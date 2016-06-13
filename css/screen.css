@@ -7719,6 +7719,10 @@ section#recent_post {
     margin-bottom: 70px;
   }
 }
+section#recent_post .item {
+  height: 500px;
+  overflow: hidden;
+}
 @media (min-width: 768px) {
   section#recent_post .item .row:first-child {
     height: 320px;
@@ -8180,14 +8184,28 @@ section#latest_news .date span {
   padding: 5px 0;
 }
 section#latest_news .carousel-control {
-  top: -90px;
+  top: -20px;
+  height: 40px;
+  width: 40px;
   color: #20b7a3;
-  font-size: 60px;
-  width: 45px;
+  font-size: 30px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  section#latest_news .carousel-control {
+    font-size: 60px;
+    top: -90px;
+    height: 40px;
+  }
 }
 section#latest_news hr {
   border-color: #3c4b4b;
-  margin: 0 60px 60px;
+  margin: 0 4rem 2rem;
+}
+@media (min-width: 768px) {
+  section#latest_news hr {
+    margin: 0 6rem 6rem;
+  }
 }
 section#client_opinion {
   background: url('../images/client_opinion.jpg');
@@ -8198,7 +8216,8 @@ section#client_opinion {
 }
 @media (min-width: 768px) {
   section#client_opinion {
-    margin-bottom: 70px;
+    height: 695px;
+    overflow: hidden;
   }
 }
 section#animated_sales .animated_diagramm {
@@ -8572,9 +8591,6 @@ section#underfooter .social a:hover {
   color: #20b7a3;
 }
 
-.carousel.slide#quote-carousel {
-  min-height: 700px;
-}
 .carousel.slide#quote-carousel blockquote {
   border: none;
   font-size: 14px;
@@ -8585,7 +8601,7 @@ section#underfooter .social a:hover {
   margin: 0 auto;
 }
 .carousel.slide#quote-carousel blockquote p.author {
-  margin: 30px auto;
+  margin: 15px auto;
   font-size: 20px;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -8595,11 +8611,20 @@ section#underfooter .social a:hover {
   display: inline-block;
 }
 .carousel.slide#quote-carousel blockquote .description {
-  max-height: 306px;
+  height: 95px;
   overflow: hidden;
 }
 .carousel.slide#quote-carousel blockquote .item {
   transition: 1s ease-in-out left;
+}
+@media (min-width: 768px) {
+  .carousel.slide#quote-carousel blockquote p {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .carousel.slide#quote-carousel blockquote p.author {
+    margin: 30px auto;
+  }
 }
 .carousel.slide#quote-carousel blockquote:before, .carousel.slide#quote-carousel blockquote:after {
   font-family: FontAwesome;
