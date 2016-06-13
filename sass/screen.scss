@@ -1,0 +1,98 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/images";
+
+@import "bootstrap/stylesheets/_bootstrap.scss";
+@import "variables.scss";
+@import "tabs.scss";
+@import "sections.scss";
+@import "carousel.scss";
+@import "modal.scss";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: $black_pearl;
+  color: $dusty_gray;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 80px;
+  a {
+    color: $java;
+    transition: 1s;
+    &:hover, &:focus {
+      color: $java;
+    }
+    &.more {
+      text-transform: uppercase;
+      &:before {
+        content: '\f178';
+        color: $java;
+        font-family: FontAwesome;
+        margin-right: 10px;
+        display: inline-block;
+        transition: 1s;
+      }
+      &:hover {
+        color: white;
+        text-decoration: none;
+        &:before {
+          color: white;
+        }
+      }
+    }
+  }
+  img {
+    vertical-align: top;
+    max-width: 100%;
+  }
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 3rem 0;
+    @media (min-width: $screen-sm) {
+      margin: 6rem 0;
+    }
+  }
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+  }
+  ul {
+    font-family: 'Roboto', sans-serif;
+  }
+  .button-more, a.button-more {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border: 1px solid $java;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      background: $java;
+      color: black;
+      text-decoration: none;
+    }
+  }
+  .green {
+    color: $java;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  @import "header.scss";
+  @import "footer.scss";
+}

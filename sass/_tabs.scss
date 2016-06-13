@@ -1,0 +1,52 @@
+ul.nav-tabs {
+  border-bottom: 1px solid $cod_gray;
+  text-transform: uppercase;
+  text-align: center;
+  li {
+    float: none;
+    display: inline-block;
+    a {
+      border-radius: 0;
+      border: none;
+      margin: 0;
+      color: $dusty_gray;
+      border-top: 4px solid $black_pearl;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      &:hover {
+        border-top: 4px solid $java;
+        margin: 0;
+        background: $ebony;
+        color: white;
+      }
+    }
+    &.active,
+    &:focus {
+      a {
+        border: none!important;
+        border-top: 4px solid $java!important;
+        border-right: 1px solid $cod_gray!important;
+        border-left: 1px solid $cod_gray!important;
+        background: $ebony!important;
+        color: white!important;
+        &:hover {
+          border: none!important;
+          border-top: 4px solid $java!important;
+          border-right: 1px solid $cod_gray!important;
+          border-left: 1px solid $cod_gray!important;
+          background: $ebony!important;
+          color: white!important;
+        }
+      }
+    }
+
+  }
+}
+.tab-content {
+  background: $ebony;
+  border-left: 1px solid $cod_gray;
+  border-right: 1px solid $cod_gray;
+  border-bottom: 1px solid $cod_gray;
+  padding: 30px 20px 10px;
+  margin-bottom: 30px;
+}
