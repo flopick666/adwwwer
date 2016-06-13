@@ -7512,14 +7512,14 @@ section#recent_works li .recent_hover span {
 section#recent_works li:hover .recent_hover {
   display: block;
 }
-section#services .col-xs-12 {
+section#introduce #services .col-xs-12 {
   display: none;
   overflow: hidden;
   height: 245px;
   margin-bottom: 40px;
   line-height: 22px;
 }
-section#services .col-xs-12 .circle {
+section#introduce #services .col-xs-12 .circle {
   display: inline-block;
   height: 130px;
   width: 130px;
@@ -7528,10 +7528,10 @@ section#services .col-xs-12 .circle {
   font-size: 55px;
   background-color: #20b7a3;
 }
-section#services .col-xs-12 .circle a {
+section#introduce #services .col-xs-12 .circle a {
   color: #fff;
 }
-section#services .col-xs-12 .circle a .fa {
+section#introduce #services .col-xs-12 .circle a .fa {
   display: inline-block;
   font-size: inherit;
   text-rendering: auto;
