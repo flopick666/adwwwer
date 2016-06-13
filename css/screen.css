@@ -7711,7 +7711,7 @@ section#recent_post {
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
-    min-height: 800px;
+    height: 800px;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
   }
@@ -7724,6 +7724,9 @@ section#recent_post .item {
   overflow: hidden;
 }
 @media (min-width: 768px) {
+  section#recent_post .item {
+    height: auto;
+  }
   section#recent_post .item .row:first-child {
     height: 320px;
     overflow: hidden;
@@ -7826,7 +7829,7 @@ section#recent_post .row .carousel-control {
 @media (min-width: 768px) {
   section#recent_post .row .carousel-control {
     font-size: 60px;
-    top: -90px;
+    top: -40px;
     height: 40px;
   }
 }
@@ -8194,7 +8197,7 @@ section#latest_news .carousel-control {
 @media (min-width: 768px) {
   section#latest_news .carousel-control {
     font-size: 60px;
-    top: -90px;
+    top: -40px;
     height: 40px;
   }
 }
@@ -8294,9 +8297,8 @@ section#video_upload .video {
   background: url('../images/video_upload.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 250px;
-  height: 270px;
-  padding: 15px 14px 77px 12px;
+  width: 265px;
+  padding: 13px 10px 73px 10px;
   margin: 0 auto;
 }
 section#video_upload .video iframe {
@@ -8360,6 +8362,7 @@ section#sign_up .col-lg-8 .input-group input {
   color: white;
   border: none;
   border-radius: 0;
+  vertical-align: middle;
 }
 section#sign_up .col-lg-8 button {
   background: none;
