@@ -7465,6 +7465,7 @@ section {
 section#first {
   background: url('../images/earth.jpg');
   background-position: 50% 0;
+  background-size: cover;
   height: 778px;
 }
 section#first h1 {
@@ -7483,6 +7484,9 @@ section#first h1 p:last-child {
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
+  section#first {
+    background-size: contain;
+  }
   section#first h1 {
     font-size: 5rem;
   }
