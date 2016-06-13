@@ -7460,7 +7460,6 @@ ul.nav-tabs li.active a:hover, ul.nav-tabs li:focus a:hover {
 section {
   padding-bottom: 2rem;
   padding-top: 2rem;
-  border: 1px solid green;
 }
 @media (min-width: 992px) {
   section {
