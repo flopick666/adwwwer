@@ -148,8 +148,30 @@ $(document).ready(function () {
         item: 5,
         autoWidth: false,
         slideMove: 1, // slidemove will be 1 if loop is true
-        slideMargin: 0
+        slideMargin: 0,
+        responsive : [
+            {
+                breakpoint:992,
+                settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:768,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            },
+            {
+                breakpoint:640,
+                settings: {
+                    item:1,
+                    slideMove:1
+                  }
+            }
+        ]
     });
-
-
 });
