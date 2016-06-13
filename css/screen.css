@@ -7426,6 +7426,11 @@ ul.nav-tabs li a:hover {
   background: #060a0e;
   color: white;
 }
+@media (min-width: 992px) {
+  ul.nav-tabs li a {
+    padding: 20px 50px;
+  }
+}
 ul.nav-tabs li.active a, ul.nav-tabs li:focus a {
   border: none !important;
   border-top: 4px solid #20b7a3 !important;
@@ -7454,12 +7459,13 @@ ul.nav-tabs li.active a:hover, ul.nav-tabs li:focus a:hover {
 
 section {
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
   border: 1px solid green;
 }
 @media (min-width: 992px) {
   section {
     padding-bottom: 8rem;
+    padding-top: 8rem;
   }
 }
 section#first {
@@ -7522,9 +7528,6 @@ section#recent_works li .recent_hover i {
 }
 section#recent_works li .recent_hover span {
   font-size: 1.4rem;
-}
-section#recent_works li:hover .recent_hover {
-  display: block;
 }
 section#introduce #services .col-xs-12 {
   display: none;
@@ -7804,19 +7807,26 @@ section#recent_post .row .recent_content p {
   }
 }
 section#recent_post .row .carousel-control {
-  top: -90px;
+  top: -70px;
   height: 40px;
   color: #20b7a3;
-  font-size: 60px;
+  font-size: 30px;
   width: 45px;
+}
+@media (min-width: 768px) {
+  section#recent_post .row .carousel-control {
+    font-size: 60px;
+    top: -90px;
+    height: 40px;
+  }
 }
 section#recent_post .row hr {
   border-color: #3c4b4b;
-  margin: 0 60px 30px;
+  margin: 0 6rem 2rem;
 }
 @media (min-width: 768px) {
   section#recent_post .row hr {
-    margin: 0 60px 60px;
+    margin: 0 6rem 6rem;
   }
 }
 section#recent_post .row img.post_autor {
@@ -8259,7 +8269,7 @@ section#video_upload .video {
   background: url('../images/video_upload.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 310px;
+  width: 250px;
   height: 270px;
   padding: 15px 14px 77px 12px;
   margin: 0 auto;
@@ -8613,7 +8623,7 @@ section#underfooter .social a:hover {
   position: relative;
   width: 100%;
   border-bottom: 1px solid #161616;
-  margin: 20px auto 0;
+  margin: 2rem auto 8rem;
 }
 .carousel-container #carousel {
   height: 255px;
@@ -8918,11 +8928,11 @@ body h2 {
   color: white;
   font-size: 4rem;
   text-transform: uppercase;
-  margin: 3rem 0;
+  margin: 0 0 2rem 0;
 }
 @media (min-width: 768px) {
   body h2 {
-    margin: 6rem 0;
+    margin: 0 0 6rem 0;
   }
 }
 body h3 {
