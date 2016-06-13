@@ -8,24 +8,36 @@ section {
   &#first {
     background: image-url('earth.jpg');
     background-position: 50% 0;
-    height: 778px;
-
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
     h1 {
       color: $java;
       font-family: 'Roboto', sans-serif;
-      font-size: 5rem;
+      font-size: 2.5rem;
       font-weight: 300;
       margin-top: 200px;
       span {
         color: white;
       }
       p:last-child {
-        font-size: 6.5rem;
+        font-size: 5rem;
         font-weight: 700;
         text-transform: uppercase;
+
+      }
+
+    }
+    @media (min-width: $screen-md) {
+      background-size: cover;
+      height: 778px;
+      h1 {
+        font-size: 5rem;
+        p:last-child {
+          font-size: 6.5rem;
+        }
       }
     }
-
   }
 
   &#recent_works {
@@ -61,13 +73,8 @@ section {
         display: block;
       }
     }
-    // .horizon-item {
-    //   float: left;
-    //   height: 334px;
-    //   overflow: hidden;
-    // }
   }
-  &#services {
+  &#introduce #services {
     .col-xs-12{
       display:none;
       overflow: hidden;

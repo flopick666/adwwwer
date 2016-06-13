@@ -7465,8 +7465,9 @@ section {
 section#first {
   background: url('../images/earth.jpg');
   background-position: 50% 0;
-  background-size: cover;
-  height: 778px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
 }
 section#first h1 {
   color: #20b7a3;
@@ -7485,7 +7486,8 @@ section#first h1 p:last-child {
 }
 @media (min-width: 992px) {
   section#first {
-    background-size: contain;
+    background-size: cover;
+    height: 778px;
   }
   section#first h1 {
     font-size: 5rem;

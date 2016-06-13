@@ -24,7 +24,10 @@ body {
   background: $black_pearl;
   color: $dusty_gray;
   font-family: 'Open Sans', sans-serif;
-  padding-top: 80px;
+  padding-top: 50px;
+  @media (min-width: $screen-sm) {
+    padding-top: 80px;
+  }
   a {
     color: $java;
     transition: 1s;
