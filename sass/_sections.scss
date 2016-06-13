@@ -288,7 +288,12 @@ section {
           margin-bottom: 13px;
         }
         &.author_name {
-          margin: 35px 0;
+          margin: 15px 0;
+        }
+        @media (min-width: $screen-sm) {
+          &.author_name {
+            margin: 35px 0;
+          }
         }
       }
       .head_post {
@@ -359,12 +364,12 @@ section {
       }
 
       .carousel-control {
-        top: -70px;
+        top: -20px;
         height: 40px;
-        // width: 20px;
+        width: 40px;
         color: $java;
         font-size: 30px;
-        width: 45px;
+        padding: 0;
         @media (min-width: $screen-sm) {
           font-size: 60px;
           top: -90px;
@@ -373,7 +378,7 @@ section {
       }
       hr {
         border-color: $cape_cod;
-        margin: 0 6rem 2rem;
+        margin: 0 4rem 2rem;
         @media (min-width: $screen-sm) {
           margin: 0 6rem 6rem;
         }
@@ -778,7 +783,7 @@ section {
       height: 270px;
       padding: 15px 14px 77px 12px;
       margin: 0 auto;
-      
+
       iframe {
         width: 100%;
         height: 100%;

@@ -7735,7 +7735,12 @@ section#recent_post .row h3.post_title {
   margin-bottom: 13px;
 }
 section#recent_post .row h3.author_name {
-  margin: 35px 0;
+  margin: 15px 0;
+}
+@media (min-width: 768px) {
+  section#recent_post .row h3.author_name {
+    margin: 35px 0;
+  }
 }
 section#recent_post .row .head_post {
   overflow: hidden;
@@ -7807,11 +7812,12 @@ section#recent_post .row .recent_content p {
   }
 }
 section#recent_post .row .carousel-control {
-  top: -70px;
+  top: -20px;
   height: 40px;
+  width: 40px;
   color: #20b7a3;
   font-size: 30px;
-  width: 45px;
+  padding: 0;
 }
 @media (min-width: 768px) {
   section#recent_post .row .carousel-control {
@@ -7822,7 +7828,7 @@ section#recent_post .row .carousel-control {
 }
 section#recent_post .row hr {
   border-color: #3c4b4b;
-  margin: 0 6rem 2rem;
+  margin: 0 4rem 2rem;
 }
 @media (min-width: 768px) {
   section#recent_post .row hr {
