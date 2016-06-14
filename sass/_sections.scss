@@ -733,7 +733,7 @@ section {
     }
   }
   &#animated_sales {
-    .animated_diagramm {
+    .animated_diagramm, .diagrama {
       background: image-url('animate_diagram.png');
       max-width: 473px;
       height: 423px;
@@ -769,6 +769,12 @@ section {
         &.month3 {left: 218px;}
         &.month4 {left: 315px;}
         &.month5 {left: 414px;}
+      }
+    }
+    .diagrama {
+      opacity: 1;
+      .serv, .mon {
+        opacity: 1;
       }
     }
   }
@@ -963,7 +969,7 @@ section {
     .modal_popup {
       background: $java;
       text-align: center;
-      padding: 4rem 7rem;
+      padding: 4rem 2rem;
       color: white;
       position: absolute;
       top: 10%;
@@ -974,6 +980,7 @@ section {
         margin-left: -225px;
         max-width: 450px;
         right: auto;
+        padding: 4rem 7rem;
       }
       &:before {
         content: '';

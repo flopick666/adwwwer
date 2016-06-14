@@ -8222,7 +8222,7 @@ section#client_opinion {
     overflow: hidden;
   }
 }
-section#animated_sales .animated_diagramm {
+section#animated_sales .animated_diagramm, section#animated_sales .diagrama {
   background: url('../images/animate_diagram.png');
   max-width: 473px;
   height: 423px;
@@ -8230,7 +8230,7 @@ section#animated_sales .animated_diagramm {
   opacity: 0;
   position: relative;
 }
-section#animated_sales .animated_diagramm .serv, section#animated_sales .animated_diagramm .mon {
+section#animated_sales .animated_diagramm .serv, section#animated_sales .animated_diagramm .mon, section#animated_sales .diagrama .serv, section#animated_sales .diagrama .mon {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -8243,40 +8243,46 @@ section#animated_sales .animated_diagramm .serv, section#animated_sales .animate
   line-height: 35px;
   opacity: 0;
 }
-section#animated_sales .animated_diagramm .serv {
+section#animated_sales .animated_diagramm .serv, section#animated_sales .diagrama .serv {
   top: 0;
   font-size: 16px;
 }
-section#animated_sales .animated_diagramm .serv.serv1 {
+section#animated_sales .animated_diagramm .serv.serv1, section#animated_sales .diagrama .serv.serv1 {
   left: 70px;
 }
-section#animated_sales .animated_diagramm .serv.serv2 {
+section#animated_sales .animated_diagramm .serv.serv2, section#animated_sales .diagrama .serv.serv2 {
   left: 168px;
 }
-section#animated_sales .animated_diagramm .serv.serv3 {
+section#animated_sales .animated_diagramm .serv.serv3, section#animated_sales .diagrama .serv.serv3 {
   left: 267px;
 }
-section#animated_sales .animated_diagramm .serv.serv4 {
+section#animated_sales .animated_diagramm .serv.serv4, section#animated_sales .diagrama .serv.serv4 {
   left: 365px;
 }
-section#animated_sales .animated_diagramm .mon {
+section#animated_sales .animated_diagramm .mon, section#animated_sales .diagrama .mon {
   bottom: 0;
   font-size: 10px;
 }
-section#animated_sales .animated_diagramm .mon.month1 {
+section#animated_sales .animated_diagramm .mon.month1, section#animated_sales .diagrama .mon.month1 {
   left: 22px;
 }
-section#animated_sales .animated_diagramm .mon.month2 {
+section#animated_sales .animated_diagramm .mon.month2, section#animated_sales .diagrama .mon.month2 {
   left: 120px;
 }
-section#animated_sales .animated_diagramm .mon.month3 {
+section#animated_sales .animated_diagramm .mon.month3, section#animated_sales .diagrama .mon.month3 {
   left: 218px;
 }
-section#animated_sales .animated_diagramm .mon.month4 {
+section#animated_sales .animated_diagramm .mon.month4, section#animated_sales .diagrama .mon.month4 {
   left: 315px;
 }
-section#animated_sales .animated_diagramm .mon.month5 {
+section#animated_sales .animated_diagramm .mon.month5, section#animated_sales .diagrama .mon.month5 {
   left: 414px;
+}
+section#animated_sales .diagrama {
+  opacity: 1;
+}
+section#animated_sales .diagrama .serv, section#animated_sales .diagrama .mon {
+  opacity: 1;
 }
 @media (min-width: 992px) {
   section#diagrams .col-xs-12 {
@@ -8465,7 +8471,7 @@ section#contact_info {
 section#contact_info .modal_popup {
   background: #20b7a3;
   text-align: center;
-  padding: 4rem 7rem;
+  padding: 4rem 2rem;
   color: white;
   position: absolute;
   top: 10%;
@@ -8478,6 +8484,7 @@ section#contact_info .modal_popup {
     margin-left: -225px;
     max-width: 450px;
     right: auto;
+    padding: 4rem 7rem;
   }
 }
 section#contact_info .modal_popup:before {
@@ -8868,12 +8875,15 @@ section#underfooter .social a:hover {
   display: none;
 }
 
-.modal-content {
+.modal-dialog {
+  margin: 10%;
+}
+.modal-dialog .modal-content {
   background: #20b7a3;
   color: white;
   border-radius: 0;
 }
-.modal-content button.close {
+.modal-dialog .modal-content button.close {
   border-radius: 50px;
   background: #20b7a3;
   position: absolute;
@@ -8888,21 +8898,25 @@ section#underfooter .social a:hover {
   border: 1px solid white;
   opacity: 1;
 }
-.modal-content .modal-header {
+.modal-dialog .modal-content .modal-header {
   text-align: center;
   border: none;
+  padding-bottom: 0;
 }
-.modal-content label {
+.modal-dialog .modal-content .modal-body {
+  padding-top: 0;
+}
+.modal-dialog .modal-content label {
   font-weight: normal;
 }
-.modal-content .button-more {
+.modal-dialog .modal-content .button-more {
   background: none;
   color: white;
   border: 1px solid white;
   transition: 1s;
   font-size: 16px;
 }
-.modal-content .button-more:hover {
+.modal-dialog .modal-content .button-more:hover {
   background: white;
   color: #20b7a3;
 }
