@@ -25,7 +25,7 @@
 	<!-- Earth -->
 
 	<!-- GLSL vertex shader for the moon -->
-  <script id="norm-vert-shader" type="x-shader/x-vertex">
+  <!-- <script id="norm-vert-shader" type="x-shader/x-vertex">
       attribute vec4 tangent;
 
       uniform vec2 uvScale;
@@ -52,10 +52,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
-  </script>
+  </script> -->
 
   <!-- GLSL fragment shader for the moon -->
-  <script id="norm-frag-shader" type="x-shader/x-fragment">
+  <!-- <script id="norm-frag-shader" type="x-shader/x-fragment">
       uniform sampler2D textureMap;
       uniform sampler2D normalMap;
 
@@ -78,11 +78,11 @@
       /** Final color is calculated with the lighting applied */
       gl_FragColor = texture2D(textureMap, vUv) * lighting;
       }
-  </script>
+  </script> -->
 
 
   <!--  Custom Shader Code for atmospheric glow  -->
-  <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
+  <!-- <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 viewVector;
       uniform float c;
       uniform float p;
@@ -95,10 +95,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
-  </script>
+  </script> -->
 
   <!-- fragment shader a.k.a. pixel shader -->
-  <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
+  <!-- <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 glowColor;
       varying float intensity;
       void main()
@@ -106,7 +106,7 @@
       vec3 glow = glowColor * intensity;
       gl_FragColor = vec4( glow, 1.0 );
       }
-  </script>
+  </script> -->
 
 	<!-- wowjs -->
 	<script src="js/wow/wow.js"></script>
