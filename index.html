@@ -818,20 +818,80 @@
 			<div class="row">
         <div class="col-xs-12 col-md-6">
 					<h2 class=" wow zoomIn" data-wow-duration="2s">Easy video upload</h2>
-					<ul>
-						<li>
-							<h3>Browse your video file</h3>
-							<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						</li>
-						<li>
-							<h3>Push upload button</h3>
-							<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						</li>
-						<li>
-							<h3>Enjoy your video on website</h3>
-							<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						</li>
-					</ul>
+					<div class="homepage">
+					  <div class="homepage-gallery homepage-section homepage-section--border">
+						  <div class="homepage-container">
+						    <div class="zap-content-row">
+						      <div class="zap-content">
+						        <ul class="timeline">
+						          <li class="timeline__first">
+						            <div class="timeline__zap zap1"></div>
+						            <div class="timeline__content">
+						              <h3>Browse your video file</h3>
+						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						            </div>
+						          </li>
+						          <li class="timeline__item">
+						            <div class="timeline__connection">
+						              <div class="line line-animation"></div>
+						              <ul class="dots blink-animation">
+						                <li class="dots__item"></li>
+						                <li class="dots__item"></li>
+						                <li class="dots__item"></li>
+						              </ul>
+						            </div>
+						          </li>
+						          <li class="timeline__item">
+						            <div class="timeline__zap-no-icon"></div>
+						            <div class="timeline__zap bounce-animation zap2"></div>
+						            <div class="timeline__content fade-animation">
+						              <h3>Push upload button</h3>
+						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						            </div>
+						          </li>
+						          <li class="timeline__item">
+						            <div class="timeline__connection">
+						              <div class="line line-animation"></div>
+						              <ul class="dots blink-animation">
+						                <li class="dots__item"></li>
+						                <li class="dots__item"></li>
+						                <li class="dots__item"></li>
+						              </ul>
+						            </div>
+						          </li>
+						          <li class="timeline__item">
+						            <div class="timeline__zap-no-icon"></div>
+						            <div class="timeline__zap bounce-animation zap3"></div>
+						            <div class="timeline__content fade-animation">
+						              <h3>Enjoy your video on website</h3>
+						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						            </div>
+						          </li>
+						        </ul>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<link href="js/video_upload/view.css" rel="stylesheet" type="text/css" />
+					<script>
+					  function nextState(){
+					    var timelineItems = $('.timeline__item');
+					    var emptyItems = timelineItems.filter('.timeline__item--empty');
+					    var next = emptyItems.first();
+					    var delay = 2000;
+					    if(next && next.length){
+					      next.removeClass('timeline__item--empty');
+					      if(emptyItems.length === 1){
+					        delay = 5000;
+					      }
+					    } else {
+					      timelineItems.addClass('timeline__item--empty');
+					    }
+					    setTimeout(nextState, delay);
+					  }
+					  nextState();
+					</script>
 				</div>
 				<div class="col-xs-12 col-md-6 text-center">
 					<div class="video">
