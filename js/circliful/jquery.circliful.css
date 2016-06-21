@@ -1,6 +1,3 @@
-/* Import the Google Font 'Lato' */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 /* Container styles */
 .outer {
     fill: transparent;
@@ -12,7 +9,6 @@
     /* firefox bug fix - won't rotate at 90deg angles */
     -moz-transform: rotate(-89deg) translateX(-190px);
 }
-
 /* full circle 25 empty 534 */
 .inner {
     fill: transparent;
@@ -25,17 +21,17 @@
     -moz-transform: rotate(-89deg) translateX(-190px);
     stroke-dashoffset: 0;
 }
-
 .circliful {
     overflow: visible !important;
 }
-
 .svg-container {
     width: 100%;
     margin: 0 auto;
     overflow: visible;
 }
-
 svg .icon {
     font-family: FontAwesome;
+}
+.timer {
+  font-family: 'Roboto', sans-serif;
 }

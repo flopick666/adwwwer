@@ -7710,6 +7710,7 @@ section#recent_post {
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
+    background-attachment: fixed;
     height: 800px;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
@@ -8214,6 +8215,7 @@ section#client_opinion {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -8284,11 +8286,14 @@ section#animated_sales .diagrama {
 section#animated_sales .diagrama .serv, section#animated_sales .diagrama .mon {
   opacity: 1;
 }
+section#diagrams {
+  text-align: center;
+}
 @media (min-width: 992px) {
-  section#diagrams .col-xs-12 {
+  section#diagrams .col-xs-6 {
     border-left: 1px solid #3c4b4b;
   }
-  section#diagrams .col-xs-12:last-child {
+  section#diagrams .col-xs-6:last-child {
     border-right: 1px solid #3c4b4b;
   }
 }
@@ -8464,6 +8469,7 @@ section#contact_info {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   min-height: 530px;
   position: relative;
 }
@@ -8598,7 +8604,461 @@ section#underfooter .social a {
 section#underfooter .social a:hover {
   color: #20b7a3;
 }
-
+section#newdiag, section#animated_sales {
+  position: relative;
+  /* GRAPH */
+  /* TOOLTIP */
+  /* COORDINATE POINTS */
+  /* CONTROL LAYER DELAY */
+  /* ANIMATION */
+}
+section#newdiag .content, section#animated_sales .content {
+  height: 300px;
+  margin: 0 30px;
+  padding-top: 450px;
+  position: relative;
+}
+section#newdiag #line_horizontal, section#animated_sales #line_horizontal {
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+  height: 1px;
+  width: 100%;
+  background: #20b7a3;
+}
+section#newdiag .line_vert, section#animated_sales .line_vert {
+  position: absolute;
+  left: 10%;
+  bottom: 35px;
+  height: 70%;
+  width: 1px;
+  background: #20b7a3;
+}
+section#newdiag .line_vert:nth-child(2n), section#animated_sales .line_vert:nth-child(2n) {
+  bottom: auto;
+  top: 35px;
+}
+section#newdiag .line_vert:nth-child(9), section#animated_sales .line_vert:nth-child(9) {
+  left: 90%;
+}
+section#newdiag .line_vert:nth-child(8), section#animated_sales .line_vert:nth-child(8) {
+  left: 80%;
+}
+section#newdiag .line_vert:nth-child(7), section#animated_sales .line_vert:nth-child(7) {
+  left: 70%;
+}
+section#newdiag .line_vert:nth-child(6), section#animated_sales .line_vert:nth-child(6) {
+  left: 60%;
+}
+section#newdiag .line_vert:nth-child(5), section#animated_sales .line_vert:nth-child(5) {
+  left: 50%;
+}
+section#newdiag .line_vert:nth-child(4), section#animated_sales .line_vert:nth-child(4) {
+  left: 40%;
+}
+section#newdiag .line_vert:nth-child(3), section#animated_sales .line_vert:nth-child(3) {
+  left: 30%;
+}
+section#newdiag .line_vert:nth-child(2), section#animated_sales .line_vert:nth-child(2) {
+  left: 20%;
+}
+section#newdiag .serv, section#newdiag .mon, section#animated_sales .serv, section#animated_sales .mon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  color: #20b7a3;
+  border: 1px solid #20b7a3;
+  border-radius: 50%;
+  background: black;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  margin-left: -20px;
+}
+section#newdiag .mon, section#animated_sales .mon {
+  bottom: 0;
+  font-size: 10px;
+}
+section#newdiag .mon.month1, section#animated_sales .mon.month1 {
+  left: 10%;
+}
+section#newdiag .mon.month2, section#animated_sales .mon.month2 {
+  left: 30%;
+}
+section#newdiag .mon.month3, section#animated_sales .mon.month3 {
+  left: 50%;
+}
+section#newdiag .mon.month4, section#animated_sales .mon.month4 {
+  left: 70%;
+}
+section#newdiag .mon.month5, section#animated_sales .mon.month5 {
+  left: 90%;
+}
+section#newdiag .serv, section#animated_sales .serv {
+  top: 0;
+  font-size: 16px;
+}
+section#newdiag .serv.serv1, section#animated_sales .serv.serv1 {
+  left: 20%;
+}
+section#newdiag .serv.serv2, section#animated_sales .serv.serv2 {
+  left: 40%;
+}
+section#newdiag .serv.serv3, section#animated_sales .serv.serv3 {
+  left: 60%;
+}
+section#newdiag .serv.serv4, section#animated_sales .serv.serv4 {
+  left: 80%;
+}
+section#newdiag .line, section#newdiag .line1, section#newdiag .line2, section#newdiag .line3, section#newdiag .line4, section#newdiag .line5, section#newdiag .line6, section#newdiag .line7, section#animated_sales .line, section#animated_sales .line1, section#animated_sales .line2, section#animated_sales .line3, section#animated_sales .line4, section#animated_sales .line5, section#animated_sales .line6, section#animated_sales .line7 {
+  background: #2187e7;
+  width: 0px;
+  height: 1px;
+}
+section#newdiag .running .line, section#animated_sales .running .line {
+  transform: rotate(-45deg);
+  transform-origin: -140px -130px;
+  animation: move 0.5s 1s linear forwards;
+}
+section#newdiag .running .line1, section#animated_sales .running .line1 {
+  transform: rotate(20deg);
+  transform-origin: 575px 200px;
+  animation: move1 0.5s 1.5s linear forwards;
+}
+section#newdiag .running .line2, section#animated_sales .running .line2 {
+  transform: rotate(-60deg);
+  transform-origin: -70px -210px;
+  animation: move2 0.5s 2s linear forwards;
+}
+section#newdiag .running .line3, section#animated_sales .running .line3 {
+  transform: rotate(315deg);
+  transform-origin: -210px -370px;
+  animation: move3 0.5s 2.5s linear forwards;
+}
+section#newdiag .running .line4, section#animated_sales .running .line4 {
+  transform: rotate(70deg);
+  transform-origin: 336px 30px;
+  animation: move4 0.5s 3s linear forwards;
+}
+section#newdiag .running .line5, section#animated_sales .running .line5 {
+  transform: rotate(-50deg);
+  transform-origin: -35px -402px;
+  animation: move5 0.5s 3.5s linear forwards;
+}
+section#newdiag .running .line6, section#animated_sales .running .line6 {
+  transform: rotate(20deg);
+  transform-origin: 825px 870px;
+  animation: move6 0.5s 4s linear forwards;
+}
+section#newdiag .running .line7, section#animated_sales .running .line7 {
+  transform: rotate(-66deg);
+  transform-origin: 33px -410px;
+  animation: move7 0.5s 4.5s linear forwards;
+}
+section#newdiag .running .ball,
+section#newdiag .running .ball1,
+section#newdiag .running .ball2,
+section#newdiag .running .ball3,
+section#newdiag .running .ball4,
+section#newdiag .running .ball5,
+section#newdiag .running .ball6,
+section#newdiag .running .ball7,
+section#newdiag .running .ball8, section#animated_sales .running .ball,
+section#animated_sales .running .ball1,
+section#animated_sales .running .ball2,
+section#animated_sales .running .ball3,
+section#animated_sales .running .ball4,
+section#animated_sales .running .ball5,
+section#animated_sales .running .ball6,
+section#animated_sales .running .ball7,
+section#animated_sales .running .ball8 {
+  background-color: #2187e7;
+  background-image: -moz-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+  background-image: -webkit-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 99;
+  transform: scale(0);
+  animation: point 0.1s linear forwards;
+}
+section#newdiag .running .pulse, section#animated_sales .running .pulse {
+  display: none;
+}
+section#newdiag .running .pulse,
+section#newdiag .running .pulse1,
+section#newdiag .running .pulse2,
+section#newdiag .running .pulse3,
+section#newdiag .running .pulse4,
+section#newdiag .running .pulse5,
+section#newdiag .running .pulse6,
+section#newdiag .running .pulse7,
+section#newdiag .running .pulse8, section#animated_sales .running .pulse,
+section#animated_sales .running .pulse1,
+section#animated_sales .running .pulse2,
+section#animated_sales .running .pulse3,
+section#animated_sales .running .pulse4,
+section#animated_sales .running .pulse5,
+section#animated_sales .running .pulse6,
+section#animated_sales .running .pulse7,
+section#animated_sales .running .pulse8 {
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  border: 1px solid #00c6ff;
+  box-shadow: 0 0 5px #00c6ff;
+  position: absolute;
+  transform: scale(0);
+  animation: pulse 0.1s ease-out;
+}
+section#newdiag .ball a, section#newdiag .ball1 a, section#newdiag .ball2 a, section#newdiag .ball3 a, section#newdiag .ball4 a, section#newdiag .ball5 a, section#newdiag .ball6 a, section#newdiag .ball7 a, section#newdiag .ball8 a, section#animated_sales .ball a, section#animated_sales .ball1 a, section#animated_sales .ball2 a, section#animated_sales .ball3 a, section#animated_sales .ball4 a, section#animated_sales .ball5 a, section#animated_sales .ball6 a, section#animated_sales .ball7 a, section#animated_sales .ball8 a {
+  float: left;
+  height: 10px;
+  width: 10px;
+  text-decoration: none;
+  position: relative;
+}
+section#newdiag .ball a small, section#newdiag .ball1 a small, section#newdiag .ball2 a small, section#newdiag .ball3 a small, section#newdiag .ball4 a small, section#newdiag .ball5 a small, section#newdiag .ball6 a small, section#newdiag .ball7 a small, section#newdiag .ball8 a small, section#animated_sales .ball a small, section#animated_sales .ball1 a small, section#animated_sales .ball2 a small, section#animated_sales .ball3 a small, section#animated_sales .ball4 a small, section#animated_sales .ball5 a small, section#animated_sales .ball6 a small, section#animated_sales .ball7 a small, section#animated_sales .ball8 a small {
+  background: #000;
+  text-align: center;
+  width: 70px;
+  padding: 5px;
+  border-left: 1px solid #111;
+  border-top: 1px solid #111;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  border-radius: 3px;
+  display: none;
+  color: #fff;
+  font-size: 0.8em;
+  text-indent: 0;
+}
+section#newdiag .ball a:hover small, section#newdiag .ball1 a:hover small, section#newdiag .ball2 a:hover small, section#newdiag .ball3 a:hover small, section#newdiag .ball4 a:hover small, section#newdiag .ball5 a:hover small, section#newdiag .ball6 a:hover small, section#newdiag .ball7 a:hover small, section#newdiag .ball8 a:hover small, section#animated_sales .ball a:hover small, section#animated_sales .ball1 a:hover small, section#animated_sales .ball2 a:hover small, section#animated_sales .ball3 a:hover small, section#animated_sales .ball4 a:hover small, section#animated_sales .ball5 a:hover small, section#animated_sales .ball6 a:hover small, section#animated_sales .ball7 a:hover small, section#animated_sales .ball8 a:hover small {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin: -40px;
+  z-index: 9999;
+  -moz-animation: tooltip .25s linear;
+  -webkit-animation: tooltip .25s linear;
+}
+section#newdiag .ball, section#animated_sales .ball {
+  top: 69%;
+  left: 9.2%;
+}
+section#newdiag .ball1, section#animated_sales .ball1 {
+  top: 58%;
+  left: 19.2%;
+}
+section#newdiag .ball2, section#animated_sales .ball2 {
+  top: 62%;
+  left: 29.2%;
+}
+section#newdiag .ball3, section#animated_sales .ball3 {
+  top: 43%;
+  left: 39.2%;
+}
+section#newdiag .ball4, section#animated_sales .ball4 {
+  top: 33%;
+  left: 49.2%;
+}
+section#newdiag .ball5, section#animated_sales .ball5 {
+  top: 62%;
+  left: 59.2%;
+}
+section#newdiag .ball6, section#animated_sales .ball6 {
+  top: 49%;
+  left: 69.2%;
+}
+section#newdiag .ball7, section#animated_sales .ball7 {
+  top: 53%;
+  left: 79.2%;
+}
+section#newdiag .ball8, section#animated_sales .ball8 {
+  top: 29%;
+  left: 89.2%;
+}
+section#newdiag .pulse, section#animated_sales .pulse {
+  top: 69%;
+  left: 9%;
+}
+section#newdiag .pulse1, section#animated_sales .pulse1 {
+  top: 58%;
+  left: 19%;
+}
+section#newdiag .pulse2, section#animated_sales .pulse2 {
+  top: 62%;
+  left: 29%;
+}
+section#newdiag .pulse3, section#animated_sales .pulse3 {
+  top: 43%;
+  left: 39%;
+}
+section#newdiag .pulse4, section#animated_sales .pulse4 {
+  top: 33%;
+  left: 49%;
+}
+section#newdiag .pulse5, section#animated_sales .pulse5 {
+  top: 62%;
+  left: 59%;
+}
+section#newdiag .pulse6, section#animated_sales .pulse6 {
+  top: 49%;
+  left: 69%;
+}
+section#newdiag .pulse7, section#animated_sales .pulse7 {
+  top: 53%;
+  left: 79%;
+}
+section#newdiag .pulse8, section#animated_sales .pulse8 {
+  top: 29%;
+  left: 89%;
+}
+section#newdiag #layerBall, section#newdiag #layerPulse, section#animated_sales #layerBall, section#animated_sales #layerPulse {
+  animation-delay: 1s;
+}
+section#newdiag #layerBall1, section#newdiag #layerPulse1, section#animated_sales #layerBall1, section#animated_sales #layerPulse1 {
+  animation-delay: 1.5s;
+}
+section#newdiag #layerBall2, section#newdiag #layerPulse2, section#animated_sales #layerBall2, section#animated_sales #layerPulse2 {
+  animation-delay: 2s;
+}
+section#newdiag #layerBall3, section#newdiag #layerPulse3, section#animated_sales #layerBall3, section#animated_sales #layerPulse3 {
+  animation-delay: 2.5s;
+}
+section#newdiag #layerBall4, section#newdiag #layerPulse4, section#animated_sales #layerBall4, section#animated_sales #layerPulse4 {
+  animation-delay: 3s;
+}
+section#newdiag #layerBall5, section#newdiag #layerPulse5, section#animated_sales #layerBall5, section#animated_sales #layerPulse5 {
+  animation-delay: 3.5s;
+}
+section#newdiag #layerBall6, section#newdiag #layerPulse6, section#animated_sales #layerBall6, section#animated_sales #layerPulse6 {
+  animation-delay: 4s;
+}
+section#newdiag #layerBall7, section#newdiag #layerPulse7, section#animated_sales #layerBall7, section#animated_sales #layerPulse7 {
+  animation-delay: 4.5s;
+}
+section#newdiag #layerBall8, section#newdiag #layerPulse8, section#animated_sales #layerBall8, section#animated_sales #layerPulse8 {
+  animation-delay: 5s;
+}
+@-webkit-keyframes move {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 14%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move1 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move3 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 12%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move4 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 26%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move5 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 16%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move6 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes move7 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 25%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+  }
+}
+@-webkit-keyframes point {
+  0% {
+    -webkit-transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(1.75);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes tooltip {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.3;
+  }
+  75% {
+    -webkit-transform: scale(0.9, 0.9);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+}
 .carousel.slide#quote-carousel blockquote {
   border: none;
   font-size: 14px;

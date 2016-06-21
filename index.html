@@ -25,7 +25,7 @@
 	<!-- Earth -->
 
 	<!-- GLSL vertex shader for the moon -->
-  <!-- <script id="norm-vert-shader" type="x-shader/x-vertex">
+  <script id="norm-vert-shader" type="x-shader/x-vertex">
       attribute vec4 tangent;
 
       uniform vec2 uvScale;
@@ -52,10 +52,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
-  </script> -->
+  </script>
 
   <!-- GLSL fragment shader for the moon -->
-  <!-- <script id="norm-frag-shader" type="x-shader/x-fragment">
+  <script id="norm-frag-shader" type="x-shader/x-fragment">
       uniform sampler2D textureMap;
       uniform sampler2D normalMap;
 
@@ -78,11 +78,11 @@
       /** Final color is calculated with the lighting applied */
       gl_FragColor = texture2D(textureMap, vUv) * lighting;
       }
-  </script> -->
+  </script>
 
 
   <!--  Custom Shader Code for atmospheric glow  -->
-  <!-- <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
+  <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 viewVector;
       uniform float c;
       uniform float p;
@@ -95,10 +95,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
-  </script> -->
+  </script>
 
   <!-- fragment shader a.k.a. pixel shader -->
-  <!-- <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
+  <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 glowColor;
       varying float intensity;
       void main()
@@ -106,7 +106,7 @@
       vec3 glow = glowColor * intensity;
       gl_FragColor = vec4( glow, 1.0 );
       }
-  </script> -->
+  </script>
 
 	<!-- wowjs -->
 	<script src="js/wow/wow.js"></script>
@@ -245,7 +245,6 @@
         </div>
     </div>
 	</header>
-
 	<!-- Section Earth -->
   <section id="first" class="visible-xs">
     <div class="container">
@@ -259,8 +258,8 @@
 	<!-- End Section Earth-->
 	<!-- Section Introduce-->
   <section id="introduce" class="animation-element">
-    <div class="container">
-      <h2 class="text-center wow zoomIn" data-wow-duration="1s">introduce new awesome theme</h2>
+    <div class="container text-center">
+      <h2 class="wow zoomIn" data-wow-duration="1s">introduce new awesome theme</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna. </p>
       <p>Donec sapien diam, aliquet in ultricies nec. Pellentesque erat ipsum, facilisis quis ullamcorper non, ullamcorper vel velit. <a href="#">Morbi quis tristique nulla</a>. Aliquam varius, nulla in porttitor consectetur, dui sem feugiat ante, quis consectetur mauris lorem id quam.</p>
       <p class="text-center visible-xs"><img src='images/carousel-feature1.jpg' alt="" title="" /></p>
@@ -446,7 +445,7 @@
 	</section>
 	<!--End Section Become a Member-->
 	<!-- Section Mobile application-->
-	<section id="mobile_application" class="animation-element hidden-xs">
+	<section id="mobile_application" class="animation-element">
 		<div class="container">
 			<h2 class="text-center wow zoomIn" data-wow-duration="2s">great mobile app preview</h2>
 			<div id="sliderFrame">
@@ -714,7 +713,7 @@
 	</section>
 	<!--End Section project info-->
 	<!-- Section Client Opinion-->
-	<section id="client_opinion" class="animation-element">
+	<section id="client_opinion" class="animation-element" data-speed="4" data-type="background">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -761,25 +760,68 @@
 	</section>
 	<!--End Section Client Opinion-->
 	<!-- Section Animated_sales-->
-	<section id="animated_sales" class="animation-element hidden-xs">
+	<section id="animated_sales" class="animation-element">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-6 wow fadeInLeftBig" data-wow-duration="2s">
-					<!-- <img src="images/animate_diagram.png" /> -->
-					<div class="animated_diagramm">
-						<canvas height="300px" width="500px" id="canvas"></canvas>
-						<!-- <script src="js/sales_diagramm.js"></script> -->
-					</div>
-					<div class="diagrama">
-						<div class="mon month1 wow bounceIn" data-wow-duration="2s">Apr</div>
-						<div class="mon month2 wow fadeInRightBig" data-wow-duration="2s">May</div>
-						<div class="mon month3 wow fadeInRightBig" data-wow-duration="2s">Jun</div>
-						<div class="mon month4 wow fadeInRightBig" data-wow-duration="2s">Jul</div>
-						<div class="mon month5 wow fadeInRightBig" data-wow-duration="2s">Aug</div>
-						<div class="serv serv1 wow fadeInRightBig" data-wow-duration="2s"><i class="fa fa-cog" aria-hidden="true"></i></div>
-						<div class="serv serv2 wow fadeInRightBig" data-wow-duration="2s"><i class="fa fa-heart" aria-hidden="true"></i></div>
-						<div class="serv serv3 wow fadeInRightBig" data-wow-duration="2s"><i class="fa fa-star" aria-hidden="true"></i></div>
-						<div class="serv serv4 wow fadeInRightBig" data-wow-duration="2s"><i class="fa fa-coffee" aria-hidden="true"></i></div>
+				<div class="col-xs-12 col-md-6 hidden-xs">
+					<div class="content">
+						<div id="line_horizontal" class="wow zoomIn" data-wow-duration="2s"></div>
+						<div class="carcass">
+							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
+							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+						</div>
+						<div class="mon month1 wow bounceInDown" data-wow-duration="3s">Apr</div>
+						<div class="mon month2 wow bounceInDown" data-wow-duration="3s">May</div>
+						<div class="mon month3 wow bounceInDown" data-wow-duration="3s">Jun</div>
+						<div class="mon month4 wow bounceInDown" data-wow-duration="3s">Jul</div>
+						<div class="mon month5 wow bounceInDown" data-wow-duration="3s">Aug</div>
+						<div class="serv serv1 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-cog" aria-hidden="true"></i></div>
+						<div class="serv serv2 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-heart" aria-hidden="true"></i></div>
+						<div class="serv serv3 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-star" aria-hidden="true"></i></div>
+						<div class="serv serv4 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-coffee" aria-hidden="true"></i></div>
+
+						<div id="layerBall" class="ball"><a href="#"><small>100 Visit</small></a></div>
+						<div id="layerPulse" class="pulse"></div>
+						<div class="line"></div>
+
+						<div id="layerBall1" class="ball1"><a href="#"><small>300 Visits</small></a></div>
+						<div id="layerPulse1" class="pulse1"></div>
+						<div class="line1"></div>
+
+						<div id="layerBall2" class="ball2"><a href="#"><small>10 Visits</small></a></div>
+						<div id="layerPulse2" class="pulse2"></div>
+						<div class="line2"></div>
+
+						<div id="layerBall3" class="ball3"><a href="#"><small>4251 Visits</small></a></div>
+						<div id="layerPulse3" class="pulse3"></div>
+						<div class="line3"></div>
+
+						<div id="layerBall4" class="ball4"><a href="#"><small>1752 Visits</small></a></div>
+						<div id="layerPulse4" class="pulse4"></div>
+						<div class="line4"></div>
+
+						<div id="layerBall5" class="ball5"><a href="#"><small>1752 Visits</small></a></div>
+						<div id="layerPulse5" class="pulse5"></div>
+						<div class="line5"></div>
+
+						<div id="layerBall6" class="ball6"><a href="#"><small>0 Visits</small></a></div>
+						<div id="layerPulse6" class="pulse6"></div>
+						<div class="line6"></div>
+
+						<div id="layerBall7" class="ball7"><a href="#"><small>0 Visits</small></a></div>
+						<div id="layerPulse7" class="pulse7"></div>
+						<div class="line7"></div>
+
+						<div id="layerBall8" class="ball8"><a href="#"><small>0 Visits</small></a></div>
+						<div id="layerPulse8" class="pulse8"></div>
+						<div class="line8"></div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 wow fadeInRightBig" data-wow-duration="2s">
@@ -796,17 +838,21 @@
 	<section id="diagrams" class="animation-element">
 		<div class="container">
 			<div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
 					<div id="circle1"></div>
+					<h3>New users</h3>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div id="circle2"></div>
+					<h3>Revisited</h3>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div id="circle3"></div>
+					<h3>Commented</h3>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div id="circle4"></div>
+					<h3>Active users</h3>
 				</div>
 			</div>
 		</div>

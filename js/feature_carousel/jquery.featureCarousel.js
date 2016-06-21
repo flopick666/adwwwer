@@ -654,7 +654,15 @@
           initiateMove(true,shortest);
         }
       }
-
+      $(window).resize(function(){
+              setTimer(true);
+              pluginData.currentlyMoving = false;
+              setupFeatureDimensions();
+              setupCarousel();
+              setupFeaturePositions();
+              setupTrackers();
+              initiateMove(true,1);
+          });
     });
 
     /****************

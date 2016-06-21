@@ -87,9 +87,11 @@ $(document).ready(function () {
 
         if (donothing_animation_diagramm == false ) {
           if ($('#animated_sales').hasClass('in-view')) {
-            console.log('donothing_animation_diagramm!');
-            $.getScript("js/sales_diagramm.js")
-
+              $('#animated_sales .content').removeClass('running').delay(10).queue(function(next){
+              $(this).addClass('running');
+                  next();
+              });
+              // return false;
             donothing_animation_diagramm = true;
           }
         }
@@ -99,9 +101,6 @@ $(document).ready(function () {
             console.log('Dagrams!');
             /*Circle diagrams*/
             $("#circle1").circliful({
-              animationStep: 5,
-              foregroundBorderWidth: 13,
-              backgroundBorderWidth: 13,
               percent: 58
             });
             $("#circle2").circliful({
