@@ -31,8 +31,10 @@ body {
   a {
     color: $java;
     transition: 1s;
+    outline: 0;
     &:hover, &:focus {
       color: $java;
+      outline: 0;
     }
     &.more {
       text-transform: uppercase;
@@ -81,12 +83,12 @@ body {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     border: 1px solid $java;
-    padding: 10px 30px;
+    padding: 15px 30px;
     cursor: pointer;
     display: inline-block;
     &:hover {
       background: $java;
-      color: black;
+      color: white;
       text-decoration: none;
     }
   }

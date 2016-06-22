@@ -7463,8 +7463,8 @@ section {
 }
 @media (min-width: 992px) {
   section {
-    padding-bottom: 8rem;
-    padding-top: 8rem;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
   }
 }
 section#first {
@@ -7501,6 +7501,9 @@ section#first h1 p:last-child {
     font-size: 6.5rem;
   }
 }
+section#recent_works {
+  background: #060a0e;
+}
 section#recent_works li {
   position: relative;
   transition: 1s;
@@ -7531,9 +7534,12 @@ section#recent_works li .recent_hover span {
 section#introduce #services .col-xs-12 {
   display: none;
   overflow: hidden;
-  height: 245px;
+  height: 270px;
   margin-bottom: 40px;
-  line-height: 22px;
+  line-height: 24px;
+}
+section#introduce #services .col-xs-12 h3 {
+  margin-bottom: 1.5rem;
 }
 section#introduce #services .col-xs-12 .circle {
   display: inline-block;
@@ -7543,6 +7549,7 @@ section#introduce #services .col-xs-12 .circle {
   border-radius: 50%;
   font-size: 55px;
   background-color: #20b7a3;
+  margin-bottom: 10px;
 }
 section#introduce #services .col-xs-12 .circle a {
   color: #fff;
@@ -7569,6 +7576,9 @@ section#best_sellers .product-item hr {
 section#best_sellers .product-item .name {
   margin: 0;
   padding: 10px 0 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
 }
 section#best_sellers .product-item .stars {
   color: #ffef69;
@@ -7624,28 +7634,35 @@ section#become_member {
 }
 section#become_member h2 {
   margin: 0;
+  font-weight: 300;
+}
+section#become_member p {
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 section#become_member .fa-money {
   font-size: 75px;
+  line-height: 65px;
 }
 section#become_member.green {
   background: #20b7a3;
-  border-bottom: 1px solid #149d8b;
+  border: 1px solid #149d8b;
   color: white;
   position: relative;
 }
 section#become_member.green:before {
   content: '';
   position: absolute;
-  top: -8px;
+  top: -7px;
   left: 50%;
   z-index: 200;
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
   border-bottom: 8px solid #20b7a3;
-  margin-left: -15px;
+  margin-left: -16px;
 }
 section#become_member.green button#hide-green-block {
   position: absolute;
@@ -7664,17 +7681,38 @@ section#become_member.green button#hide-green-block span {
   font-size: 10px;
   top: 5px;
 }
-section#become_member .col-sm-2 {
+section#become_member .col-md-2 {
   text-align: center;
   padding-top: 4px;
   padding-bottom: 4px;
   margin-bottom: 20px;
+  position: relative;
 }
-@media (min-width: 768px) {
-  section#become_member .col-sm-2 {
-    border-right: 1px solid white;
-    text-align: right;
+section#become_member .col-md-10 {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  section#become_member .col-md-2 {
     margin-bottom: 0;
+  }
+  section#become_member .col-md-2:after {
+    content: '';
+    display: block;
+    background: white;
+    margin-bottom: 0;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 8px;
+    top: 0;
+  }
+  section#become_member .col-md-10 {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  section#become_member .col-md-2:after {
+    right: 15px;
   }
 }
 section#mobile_application {
@@ -7942,7 +7980,7 @@ section#recent_post .read_blog:hover {
   }
 }
 section#project_info .menu {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 section#project_info .menu a {
   display: block;
@@ -7961,42 +7999,12 @@ section#project_info .menu a:hover, section#project_info .menu a.active {
 @media (min-width: 768px) {
   section#project_info .menu a {
     display: inline;
+    margin-bottom: 60px;
   }
 }
 section#project_info .project_progress, section#project_info .project_progress_v2 {
   height: 356px;
   position: relative;
-}
-section#project_info .project_progress .project_progress_bar, section#project_info .project_progress_v2 .project_progress_bar {
-  width: 14%;
-  height: 5px;
-  opacity: 0;
-  background: #20b7a3;
-  position: absolute;
-  top: 170px;
-  left: 0;
-}
-section#project_info .project_progress .project_progress_bar:after, section#project_info .project_progress_v2 .project_progress_bar:after {
-  content: '';
-  height: 20px;
-  width: 20px;
-  background: #20b7a3;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: -7px;
-  right: 0;
-}
-section#project_info .project_progress .project_progress_bar:before, section#project_info .project_progress_v2 .project_progress_bar:before {
-  content: '';
-  height: 20px;
-  width: 20px;
-  background: #20b7a3;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: -7px;
-  left: 0;
 }
 section#project_info .project_progress .project_step, section#project_info .project_progress_v2 .project_step {
   position: absolute;
@@ -8158,6 +8166,133 @@ section#project_info .project_progress_v2 .project_step .date {
 }
 section#project_info .project_progress_v2 .project_step .name {
   color: white;
+}
+section#project_info .project_progress_mobile {
+  position: relative;
+  height: 600px;
+  width: 320px;
+  margin: 0 auto;
+}
+section#project_info .project_progress_mobile .vertical_axis {
+  position: absolute;
+  background: #20b7a3;
+  height: 100%;
+  width: 5px;
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+  display: block;
+  border: none;
+}
+section#project_info .project_progress_mobile .vertical_axis:after {
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: #20b7a3;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+}
+section#project_info .project_progress_mobile .vertical_axis:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: #20b7a3;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+}
+section#project_info .project_progress_mobile .project_step {
+  border: 1px solid green;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 200;
+  text-align: right;
+  background-repeat: no-repeat !important;
+  background-position: 90% -10% !important;
+  padding-right: 40%;
+  padding-top: 16px;
+}
+section#project_info .project_progress_mobile .project_step .date {
+  background: #20b7a3;
+  font-size: 10px;
+  color: #060a0e;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-left: 2rem;
+  position: relative;
+}
+section#project_info .project_progress_mobile .project_step .date:after {
+  content: '';
+  display: block;
+  background: url('../images/pro_info_bullet_m.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 7px;
+  width: 20px;
+  height: 8px;
+  right: -20px;
+}
+section#project_info .project_progress_mobile .project_step .name {
+  color: white;
+  display: inline-block;
+}
+section#project_info .project_progress_mobile .project_step.step1 {
+  top: 5.7%;
+  background: url('../images/project_step1.png');
+}
+section#project_info .project_progress_mobile .project_step.step2 {
+  top: 21.4%;
+  background: url('../images/project_step2.png');
+}
+section#project_info .project_progress_mobile .project_step.step3 {
+  top: 37.1%;
+  background: url('../images/project_step3.png');
+}
+section#project_info .project_progress_mobile .project_step.step4 {
+  top: 52.8%;
+  background: url('../images/project_step4.png');
+}
+section#project_info .project_progress_mobile .project_step.step5 {
+  top: 68.5%;
+  background: url('../images/project_step5.png');
+}
+section#project_info .project_progress_mobile .project_step.step6 {
+  top: 84.2%;
+  background: url('../images/project_step6.png');
+}
+section#project_info .project_progress_mobile .project_step:nth-child(2n) {
+  background-position: 0 100% !important;
+  text-align: left;
+  padding-left: 38%;
+  padding-right: 0;
+}
+section#project_info .project_progress_mobile .project_step:nth-child(2n) .date {
+  margin-left: 0;
+  margin-right: 2.5rem;
+}
+section#project_info .project_progress_mobile .project_step:nth-child(2n) .date:after {
+  transform: rotate(180deg);
+  right: auto;
+  left: -20px;
+}
+section#project_info .project_progress_mobile .project_step:nth-child(2n).step2 {
+  background-position: 8% 108% !important;
+}
+section#project_info .project_progress_mobile .project_step:nth-child(2n).step6 {
+  background-position: 12% 105% !important;
 }
 section#latest_news {
   background: #060a0e;
@@ -9402,9 +9537,11 @@ body {
 body a {
   color: #20b7a3;
   transition: 1s;
+  outline: 0;
 }
 body a:hover, body a:focus {
   color: #20b7a3;
+  outline: 0;
 }
 body a.more {
   text-transform: uppercase;
@@ -9454,13 +9591,13 @@ body .button-more, body a.button-more {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   border: 1px solid #20b7a3;
-  padding: 10px 30px;
+  padding: 15px 30px;
   cursor: pointer;
   display: inline-block;
 }
 body .button-more:hover, body a.button-more:hover {
   background: #20b7a3;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 body .green {

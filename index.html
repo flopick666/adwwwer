@@ -25,7 +25,7 @@
 	<!-- Earth -->
 
 	<!-- GLSL vertex shader for the moon -->
-  <script id="norm-vert-shader" type="x-shader/x-vertex">
+  <!-- <script id="norm-vert-shader" type="x-shader/x-vertex">
       attribute vec4 tangent;
 
       uniform vec2 uvScale;
@@ -52,10 +52,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
-  </script>
+  </script> -->
 
   <!-- GLSL fragment shader for the moon -->
-  <script id="norm-frag-shader" type="x-shader/x-fragment">
+  <!-- <script id="norm-frag-shader" type="x-shader/x-fragment">
       uniform sampler2D textureMap;
       uniform sampler2D normalMap;
 
@@ -78,11 +78,11 @@
       /** Final color is calculated with the lighting applied */
       gl_FragColor = texture2D(textureMap, vUv) * lighting;
       }
-  </script>
+  </script> -->
 
 
   <!--  Custom Shader Code for atmospheric glow  -->
-  <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
+  <!-- <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 viewVector;
       uniform float c;
       uniform float p;
@@ -95,10 +95,10 @@
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
-  </script>
+  </script> -->
 
   <!-- fragment shader a.k.a. pixel shader -->
-  <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
+  <!-- <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 glowColor;
       varying float intensity;
       void main()
@@ -106,7 +106,7 @@
       vec3 glow = glowColor * intensity;
       gl_FragColor = vec4( glow, 1.0 );
       }
-  </script>
+  </script> -->
 
 	<!-- wowjs -->
 	<script src="js/wow/wow.js"></script>
@@ -434,8 +434,8 @@
 	<section id="become_member" class="green">
 		<div class="container">
 			<div class="row">
-        <div class="col-xs-12 col-sm-2"><i class="fa fa-money wow rubberBand" data-wow-duration="2s" aria-hidden="true"></i></div>
-				<div class="col-xs-12 col-sm-10 wow fadeInRight" data-wow-duration="2s">
+        <div class="col-xs-12 col-md-2"><i class="fa fa-money wow rubberBand" data-wow-duration="2s" aria-hidden="true"></i></div>
+				<div class="col-xs-12 col-md-10 wow fadeInRight" data-wow-duration="2s">
 					<h2>save more up to 40%. become a member!</h2>
 					<p>One of the best program on the web for customers.</p>
 				</div>
@@ -582,8 +582,8 @@
 		        </div>
 
 		        <!-- Carousel Buttons Next/Prev -->
-		        <a data-slide="prev" href="#recent-post-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-		        <a data-slide="next" href="#recent-post-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+		        <a data-slide="prev" href="#recent-post-carousel" class="left carousel-control"><i class="fa fa-angle-left"></i></a>
+		        <a data-slide="next" href="#recent-post-carousel" class="right carousel-control"><i class="fa fa-angle-right"></i></a>
 		      </div>
 				</div>
 			</div>
@@ -591,13 +591,13 @@
 	</section>
 	<!--End Section Recent Post-->
 	<!-- Section project info-->
-	<section id="project_info" class="animation-element hidden-xs">
+	<section id="project_info" class="animation-element">
 		<div class="container">
 			<div class="row">
         <div class="col-xs-12">
 					<h2 class="text-center wow zoomIn" data-wow-duration="2s">project info</h2>
 					<p class="text-center menu"><a href="#" class="active">timeline</a><a href="#">responsive</a><a href="#">application</a></p>
-					<div class="project_progress_v2">
+					<div class="project_progress_v2 hidden-xs">
 						<div class="project_step step1 wow fadeInUp" data-wow-duration="2s">
 							<div class="date">Apr, 2015</div>
 							<div class="name">Diagramm</div>
@@ -623,6 +623,33 @@
 							<div class="date">Sep, 2015</div>
 						</div>
 						<hr class=" wow bounceIn" data-wow-duration="2s"/>
+					</div>
+					<div class="project_progress_mobile visible-xs">
+						<div class="project_step step1 wow fadeInLeft" data-wow-duration="2s">
+							<div class="name">Diagramm</div>
+							<div class="date">Apr, 2015</div>
+						</div>
+						<div class="project_step step2 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.3s">
+							<div class="date">May, 2015</div>
+							<div class="name">Clients</div>
+						</div>
+						<div class="project_step step3 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="name">Rating</div>
+							<div class="date">Jun, 2015</div>
+						</div>
+						<div class="project_step step4 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.9s">
+							<div class="date">Jul, 2015</div>
+							<div class="name">World Map</div>
+						</div>
+						<div class="project_step step5 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1.2s">
+							<div class="name">Graph</div>
+							<div class="date">Aug, 2015</div>
+						</div>
+						<div class="project_step step6 wow fadeInRight" data-wow-duration="2s" data-wow-delay="1.5s">
+							<div class="date">Sep, 2015</div>
+							<div class="name">Comparing</div>
+						</div>
+						<div class="vertical_axis wow bounceIn" data-wow-duration="2s"/></div>
 					</div>
 				</div>
 			</div>
