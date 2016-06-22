@@ -7981,12 +7981,15 @@ section#recent_post .read_blog:hover {
 }
 section#project_info .menu {
   margin-bottom: 20px;
+  overflow: hidden;
 }
 section#project_info .menu a {
   display: block;
+  float: left;
   background: #060a0e;
   border: 1px solid #161616;
-  padding: 10px 50px;
+  padding: 10px 0;
+  width: 33%;
   color: #9B9B9B;
   text-transform: uppercase;
 }
@@ -7999,7 +8002,9 @@ section#project_info .menu a:hover, section#project_info .menu a.active {
 @media (min-width: 768px) {
   section#project_info .menu a {
     display: inline;
+    width: auto;
     margin-bottom: 60px;
+    padding: 10px 50px;
   }
 }
 section#project_info .project_progress, section#project_info .project_progress_v2 {
@@ -8207,7 +8212,6 @@ section#project_info .project_progress_mobile .vertical_axis:before {
   left: -7px;
 }
 section#project_info .project_progress_mobile .project_step {
-  border: 1px solid green;
   position: absolute;
   left: 0;
   width: 100%;

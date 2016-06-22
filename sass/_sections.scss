@@ -524,11 +524,14 @@ section {
   &#project_info {
     .menu {
       margin-bottom: 20px;
+      overflow: hidden;
       a {
         display: block;
+        float: left;
         background: $ebony;
         border: 1px solid $cod_gray;
-        padding: 10px 50px;
+        padding: 10px 0;
+        width: 33%;
         color: $dusty_gray;
         text-transform: uppercase;
         &:hover, &.active {
@@ -539,7 +542,9 @@ section {
         }
         @media (min-width: $screen-sm) {
           display: inline;
+          width: auto;
           margin-bottom: 60px;
+          padding: 10px 50px;
         }
       }
     }
@@ -747,7 +752,6 @@ section {
         }
       }
       .project_step {
-        border: 1px solid green;
         position: absolute;
         left: 0;
         width: 100%;
