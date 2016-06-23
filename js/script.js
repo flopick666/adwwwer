@@ -41,26 +41,16 @@ $(document).ready(function () {
           }
         }
 
-        if (donothing_recentwork == false ) {
-          if ($('#recent_works').hasClass('in-view')) {
-            console.log('recent_works!');
-            /*recent post*/
-            // http://sachinchoolur.github.io/lightslider/
-
-            donothing_recentwork = true;
-          }
-        }
-
-        if (donothing_recentpost == false ) {
-          if ($('#recent_post').hasClass('in-view')) {
-            console.log('recent_post!');
-            $('#recent-post-carousel').carousel({
-              pauseOnHover: true,
-              interval: 5000,
-            });
-            donothing_recentpost = true;
-          }
-        }
+        // if (donothing_recentpost == false ) {
+        //   if ($('#recent_post').hasClass('in-view')) {
+        //     console.log('recent_post!');
+        //     $('#recent-post-carousel').carousel({
+        //       pauseOnHover: true,
+        //       interval: 5000,
+        //     });
+        //     donothing_recentpost = true;
+        //   }
+        // }
 
         if (donothing_latestnews == false ) {
           if ($('#latest_news').hasClass('in-view')) {
@@ -140,7 +130,7 @@ $(document).ready(function () {
     $( "#hide-green-block" ).click(function() {
       $( "#become_member" ).slideUp( "slow");
     });
-    /*recent_post*/
+    /*recent_works*/
     $("#content-slider").lightSlider({
         loop:true,
         keyPress:true,
@@ -149,28 +139,39 @@ $(document).ready(function () {
         slideMove: 1, // slidemove will be 1 if loop is true
         slideMargin: 0,
         responsive : [
-            {
-                breakpoint:992,
-                settings: {
-                    item:4,
-                    slideMove:1,
-                    slideMargin:6,
-                  }
-            },
-            {
-                breakpoint:768,
-                settings: {
-                    item:2,
-                    slideMove:1
-                  }
-            },
-            {
-                breakpoint:640,
-                settings: {
-                    item:1,
-                    slideMove:1
-                  }
+          {
+            breakpoint:992,
+            settings: {
+              item:3,
+              slideMove:1,
+              slideMargin:6,
             }
+          },
+          {
+            breakpoint:768,
+            settings: {
+              item:2,
+              slideMove:1
+            }
+          },
+          {
+            breakpoint:640,
+            settings: {
+              item:1,
+              slideMove:1
+            }
+          }
         ]
+    });
+    /*recent_post*/
+    $("#recent_post-slider").lightSlider({
+        loop:true,
+        // auto: true,
+        speed: 2000,
+        pause: 10000,
+        item: 1,
+        autoWidth: false,
+        slideMove: 1, // slidemove will be 1 if loop is true
+        slideMargin: 5
     });
 });

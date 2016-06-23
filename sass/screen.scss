@@ -1,22 +1,9 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/images";
-
 @import "bootstrap/stylesheets/_bootstrap.scss";
 @import "variables.scss";
-@import "tabs.scss";
-@import "sections.scss";
-@import "carousel.scss";
-@import "modal.scss";
-
-html {
-  box-sizing: border-box;
-}
+html { box-sizing: border-box;}
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -92,12 +79,12 @@ body {
       text-decoration: none;
     }
   }
-  .green {
-    color: $java;
-  }
-  .container {
-    margin: 0 auto;
-  }
+  .green { color: $java;}
+  .container { margin: 0 auto;}
   @import "header.scss";
+  @import "sections/sections.scss";
+  @import "tabs.scss";
+  @import "carousel.scss";
+  @import "modal.scss";
   @import "footer.scss";
 }

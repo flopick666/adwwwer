@@ -484,8 +484,41 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h2 class="text-center wow zoomIn" data-wow-duration="2s">Recent Post</h2>
+					<div>
+						<hr/>
+						<ul id="recent_post-slider" class="recent_post-slider">
+								<li>
+									<div class="row post">
+										<div class="col-xs-12 col-sm-4">
+											<img src="images/img1.jpg" alt="" class="img-responsive">
+										</div>
+										<div class="col-xs-12 col-sm-8">
+											<div class="head_post1">
+												<div class="icons">
+													<a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+													<a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+												</div>
+												<div class="data"><span class="date">23</span> <span class="year">Apr, 2015</span></div>
+												<h3 class="post_title">Claritas est etiam processus est usus legentis facit</h3>
+												<p class="post_tags"><a href="#">Wordpress</a> <a href="#">template</a> <a href="#">Hotnews</a> <a href="#">theme</a></p>
+											</div>
+											<div class="recent_content">
+												<p>Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et. </p>
+												<p>Liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit	- eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt. </p>
+											</div>
+											<p><a href="#" class="more">read more</a></p>
+										</div>
+									</div>
+								</li>
+								<li><a href="#"><img src="images/img2.jpg" alt="" class="img-responsive"></a></li>
+								<li><a href="#"><img src="images/img3.jpg" alt="" class="img-responsive"></a></li>
+								<li><a href="#"><img src="images/img4.jpg" alt="" class="img-responsive"></a></li>
+								<li><a href="#"><img src="images/img1.jpg" alt="" class="img-responsive"></a></li>
+								<li><a href="#"><img src="images/img5.jpg" alt="" class="img-responsive"></a></li>
+						</ul>
+					</div>
 
-					<div class="carousel slide" data-ride="carousel" id="recent-post-carousel">
+					<div class="carousel slide" data-ride="carousel" id="recent-post-carousel" style="display: none;">
 						<hr/>
 		        <!-- Carousel Slides / Quotes -->
 		        <div class="carousel-inner">
@@ -1084,7 +1117,7 @@
 	</section>
 	<!--End Section Contact info-->
 	<!-- Section Underfooter-->
-	<section id="underfooter">
+	<section id="abovefooter">
 		<div class="container">
 			<div class="row">
         <div class="col-xs-12 col-sm-6 site-about wow fadeInLeftBig" data-wow-duration="1s">
@@ -1109,13 +1142,14 @@
 					<form action="" method="post">
 						<div class="form-group">
 								<div class="input-group">
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-									<button type="submit" class="form-control"><span class="input-group-addon glyphicon glyphicon-envelope"></span></button>
+									<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email"/>
+									<button type="submit" class="form-control"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
 								</div>
 						</div>
 					</form>
 				</div>
 				<div class="col-xs-12 col-sm-6 wow fadeInRightBig" data-wow-duration="1s">
+					<div class="row">
 					<div class="col-md-6">
 						<blockquote class="twitter-tweet" data-lang="ru">
 							<p lang="en" dir="ltr">
@@ -1125,7 +1159,6 @@
 								<a href="https://twitter.com/hashtag/super?src=hash">#super</a>
 								<a href="https://twitter.com/hashtag/annoying?src=hash">#annoying</a>
 								😩 Sticking to one or two per Tweet is a good call 😀</p>&mdash; Twitter Support (@Support)
-
 						</blockquote>
 						<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
@@ -1136,6 +1169,7 @@
 						<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
 						<a href="#"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
 						<a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+					</div>
 					</div>
 				</div>
 			</div>
