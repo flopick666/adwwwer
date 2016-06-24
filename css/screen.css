@@ -9044,9 +9044,6 @@ body section#video_upload .video iframe {
     text-align: left;
   }
 }
-body section#sign_up {
-  padding: 35px 0;
-}
 body section#sign_up h3 {
   margin-top: 0;
   text-align: center;
@@ -9059,7 +9056,6 @@ body section#sign_up.green {
 }
 body section#sign_up .col-lg-8 .input-group {
   margin-bottom: 2rem;
-  margin-right: 3rem;
   border: 1px solid #c7c7c7;
   border-radius: 2px;
   overflow: hidden;
@@ -9078,6 +9074,7 @@ body section#sign_up .col-lg-8 .input-group input {
   vertical-align: middle;
 }
 body section#sign_up .col-lg-8 button {
+  width: 100%;
   background: none;
   border: none;
   padding: 0;
@@ -9096,14 +9093,22 @@ body section#sign_up .col-lg-8 button .button-more:hover {
   body section#sign_up .col-lg-8 button {
     display: inline-table;
     vertical-align: middle;
+    width: auto;
   }
 }
 @media (min-width: 768px) {
   body section#sign_up h3 {
-    line-height: 5rem;
+    margin-bottom: 4rem;
   }
   body section#sign_up .col-lg-8 .input-group {
     margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  body section#sign_up h3 {
+    margin-bottom: 0;
+    line-height: 5rem;
   }
 }
 body section#choose_your_plan .plan {
