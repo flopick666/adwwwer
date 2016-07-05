@@ -229,6 +229,7 @@
       max-width: 970px;
       .row.post {
         margin-bottom: 7rem;
+        height: 280px;
         .col-sm-4 {
           height: auto;
         }
@@ -276,6 +277,7 @@
     @media (min-width: $screen-lg) {
       max-width: 1170px;
       .row.post {
+        height: 360px;
         .col-sm-8 {
           .recent_content {
             height: 218px;
