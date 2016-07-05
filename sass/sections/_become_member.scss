@@ -1,0 +1,89 @@
+&#become_member {
+  padding: 35px 0;
+  margin-bottom: 50px;
+  h2 {
+    margin: 0;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+  .fa-money {
+    font-size: 75px;
+    line-height: 65px;
+  }
+  &.green {
+    background: $java;
+    border: 1px solid $mountain_meadow;
+    color: white;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      z-index: 200;
+      width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 8px solid $java;
+      margin-left: -16px;
+    }
+    button#hide-green-block {
+      position: absolute;
+      bottom:-27px;
+      left: 50%;
+      background: $mountain_meadow;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      font-size: 11px;
+      padding: 5px 10px;
+      margin-left: -70px;
+      span {
+        vertical-align: super;
+        font-size: 10px;
+        top: 5px;
+      }
+    }
+  }
+  .col-md-2 {
+    text-align: center;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .col-md-10 {
+    text-align: center;
+  }
+  @media (min-width: $screen-md) {
+    .col-md-2 {
+      margin-bottom: 0;
+      &:after {
+        content: '';
+        display: block;
+        background: white;
+        margin-bottom: 0;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        right: 8px;
+        top: 0;
+      }
+    }
+    .col-md-10 {
+      text-align: left;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    .col-md-2 {
+      &:after {
+        right: 15px;
+      }
+    }
+  }
+}

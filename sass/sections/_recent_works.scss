@@ -1,0 +1,71 @@
+&#recent_works {
+  background: $ebony;
+  .owl-controls {
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    margin: 0;
+    div {
+      opacity: 1;
+      font-family: FontAwesome;
+      text-indent: -9999px;
+      background: none;
+      font-size: 6rem;
+      line-height: 3.6rem;
+      color: $java;
+      position: relative;
+    }
+    .owl-prev {
+      float: left;
+      &:before {
+        position: absolute;
+        display: block;
+        content: '\f104';
+        left: 0;
+        text-indent: 0;
+      }
+    }
+    .owl-next {
+      float: right;
+      &:before {
+        position: absolute;
+        display: block;
+        content: '\f105';
+        left: 0;
+        text-indent: 0;
+      }
+    }
+  }
+  .item {
+    position: relative;
+    transition: 1s;
+    img {
+      width: 100%;
+    }
+    .recent_hover {
+      display: none;
+      background: rgba(32,183,163,0.95);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      padding-top: 20%;
+      text-align: center;
+      font-size: 2rem;
+      i, span {
+        display: block;
+      }
+      i {
+        font-size: 4rem;
+        margin: 20px 0;
+      }
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

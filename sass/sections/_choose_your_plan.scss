@@ -1,0 +1,57 @@
+&#choose_your_plan {
+  .plan {
+    background: $ebony;
+    border: 1px solid $cod_gray;
+    padding: 30px 30px;
+    height: 430px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: 1s;
+    .price {
+      font-size: 70px;
+      color: $java;
+      font-weight: 200;
+      transition: 1s;
+    }
+    .name {
+      font-size: 20px;
+      color: white;
+    }
+    .date {
+      margin-bottom: 20px;
+    }
+    hr {
+      border-color: $cape_cod;
+      transition: 1s;
+    }
+    ul li{
+      padding-bottom: 10px;
+      .glyphicon {
+        margin-right: 10px;
+      }
+      .glyphicon-ok {
+        color: $java;
+        transition: 1s;
+      }
+    }
+    .button-more { display: block;}
+    /*green active state + hover*/
+    &.best, &:hover {
+      background: $java;
+      color: white;
+      hr { border-color: white;}
+      .price { color: white;}
+      ul li{
+        .glyphicon-ok { color: white;}
+      }
+      .button-more {
+        border-color: white;
+        color: white;
+        &:hover {
+          background: white;
+          color: $java;
+        }
+      }
+    }
+  }
+}

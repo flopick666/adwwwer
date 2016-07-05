@@ -1,0 +1,11 @@
+&#diagrams {
+  text-align: center;
+  @media (min-width: $screen-md) {
+    .col-xs-6 {
+      border-left: 1px solid $cape_cod;
+      &:last-child {
+        border-right: 1px solid $cape_cod;
+      }
+    }
+  }
+}

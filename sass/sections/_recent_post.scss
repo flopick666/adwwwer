@@ -1,0 +1,287 @@
+&#recent_post {
+  background: image-url('recent_post.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 0;
+  .lSAction > a { top: 5%;}
+  #owl-recent-post {
+    margin: 0 auto;
+    .row.post {
+      padding: 0 15px;
+      .col-sm-4 {
+        height: 140px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        img {
+          width: 100%;
+          position: relative;
+          top: -50%;
+        }
+      }
+      .col-sm-8 {
+        .head_post1 {
+          h3 { clear: both; padding: 10px 0;}
+          .post_tags {
+            text-transform: uppercase;
+            a {
+              margin-right: 5px;
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+                color: white;
+              }
+            }
+          }
+          .icons {
+            float: right;
+            font-size: 1.8rem;
+            a {
+              display: inline-block;
+              border-radius: 50%;
+              border: 1px solid $mountain_meadow;
+              text-align: center;
+              margin-left: 1rem;
+              width: 4rem;
+              padding: 1rem;
+              line-height: 1.6rem;
+              &:hover {
+                color: white;
+                border-color: white;
+              }
+            }
+          }
+          .data {
+            float: left;
+            padding-top: 0.8rem;
+            span {
+              display: inline-block;
+              vertical-align: top;
+              font-family: 'Roboto', sans-serif;
+              line-height: 26px;
+              &.date {
+                font-weight: 900;
+                font-size: 36px;
+                color: $mountain_meadow;
+              }
+              &.year {
+                height: 26px;
+                width: 65px;
+                text-align: center;
+                color: black;
+                background: $mountain_meadow;
+                font-size: 9px;
+              }
+            }
+          }
+        }
+        .recent_content {
+          line-height: 24px;
+          height: 76px;
+          overflow: hidden;
+          position: relative;
+        }
+      }
+    }
+    .author {
+      overflow: hidden;
+      .author_photo {
+        float: left;
+      }
+      h3.author_name {
+        padding: 0 15px;
+        font-size: 2.4rem;
+      }
+      .post_author_statistic {
+        background: $ebony;
+        padding: 15px;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        p {
+          margin: 0 4%;
+          display: inline-block;
+          span {
+            display: block;
+            position: relative;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: 1px solid $abbey;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            &:before, &:after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent;
+              border-bottom: 0;
+            }
+            &:before {
+              bottom: -8px;
+              left: 30px;
+              border-top-color: $abbey;
+              border-width: 7px;
+            }
+            &:after {
+              bottom: -7px;
+              left: 29px;
+              border-top-color: $ebony;
+              border-width: 8px;
+            }
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .read_blog {
+        background: $java;
+        display: block;
+        height: 75px;
+        line-height: 75px;
+        color: white;
+        font-family: 'Maven Pro', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        .fa-file-text {
+          height: 75px;
+          float: left;
+          line-height: 75px;
+          background: $mountain_meadow;
+          width: 75px;
+          text-align: center;
+          font-size: 25px;
+        }
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+    }
+    @media (min-width: $screen-sm) {
+      max-width: 750px;
+      .row.post {
+        .col-sm-4 {
+          img {
+            position: static;
+          }
+        }
+      }
+      .author {
+        .post_author_statistic {
+          float: left;
+          width: 70%;
+          text-align: left;
+          p {
+            margin: 0;
+            padding-right: 10px;
+            span {
+              display: inline-block;
+              margin-bottom: 0;
+              margin-right: 15px;
+              &:after,
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 100%;
+                width: 0;
+                height: 0;
+                border-style: solid;
+              }
+              &:after {
+                top: 16px;
+                border-color: transparent transparent transparent $ebony;
+                border-width: 10px;
+              }
+              &:before {
+                top: 15px;
+                border-color: transparent transparent transparent $abbey;
+                border-width: 11px;
+              }
+            }
+          }
+        }
+        .read_blog {
+          float: right;
+          width: 30%;
+          height: 80px;
+          line-height: 80px;
+          .fa-file-text {
+            height: 80px;
+            line-height: 80px;
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-md) {
+      max-width: 970px;
+      .row.post {
+        margin-bottom: 7rem;
+        .col-sm-4 {
+          height: auto;
+        }
+        .col-sm-8 {
+          .head_post1 {
+            margin-bottom: 10px;
+            overflow: hidden;
+            .icons {
+              padding-top: 10px;
+              font-size: 2.5rem;
+              a { width: 5rem;}
+            }
+            h3 {
+             clear: none;
+             padding-top: 0;
+             margin: 15px 0 0;
+            }
+            .data {
+             text-align: center;
+             margin-right: 3rem;
+             span {
+                display: block;
+                &.date {
+                 margin-bottom: 10px;
+                }
+              }
+            }
+          }
+          .recent_content {
+            height: 135px;
+          }
+        }
+      }
+      .author {
+        padding: 0 15px;
+        .post_overview {
+          overflow: hidden;
+          h3 {
+            line-height: 75px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 1170px;
+      .row.post {
+        .col-sm-8 {
+          .recent_content {
+            height: 218px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+section {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  @media (min-width: $screen-sm) {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+  @media (min-width: $screen-md) {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+  @import "sections/earth_mobile.scss";
+  @import "sections/first.scss";
+  @import "sections/introduce.scss";
+  @import "sections/recent_works.scss";
+  @import "sections/best_sellers.scss";
+  @import "sections/become_member.scss";
+  @import "sections/mobile_application.scss";
+  @import "sections/recent_post.scss";
+  @import "sections/project_info.scss";
+  @import "sections/latest_news.scss";
+  @import "sections/client_opinion.scss";
+  @import "sections/animated_sales.scss";
+  @import "sections/diagrams.scss";
+  @import "sections/video_upload.scss";
+  @import "sections/sign_up.scss";
+  @import "sections/choose_your_plan.scss";
+  @import "sections/contact_info.scss";
+  @import "sections/abovefooter.scss";
+  &#recent_post,
+  &#latest_news {
+    hr {
+      border-color: $cape_cod;
+      margin: 0 4rem 2rem;
+      @media (min-width: $screen-sm) {
+        margin: 0 4rem 6rem;
+      }
+    }
+    .owl-controls {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      text-align: left;
+      overflow: hidden;
+      div {
+        opacity: 1;
+        font-family: FontAwesome;
+        text-indent: -9999px;
+        background: none;
+        font-size: 6rem;
+        line-height: 3.6rem;
+        color: $java;
+        position: relative;
+      }
+      .owl-prev {
+        float: left;
+        &:before {
+          position: absolute;
+          display: block;
+          content: '\f104';
+          left: 0;
+          text-indent: 0;
+        }
+      }
+      .owl-next {
+        float: right;
+        &:before {
+          position: absolute;
+          display: block;
+          content: '\f105';
+          left: 0;
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}

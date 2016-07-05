@@ -1,0 +1,43 @@
+&#mobile_top {
+  background: url(../img/space/starfield/right.png);
+  #earth_mobile {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: url(http://flatplanet.sourceforge.net/maps/images/PathfinderMap.jpg) 0 0 repeat;
+    border-radius: 50%;
+    background-size: 630px;
+    animation: rotate 20s linear infinite;
+    transition: transform 200ms linear;
+    transform-style: preserve-3d;
+    box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+    color: #000;
+  }
+  @keyframes rotate {
+    0% {background-position: 0 0;}
+    100% {background-position: 630px 0;}
+  }
+  h1 {
+    color: $java;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    span {
+      color: white;
+    }
+    p:last-child {
+      font-size: 5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  @media (min-width: $screen-md) {
+    h1 {
+      font-size: 5rem;
+      p:last-child {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}

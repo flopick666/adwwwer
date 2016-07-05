@@ -1,0 +1,21 @@
+&#mobile_application {
+  background: black;
+  ul {
+    li {
+      margin-bottom: 20px;
+      i.fa-check-circle {
+        color: $java;
+        font-size: 40px;
+      }
+      &.active {
+        color: white;
+        i.fa-check-circle {
+          color: black;
+          background: $java;
+          border: 1px solid $java;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
