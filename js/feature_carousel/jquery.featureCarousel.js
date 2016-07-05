@@ -729,10 +729,10 @@
     // numbered blips can appear and be used to track the currently centered feature, as well as
     // allow the user to click a number to move to that feature. Set to false to not process these at all
     // and true to process and display them
-    trackerIndividual:    true,
+    trackerIndividual:    false,
     // a summation of the features can also be used to display an "x Of y" style of tracking
     // this can be combined with the above option as well
-    trackerSummation:     true,
+    trackerSummation:     false,
     // true to preload all images in the carousel before displaying anything. If this is set to false,
     // you will probably need to set a fixed width/height to prevent strangeness
     preload:              true,

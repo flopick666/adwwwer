@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // try to do somth with scroll
+    // try to do somth with scroll
     var $animation_elements = $('.animation-element');
     var $window = $(window);
     var donothing_introduce = false;
@@ -27,52 +27,6 @@ $(document).ready(function () {
           $element.addClass('in-view');
         } else {
           $element.removeClass('in-view');
-        }
-
-        if (donothing_introduce == false ) {
-          if ($('#introduce').hasClass('in-view')) {
-            console.log('introduce!');
-            /*jquery.featureCarousel*/
-            var carousel = $("#carousel").featureCarousel({
-              trackerSummation: false,
-              trackerIndividual: false
-            });
-            donothing_introduce = true;
-          }
-        }
-
-        // if (donothing_recentpost == false ) {
-        //   if ($('#recent_post').hasClass('in-view')) {
-        //     console.log('recent_post!');
-        //     $('#recent-post-carousel').carousel({
-        //       pauseOnHover: true,
-        //       interval: 5000,
-        //     });
-        //     donothing_recentpost = true;
-        //   }
-        // }
-
-        if (donothing_latestnews == false ) {
-          if ($('#latest_news').hasClass('in-view')) {
-            console.log('latestnews!');
-            $('#news-carousel').carousel({
-              pauseOnHover: true,
-              interval: 5000,
-            });
-            donothing_latestnews = true;
-          }
-        }
-
-        if (donothing_client_opinion == false ) {
-          if ($('#client_opinion').hasClass('in-view')) {
-            console.log('donothing_client_opinion!');
-            //Set the carousel options
-            $('#quote-carousel').carousel({
-              pauseOnHover: true,
-              interval: 2000,
-            });
-            donothing_client_opinion = true;
-          }
         }
 
         if (donothing_animation_diagramm == false ) {
@@ -107,71 +61,122 @@ $(document).ready(function () {
         }
       });
     }
-
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
 
-    // Load the first 4 list items from another HTML file
-    //$('#myList').load('externalList.html li:lt(3)');
+    // Load the first 4 list items for Services Section
     $('#services .col-xs-12:lt(4)').show();
-
     var items =  8;
     var shown =  4;
     $('#loadMore').click(function () {
-
-        shown = $('#services .col-xs-12:visible').size()+4;
-        if(shown< items) {$('#services .col-xs-12:lt('+shown+')').show();}
-        else {$('#services .col-xs-12:lt('+items+')').show();
-             $('#loadMore').hide();
-             }
+      shown = $('#services .col-xs-12:visible').size()+4;
+      if (shown < items) {
+        $('#services .col-xs-12:lt('+shown+')').show();
+      }
+      else {
+        $('#services .col-xs-12:lt('+items+')').show();
+        $('#loadMore').hide();
+      }
     });
 
-    /*hide green block*/
+    /*Hide Become a member block*/
     $( "#hide-green-block" ).click(function() {
       $( "#become_member" ).slideUp( "slow");
     });
-    /*recent_works*/
-    $("#content-slider").lightSlider({
-        loop:true,
-        keyPress:true,
-        item: 5,
-        autoWidth: false,
-        slideMove: 1, // slidemove will be 1 if loop is true
-        slideMargin: 0,
-        responsive : [
-          {
-            breakpoint:992,
-            settings: {
-              item:3,
-              slideMove:1,
-              slideMargin:6,
-            }
-          },
-          {
-            breakpoint:768,
-            settings: {
-              item:2,
-              slideMove:1
-            }
-          },
-          {
-            breakpoint:640,
-            settings: {
-              item:1,
-              slideMove:1
-            }
-          }
-        ]
+
+    // Feature Carousel for introduce section
+    $("#introduce-carousel").featureCarousel({
+
     });
-    /*recent_post*/
-    $("#recent_post-slider").lightSlider({
-        loop:true,
-        // auto: true,
-        speed: 2000,
-        pause: 10000,
-        item: 1,
-        autoWidth: false,
-        slideMove: 1, // slidemove will be 1 if loop is true
-        slideMargin: 5
+
+    //Clent Option section Carousel
+    $("#owl-clients").owlCarousel({
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+      items : 1, //5 items above 1000px browser width
+      itemsDesktop : [1000,1],
+      itemsDesktopSmall : [960,1], // betweem 900px and 601px
+      itemsTablet: [600,1],
+      itemsMobile : [320,1],
+      navigation : false,
+      rewindNav : true,
+      scrollPerPage : false,
+      pagination : false
     });
+
+    //Latest News section Carousel
+    $("#owl-latest-news").owlCarousel({
+      autoPlay: 100000, //Set AutoPlay to 3 seconds
+      items : 3,
+      itemsDesktop : [1000,3],
+      itemsDesktopSmall : [960,2], // betweem 900px and 601px
+      itemsTablet: [610,1],
+      itemsMobile : [320,1],
+      navigation : true,
+      navigationText : ["prev","next"],
+      rewindNav : true,
+      scrollPerPage : false,
+      pagination : false
+    });
+
+    //Recent Post section Carousel
+    $("#owl-recent-post").owlCarousel({
+      autoPlay: 5000, //Set AutoPlay to 3 seconds
+      items : 1, //5 items above 1000px browser width
+      itemsDesktop : [1000,1],
+      itemsDesktopSmall : [960,1], // betweem 900px and 601px
+      itemsTablet: [600,1],
+      itemsMobile : [320,1],
+      navigation : true,
+      navigationText : ["prev","next"],
+      rewindNav : true,
+      scrollPerPage : false,
+      pagination : false
+    });
+
+    //Recebt Work section Carousel
+    $("#owl-recent-work").owlCarousel({
+      autoPlay: 7500, //Set AutoPlay to 3 seconds
+      items : 5, //5 items above 1000px browser width
+      itemsDesktop : [1000,5], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // betweem 900px and 601px
+      itemsTablet: [600,2], //2 items between 600 and 0
+      itemsMobile : [320,1], // itemsMobile disabled - inherit from itemsTablet option
+      navigation : true,
+      navigationText : ["prev","next"],
+      rewindNav : true,
+      scrollPerPage : false,
+      pagination : false
+    });
+
+    // Custom Navigation Events
+    $(".next").click(function(){
+      owl.trigger('owl.next');
+    })
+    $(".prev").click(function(){
+      owl.trigger('owl.prev');
+    })
+    $(".play").click(function(){
+      owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+    })
+    $(".stop").click(function(){
+      owl.trigger('owl.stop');
+    })
+
+    // Video upload section animation
+    function nextState(){
+      var timelineItems = $('.timeline__item');
+      var emptyItems = timelineItems.filter('.timeline__item--empty');
+      var next = emptyItems.first();
+      var delay = 2000;
+      if(next && next.length){
+        next.removeClass('timeline__item--empty');
+        if(emptyItems.length === 1){
+          delay = 5000;
+        }
+      } else {
+        timelineItems.addClass('timeline__item--empty');
+      }
+      setTimeout(nextState, delay);
+    }
+    nextState();
 });

@@ -81,10 +81,30 @@ body {
   }
   .green { color: $java;}
   .container { margin: 0 auto;}
+  #earth .earth-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      color: $java;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 5rem;
+      span {
+        color: white;
+      }
+      p:last-child {
+        font-size: 6.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
   @import "header.scss";
   @import "sections/sections.scss";
   @import "tabs.scss";
-  @import "carousel.scss";
   @import "modal.scss";
   @import "footer.scss";
 }
