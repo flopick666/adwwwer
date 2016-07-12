@@ -7541,49 +7541,33 @@ body #header nav.navbar .navbar-brand {
   font-family: 'Montserrat', sans-serif;
   line-height: 20px;
 }
-@media (min-width: 768px) {
-  body #header nav.navbar .navbar-brand {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
 body #header nav.navbar .navbar-brand:hover {
   color: #20b7a3;
 }
 body #header nav.navbar .navbar-brand img {
   display: inline-block;
 }
-body #header nav.navbar ul#main-menu {
-  text-transform: uppercase;
-}
-body #header nav.navbar ul#main-menu a, body #header nav.navbar ul#main-menu a:focus {
-  position: relative;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0 5px;
-  line-height: 20px;
+body #header nav.navbar #navbar-collapse-1 ul li {
   text-align: center;
 }
-@media (min-width: 768px) {
-  body #header nav.navbar ul#main-menu a, body #header nav.navbar ul#main-menu a:focus {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+body #header nav.navbar #navbar-collapse-1 ul li a {
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  line-height: 20px;
 }
-@media (min-width: 992px) {
-  body #header nav.navbar ul#main-menu a, body #header nav.navbar ul#main-menu a:focus {
-    margin: 0 15px;
-  }
+body #header nav.navbar #navbar-collapse-1 ul#main-menu li {
+  text-transform: uppercase;
 }
-body #header nav.navbar ul#main-menu a:hover, body #header nav.navbar ul#main-menu a:focus:hover {
+body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:hover, body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:focus:hover {
   color: #20b7a3;
 }
-body #header nav.navbar ul#main-menu a:hover:before, body #header nav.navbar ul#main-menu a:focus:hover:before {
+body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:hover:before, body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:focus:hover:before {
   left: 0;
   height: 2px;
   width: 100%;
 }
-body #header nav.navbar ul#main-menu a:before, body #header nav.navbar ul#main-menu a:focus:before {
+body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:before, body #header nav.navbar #navbar-collapse-1 ul#main-menu li a:focus:before {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -7593,89 +7577,76 @@ body #header nav.navbar ul#main-menu a:before, body #header nav.navbar ul#main-m
   background-color: #20b7a3;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-body #header nav.navbar ul#login {
-  color: #20b7a3;
-  text-align: center;
+body #header nav.navbar #navbar-collapse-1 ul#login {
+  background: #20b7a3;
 }
-body #header nav.navbar ul#login li {
-  display: inline-block;
-  float: none;
+body #header nav.navbar #navbar-collapse-1 ul#login li {
+  display: block;
+  width: 50%;
+  float: left;
 }
-body #header nav.navbar ul#login li a {
-  color: #20b7a3;
+body #header nav.navbar #navbar-collapse-1 ul#login li a {
+  color: white;
   font-family: 'Roboto', sans-serif;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 0 5px;
-  line-height: 20px;
+}
+body #header nav.navbar #navbar-collapse-1 ul#login li a:hover {
+  color: #20b7a3;
+  background: white;
+}
+body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
+  margin-right: 15px;
 }
 @media (min-width: 768px) {
-  body #header nav.navbar ul#login li a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  body #header nav.navbar #navbar-collapse-1 {
+    float: right;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul {
+    float: left !important;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul li {
+    padding-left: 10px;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul li a {
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 30px;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul#login {
+    margin-left: 10px;
+    background: none;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul#login li {
+    width: auto;
+    text-align: center;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul#login li a {
+    color: #20b7a3;
+    font-family: 'Roboto', sans-serif;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul#login li a:hover {
+    color: white;
+    background: none;
   }
 }
 @media (min-width: 992px) {
-  body #header nav.navbar ul#login li a {
-    margin: 0 15px;
+  body #header nav.navbar #navbar-collapse-1 ul li {
+    padding-left: 30px;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul li a {
+    line-height: 60px;
+  }
+  body #header nav.navbar #navbar-collapse-1 ul#login {
+    margin-left: 30px;
   }
 }
-body #header nav.navbar ul#login li a:hover {
-  color: white;
-}
-@media (min-width: 768px) {
-  body #header nav.navbar ul#login li {
-    display: block;
-    float: left;
+@media (min-width: 992px) {
+  body #header nav.navbar {
+    height: 80px;
+    line-height: 80px;
   }
-}
-body #header #earth {
-  position: relative;
-  height: 777px;
-  width: 100%;
-  background: url('../img/earth.jpg');
-  background-color: #000000;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-body #header #earth .earth-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color: #20b7a3;
-}
-body #header #earth .earth-content h1 {
-  color: #20b7a3;
-  font-family: 'Roboto', sans-serif;
-  font-size: 5rem;
-  font-weight: 500;
-  margin-top: 0;
-  line-height: 8rem;
-  margin-bottom: 7rem;
-}
-body #header #earth .earth-content h1 span {
-  color: white;
-}
-body #header #earth .earth-content h1 p:last-child {
-  font-size: 6.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-body #header #earth .earth-content h2, body #header #earth .earth-content h3 {
-  font-size: 65px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-body #header #earth .earth-content h3 {
-  font-size: 50px;
-  text-transform: none;
-  color: #fff;
+  body #header nav.navbar .navbar-header {
+    padding-top: 10px;
+  }
 }
 body section {
   padding-bottom: 2rem;
@@ -7694,9 +7665,14 @@ body section {
   }
 }
 body section#mobile_top {
-  background: url(../img/space/starfield/right.png);
+  background: url('../img/mobile_back.jpg');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
 }
 body section#mobile_top #earth_mobile {
+  display: none;
   position: relative;
   width: 300px;
   height: 300px;
@@ -7718,25 +7694,32 @@ body section#mobile_top #earth_mobile {
     background-position: 630px 0;
   }
 }
-body section#mobile_top h1 {
+body section#mobile_top .container h1 {
   color: #20b7a3;
   font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 500;
 }
-body section#mobile_top h1 span {
+body section#mobile_top .container h1 span {
   color: white;
 }
-body section#mobile_top h1 p:last-child {
+body section#mobile_top .container h1 p:first-child {
+  margin-bottom: 30px;
+}
+body section#mobile_top .container h1 p:last-child {
   font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
+body section#mobile_top .container a.arrow_down {
+  display: inline-block;
+  cursor: pointer;
+}
 @media (min-width: 992px) {
-  body section#mobile_top h1 {
+  body section#mobile_top .container h1 {
     font-size: 5rem;
   }
-  body section#mobile_top h1 p:last-child {
+  body section#mobile_top .container h1 p:last-child {
     font-size: 6.5rem;
   }
 }
@@ -7744,15 +7727,15 @@ body section#first {
   background: url('../img/earth.jpg');
   background-position: 50% 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
 }
 body section#first h1 {
   color: #20b7a3;
   font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
-  font-weight: 300;
-  margin-top: 200px;
+  font-weight: 500;
+  margin-top: 20%;
 }
 body section#first h1 span {
   color: white;
@@ -7769,6 +7752,7 @@ body section#first h1 p:last-child {
   }
   body section#first h1 {
     font-size: 5rem;
+    margin-top: 200px;
   }
   body section#first h1 p:last-child {
     font-size: 6.5rem;
@@ -9941,6 +9925,9 @@ body section#abovefooter .social a {
 }
 body section#abovefooter .social a:hover {
   color: #20b7a3;
+}
+body section#introduce {
+  padding-top: 5rem;
 }
 body section#recent_post hr, body section#latest_news hr {
   border-color: #3c4b4b;

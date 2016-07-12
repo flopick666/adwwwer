@@ -2,14 +2,14 @@
   background: image-url('earth.jpg');
   background-position: 50% 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   h1 {
     color: $java;
     font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
-    font-weight: 300;
-    margin-top: 200px;
+    font-weight: 500;
+    margin-top: 20%;
     span {
       color: white;
     }
@@ -24,6 +24,7 @@
     height: 778px;
     h1 {
       font-size: 5rem;
+      margin-top: 200px;
       p:last-child {
         font-size: 6.5rem;
       }

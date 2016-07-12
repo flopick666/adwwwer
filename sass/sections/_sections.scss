@@ -9,7 +9,7 @@ section {
     padding-bottom: 6rem;
     padding-top: 6rem;
   }
-  @import "sections/earth_mobile.scss";
+  @import "sections/mobile_top.scss";
   @import "sections/first.scss";
   @import "sections/introduce.scss";
   @import "sections/recent_works.scss";
@@ -27,6 +27,9 @@ section {
   @import "sections/choose_your_plan.scss";
   @import "sections/contact_info.scss";
   @import "sections/abovefooter.scss";
+  &#introduce {
+    padding-top: 5rem;
+  }
   &#recent_post,
   &#latest_news {
     hr {
