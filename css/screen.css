@@ -8828,7 +8828,7 @@ body section#animated_sales #line_horizontal {
   bottom: 30%;
   height: 1px;
   width: 100%;
-  background: #20b7a3;
+  background: #1a8e80;
 }
 body section#animated_sales .line_vert {
   position: absolute;
@@ -8836,7 +8836,7 @@ body section#animated_sales .line_vert {
   bottom: 35px;
   height: 70%;
   width: 1px;
-  background: #20b7a3;
+  background: #1a8e80;
 }
 body section#animated_sales .line_vert:nth-child(2n) {
   bottom: auto;
@@ -8870,8 +8870,8 @@ body section#animated_sales .serv, body section#animated_sales .mon {
   position: absolute;
   width: 40px;
   height: 40px;
-  color: #20b7a3;
-  border: 1px solid #20b7a3;
+  color: #1a8e80;
+  border: 1px solid #1a8e80;
   border-radius: 50%;
   background: black;
   text-transform: uppercase;
@@ -8915,38 +8915,38 @@ body section#animated_sales .serv.serv4 {
   left: 80%;
 }
 body section#animated_sales .line, body section#animated_sales .line1, body section#animated_sales .line2, body section#animated_sales .line3, body section#animated_sales .line4, body section#animated_sales .line5, body section#animated_sales .line6, body section#animated_sales .line7 {
-  background: #20b7a3;
+  background: #1a8e80;
   width: 0px;
   height: 1px;
 }
 body section#animated_sales .running .line {
   transform: rotate(-57deg);
-  transform-origin: -108px -100px;
+  transform-origin: -108px -97px;
   animation: move 0.5s 1s linear forwards;
 }
 body section#animated_sales .running .line1 {
   transform: rotate(30deg);
-  transform-origin: 377px 40px;
+  transform-origin: 377px 34px;
   animation: move1 0.5s 1.5s linear forwards;
 }
 body section#animated_sales .running .line2 {
   transform: rotate(-70deg);
-  transform-origin: -70px -153px;
+  transform-origin: -70px -150px;
   animation: move2 0.5s 2s linear forwards;
 }
 body section#animated_sales .running .line3 {
   transform: rotate(305deg);
-  transform-origin: -183px -257px;
+  transform-origin: -182px -253px;
   animation: move3 0.5s 2.5s linear forwards;
 }
 body section#animated_sales .running .line4 {
   transform: rotate(77deg);
-  transform-origin: 273px -51px;
+  transform-origin: 268px -48px;
   animation: move4 0.5s 3s linear forwards;
 }
 body section#animated_sales .running .line5 {
   transform: rotate(-62deg);
-  transform-origin: -45px -250px;
+  transform-origin: -44px -245px;
   animation: move5 0.5s 3.5s linear forwards;
 }
 body section#animated_sales .running .line6 {
@@ -8956,7 +8956,7 @@ body section#animated_sales .running .line6 {
 }
 body section#animated_sales .running .line7 {
   transform: rotate(-74deg);
-  transform-origin: -7px -272px;
+  transform-origin: -11px -275px;
   animation: move7 0.5s 4.5s linear forwards;
 }
 body section#animated_sales .running .ball,
@@ -8968,9 +8968,9 @@ body section#animated_sales .running .ball5,
 body section#animated_sales .running .ball6,
 body section#animated_sales .running .ball7,
 body section#animated_sales .running .ball8 {
-  background-color: #20b7a3;
-  background-image: -moz-linear-gradient(90deg, #20b7a3 25%, #a0eaff);
-  background-image: -webkit-linear-gradient(90deg, #20b7a3 25%, #a0eaff);
+  background-color: #1a8e80;
+  background-image: -moz-linear-gradient(90deg, #1a8e80 25%, #a0eaff);
+  background-image: -webkit-linear-gradient(90deg, #1a8e80 25%, #a0eaff);
   width: 10px;
   height: 10px;
   border-radius: 50px;
@@ -9034,75 +9034,75 @@ body section#animated_sales .ball a:hover small, body section#animated_sales .ba
 }
 body section#animated_sales .ball {
   top: 69%;
-  left: 9.2%;
+  left: 8.5%;
 }
 body section#animated_sales .ball1 {
   top: 58%;
-  left: 19.2%;
+  left: 18.5%;
 }
 body section#animated_sales .ball2 {
   top: 62%;
-  left: 29.2%;
+  left: 28.5%;
 }
 body section#animated_sales .ball3 {
   top: 43%;
-  left: 39.2%;
+  left: 38.5%;
 }
 body section#animated_sales .ball4 {
   top: 33%;
-  left: 49.2%;
+  left: 48.5%;
 }
 body section#animated_sales .ball5 {
   top: 63%;
-  left: 59.2%;
+  left: 58.5%;
 }
 body section#animated_sales .ball6 {
   top: 50%;
-  left: 69.2%;
+  left: 68.5%;
 }
 body section#animated_sales .ball7 {
   top: 54%;
-  left: 79.2%;
+  left: 78.5%;
 }
 body section#animated_sales .ball8 {
   top: 30%;
-  left: 89.2%;
+  left: 88.5%;
 }
 body section#animated_sales .pulse {
   top: 69%;
-  left: 9%;
+  left: 8.2%;
 }
 body section#animated_sales .pulse1 {
   top: 58%;
-  left: 19%;
+  left: 18.2%;
 }
 body section#animated_sales .pulse2 {
   top: 62%;
-  left: 29%;
+  left: 28.2%;
 }
 body section#animated_sales .pulse3 {
   top: 43%;
-  left: 39%;
+  left: 38.2%;
 }
 body section#animated_sales .pulse4 {
   top: 33%;
-  left: 49%;
+  left: 48.2%;
 }
 body section#animated_sales .pulse5 {
   top: 63%;
-  left: 59%;
+  left: 58.2%;
 }
 body section#animated_sales .pulse6 {
   top: 50%;
-  left: 69%;
+  left: 68.2%;
 }
 body section#animated_sales .pulse7 {
   top: 54%;
-  left: 79%;
+  left: 78.2%;
 }
 body section#animated_sales .pulse8 {
   top: 30%;
-  left: 89%;
+  left: 88.2%;
 }
 body section#animated_sales #layerBall, body section#animated_sales #layerPulse {
   animation-delay: 1s;
@@ -9137,7 +9137,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 17%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move1 {
@@ -9146,7 +9145,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 10%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move2 {
@@ -9155,7 +9153,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 28%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move3 {
@@ -9164,7 +9161,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 15%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move4 {
@@ -9173,7 +9169,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 44%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move5 {
@@ -9181,8 +9176,7 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     width: 0px;
   }
   100% {
-    width: 18%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
+    width: 20%;
   }
 }
 @-webkit-keyframes move6 {
@@ -9191,7 +9185,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 10%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes move7 {
@@ -9200,7 +9193,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   100% {
     width: 36%;
-    box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
   }
 }
 @-webkit-keyframes point {
@@ -9245,6 +9237,115 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   100% {
     -webkit-transform: scale(1, 1);
     opacity: 1;
+  }
+}
+@media (max-width: 320px) {
+  body section#animated_sales {
+    /* ANIMATION */
+  }
+  body section#animated_sales .running .line {
+    transform: rotate(-60deg);
+    transform-origin: -100px -90px;
+    animation: move 0.5s 1s linear forwards;
+  }
+  body section#animated_sales .running .line1 {
+    transform: rotate(35deg);
+    transform-origin: 325px 5px;
+    animation: move1 0.5s 1.5s linear forwards;
+  }
+  body section#animated_sales .running .line2 {
+    transform: rotate(-72deg);
+    transform-origin: -70px -144px;
+    animation: move2 0.5s 2s linear forwards;
+  }
+  body section#animated_sales .running .line3 {
+    transform: rotate(300deg);
+    transform-origin: -162px -230px;
+    animation: move3 0.5s 2.5s linear forwards;
+  }
+  body section#animated_sales .running .line4 {
+    transform: rotate(78deg);
+    transform-origin: 257px -58px;
+    animation: move4 0.5s 3s linear forwards;
+  }
+  body section#animated_sales .running .line5 {
+    transform: rotate(-65deg);
+    transform-origin: -43px -221px;
+    animation: move5 0.5s 3.5s linear forwards;
+  }
+  body section#animated_sales .running .line6 {
+    transform: rotate(30deg);
+    transform-origin: 522px 275px;
+    animation: move6 0.5s 4s linear forwards;
+  }
+  body section#animated_sales .running .line7 {
+    transform: rotate(-76deg);
+    transform-origin: -18px -255px;
+    animation: move7 0.5s 4.5s linear forwards;
+  }
+  @-webkit-keyframes move {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 20%;
+    }
+  }
+  @-webkit-keyframes move1 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 10%;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 30%;
+    }
+  }
+  @-webkit-keyframes move3 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 17%;
+    }
+  }
+  @-webkit-keyframes move4 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 45%;
+    }
+  }
+  @-webkit-keyframes move5 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 21%;
+    }
+  }
+  @-webkit-keyframes move6 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 10%;
+    }
+  }
+  @-webkit-keyframes move7 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 37%;
+    }
   }
 }
 @media (min-width: 768px) {
