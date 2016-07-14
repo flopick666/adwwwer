@@ -190,4 +190,7 @@ $(document).ready(function () {
           }, 1000);
       }
     });
+
+    // Tabs responsive
+    $(".tabbable.responsive").resptabs();
 });

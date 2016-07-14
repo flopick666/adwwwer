@@ -2,7 +2,7 @@
   .product-item {
     position: relative;
     font-family: 'Maven Pro', sans-serif;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     @media (min-width: $screen-sm) {
       margin-bottom: 0;
     }
@@ -19,15 +19,16 @@
     .stars {
       color: $paris_daisy;
       float: left;
+      font-size: 20px;
       .fa {
-        line-height: 40px;
+        line-height: 20px;
       }
     }
     .reviews {
       float: right;
       border: 1px solid $cod_gray;
       position: relative;
-      line-height: 40px;
+      line-height: 26px;
       padding: 0 10px;
       font-size: 12px;
       &:after {

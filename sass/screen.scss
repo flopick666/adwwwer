@@ -19,7 +19,7 @@ body {
     color: $java;
     transition: 1s;
     outline: 0;
-    &:hover, &:focus {
+    &:hover, &:focus, &:active {
       color: $java;
       outline: 0;
     }
