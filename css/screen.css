@@ -9986,15 +9986,16 @@ body section#recent_post .owl-controls .owl-next:before, body section#latest_new
   text-indent: 0;
 }
 body .tabbable.responsive .nav-tabs {
-  border-bottom: 1px solid #161616;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: none;
 }
 body .tabbable.responsive .nav-tabs li {
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
   overflow: hidden;
+  border-bottom: none;
 }
 body .tabbable.responsive .nav-tabs li span.tab-control-spacer {
   float: left;
@@ -10024,7 +10025,7 @@ body .tabbable.responsive .nav-tabs li a {
   border: none;
   background: none;
   color: #9B9B9B;
-  border-top: 4px solid #161616;
+  border-top: 4px solid black;
 }
 body .tabbable.responsive .nav-tabs li a:hover {
   border-style: none;
@@ -10036,7 +10037,7 @@ body .tabbable.responsive .nav-tabs li a.tab-control {
   float: left;
   width: 36px;
   height: 36px;
-  margin-top: 4px;
+  margin-top: 16px;
   font-size: 56px;
   font-weight: 100;
   line-height: 26px;
@@ -10048,40 +10049,49 @@ body .tabbable.responsive .nav-tabs li a.tab-control.right {
   float: right;
 }
 body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
-  line-height: 6rem;
-  padding: 0 6rem;
+  line-height: 5rem;
+  padding: 0 5rem;
+}
+body .tabbable.responsive .nav-tabs li.active {
+  border-left: 1px solid #161616;
+  border-right: 1px solid #161616;
 }
 body .tabbable.responsive .nav-tabs li.active a[data-toggle="tab"] {
   border-top: 4px solid #20b7a3;
-  line-height: 6rem;
+  line-height: 5rem;
   background: #060a0e;
-  padding: 0 6rem;
-  border-left: 1px solid #161616;
-  border-right: 1px solid #161616;
 }
 body .tabbable.responsive .tab-content {
   background: #060a0e;
   border-left: 1px solid #161616;
   border-right: 1px solid #161616;
   border-bottom: 1px solid #161616;
+  border-top: 1px solid #161616;
   padding: 30px 20px 10px;
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   body .tabbable.responsive .nav-tabs {
-    height: 65px;
     overflow: hidden;
+    margin-bottom: -5px;
   }
   body .tabbable.responsive .nav-tabs li {
     width: auto;
     float: none;
+    display: inline-block !important;
+  }
+  body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
+    padding: 0 3rem;
   }
   body .tabbable.responsive .nav-tabs li.active {
     border-left: 1px solid #161616;
     border-right: 1px solid #161616;
+    border-bottom: 1px solid #060a0e;
   }
-  body .tabbable.responsive .nav-tabs li.active a[data-toggle="tab"] {
-    border: none;
+}
+@media (min-width: 992px) {
+  body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
+    padding: 0 5rem;
   }
 }
 @media (max-width: 767px) {
