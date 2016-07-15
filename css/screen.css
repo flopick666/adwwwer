@@ -7836,41 +7836,44 @@ body section#recent_works {
   background: #060a0e;
 }
 body section#recent_works .owl-controls {
-  position: absolute;
-  top: 43%;
-  width: 100%;
-  text-align: left;
   overflow: hidden;
   margin: 0;
 }
-body section#recent_works .owl-controls div {
+body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+  position: absolute;
+  top: 43%;
   opacity: 1;
   font-family: FontAwesome;
   text-indent: -9999px;
-  background: none;
-  font-size: 6rem;
+  width: 42px;
+  font-size: 4rem;
   line-height: 3.6rem;
   color: #20b7a3;
-  position: relative;
+  background: white;
+  transition: 1s;
+}
+body section#recent_works .owl-controls .owl-prev:hover, body section#recent_works .owl-controls .owl-next:hover {
+  color: white;
+  background: #20b7a3;
 }
 body section#recent_works .owl-controls .owl-prev {
-  float: left;
+  left: 0;
 }
 body section#recent_works .owl-controls .owl-prev:before {
   position: absolute;
   display: block;
   content: '\f104';
-  left: 0;
+  left: 12px;
   text-indent: 0;
 }
 body section#recent_works .owl-controls .owl-next {
-  float: right;
+  right: 0;
 }
 body section#recent_works .owl-controls .owl-next:before {
   position: absolute;
   display: block;
   content: '\f105';
-  left: 0;
+  right: 12px;
   text-indent: 0;
 }
 body section#recent_works .item {
