@@ -16,8 +16,6 @@
         margin-top: 4px;
         font-size: 56px;
         font-weight: 100;
-        line-height: 26px;
-        color: #fff;
         text-align: center;
         background: #444;
         border-radius: 18px;
@@ -42,20 +40,22 @@
           border-style: none;
           background-color: transparent;
           border-top: 4px solid $java;
-
         }
         &.tab-control {
           background: none;
           float: left;
           width: 36px;
           height: 36px;
-          margin-top: 16px;
+          margin-top: 10px;
           font-size: 56px;
           font-weight: 100;
-          line-height: 26px;
+          line-height: 30px;
           color: $java;
           text-align: center;
           border-radius: 18px;
+          &:hover {
+            background: $java!important;
+          }
           &.right {
             float: right;
           }
@@ -68,6 +68,10 @@
       &.active {
         border-left: 1px solid $cod_gray;
         border-right: 1px solid $cod_gray;
+        @media (max-width: $screen-sm) {
+          border-left: 0;
+          border-right: 0;
+        }
         a[data-toggle="tab"] {
           border-top: 4px solid $java;
           line-height: 5rem;

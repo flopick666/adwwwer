@@ -25,6 +25,7 @@
           h3 { clear: both; padding: 10px 0;}
           .post_tags {
             text-transform: uppercase;
+            font-size: 12px;
             a {
               margin-right: 5px;
               text-decoration: underline;
@@ -69,6 +70,7 @@
                 height: 26px;
                 width: 65px;
                 text-align: center;
+                text-transform: uppercase;
                 color: black;
                 background: $mountain_meadow;
                 font-size: 9px;
@@ -81,6 +83,9 @@
           height: 76px;
           overflow: hidden;
           position: relative;
+          p {
+            margin-bottom: 30px;
+          }
         }
       }
     }
@@ -239,8 +244,8 @@
             overflow: hidden;
             .icons {
               padding-top: 10px;
-              font-size: 2.5rem;
-              a { width: 5rem;}
+              font-size: 2rem;
+              a { width: 4.5rem;}
             }
             h3 {
              clear: none;
@@ -259,7 +264,7 @@
             }
           }
           .recent_content {
-            height: 135px;
+            height: 100px;
           }
         }
       }
@@ -280,7 +285,7 @@
         height: 360px;
         .col-sm-8 {
           .recent_content {
-            height: 218px;
+            height: 200px;
           }
         }
       }

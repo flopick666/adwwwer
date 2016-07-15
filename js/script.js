@@ -97,7 +97,7 @@ $(document).ready(function () {
       itemsDesktopSmall : [960,1], // betweem 900px and 601px
       itemsTablet: [600,1],
       itemsMobile : [320,1],
-      navigation : false,
+      navigation : true,
       rewindNav : true,
       scrollPerPage : false,
       pagination : false
