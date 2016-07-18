@@ -57,6 +57,10 @@ body {
       margin: 0 0 4rem 0;
       font-size: 4rem;
     }
+    @media (min-width: $screen-md) {
+      margin: 0 0 6rem 0;
+      font-size: 4rem;
+    }
   }
   h3 {
     font-family: 'Roboto', sans-serif;
