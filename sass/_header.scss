@@ -35,43 +35,90 @@
       }
     }
     #navbar-collapse-1 {
+      max-height: none;
       ul {
+        text-transform: uppercase;
         li {
-          text-align: center;
           a {
             margin: 0;
-            padding: 10px;
+            padding: 10px 30px;
             position: relative;
             line-height: 20px;
+            color: $silver_chalice;
+            &:before {
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              content: "";
+              height: 2px;
+              width: 0%;
+              background-color: #20b7a3;
+              transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            &:hover, &.active {
+              color: $java;
+              &:before {
+                left: 0;
+                height: 2px;
+                width: 100%;
+              }
+            }
           }
-        }
-        &#main-menu {
-          li {
-            text-transform: uppercase;
-            a, a:focus {
-              &:hover {
+          &.dropdown {
+            > a.dropdown-toggle {
+              background: none;
+              &:after {
+                display:block;
+                content:"\f105";
+                font-family: FontAwesome;
+                font-size: 1rem;
+                float:right;
+                &:hover {
+                  color: $java;
+                }
+              }
+            }
+            .dropdown-menu {
+              background: $cod_gray;
+              padding-left: 30px;
+              text-transform: none;
+              border: none;
+              border-radius: 0;
+              .dropdown-submenu {
+                position:relative;
+                > .dropdown-menu {
+                  top:0;
+                  left:100%;
+                }
+                &:hover > a:after {border-left-color:#555;}
+                &.pull-left{
+                  float:none;
+                  > .dropdown-menu {
+                    left:-100%;
+                    margin-left:10px;
+                  }
+                }
+              }
+            }
+            &.open {
+              > a.dropdown-toggle {
                 color: $java;
                 &:before {
                   left: 0;
                   height: 2px;
                   width: 100%;
                 }
-              }
-              &:before {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                content: "";
-                height: 2px;
-                width: 0%;
-                background-color: #20b7a3;
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                &:after {
+                  content:"\f107";
+                  color: $java;
+                }
               }
             }
           }
         }
         &#login {
           background: $java;
+          text-align: center;
           li {
             display: block;
             width: 50%;
@@ -92,14 +139,49 @@
       }
       @media (min-width: $screen-sm) {
         float: right;
-        ul {
+        > ul {
           float: left!important;
-          li {
+          > li {
             padding-left:10px;
-            a {
+            > a {
               padding-left: 5px;
               padding-right: 5px;
               line-height: 30px;
+            }
+            &.dropdown {
+              > a.dropdown-toggle {
+                &:after {
+                  display:none;
+                }
+              }
+              a {
+                padding: 10px 20px;
+                &:hover {
+                  background: none;
+                }
+              }
+              .dropdown-menu {
+                padding: 0;
+                right: auto;
+                left: 0;
+                background: $ebony;
+                .dropdown-menu {
+                  margin-left: 1px;
+                }
+              }
+              .dropdown {
+                &.open {
+                  > a.dropdown-toggle {
+                    &:before {
+                      display: none;
+                    }
+                    &:after {
+                      content:"\f105";
+                      color: $java;
+                    }
+                  }
+                }
+              }
             }
           }
           &#login {
@@ -121,10 +203,10 @@
         }
       }
       @media (min-width: $screen-md) {
-        ul {
-          li {
+        > ul {
+          > li {
             padding-left: 30px;
-            a {
+            > a {
               line-height: 60px;
             }
           }

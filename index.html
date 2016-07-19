@@ -18,6 +18,7 @@
 	<script src="https://use.fontawesome.com/4063b2e06c.js"></script>
 	<!--js-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></scr‌​ipt>
 	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
 
 	<!-- wowjs -->
@@ -66,12 +67,31 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
 					<ul id="main-menu" class="nav navbar-nav navbar-right">
-						<li><a href="#">HOME</a></li>
-						<li><a href="#">about</a></li>
-						<li><a href="#">features</a></li>
-						<li><a href="#">prices</a></li>
-						<li><a href="#">contacts</a></li>
-						<li><a href="#">extra</a></li>
+						<li><a href="#first">Home</a></li>
+						<li><a href="#introduce">about</a></li>
+						<li><a href="#best_sellers">shop</a></li>
+						<li><a href="#recent_post">blog</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">extras</a>
+							<ul class="dropdown-menu">
+		            <li><a href="#services">Services</a></li>
+		            <li><a href="#recent_works">Works</a></li>
+		            <!-- <li><a href="#">Mobile App</a></li> -->
+		            <!--  <li role="separator" class="divider"></li>-->
+		            <li class="dropdown dropdown-submenu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Projects</a>
+									<ul class="dropdown-menu">
+										<li><a href="#project_info">Project</a></li>
+										<li><a href="#animated_sales">Infographic</a></li>
+										<li><a href="#video_upload">Step-by-Step</a></li>
+									</ul>
+								</li>
+								<li><a href="#latest_news">News</a></li>
+								<li><a href="#client_opinion">Testimonials</a></li>
+								<li><a href="#choose_your_plan">Prices</a></li>
+		          </ul>
+						</li>
+						<li><a href="#contact_info">contacts</a></li>
 					</ul>
 					<ul id="login" class="secondary-menu nav navbar-nav navbar-right">
 						<li><a href="#" data-toggle="modal" data-target="#myModalHorizontal"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
@@ -151,10 +171,7 @@
 	<section id="mobile_top" class="visible-xs" >
 		<div id="earth_mobile"></div>
 		<div class="container">
-      <h1 class="text-center">
-        <p><span class="white">Quick and amazing</p>
-        <p>Reimagine <span class="white">what's</span> possible</p>
-      </h1>
+			<h1 class="text-center"><span class="white">Quick and amazing</span><br/> Reimagine <span class="white">what's</span> possible</h1>
       <p class="text-center"><a class="button-more" href="#introduce">get started</a></p>
 			<p class="text-center"><a class="arrow_down" href="#introduce"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a></p>
     </div>
@@ -162,10 +179,7 @@
 	<!-- Section Earth -->
   <section id="first" class="hidden-xs">
     <div class="container">
-      <h1 class="text-center">
-        <p><span class="white">Quick and amazing</p>
-        <p>Reimagine <span class="white">what's</span> possible</p>
-      </h1>
+      <h1 class="text-center"><span class="white">Quick and amazing</span><br/> Reimagine <span class="white">what's</span> possible</h1>
       <p class="text-center"><a class="button-more" href="#introduce">get started</a></p>
     </div>
   </section>

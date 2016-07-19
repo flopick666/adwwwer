@@ -1,17 +1,10 @@
 section {
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  &#introduce {
-    padding-top: 5rem;
-  }
-  @media (min-width: $screen-sm) {
-    padding-bottom: 4rem;
-    padding-top: 4rem;
-  }
+  padding-bottom: 5rem;
+  padding-top: 5rem;
   @media (min-width: $screen-md) {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
-    &#introduce {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+    &#introduce, &#first {
       padding-top: 8rem;
     }
   }
