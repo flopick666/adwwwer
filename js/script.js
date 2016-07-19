@@ -220,24 +220,26 @@ $(document).ready(function () {
     
     if ( false === $.browser.mobile ) {
         
-        var webgl = $('#webgl');
+        $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
+        
+        var webgl = $('#earth');
 
         $(window).scroll(function(){
             if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
                 webgl.detach();
-                $('#first').show();
+                $('#load_animation').show();
             }
         });
 
         $('#show_webgl_button').on('click', function(e){
             e.preventDefault();
             showAnimation();
+            $('#load_animation').hide();
         });
 
         function showAnimation()
         {
-            webgl.appendTo('#webgl_section');
-            $('#first').hide();
+            webgl.appendTo('#webgl');
             return false;
         }
     }
