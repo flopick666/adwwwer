@@ -16,7 +16,7 @@
     bottom: 30%;
     height: 1px;
     width: 100%;
-    background: $java;
+    background: $elm;
   }
   .line_vert {
     position: absolute;
@@ -24,7 +24,7 @@
     bottom: 35px;
     height: 70%;
     width: 1px;
-    background: $java;
+    background: $elm;
     &:nth-child(2n) {
       bottom: auto;
       top: 35px;
@@ -58,8 +58,8 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    color: $java;
-    border: 1px solid $java;
+    color: $elm;
+    border: 1px solid $elm;
     border-radius: 50%;
     background: black;
     text-transform: uppercase;
@@ -85,39 +85,39 @@
     &.serv4 {left: 80%;}
   }
   .line, .line1, .line2, .line3, .line4, .line5, .line6, .line7 {
-    background:#20b7a3;
+    background: $elm;
     width:0px;
     height:1px;
   }
 
   .running .line {
     transform:rotate(-57deg);
-    transform-origin: -108px -100px;
+    transform-origin: -108px -97px;
     animation:move 0.5s 1s linear forwards;
   }
   .running .line1 {
     transform:rotate(30deg);
-    transform-origin: 377px 40px;
+    transform-origin: 377px 34px;
     animation:move1 0.5s 1.5s linear forwards;
   }
   .running .line2 {
     transform:rotate(-70deg);
-    transform-origin: -70px -153px;
+    transform-origin: -70px -150px;
     animation:move2 0.5s 2s linear forwards;
   }
   .running .line3 {
     transform:rotate(305deg);
-    transform-origin: -183px -257px;
+    transform-origin: -182px -253px;
     animation:move3 0.5s 2.5s linear forwards;
   }
   .running .line4 {
     transform:rotate(77deg);
-    transform-origin: 273px -51px;
+    transform-origin: 268px -48px;
     animation:move4 0.5s 3s linear forwards;
   }
   .running .line5 {
     transform:rotate(-62deg);
-    transform-origin: -45px -250px;
+    transform-origin: -44px -245px;
     animation:move5 0.5s 3.5s linear forwards;
   }
   .running .line6 {
@@ -127,7 +127,7 @@
   }
   .running .line7 {
     transform:rotate(-74deg);
-    transform-origin: -7px -272px;
+    transform-origin: -11px -275px;
     animation:move7 0.5s 4.5s linear forwards;
   }
 
@@ -140,9 +140,9 @@
   .running  .ball6,
   .running  .ball7,
   .running  .ball8 {
-    background-color:#20b7a3;
-    background-image: -moz-linear-gradient(90deg, #20b7a3 25%, #a0eaff);
-    background-image: -webkit-linear-gradient(90deg, #20b7a3 25%, #a0eaff);
+    background-color: $elm;
+    background-image: -moz-linear-gradient(90deg, $elm 25%, #a0eaff);
+    background-image: -webkit-linear-gradient(90deg, $elm 25%, #a0eaff);
     width:10px;
     height:10px;
     border-radius:50px;
@@ -205,25 +205,25 @@
   }
 
   /* COORDINATE POINTS */
-  .ball  { top:69%; left:9.2%; }
-  .ball1 { top:58%; left:19.2%; }
-  .ball2 { top:62%; left:29.2%; }
-  .ball3 { top:43%; left:39.2%; }
-  .ball4 { top:33%; left:49.2%; }
-  .ball5 { top:63%; left:59.2%; }
-  .ball6 { top:50%; left:69.2%; }
-  .ball7 { top:54%; left:79.2%; }
-  .ball8 { top:30%; left:89.2%; }
+  .ball  { top:69%; left:8.9%; }
+  .ball1 { top:58%; left:18.9%; }
+  .ball2 { top:62%; left:28.9%; }
+  .ball3 { top:43%; left:38.9%; }
+  .ball4 { top:33%; left:48.9%; }
+  .ball5 { top:63%; left:58.9%; }
+  .ball6 { top:50%; left:68.9%; }
+  .ball7 { top:54%; left:78.9%; }
+  .ball8 { top:30%; left:88.9%; }
 
-  .pulse  { top:69%; left:9%; }
-  .pulse1 { top:58%; left:19%; }
-  .pulse2 { top:62%; left:29%; }
-  .pulse3 { top:43%; left:39%; }
-  .pulse4 { top:33%; left:49%; }
-  .pulse5 { top:63%; left:59%; }
-  .pulse6 { top:50%; left:69%; }
-  .pulse7 { top:54%; left:79%; }
-  .pulse8 { top:30%; left:89%; }
+  .pulse  { top:69%; left:8.2%; }
+  .pulse1 { top:58%; left:18.2%; }
+  .pulse2 { top:62%; left:28.2%; }
+  .pulse3 { top:43%; left:38.2%; }
+  .pulse4 { top:33%; left:48.2%; }
+  .pulse5 { top:63%; left:58.2%; }
+  .pulse6 { top:50%; left:68.2%; }
+  .pulse7 { top:54%; left:78.2%; }
+  .pulse8 { top:30%; left:88.2%; }
 
   /* CONTROL LAYER DELAY */
   #layerBall, #layerPulse   { animation-delay:1s; }
@@ -239,35 +239,35 @@
   /* ANIMATION */
   @-webkit-keyframes move {
     0%   { width:0px;}
-    100% { width:17%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:17%;}
   }
   @-webkit-keyframes move1 {
     0%   { width:0px;}
-    100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:10%;}
   }
   @-webkit-keyframes move2 {
     0%   { width:0px;}
-    100% { width:28%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:28%;}
   }
   @-webkit-keyframes move3 {
     0%   { width:0px;}
-    100% { width:15%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:15%;}
   }
   @-webkit-keyframes move4 {
     0%   { width:0px;}
-    100% { width:44%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:44%;}
   }
   @-webkit-keyframes move5 {
     0%   { width:0px;}
-    100% { width:18%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:20%;}
   }
   @-webkit-keyframes move6 {
     0%   { width:0px;}
-    100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:10%;}
   }
   @-webkit-keyframes move7 {
     0%   { width:0px;}
-    100% { width:36%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+    100% { width:36%;}
   }
 
   @-webkit-keyframes point {
@@ -285,6 +285,83 @@
     50% { -webkit-transform:scale(1.2,1.2); opacity:0.3; }
     75% { -webkit-transform:scale(0.9,0.9); opacity:0.7;}
     100%{ -webkit-transform:scale(1,1); opacity:1;}
+  }
+
+  //Start 6x iphone
+  @media (max-width: 320px) {
+    .running .line {
+      transform:rotate(-60deg);
+      transform-origin: -100px -90px;
+      animation:move 0.5s 1s linear forwards;
+    }
+    .running .line1 {
+      transform:rotate(35deg);
+      transform-origin: 325px 5px;
+      animation:move1 0.5s 1.5s linear forwards;
+    }
+    .running .line2 {
+      transform:rotate(-72deg);
+      transform-origin: -70px -144px;
+      animation:move2 0.5s 2s linear forwards;
+    }
+    .running .line3 {
+      transform:rotate(300deg);
+      transform-origin: -162px -230px;
+      animation:move3 0.5s 2.5s linear forwards;
+    }
+    .running .line4 {
+      transform:rotate(78deg);
+      transform-origin: 257px -58px;
+      animation:move4 0.5s 3s linear forwards;
+    }
+    .running .line5 {
+      transform:rotate(-65deg);
+      transform-origin: -43px -221px;
+      animation:move5 0.5s 3.5s linear forwards;
+    }
+    .running .line6 {
+      transform:rotate(30deg);
+      transform-origin: 522px 275px;
+      animation:move6 0.5s 4s linear forwards;
+    }
+    .running .line7 {
+      transform:rotate(-76deg);
+      transform-origin: -18px -255px;
+      animation:move7 0.5s 4.5s linear forwards;
+    }
+    /* ANIMATION */
+    @-webkit-keyframes move {
+      0%   { width:0px;}
+      100% { width:20%;}
+    }
+    @-webkit-keyframes move1 {
+      0%   { width:0px;}
+      100% { width:10%;}
+    }
+    @-webkit-keyframes move2 {
+      0%   { width:0px;}
+      100% { width:30%;}
+    }
+    @-webkit-keyframes move3 {
+      0%   { width:0px;}
+      100% { width:17%;}
+    }
+    @-webkit-keyframes move4 {
+      0%   { width:0px;}
+      100% { width:45%;}
+    }
+    @-webkit-keyframes move5 {
+      0%   { width:0px;}
+      100% { width:21%;}
+    }
+    @-webkit-keyframes move6 {
+      0%   { width:0px;}
+      100% { width:10%;}
+    }
+    @-webkit-keyframes move7 {
+      0%   { width:0px;}
+      100% { width:37%;}
+    }
   }
   //Start tablet here
   @media (min-width: $screen-sm) {

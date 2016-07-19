@@ -9,6 +9,56 @@
     height: 695px;
     overflow: hidden;
   }
+  .owl-controls {
+    overflow: hidden;
+    margin: 0;
+    .owl-prev, .owl-next {
+      opacity: 1;
+      font-family: FontAwesome;
+      text-indent: -9999px;
+      background: none;
+      font-size: 5rem;
+      line-height: 3.6rem;
+      color: white;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      top: 80px;
+      &:before {
+        position: absolute;
+        display: block;
+        text-indent: 0;
+        width: 18px;
+        height: 36px;
+      }
+    }
+    .owl-prev {
+      left: 15px;
+      &:before {
+        content: '\f104';
+        left: 0;
+      }
+    }
+    .owl-next {
+      right: 15px;
+      &:before {
+        content: '\f105';
+        right: 0;
+      }
+    }
+    @media (min-width: $screen-sm) {
+      .owl-prev, .owl-next {
+        font-size: 6rem;
+        top: 80px;
+      }
+      .owl-prev {
+        left: 30%;
+      }
+      .owl-next {
+        right: 30%;
+      }
+    }
+  }
   #quote-carousel {
     blockquote {
       border: none;
@@ -43,23 +93,23 @@
             margin: 30px auto;
           }
         }
-      }
-      &:before, &:after {
-        font-family: FontAwesome;
-        color: $java;
-        font-size: 50px;
-        font-weight: normal;
-        vertical-align: super;
-        position: absolute;
-        top: 195px;
-      }
-      &:before {
-        content: '\f10d';
-        left: 0;
-      }
-      &:after {
-        content: '\f10e';
-        right: 0;
+        &:before, &:after {
+          font-family: FontAwesome;
+          color: $java;
+          font-size: 50px;
+          font-weight: normal;
+          vertical-align: super;
+          position: absolute;
+          top: 195px;
+        }
+        &:before {
+          content: '\f10d';
+          left: 0;
+        }
+        &:after {
+          content: '\f10e';
+          right: 0;
+        }
       }
     }
   }

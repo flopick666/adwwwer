@@ -18,7 +18,8 @@
 	<script src="https://use.fontawesome.com/4063b2e06c.js"></script>
 	<!--js-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-	<!-- <script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script> -->
+	<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></scr‌​ipt>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
 
 	<!-- wowjs -->
 	<script type="text/javascript" src="js/wow/wow.js"></script>
@@ -154,12 +155,31 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
 					<ul id="main-menu" class="nav navbar-nav navbar-right">
-						<li><a href="#">HOME</a></li>
-						<li><a href="#">about</a></li>
-						<li><a href="#">features</a></li>
-						<li><a href="#">prices</a></li>
-						<li><a href="#">contacts</a></li>
-						<li><a href="#">extra</a></li>
+						<li><a href="#first">Home</a></li>
+						<li><a href="#introduce">about</a></li>
+						<li><a href="#best_sellers">shop</a></li>
+						<li><a href="#recent_post">blog</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">extras</a>
+							<ul class="dropdown-menu">
+		            <li><a href="#services">Services</a></li>
+		            <li><a href="#recent_works">Works</a></li>
+		            <!-- <li><a href="#">Mobile App</a></li> -->
+		            <!--  <li role="separator" class="divider"></li>-->
+		            <li class="dropdown dropdown-submenu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Projects</a>
+									<ul class="dropdown-menu">
+										<li><a href="#project_info">Project</a></li>
+										<li><a href="#animated_sales">Infographic</a></li>
+										<li><a href="#video_upload">Step-by-Step</a></li>
+									</ul>
+								</li>
+								<li><a href="#latest_news">News</a></li>
+								<li><a href="#client_opinion">Testimonials</a></li>
+								<li><a href="#choose_your_plan">Prices</a></li>
+		          </ul>
+						</li>
+						<li><a href="#contact_info">contacts</a></li>
 					</ul>
 					<ul id="login" class="secondary-menu nav navbar-nav navbar-right">
 						<li><a href="#" data-toggle="modal" data-target="#myModalHorizontal"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
@@ -239,11 +259,8 @@
 	<section id="mobile_top" class="visible-xs" >
 		<div id="earth_mobile"></div>
 		<div class="container">
-      <h1 class="text-center">
-        <p><span class="white">Quick and amazing</p>
-        <p>Reimagine <span class="white">what's</span> possible</p>
-      </h1>
-      <p class="text-center"><a class="button-more">get started</a></p>
+			<h1 class="text-center"><span class="white">Quick and amazing</span><br/> Reimagine <span class="white">what's</span> possible</h1>
+      <p class="text-center"><a class="button-more" href="#introduce">get started</a></p>
 			<p class="text-center"><a class="arrow_down" href="#introduce"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a></p>
     </div>
 	</section>
@@ -265,7 +282,7 @@
         <p>Reimagine <span class="white">what's</span> possible</p>
       </h1>
       <p class="text-center"><a class="button-more">get started</a></p>
-                <p class="text-center"><a id="show_webgl_button" class="button-more">show animation</a></p>
+      <p class="text-center"><a id="show_webgl_button" class="button-more">show animation</a></p>
     </div>
   </section>
 	<!-- Section Introduce-->
@@ -354,7 +371,6 @@
 	</section>
 	<!-- End Section Recent work-->
 	<!-- Section Best sellers-->
-
   <section id="best_sellers">
     <div class="container">
       <h2 class="text-center wow zoomIn" data-wow-duration="2s">best sellers</h2>
@@ -402,7 +418,7 @@
 											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img3.jpg' alt="" title="" /></p>
 											<p class="name">Marley Football - <span class="green">$174<sup>99</sup></span></p>
@@ -419,7 +435,7 @@
 											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img4.jpg' alt="" title="" /></p>
 											<p class="name">Super T-Shirt - <span class="green">$174<sup>99</sup></span></p>
@@ -581,7 +597,7 @@
 	</section>
 	<!--End Section Recent Post-->
 	<!-- Section project info-->
-	<section id="project_info" class="animation-element">
+	<section id="project_info" class="animation-element" style="display: none!important">
 		<div class="container">
 			<h2 class="text-center wow zoomIn" data-wow-duration="2s">project info</h2>
 			<div class="pills">
@@ -656,57 +672,55 @@
 	<!--End Section project info-->
 	<!-- Section Latest News-->
 	<section id="latest_news" class="animation-element">
-		<div class="container">
-			<h2 class="text-center wow zoomIn" data-wow-duration="2s">Latest News</h2>
-			<hr/>
-			<div id="owl-latest-news" class="owl-carousel">
-				<div class="item">
-					<div class="news-image"><img src="img/news_img.png" /></div>
-					<div class="date">23 <span>Apr, 2015</span></div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
-				<div class="item">
-					<div class="news-image"><img src="img/news_img2.png" /></div>
-					<div class="date">
-						14 <span>Apr, 2015</span>
-					</div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
-				<div class="item">
-					<div class="news-image"><img src="img/news_img3.png" /></div>
-					<div class="date">
-						31 <span>Apr, 2015</span>
-					</div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
-				<div class="item">
-					<div class="news-image"><img src="img/news_img.png" /></div>
-					<div class="date">23 <span>Apr, 2015</span></div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
-				<div class="item">
-					<div class="news-image"><img src="img/news_img2.png" /></div>
-					<div class="date">
-						14 <span>Apr, 2015</span>
-					</div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
-				<div class="item">
-					<div class="news-image"><img src="img/news_img3.png" /></div>
-					<div class="date">
-						31 <span>Apr, 2015</span>
-					</div>
-					<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
-					<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis</div>
-				</div>
+		<h2 class="text-center wow zoomIn" data-wow-duration="2s">Latest News</h2>
+		<div class="container"><hr/></div>
+		<div id="owl-latest-news" class="owl-carousel">
+			<div class="item">
+				<div class="news-image"><img src="img/news_img.png" /></div>
+				<div class="date">23 <span>Apr, 2015</span></div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna.</div>
 			</div>
-			<p class="text-center"><a href="#" class="button-more">Read all news</a></p>
+			<div class="item">
+				<div class="news-image"><img src="img/news_img2.png" /></div>
+				<div class="date">
+					14 <span>Apr, 2015</span>
+				</div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.</div>
+			</div>
+			<div class="item">
+				<div class="news-image"><img src="img/news_img3.png" /></div>
+				<div class="date">
+					31 <span>Apr, 2015</span>
+				</div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto.</div>
+			</div>
+			<div class="item">
+				<div class="news-image"><img src="img/news_img.png" /></div>
+				<div class="date">23 <span>Apr, 2015</span></div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis.</div>
+			</div>
+			<div class="item">
+				<div class="news-image"><img src="img/news_img2.png" /></div>
+				<div class="date">
+					14 <span>Apr, 2015</span>
+				</div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero.</div>
+			</div>
+			<div class="item">
+				<div class="news-image"><img src="img/news_img3.png" /></div>
+				<div class="date">
+					31 <span>Apr, 2015</span>
+				</div>
+				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<div class="description">Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit.</div>
+			</div>
 		</div>
+		<p class="text-center"><a href="#" class="button-more">Read all news</a></p>
 	</section>
 	<!--End Section project info-->
 	<!-- Section Client Opinion-->
@@ -912,7 +926,7 @@
 				</div>
 				<div class="col-xs-12 col-md-6 text-center">
 					<div class="video">
-						<iframe src="https://www.youtube.com/embed/YR5ApYxkU-U" frameborder="0" allowfullscreen></iframe>
+						<iframe src="https://www.youtube.com/embed/GK_iOhRhwV4" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -1062,13 +1076,8 @@
 					<div class="row">
 					<div class="col-md-6">
 						<blockquote class="twitter-tweet" data-lang="ru">
-							<p lang="en" dir="ltr">
-								<a href="https://twitter.com/Support/status/613308058094039043">june 23, 2015.</a><br/>
-								<a href="https://twitter.com/hashtag/Overusing?src=hash">#Overusing</a>
-								<a href="https://twitter.com/hashtag/hashtags?src=hash">#hashtags</a> can be
-								<a href="https://twitter.com/hashtag/super?src=hash">#super</a>
-								<a href="https://twitter.com/hashtag/annoying?src=hash">#annoying</a>
-								😩 Sticking to one or two per Tweet is a good call 😀</p>&mdash; Twitter Support (@Support)
+							<p><a href="#">about 7 hours ago</a></p>
+							<p>We'll give more new soon <br/><a href="#" class="white">http://themeforest</a></p>
 						</blockquote>
 						<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>

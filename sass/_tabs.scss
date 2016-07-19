@@ -1,13 +1,14 @@
 .tabbable.responsive {
   .nav-tabs {
-    border-bottom: 1px solid $cod_gray;
     text-transform: uppercase;
     text-align: center;
+    border-bottom: none;
     li {
       box-sizing: border-box;
       display: inline-block;
       width: 100%;
       overflow: hidden;
+      border-bottom: none;
       span.tab-control-spacer {
         float: left;
         width: 36px;
@@ -15,8 +16,6 @@
         margin-top: 4px;
         font-size: 56px;
         font-weight: 100;
-        line-height: 26px;
-        color: #fff;
         text-align: center;
         background: #444;
         border-radius: 18px;
@@ -36,43 +35,47 @@
         border: none;
         background: none;
         color: $dusty_gray;
-        border-top: 4px solid $cod_gray;
+        border-top: 4px solid black;
         &:hover {
           border-style: none;
           background-color: transparent;
           border-top: 4px solid $java;
-
         }
         &.tab-control {
           background: none;
           float: left;
           width: 36px;
           height: 36px;
-          margin-top: 4px;
+          margin-top: 10px;
           font-size: 56px;
           font-weight: 100;
-          line-height: 26px;
+          line-height: 30px;
           color: $java;
           text-align: center;
           border-radius: 18px;
+          &:hover {
+            background: $java!important;
+          }
           &.right {
             float: right;
           }
         }
       }
       a[data-toggle="tab"] {
-        line-height: 6rem;
-        padding: 0 6rem;
+        line-height: 5rem;
+        padding: 0 5rem;
       }
       &.active {
-
+        border-left: 1px solid $cod_gray;
+        border-right: 1px solid $cod_gray;
+        @media (max-width: $screen-sm) {
+          border-left: 0;
+          border-right: 0;
+        }
         a[data-toggle="tab"] {
           border-top: 4px solid $java;
-          line-height: 6rem;
+          line-height: 5rem;
           background: $ebony;
-          padding: 0 6rem;
-          border-left: 1px solid $cod_gray;
-          border-right: 1px solid $cod_gray;
         }
       }
     }
@@ -82,22 +85,34 @@
     border-left: 1px solid $cod_gray;
     border-right: 1px solid $cod_gray;
     border-bottom: 1px solid $cod_gray;
+    border-top: 1px solid $cod_gray;
     padding: 30px 20px 10px;
     margin-bottom: 30px;
   }
   @media (min-width: $screen-sm) {
     .nav-tabs {
-      height: 65px;
       overflow: hidden;
+        margin-bottom: -5px;
       li {
         width: auto;
         float: none;
+        display: inline-block!important;
+        a[data-toggle="tab"] {
+          padding: 0 3rem;
+        }
         &.active {
           border-left: 1px solid $cod_gray;
           border-right: 1px solid $cod_gray;
-          a[data-toggle="tab"] {
-            border: none;
-          }
+          border-bottom: 1px solid $ebony;
+        }
+      }
+    }
+  }
+  @media (min-width: $screen-md) {
+    .nav-tabs {
+      li {
+        a[data-toggle="tab"] {
+          padding: 0 5rem;
         }
       }
     }

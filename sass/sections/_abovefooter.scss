@@ -1,18 +1,14 @@
 &#abovefooter {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0;
+  line-height: 24px;
   h3 { margin: 0 0 20px 0;}
   .col-xs-12 { margin-bottom: 20px;}
-  // .row:first-child {
-  //   @media (min-width: $screen-sm) {
-  //     margin-bottom: 2rem;
-  //   }
-  // }
   .site-about {
     h3 { text-transform: uppercase;}
   }
   .newsletter {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     form {
       .form-group {
         margin-bottom: 0;
@@ -52,7 +48,6 @@
       }
     }
   }
-
   .twitter-tweet {
     border: none;
     padding: 0 0 0 100px;
@@ -62,6 +57,13 @@
     background-repeat: no-repeat;
     background-position: left center;
     min-height: 65px;
+    p { margin-bottom: 0}
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   .tags {
     a {
@@ -69,7 +71,7 @@
       display: inline-block;
       border: 1px solid $java;
       padding: 7px 15px;
-      margin: 0 5px 5px 0;
+      margin: 0 10px 15px 0;
       font-size: 14px;
       &:hover {
         color: black;
