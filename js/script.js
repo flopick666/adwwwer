@@ -193,4 +193,31 @@ $(document).ready(function () {
 
     // Tabs responsive
     $(".tabbable.responsive").resptabs();
+    
+    
+    // WebGl section
+    
+    if ( false === $.browser.mobile ) {
+        
+        var webgl = $('#webgl');
+
+        $(window).scroll(function(){
+            if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
+                webgl.detach();
+                $('#first').show();
+            }
+        });
+
+        $('#show_webgl_button').on('click', function(e){
+            e.preventDefault();
+            showAnimation();
+        });
+
+        function showAnimation()
+        {
+            webgl.appendTo('#webgl_section');
+            $('#first').hide();
+            return false;
+        }
+    }
 });
