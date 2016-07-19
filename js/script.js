@@ -220,6 +220,8 @@ $(document).ready(function () {
     
     if ( false === $.browser.mobile ) {
         
+        $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
+        
         var webgl = $('#webgl');
 
         $(window).scroll(function(){
