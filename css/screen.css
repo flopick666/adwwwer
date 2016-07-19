@@ -7728,6 +7728,7 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   }
 }
 body section {
+  clear: both;
   padding-bottom: 5rem;
   padding-top: 5rem;
 }
@@ -7799,15 +7800,18 @@ body section#mobile_top .container a.arrow_down {
     font-size: 6.5rem;
   }
 }
+body section#webgl_section {
+  height: 100vh;
+}
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
 }
 body section#webgl_section .description {
   z-index: 200;
+  padding-top: 8rem;
 }
 body section#first {
   background: url('../img/earth.jpg');
