@@ -222,25 +222,34 @@ $(document).ready(function () {
         
         $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
         
-        var webgl = $('#earth');
+        var webgl = $('#earth'),
+        sectionWebGl = $('#webgl');
+
+        THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+            console.log( item, loaded, total );
+            if ( loaded == total ) {
+                webgl.show();
+            }
+        };
 
         $(window).scroll(function(){
             if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
                 webgl.detach();
-                $('#load_animation').show();
+                $('#show_webgl_button').html('show animation');
             }
         });
 
         $('#show_webgl_button').on('click', function(e){
             e.preventDefault();
-            showAnimation();
-            $('#load_animation').hide();
+            if ( 1 === sectionWebGl.children('#earth').length ) {
+                webgl.detach();
+                $('#show_webgl_button').html('show animation');
+                $('#show_webgl_button').removeAttr('href');
+            } else {
+                webgl.appendTo('#webgl');
+                $('#show_webgl_button').html('get started');
+                $('#show_webgl_button').attr('href','#introduce');
+            }
         });
-
-        function showAnimation()
-        {
-            webgl.appendTo('#webgl');
-            return false;
-        }
     }
 });
