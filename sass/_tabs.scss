@@ -155,7 +155,9 @@
         background: $ebony;
         border: 1px solid $cod_gray;
         color: $dusty_gray;
+        // font-weight: 100;
         font-weight: 300;
+        font-size: 12px;
         outline: 0;
         text-transform: uppercase;
         &:hover {

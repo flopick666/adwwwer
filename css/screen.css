@@ -7591,8 +7591,6 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:af
   font-family: FontAwesome;
   font-size: 1rem;
   float: right;
-}
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:after:hover {
   color: #20b7a3;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu {
@@ -7622,14 +7620,14 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle {
   color: #20b7a3;
 }
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after {
+  content: "\f107";
+  color: #20b7a3;
+}
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:before {
   left: 0;
   height: 2px;
   width: 100%;
-}
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after {
-  content: "\f107";
-  color: #20b7a3;
 }
 body #header nav.navbar #navbar-collapse-1 ul#login {
   background: #20b7a3;
@@ -7690,6 +7688,9 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover {
     background: #20b7a3;
+    color: #010509;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover:after {
     color: #010509;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-menu {
@@ -7821,6 +7822,7 @@ body section#webgl_section {
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 4px solid #20b7a3;
 }
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;
@@ -7832,28 +7834,35 @@ body section#webgl_section .description {
   z-index: 200;
   padding-top: 8rem;
 }
+body section#webgl_section .description .button-more {
+  width: 190px;
+  margin-bottom: 50px;
+}
 body section#webgl_section h1 {
   color: #20b7a3;
   font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 5rem;
+  font-weight: 700;
   margin-top: 20%;
+  text-transform: uppercase;
 }
 body section#webgl_section h1 span {
   color: white;
 }
-body section#webgl_section h1 p:last-child {
-  font-size: 5rem;
-  font-weight: 700;
-  text-transform: uppercase;
+body section#webgl_section h1 span:first-child {
+  text-transform: none;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 @media (min-width: 992px) {
   body section#webgl_section h1 {
-    font-size: 5rem;
-    margin-top: 200px;
-  }
-  body section#webgl_section h1 p:last-child {
     font-size: 6.5rem;
+    margin-top: 180px;
+    margin-bottom: 60px;
+    line-height: 90px;
+  }
+  body section#webgl_section h1 span:first-child {
+    font-size: 5rem;
   }
 }
 body section#first {
@@ -8534,105 +8543,9 @@ body section#project_info .menu a:hover, body section#project_info .menu a.activ
     padding: 10px 50px;
   }
 }
-body section#project_info .project_progress, body section#project_info .project_progress_v2 {
+body section#project_info .project_progress_v2 {
   height: 356px;
   position: relative;
-}
-body section#project_info .project_progress .project_step, body section#project_info .project_progress_v2 .project_step {
-  position: absolute;
-  top: 10px;
-  height: 250px;
-  min-width: 65px;
-  padding-top: 150px;
-  opacity: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 200;
-  text-align: center;
-  background-repeat: no-repeat !important;
-  background-position: 50% 0 !important;
-}
-body section#project_info .project_progress .project_step .date, body section#project_info .project_progress_v2 .project_step .date {
-  margin-bottom: 3rem;
-}
-body section#project_info .project_progress .project_step:nth-child(2n), body section#project_info .project_progress_v2 .project_step:nth-child(2n) {
-  top: auto;
-  bottom: 21px;
-  height: 227px;
-  padding-top: 0;
-  background-position: 50% 100% !important;
-}
-body section#project_info .project_progress .project_step:nth-child(2n) .name, body section#project_info .project_progress_v2 .project_step:nth-child(2n) .name {
-  margin-bottom: 3rem;
-}
-body section#project_info .project_progress .project_step:nth-child(2n) .date, body section#project_info .project_progress_v2 .project_step:nth-child(2n) .date {
-  margin-bottom: 0;
-}
-body section#project_info .project_progress .project_step.step1, body section#project_info .project_progress_v2 .project_step.step1 {
-  left: 11%;
-  background: url('../img/project_step1.png');
-}
-body section#project_info .project_progress .project_step.step2, body section#project_info .project_progress_v2 .project_step.step2 {
-  left: 25%;
-  background: url('../img/project_step2.png');
-}
-body section#project_info .project_progress .project_step.step3, body section#project_info .project_progress_v2 .project_step.step3 {
-  left: 39%;
-  background: url('../img/project_step3.png');
-}
-body section#project_info .project_progress .project_step.step4, body section#project_info .project_progress_v2 .project_step.step4 {
-  left: 52%;
-  background: url('../img/project_step4.png');
-}
-body section#project_info .project_progress .project_step.step5, body section#project_info .project_progress_v2 .project_step.step5 {
-  left: 66%;
-  background: url('../img/project_step5.png');
-}
-body section#project_info .project_progress .project_step.step6, body section#project_info .project_progress_v2 .project_step.step6 {
-  left: 80%;
-  background: url('../img/project_step6.png');
-}
-body section#project_info .project_progress .project_step .date, body section#project_info .project_progress_v2 .project_step .date {
-  background: #20b7a3;
-  font-size: 10px;
-  color: #060a0e;
-  text-transform: uppercase;
-  padding: 5px 10px;
-}
-body section#project_info .project_progress .project_step .name, body section#project_info .project_progress_v2 .project_step .name {
-  color: white;
-}
-body section#project_info .project_progress_v2 hr {
-  position: absolute;
-  background: #798084;
-  height: 5px;
-  width: 100%;
-  top: 42%;
-  display: block;
-  border: none;
-}
-body section#project_info .project_progress_v2 hr:after {
-  content: '';
-  height: 20px;
-  width: 20px;
-  background: #798084;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: -7px;
-  right: 0;
-}
-body section#project_info .project_progress_v2 hr:before {
-  content: '';
-  height: 20px;
-  width: 20px;
-  background: #798084;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: -7px;
-  left: 0;
 }
 body section#project_info .project_progress_v2 .project_step {
   position: absolute;
@@ -8640,7 +8553,7 @@ body section#project_info .project_progress_v2 .project_step {
   height: 250px;
   min-width: 65px;
   padding-top: 150px;
-  opacity: 1;
+  opacity: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -8699,10 +8612,41 @@ body section#project_info .project_progress_v2 .project_step .date {
 body section#project_info .project_progress_v2 .project_step .name {
   color: white;
 }
+body section#project_info .project_progress_v2 hr {
+  position: absolute;
+  background: #798084;
+  height: 5px;
+  width: 100%;
+  top: 42%;
+  display: block;
+  border: none;
+}
+body section#project_info .project_progress_v2 hr:after {
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: #798084;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+body section#project_info .project_progress_v2 hr:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: #798084;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: -7px;
+  left: 0;
+}
 body section#project_info .project_progress_mobile {
   position: relative;
   height: 600px;
-  width: 320px;
+  width: 290px;
   margin: 0 auto;
 }
 body section#project_info .project_progress_mobile .vertical_axis {
@@ -10454,6 +10398,7 @@ body .pills .nav-pills li a {
   border: 1px solid #161616;
   color: #9B9B9B;
   font-weight: 300;
+  font-size: 12px;
   outline: 0;
   text-transform: uppercase;
 }
