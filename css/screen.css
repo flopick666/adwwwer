@@ -8783,8 +8783,50 @@ body section#project_info #responsive p {
     padding-top: 55px;
   }
 }
-body section#project_info #application {
-  border: 1px solid green;
+body section#project_info #application div {
+  margin: 0 auto;
+}
+body section#project_info #application div.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  line-height: 52px;
+  font-size: 2.5rem;
+  border: 1px solid #149d8b;
+  color: #149d8b;
+}
+body section#project_info #application .laptop {
+  max-width: 290px;
+  background: url('../img/laptop.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 170px;
+  padding: 11px 35px 0 35px;
+}
+body section#project_info #application .laptop .screen {
+  background: #149d8b;
+  color: white;
+  height: 136px;
+  padding: 1px 10px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  body section#project_info #application .laptop {
+    max-width: 640px;
+    background: url('../img/laptop.png');
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 370px;
+    padding: 23px 78px 0 76px;
+  }
+  body section#project_info #application .laptop .screen {
+    background: #149d8b;
+    color: white;
+    height: 305px;
+    padding: 70px;
+  }
 }
 body section#latest_news {
   background: #060a0e;
