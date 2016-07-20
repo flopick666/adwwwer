@@ -1,4 +1,26 @@
 $(document).ready(function () {
+  //Active class according to scroll
+  $(window).scroll(function(){
+    var scrollTop = $(document).scrollTop();
+    var anchors = $('body').find('section');
+    for (var i = 0; i < anchors.length; i++){
+      if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
+        // $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+        $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+      } else {
+        $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
+      }
+    }
+  });
+  // Main Submenu
+  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $(this).parent().siblings().removeClass('open');
+    $(this).parent().toggleClass('open');
+  });
+
+
     // try to do somth with scroll
     var $animation_elements = $('.animation-element');
     var $window = $(window);
@@ -64,26 +86,7 @@ $(document).ready(function () {
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
 
-    //Active class according to scroll
-    $(window).scroll(function(){
-      var scrollTop = $(document).scrollTop();
-      var anchors = $('body').find('section');
-      for (var i = 0; i < anchors.length; i++){
-        if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
-          // $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
-          $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
-        } else {
-          $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
-        }
-      }
-    });
-    // Main Submenu
-		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
-			$(this).parent().siblings().removeClass('open');
-			$(this).parent().toggleClass('open');
-		});
+
 
     // Load the first 4 list items for Services Section
     $('#services .col-xs-12:lt(4)').show();
@@ -214,14 +217,14 @@ $(document).ready(function () {
 
     // Tabs responsive
     $(".tabbable.responsive").resptabs();
-    
-    
+
+
     // WebGl section
-    
+
     if ( false === $.browser.mobile ) {
-        
+
         $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
-        
+
         var webgl = $('#earth');
 
         $(window).scroll(function(){
