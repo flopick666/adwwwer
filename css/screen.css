@@ -7473,6 +7473,7 @@ body ul {
 body .button-more, body a.button-more {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
   border: 1px solid #20b7a3;
   padding: 15px 30px;
   cursor: pointer;
@@ -7590,8 +7591,6 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:af
   font-family: FontAwesome;
   font-size: 1rem;
   float: right;
-}
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:after:hover {
   color: #20b7a3;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu {
@@ -7621,14 +7620,14 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle {
   color: #20b7a3;
 }
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after {
+  content: "\f107";
+  color: #20b7a3;
+}
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:before {
   left: 0;
   height: 2px;
   width: 100%;
-}
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after {
-  content: "\f107";
-  color: #20b7a3;
 }
 body #header nav.navbar #navbar-collapse-1 ul#login {
   background: #20b7a3;
@@ -7666,6 +7665,13 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     line-height: 30px;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown > a.dropdown-toggle:after {
+    content: "\f107";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown > a.dropdown-toggle:hover:after {
     display: none;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown a {
@@ -7680,6 +7686,13 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     left: 0;
     background: #060a0e;
   }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover {
+    background: #20b7a3;
+    color: #010509;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover:after {
+    color: #010509;
+  }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-menu {
     margin-left: 1px;
   }
@@ -7689,6 +7702,9 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown.open > a.dropdown-toggle:after {
     content: "\f105";
     color: #20b7a3;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.open > a.dropdown-toggle:after {
+    display: none;
   }
   body #header nav.navbar #navbar-collapse-1 > ul#login {
     margin-left: 10px;
@@ -7802,6 +7818,11 @@ body section#mobile_top .container a.arrow_down {
 }
 body section#webgl_section {
   height: 100vh;
+  background: url('../img/earth.jpg');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid #20b7a3;
 }
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;
@@ -7812,6 +7833,37 @@ body section#webgl_section canvas, body section#webgl_section .description {
 body section#webgl_section .description {
   z-index: 200;
   padding-top: 8rem;
+}
+body section#webgl_section .description .button-more {
+  width: 190px;
+  margin-bottom: 50px;
+}
+body section#webgl_section h1 {
+  color: #20b7a3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 20%;
+  text-transform: uppercase;
+}
+body section#webgl_section h1 span {
+  color: white;
+}
+body section#webgl_section h1 span:first-child {
+  text-transform: none;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  body section#webgl_section h1 {
+    font-size: 6.5rem;
+    margin-top: 180px;
+    margin-bottom: 60px;
+    line-height: 90px;
+  }
+  body section#webgl_section h1 span:first-child {
+    font-size: 5rem;
+  }
 }
 body section#first {
   background: url('../img/earth.jpg');
@@ -8491,11 +8543,11 @@ body section#project_info .menu a:hover, body section#project_info .menu a.activ
     padding: 10px 50px;
   }
 }
-body section#project_info .project_progress, body section#project_info .project_progress_v2 {
+body section#project_info #timeline .project_progress_v2 {
   height: 356px;
   position: relative;
 }
-body section#project_info .project_progress .project_step, body section#project_info .project_progress_v2 .project_step {
+body section#project_info #timeline .project_progress_v2 .project_step {
   position: absolute;
   top: 10px;
   height: 250px;
@@ -8510,57 +8562,57 @@ body section#project_info .project_progress .project_step, body section#project_
   background-repeat: no-repeat !important;
   background-position: 50% 0 !important;
 }
-body section#project_info .project_progress .project_step .date, body section#project_info .project_progress_v2 .project_step .date {
+body section#project_info #timeline .project_progress_v2 .project_step .date {
   margin-bottom: 3rem;
 }
-body section#project_info .project_progress .project_step:nth-child(2n), body section#project_info .project_progress_v2 .project_step:nth-child(2n) {
+body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) {
   top: auto;
   bottom: 21px;
   height: 227px;
   padding-top: 0;
   background-position: 50% 100% !important;
 }
-body section#project_info .project_progress .project_step:nth-child(2n) .name, body section#project_info .project_progress_v2 .project_step:nth-child(2n) .name {
+body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) .name {
   margin-bottom: 3rem;
 }
-body section#project_info .project_progress .project_step:nth-child(2n) .date, body section#project_info .project_progress_v2 .project_step:nth-child(2n) .date {
+body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) .date {
   margin-bottom: 0;
 }
-body section#project_info .project_progress .project_step.step1, body section#project_info .project_progress_v2 .project_step.step1 {
+body section#project_info #timeline .project_progress_v2 .project_step.step1 {
   left: 11%;
   background: url('../img/project_step1.png');
 }
-body section#project_info .project_progress .project_step.step2, body section#project_info .project_progress_v2 .project_step.step2 {
+body section#project_info #timeline .project_progress_v2 .project_step.step2 {
   left: 25%;
   background: url('../img/project_step2.png');
 }
-body section#project_info .project_progress .project_step.step3, body section#project_info .project_progress_v2 .project_step.step3 {
+body section#project_info #timeline .project_progress_v2 .project_step.step3 {
   left: 39%;
   background: url('../img/project_step3.png');
 }
-body section#project_info .project_progress .project_step.step4, body section#project_info .project_progress_v2 .project_step.step4 {
+body section#project_info #timeline .project_progress_v2 .project_step.step4 {
   left: 52%;
   background: url('../img/project_step4.png');
 }
-body section#project_info .project_progress .project_step.step5, body section#project_info .project_progress_v2 .project_step.step5 {
+body section#project_info #timeline .project_progress_v2 .project_step.step5 {
   left: 66%;
   background: url('../img/project_step5.png');
 }
-body section#project_info .project_progress .project_step.step6, body section#project_info .project_progress_v2 .project_step.step6 {
+body section#project_info #timeline .project_progress_v2 .project_step.step6 {
   left: 80%;
   background: url('../img/project_step6.png');
 }
-body section#project_info .project_progress .project_step .date, body section#project_info .project_progress_v2 .project_step .date {
+body section#project_info #timeline .project_progress_v2 .project_step .date {
   background: #20b7a3;
   font-size: 10px;
   color: #060a0e;
   text-transform: uppercase;
   padding: 5px 10px;
 }
-body section#project_info .project_progress .project_step .name, body section#project_info .project_progress_v2 .project_step .name {
+body section#project_info #timeline .project_progress_v2 .project_step .name {
   color: white;
 }
-body section#project_info .project_progress_v2 hr {
+body section#project_info #timeline .project_progress_v2 hr {
   position: absolute;
   background: #798084;
   height: 5px;
@@ -8569,7 +8621,7 @@ body section#project_info .project_progress_v2 hr {
   display: block;
   border: none;
 }
-body section#project_info .project_progress_v2 hr:after {
+body section#project_info #timeline .project_progress_v2 hr:after {
   content: '';
   height: 20px;
   width: 20px;
@@ -8580,7 +8632,7 @@ body section#project_info .project_progress_v2 hr:after {
   top: -7px;
   right: 0;
 }
-body section#project_info .project_progress_v2 hr:before {
+body section#project_info #timeline .project_progress_v2 hr:before {
   content: '';
   height: 20px;
   width: 20px;
@@ -8591,78 +8643,13 @@ body section#project_info .project_progress_v2 hr:before {
   top: -7px;
   left: 0;
 }
-body section#project_info .project_progress_v2 .project_step {
-  position: absolute;
-  top: 10px;
-  height: 250px;
-  min-width: 65px;
-  padding-top: 150px;
-  opacity: 1;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 200;
-  text-align: center;
-  background-repeat: no-repeat !important;
-  background-position: 50% 0 !important;
-}
-body section#project_info .project_progress_v2 .project_step .date {
-  margin-bottom: 3rem;
-}
-body section#project_info .project_progress_v2 .project_step:nth-child(2n) {
-  top: auto;
-  bottom: 21px;
-  height: 227px;
-  padding-top: 0;
-  background-position: 50% 100% !important;
-}
-body section#project_info .project_progress_v2 .project_step:nth-child(2n) .name {
-  margin-bottom: 3rem;
-}
-body section#project_info .project_progress_v2 .project_step:nth-child(2n) .date {
-  margin-bottom: 0;
-}
-body section#project_info .project_progress_v2 .project_step.step1 {
-  left: 11%;
-  background: url('../img/project_step1.png');
-}
-body section#project_info .project_progress_v2 .project_step.step2 {
-  left: 25%;
-  background: url('../img/project_step2.png');
-}
-body section#project_info .project_progress_v2 .project_step.step3 {
-  left: 39%;
-  background: url('../img/project_step3.png');
-}
-body section#project_info .project_progress_v2 .project_step.step4 {
-  left: 52%;
-  background: url('../img/project_step4.png');
-}
-body section#project_info .project_progress_v2 .project_step.step5 {
-  left: 66%;
-  background: url('../img/project_step5.png');
-}
-body section#project_info .project_progress_v2 .project_step.step6 {
-  left: 80%;
-  background: url('../img/project_step6.png');
-}
-body section#project_info .project_progress_v2 .project_step .date {
-  background: #20b7a3;
-  font-size: 10px;
-  color: #060a0e;
-  text-transform: uppercase;
-  padding: 5px 10px;
-}
-body section#project_info .project_progress_v2 .project_step .name {
-  color: white;
-}
-body section#project_info .project_progress_mobile {
+body section#project_info #timeline .project_progress_mobile {
   position: relative;
   height: 600px;
-  width: 320px;
+  width: 290px;
   margin: 0 auto;
 }
-body section#project_info .project_progress_mobile .vertical_axis {
+body section#project_info #timeline .project_progress_mobile .vertical_axis {
   position: absolute;
   background: #20b7a3;
   height: 100%;
@@ -8673,7 +8660,7 @@ body section#project_info .project_progress_mobile .vertical_axis {
   display: block;
   border: none;
 }
-body section#project_info .project_progress_mobile .vertical_axis:after {
+body section#project_info #timeline .project_progress_mobile .vertical_axis:after {
   content: '';
   height: 20px;
   width: 20px;
@@ -8684,7 +8671,7 @@ body section#project_info .project_progress_mobile .vertical_axis:after {
   top: -7px;
   left: -7px;
 }
-body section#project_info .project_progress_mobile .vertical_axis:before {
+body section#project_info #timeline .project_progress_mobile .vertical_axis:before {
   content: '';
   height: 20px;
   width: 20px;
@@ -8695,7 +8682,7 @@ body section#project_info .project_progress_mobile .vertical_axis:before {
   bottom: -7px;
   left: -7px;
 }
-body section#project_info .project_progress_mobile .project_step {
+body section#project_info #timeline .project_progress_mobile .project_step {
   position: absolute;
   left: 0;
   width: 100%;
@@ -8711,7 +8698,7 @@ body section#project_info .project_progress_mobile .project_step {
   padding-right: 40%;
   padding-top: 16px;
 }
-body section#project_info .project_progress_mobile .project_step .date {
+body section#project_info #timeline .project_progress_mobile .project_step .date {
   background: #20b7a3;
   font-size: 10px;
   color: #060a0e;
@@ -8721,7 +8708,7 @@ body section#project_info .project_progress_mobile .project_step .date {
   margin-left: 2rem;
   position: relative;
 }
-body section#project_info .project_progress_mobile .project_step .date:after {
+body section#project_info #timeline .project_progress_mobile .project_step .date:after {
   content: '';
   display: block;
   background: url('../img/pro_info_bullet_m.png');
@@ -8733,54 +8720,71 @@ body section#project_info .project_progress_mobile .project_step .date:after {
   height: 8px;
   right: -20px;
 }
-body section#project_info .project_progress_mobile .project_step .name {
+body section#project_info #timeline .project_progress_mobile .project_step .name {
   color: white;
   display: inline-block;
 }
-body section#project_info .project_progress_mobile .project_step.step1 {
+body section#project_info #timeline .project_progress_mobile .project_step.step1 {
   top: 5.7%;
   background: url('../img/project_step1.png');
 }
-body section#project_info .project_progress_mobile .project_step.step2 {
+body section#project_info #timeline .project_progress_mobile .project_step.step2 {
   top: 21.4%;
   background: url('../img/project_step2.png');
 }
-body section#project_info .project_progress_mobile .project_step.step3 {
+body section#project_info #timeline .project_progress_mobile .project_step.step3 {
   top: 37.1%;
   background: url('../img/project_step3.png');
 }
-body section#project_info .project_progress_mobile .project_step.step4 {
+body section#project_info #timeline .project_progress_mobile .project_step.step4 {
   top: 52.8%;
   background: url('../img/project_step4.png');
 }
-body section#project_info .project_progress_mobile .project_step.step5 {
+body section#project_info #timeline .project_progress_mobile .project_step.step5 {
   top: 68.5%;
   background: url('../img/project_step5.png');
 }
-body section#project_info .project_progress_mobile .project_step.step6 {
+body section#project_info #timeline .project_progress_mobile .project_step.step6 {
   top: 84.2%;
   background: url('../img/project_step6.png');
 }
-body section#project_info .project_progress_mobile .project_step:nth-child(2n) {
+body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) {
   background-position: 0 100% !important;
   text-align: left;
   padding-left: 38%;
   padding-right: 0;
 }
-body section#project_info .project_progress_mobile .project_step:nth-child(2n) .date {
+body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) .date {
   margin-left: 0;
   margin-right: 2.5rem;
 }
-body section#project_info .project_progress_mobile .project_step:nth-child(2n) .date:after {
+body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) .date:after {
   transform: rotate(180deg);
   right: auto;
   left: -20px;
 }
-body section#project_info .project_progress_mobile .project_step:nth-child(2n).step2 {
+body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n).step2 {
   background-position: 8% 108% !important;
 }
-body section#project_info .project_progress_mobile .project_step:nth-child(2n).step6 {
+body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n).step6 {
   background-position: 12% 105% !important;
+}
+body section#project_info #responsive h2 {
+  padding-top: 0;
+  margin-bottom: 3rem;
+  line-height: 4rem;
+}
+body section#project_info #responsive p {
+  line-height: 24px;
+  margin-bottom: 3rem;
+}
+@media (min-width: 1200px) {
+  body section#project_info #responsive h2 {
+    padding-top: 55px;
+  }
+}
+body section#project_info #application {
+  border: 1px solid green;
 }
 body section#latest_news {
   background: #060a0e;
@@ -10148,7 +10152,6 @@ body section#abovefooter .newsletter form .input-group input {
   color: #9B9B9B;
   border: none;
   border-radius: 0;
-  width: 90%;
   font-size: 14px;
 }
 body section#abovefooter .newsletter form .input-group button {
@@ -10156,7 +10159,8 @@ body section#abovefooter .newsletter form .input-group button {
   border-radius: 0;
   background: #20b7a3;
   padding: 0;
-  width: 10%;
+  height: 34px;
+  width: 34px;
 }
 @media (min-width: 768px) {
   body section#abovefooter .newsletter {
@@ -10411,6 +10415,7 @@ body .pills .nav-pills li a {
   border: 1px solid #161616;
   color: #9B9B9B;
   font-weight: 300;
+  font-size: 12px;
   outline: 0;
   text-transform: uppercase;
 }
@@ -10428,7 +10433,7 @@ body .pills .nav-pills li.active a, body .pills .nav-pills li:focus a {
 body .pills .tab-content {
   background: none;
   border: none;
-  padding: 30px 0;
+  padding: 60px 0 0 0;
   margin-bottom: 30px;
 }
 body .modal-dialog {

@@ -73,9 +73,7 @@
                 font-family: FontAwesome;
                 font-size: 1rem;
                 float:right;
-                &:hover {
-                  color: $java;
-                }
+                color: $java;
               }
             }
             .dropdown-menu {
@@ -103,14 +101,14 @@
             &.open {
               > a.dropdown-toggle {
                 color: $java;
+                &:after {
+                  content:"\f107";
+                  color: $java;
+                }
                 &:before {
                   left: 0;
                   height: 2px;
                   width: 100%;
-                }
-                &:after {
-                  content:"\f107";
-                  color: $java;
                 }
               }
             }
@@ -151,7 +149,16 @@
             &.dropdown {
               > a.dropdown-toggle {
                 &:after {
-                  display:none;
+                  content: "\f107";
+                  position: absolute;
+                  bottom: -10px;
+                  left: 50%;
+                  margin-left: -5px;
+                }
+                &:hover {
+                  &:after {
+                    display: none;
+                  }
                 }
               }
               a {
@@ -165,6 +172,15 @@
                 right: auto;
                 left: 0;
                 background: $ebony;
+                li a {
+                  &:hover {
+                    background: $java;
+                    color: $black_pearl;
+                    &:after {
+                      color: $black_pearl;
+                    }
+                  }
+                }
                 .dropdown-menu {
                   margin-left: 1px;
                 }
@@ -180,6 +196,13 @@
                       color: $java;
                     }
                   }
+                }
+              }
+            }
+            &.open {
+              > a.dropdown-toggle {
+                &:after {
+                  display: none;
                 }
               }
             }

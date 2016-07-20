@@ -69,6 +69,7 @@ body {
   .button-more, a.button-more {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    text-decoration: none;
     border: 1px solid $java;
     padding: 15px 30px;
     cursor: pointer;
