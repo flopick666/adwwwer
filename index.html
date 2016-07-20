@@ -44,14 +44,11 @@
 	<!-- Video Section animation -->
 	<link href="js/video_upload/view.css" rel="stylesheet" type="text/css" />
 
-        <!-- Mobile Detect Script -->
-        <script type="text/javascript" src="js/mobiledetect.js"></script>
-
+  <!-- Mobile Detect Script -->
+  <script type="text/javascript" src="js/mobiledetect.js"></script>
 	<!--Custom JS  -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="sass/bootstrap/javascripts/bootstrap.min.js"></script>
-
-
   <!-- GLSL vertex shader for the moon -->
   <script id="norm-vert-shader" type="x-shader/x-vertex">
 
@@ -108,8 +105,6 @@
       gl_FragColor = texture2D(textureMap, vUv) * lighting;
       }
   </script>
-
-
   <!-- ------ Custom Shader Code for atmospheric glow ------ -->
   <script id="vertexShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 viewVector;
@@ -125,7 +120,6 @@
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
   </script>
-
   <!-- fragment shader a.k.a. pixel shader -->
   <script id="fragmentShaderAtmosphere" type="x-shader/x-vertex">
       uniform vec3 glowColor;
@@ -268,14 +262,14 @@
     <div id="webgl">
 			<div class="description">
 				<h1 class="text-center"><span class="white">Quick and amazing</span><br/> Reimagine <span class="white">what's</span> possible</h1>
-				<p class="text-center"><a class="button-more">get started</a></p>
-                                <p id="load_animation" style="display: none;" class="text-center"><a id="show_webgl_button" class="button-more">show animation</a></p>
+				<p class="text-center"><a class="button-more" href="#introduce">get started</a></p>
+				<p id="load_animation" style="display: none;" class="text-center"><a id="show_webgl_button" class="button-more">show animation</a></p>
 			</div>
 			<div id="earth"></div>
     </div>
   </section>
 	<!-- Section Earth -->
-  <section id="first" class="hidden-xs" style="display: none;">
+  <!-- <section id="first" class="hidden-xs" style="display: none;">
     <div class="container">
       <h1 class="text-center">
         <p><span class="white">Quick and amazing</p>
@@ -283,7 +277,7 @@
       </h1>
       <p class="text-center"><a class="button-more">get started</a></p>
     </div>
-  </section>
+  </section> -->
 	<!-- Section Introduce-->
   <section id="introduce" class="animation-element">
     <div class="container text-center">
@@ -1065,9 +1059,11 @@
 					<form action="" method="post">
 						<div class="form-group">
 								<div class="input-group">
-									<input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email"/>
-									<button type="submit" class="form-control"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-								</div>
+						      <input type="text" class="form-control" placeholder="Enter your Email">
+						      <span class="input-group-btn">
+						        <button class="btn btn-default" type="button"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+						      </span>
+						    </div><!-- /input-group -->
 						</div>
 					</form>
 				</div>

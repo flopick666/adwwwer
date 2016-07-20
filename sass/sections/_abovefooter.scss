@@ -29,7 +29,6 @@
           color: $dusty_gray;
           border: none;
           border-radius: 0;
-          width: 90%;
           font-size: 14px;
         }
         button {
@@ -37,7 +36,8 @@
           border-radius: 0;
           background: $java;
           padding: 0;
-          width: 10%;
+          height: 34px;
+          width: 34px;
         }
       }
     }

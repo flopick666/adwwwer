@@ -7473,6 +7473,7 @@ body ul {
 body .button-more, body a.button-more {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
   border: 1px solid #20b7a3;
   padding: 15px 30px;
   cursor: pointer;
@@ -7666,6 +7667,13 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     line-height: 30px;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown > a.dropdown-toggle:after {
+    content: "\f107";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown > a.dropdown-toggle:hover:after {
     display: none;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown a {
@@ -7680,6 +7688,10 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     left: 0;
     background: #060a0e;
   }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover {
+    background: #20b7a3;
+    color: #010509;
+  }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-menu {
     margin-left: 1px;
   }
@@ -7689,6 +7701,9 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown.open > a.dropdown-toggle:after {
     content: "\f105";
     color: #20b7a3;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.open > a.dropdown-toggle:after {
+    display: none;
   }
   body #header nav.navbar #navbar-collapse-1 > ul#login {
     margin-left: 10px;
@@ -7802,6 +7817,10 @@ body section#mobile_top .container a.arrow_down {
 }
 body section#webgl_section {
   height: 100vh;
+  background: url('../img/earth.jpg');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;
@@ -7812,6 +7831,30 @@ body section#webgl_section canvas, body section#webgl_section .description {
 body section#webgl_section .description {
   z-index: 200;
   padding-top: 8rem;
+}
+body section#webgl_section h1 {
+  color: #20b7a3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 20%;
+}
+body section#webgl_section h1 span {
+  color: white;
+}
+body section#webgl_section h1 p:last-child {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  body section#webgl_section h1 {
+    font-size: 5rem;
+    margin-top: 200px;
+  }
+  body section#webgl_section h1 p:last-child {
+    font-size: 6.5rem;
+  }
 }
 body section#first {
   background: url('../img/earth.jpg');
@@ -10148,7 +10191,6 @@ body section#abovefooter .newsletter form .input-group input {
   color: #9B9B9B;
   border: none;
   border-radius: 0;
-  width: 90%;
   font-size: 14px;
 }
 body section#abovefooter .newsletter form .input-group button {
@@ -10156,7 +10198,8 @@ body section#abovefooter .newsletter form .input-group button {
   border-radius: 0;
   background: #20b7a3;
   padding: 0;
-  width: 10%;
+  height: 34px;
+  width: 34px;
 }
 @media (min-width: 768px) {
   body section#abovefooter .newsletter {
