@@ -1,4 +1,26 @@
 $(document).ready(function () {
+  //Active class according to scroll
+  $(window).scroll(function(){
+    var scrollTop = $(document).scrollTop();
+    var anchors = $('body').find('section');
+    for (var i = 0; i < anchors.length; i++){
+      if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
+        // $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+        $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+      } else {
+        $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
+      }
+    }
+  });
+  // Main Submenu
+  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $(this).parent().siblings().removeClass('open');
+    $(this).parent().toggleClass('open');
+  });
+
+
     // try to do somth with scroll
     var $animation_elements = $('.animation-element');
     var $window = $(window);
@@ -64,26 +86,7 @@ $(document).ready(function () {
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
 
-    //Active class according to scroll
-    $(window).scroll(function(){
-      var scrollTop = $(document).scrollTop();
-      var anchors = $('body').find('section');
-      for (var i = 0; i < anchors.length; i++){
-        if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
-          // $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
-          $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
-        } else {
-          $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
-        }
-      }
-    });
-    // Main Submenu
-		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-			event.preventDefault();
-			event.stopPropagation();
-			$(this).parent().siblings().removeClass('open');
-			$(this).parent().toggleClass('open');
-		});
+
 
     // Load the first 4 list items for Services Section
     $('#services .col-xs-12:lt(4)').show();
@@ -214,33 +217,42 @@ $(document).ready(function () {
 
     // Tabs responsive
     $(".tabbable.responsive").resptabs();
-    
-    
+
+
     // WebGl section
-    
+
     if ( false === $.browser.mobile ) {
-        
+
         $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
         
-        var webgl = $('#earth');
+        var webgl = $('#earth'),
+        sectionWebGl = $('#webgl');
+
+        THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
+            console.log( item, loaded, total );
+            if ( loaded == total ) {
+                webgl.show();
+            }
+        };
 
         $(window).scroll(function(){
             if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
                 webgl.detach();
-                $('#load_animation').show();
+                $('#show_webgl_button').html('show animation');
             }
         });
 
         $('#show_webgl_button').on('click', function(e){
             e.preventDefault();
-            showAnimation();
-            $('#load_animation').hide();
+            if ( 1 === sectionWebGl.children('#earth').length ) {
+                webgl.detach();
+                $('#show_webgl_button').html('show animation');
+                $('#show_webgl_button').removeAttr('href');
+            } else {
+                webgl.appendTo('#webgl');
+                $('#show_webgl_button').html('get started');
+                $('#show_webgl_button').attr('href','#introduce');
+            }
         });
-
-        function showAnimation()
-        {
-            webgl.appendTo('#webgl');
-            return false;
-        }
     }
 });
