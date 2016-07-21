@@ -7474,6 +7474,7 @@ body .button-more, body a.button-more {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   border: 1px solid #20b7a3;
   padding: 15px 30px;
   cursor: pointer;
@@ -8554,7 +8555,6 @@ body section#project_info #timeline .project_progress_v2 .project_step {
   height: 250px;
   min-width: 65px;
   padding-top: 150px;
-  opacity: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -8813,6 +8813,9 @@ body section#project_info #application .laptop .screen {
   overflow: hidden;
 }
 @media (min-width: 768px) {
+  body section#project_info #application div {
+    display: inline-block;
+  }
   body section#project_info #application .laptop {
     max-width: 640px;
     background: url('../img/laptop.png');
