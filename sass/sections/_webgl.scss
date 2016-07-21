@@ -1,0 +1,49 @@
+&#webgl_section {
+  height: 100vh;
+  background: image-url('earth.jpg');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid $java;
+  canvas, .description {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .description {
+    z-index: 200;
+    padding-top: 8rem;
+    .button-more {
+      width: 190px;
+      margin-bottom: 50px;
+    }
+  }
+  h1 {
+    color: $java;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 20%;
+    text-transform: uppercase;
+    span {
+      color: white;
+      &:first-child {
+        text-transform: none;
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+  @media (min-width: $screen-md) {
+    h1 {
+      font-size: 6.5rem;
+      margin-top: 180px;
+      margin-bottom: 60px;
+      line-height: 90px;
+      span:first-child {
+        font-size: 5rem;
+      }
+    }
+  }
+}
