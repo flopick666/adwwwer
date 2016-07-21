@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    
+    $('#navbar-collapse-1 li').each(function(e,n){
+        if ( !$(n).hasClass('dropdown')){
+            console.log(e);
+            $(n).on('click', function(){
+                $('#navbar-collapse-1').removeClass('in');
+            });
+        }});
+    
   //Active class according to scroll
   $(window).scroll(function(){
     var scrollTop = $(document).scrollTop();
