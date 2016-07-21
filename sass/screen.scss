@@ -67,13 +67,14 @@ body {
     font-family: 'Roboto', sans-serif;
   }
   .button-more, a.button-more {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     border: 1px solid $java;
     padding: 15px 30px;
     cursor: pointer;
     display: inline-block;
+    width: 190px;
     &:hover {
       background: $java;
       color: white;

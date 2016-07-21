@@ -137,7 +137,8 @@
   display: flex
 }
 
-.homepage .timeline__item,.homepage .timeline__first {
+.homepage .timeline__item,
+.homepage .timeline__first {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -157,6 +158,7 @@
   height: 74px;
   margin-top: -2px
 }
+
 
 .homepage .timeline__content {
   margin-left: 2em
@@ -225,7 +227,7 @@
 
 .homepage .line-animation {
   animation-name: line;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards
 }
@@ -241,7 +243,7 @@
 
 .homepage .fade-animation {
   animation-name: fade;
-  animation-duration: 1.3s;
+  /*animation-duration: 1.3s;*/
   animation-iteration-count: 1;
   animation-fill-mode: forwards
 }
@@ -278,4 +280,38 @@
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards
+}
+@media screen and (max-width: 460px) {
+  .homepage .timeline {
+    margin-bottom: 5rem;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .homepage .timeline__item,
+  .homepage .timeline__first {
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  .homepage .timeline__item,
+  .homepage .timeline__first,
+  .homepage .timeline__connection,
+  .homepage .line {
+    height: 90px
+  }
+  .linia {
+    top: -18px;
+    position: relative;
+    height: 110px;
+  }
+  @keyframes line {
+    from {
+      height: 0
+    }
+    to {
+      height: 110px
+    }
+  }
 }

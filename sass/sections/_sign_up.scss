@@ -1,6 +1,8 @@
 &#sign_up {
+  text-align: center;
   h3 {
     margin-top: 0;
+    margin-bottom: 35px;
     text-align: center;
     font-size: 2.4rem;
   }
@@ -11,15 +13,19 @@
   }
   .col-lg-8 {
     .input-group {
+      width: 100%;
       margin-bottom: 2rem;
-      border: 1px solid $silver;
-      border-radius: 2px;
+      border: 1px solid #5bbbae;
       overflow: hidden;
-      .glyphicon {
+      .form-control {
+        height: 50px;
+      }
+      .input-group-addon {
         background: $java;
         color: white;
         border: none;
         border-radius: 0;
+        width: 52px;
       }
       input {
         background: none;
@@ -27,6 +33,7 @@
         border: none;
         border-radius: 0;
         vertical-align: middle;
+        font-weight: 300;
       }
     }
     button {
@@ -36,9 +43,13 @@
       padding: 0;
       margin: 0 auto;
       display: block;
-      .button-more{
+      .button-more {
         border: 1px solid white;
         transition: 1s;
+        width: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 32px;
         &:hover {
           background: white;
           color: $java;
@@ -51,8 +62,8 @@
       }
     }
   }
-
   @media (min-width: $screen-sm) {
+    padding: 4rem 0;
     h3 {
       margin-bottom: 4rem;
     }
@@ -60,6 +71,7 @@
       .input-group {
         margin-bottom: 0;
         margin-right: 3rem;
+        width: auto;
       }
     }
   }
@@ -67,6 +79,11 @@
     h3 {
       margin-bottom: 0;
       line-height: 5rem;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    .col-lg-8 {
+      text-align: right;
     }
   }
 }

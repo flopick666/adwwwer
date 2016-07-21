@@ -6,23 +6,35 @@
     background-repeat: no-repeat;
     background-size: 100%;
     width: 265px;
-    padding: 13px 10px 73px 10px;
+    padding: 13px 11px 73px 10px;
     margin: 0 auto;
-    iframe {
-      width: 100%;
-      height: 100%;
+    #youtube_canvas {
+      height:150px;width:100%;max-width:100%;
+      iframe {
+        height:100%;width:100%;max-width:100%;border:0;
+      }
     }
+
     @media (min-width: $screen-sm) {
       width: auto;
       max-width: 539px;
       height: 466px;
       padding: 27px 24px 130px 20px;
+      #youtube_canvas {
+        height: 310px;
+      }
     }
     @media (min-width: $screen-md) {
       padding: 22px 20px 183px 17px;
+      #youtube_canvas {
+        height: 262px;
+      }
     }
     @media (min-width: $screen-lg) {
       padding: 27px 24px 130px 20px;
+      #youtube_canvas {
+        height: 308px;
+      }
     }
   }
   @media (min-width: $screen-sm) {
