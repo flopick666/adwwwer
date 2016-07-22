@@ -1,12 +1,23 @@
 $(document).ready(function () {
-    
+    //hide menu when select menu item
     $('#navbar-collapse-1 li').each(function(e,n){
         if ( !$(n).hasClass('dropdown')){
-            console.log(e);
             $(n).on('click', function(){
                 $('#navbar-collapse-1').removeClass('in');
             });
         }});
+    //for display active item
+    function getMainMenuItem(item, i)
+    {
+        if ( i == 3 ) {
+            return false;
+        }
+
+        if ( $(item).hasClass('dropdown-toggle') ) {
+            $(item).addClass('active');
+        }
+        getMainMenuItem($(item).parent().parent().prev(), ++i);
+    }
     
   //Active class according to scroll
   $(window).scroll(function(){
@@ -14,8 +25,9 @@ $(document).ready(function () {
     var anchors = $('body').find('section');
     for (var i = 0; i < anchors.length; i++){
       if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
-        // $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
         $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+        $('#navbar-collapse-1').find('.dropdown-toggle').removeClass('active');
+        getMainMenuItem($('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]'), 0);
       } else {
         $('#header nav ul li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
       }
@@ -70,26 +82,26 @@ $(document).ready(function () {
             donothing_animation_diagramm = true;
           }
         }
+        
+        $('#diagrams').find('.diagram_circles').each(function(n,e){
+            z = e;
 
-        if (donothing_diagram == false ) {
-          if ($('#diagrams').hasClass('in-view')) {
-            console.log('Dagrams!');
-            /*Circle diagrams*/
-            $("#circle1").circliful({
-              percent: 58
-            });
-            $("#circle2").circliful({
-              percent: 75
-            });
-            $("#circle3").circliful({
-              percent: 28
-            });
-            $("#circle4").circliful({
-              percent: 97
-            });
-            donothing_diagram = true;
-          }
-        }
+              var $el = $(e);
+              var el_height = $el.outerHeight();
+              var el_top_position = $el.offset().top;
+              var el_bottom_position = (el_top_position + el_height);
+
+              if ( 0 == $el.data('run') ) {
+                  if ( (el_bottom_position >= window_top_position) &&
+                      (el_top_position <= window_bottom_position) ) {
+
+                      $el.circliful({
+                          percent: $el.data('percent')
+                      });
+                      $el.data('run', '1');
+                  }
+              }
+        });
       });
     }
     $window.on('scroll resize', check_if_in_view);
