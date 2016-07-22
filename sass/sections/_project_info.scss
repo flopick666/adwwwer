@@ -233,51 +233,62 @@
     }
   }
   #application {
-    div {
-      margin: 0 auto;
-    }
-    div.icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      line-height: 52px;
-      font-size: 2.5rem;
-      border: 1px solid $mountain_meadow;
-      color: $mountain_meadow;
-    }
-    .laptop {
-      max-width: 290px;
-      background: image-url('laptop.png');
-      background-position: 50% 0;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 170px;
-      padding: 11px 35px 0 35px;
-      .screen {
-        background: $mountain_meadow;
-        color: white;
-        height: 136px;
-        padding: 1px 10px;
-        overflow: hidden;
+    .application-section {
+      position: relative;
+      div {
+        margin: 0 auto;
+        &.line {
+          background: $mountain_meadow;
+          height: 1px;
+          width: 35px;
+          transform: rotate(90deg);
+        }
+        &.icon {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          line-height: 52px;
+          font-size: 2.5rem;
+          border: 1px solid $mountain_meadow;
+          color: $mountain_meadow;
+        }
+        &.laptop {
+          max-width: 290px;
+          background: image-url('laptop.png');
+          background-position: 50% 0;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 170px;
+          padding: 11px 35px 0 35px;
+          .screen {
+            background: $mountain_meadow;
+            color: white;
+            height: 136px;
+            padding: 1px 10px;
+            overflow: hidden;
+          }
+        }
       }
     }
     @media(min-width: $screen-sm){
-      div {
-        display: inline-block;
-      }
-      .laptop {
-        max-width: 640px;
-        background: image-url('laptop.png');
-        background-position: 50% 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 370px;
-        padding: 23px 78px 0 76px;
-        .screen {
-          background: $mountain_meadow;
-          color: white;
-          height: 305px;
-          padding: 70px;
+      .application-section {
+        div {
+          display: inline-block;
+          &.laptop {
+            max-width: 640px;
+            background: image-url('laptop.png');
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 370px;
+            padding: 23px 78px 0 76px;
+            .screen {
+              background: $mountain_meadow;
+              color: white;
+              height: 305px;
+              padding: 70px;
+            }
+          }
         }
       }
     }

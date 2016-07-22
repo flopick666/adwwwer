@@ -8784,10 +8784,19 @@ body section#project_info #responsive p {
     padding-top: 55px;
   }
 }
-body section#project_info #application div {
+body section#project_info #application .application-section {
+  position: relative;
+}
+body section#project_info #application .application-section div {
   margin: 0 auto;
 }
-body section#project_info #application div.icon {
+body section#project_info #application .application-section div.line {
+  background: #149d8b;
+  height: 1px;
+  width: 35px;
+  transform: rotate(90deg);
+}
+body section#project_info #application .application-section div.icon {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -8796,7 +8805,7 @@ body section#project_info #application div.icon {
   border: 1px solid #149d8b;
   color: #149d8b;
 }
-body section#project_info #application .laptop {
+body section#project_info #application .application-section div.laptop {
   max-width: 290px;
   background: url('../img/laptop.png');
   background-position: 50% 0;
@@ -8805,7 +8814,7 @@ body section#project_info #application .laptop {
   height: 170px;
   padding: 11px 35px 0 35px;
 }
-body section#project_info #application .laptop .screen {
+body section#project_info #application .application-section div.laptop .screen {
   background: #149d8b;
   color: white;
   height: 136px;
@@ -8813,10 +8822,10 @@ body section#project_info #application .laptop .screen {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  body section#project_info #application div {
+  body section#project_info #application .application-section div {
     display: inline-block;
   }
-  body section#project_info #application .laptop {
+  body section#project_info #application .application-section div.laptop {
     max-width: 640px;
     background: url('../img/laptop.png');
     background-position: 50% 0;
@@ -8825,7 +8834,7 @@ body section#project_info #application .laptop .screen {
     height: 370px;
     padding: 23px 78px 0 76px;
   }
-  body section#project_info #application .laptop .screen {
+  body section#project_info #application .application-section div.laptop .screen {
     background: #149d8b;
     color: white;
     height: 305px;
@@ -10036,9 +10045,6 @@ body section#sign_up .col-lg-8 button .button-more {
   border: 1px solid white;
   transition: 1s;
   width: auto;
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 32px;
 }
 body section#sign_up .col-lg-8 button .button-more:hover {
   background: white;
