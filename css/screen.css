@@ -7916,6 +7916,8 @@ body section#introduce .carousel-container #introduce-carousel {
 }
 body section#introduce .carousel-container #introduce-carousel .carousel-feature {
   position: absolute;
+  bottom: 0;
+  top: auto !important;
 }
 body section#introduce .carousel-container #introduce-carousel .carousel-feature .carousel-image {
   border: 0;
