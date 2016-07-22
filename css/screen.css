@@ -8232,7 +8232,6 @@ body section#recent_post {
   background: url('../img/recent_post.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: cover;
   background-attachment: fixed;
   padding-bottom: 0;
 }
@@ -8969,7 +8968,6 @@ body section#client_opinion {
   background: url('../img/client_opinion.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   background-attachment: fixed;
   text-align: center;
 }
@@ -10375,7 +10373,6 @@ body section#contact_info {
   background: url('../img/contact_bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   min-height: 530px;
   position: relative;
 }
