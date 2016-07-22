@@ -7967,11 +7967,12 @@ body section#introduce #services .col-xs-12 .circle a .fa {
 @media (min-width: 768px) {
   body section#introduce #services .col-xs-12 {
     padding-top: 10rem;
-    height: 390px;
+    height: 380px;
   }
 }
 body section#introduce a.button-more {
   margin: 4rem 0 2rem 0;
+  width: auto;
 }
 body section#introduce p:last-child {
   margin: 0;
@@ -8049,6 +8050,9 @@ body section#recent_works .item .recent_hover i {
 }
 body section#recent_works .item .recent_hover span {
   font-size: 1.4rem;
+}
+body section#best_sellers .button-more {
+  width: auto;
 }
 body section#best_sellers .product-item {
   position: relative;
@@ -9088,6 +9092,24 @@ body section#animated_sales {
 }
 body section#animated_sales h2 {
   text-align: center;
+  line-height: 3rem;
+  margin: 0 0 4rem 0;
+}
+@media (min-width: 768px) {
+  body section#animated_sales h2 {
+    margin: 6rem 0 4rem 0;
+  }
+}
+body section#animated_sales h4 {
+  line-height: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+body section#animated_sales p {
+  margin-bottom: 2rem;
+  line-height: 24px;
+  font-family: 'Roboto', sans-serif;
 }
 body section#animated_sales .content {
   height: 300px;
@@ -9588,6 +9610,83 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   body section#animated_sales .pulse8 {
     top: 29.8%;
     left: 88.2%;
+  }
+}
+@media (min-width: 768px) {
+  body section#animated_sales {
+    /* COORDINATE POINTS */
+  }
+  body section#animated_sales .ball {
+    top: 69%;
+    left: 9.2%;
+  }
+  body section#animated_sales .ball1 {
+    top: 58%;
+    left: 19.2%;
+  }
+  body section#animated_sales .ball2 {
+    top: 62%;
+    left: 29.2%;
+  }
+  body section#animated_sales .ball3 {
+    top: 43%;
+    left: 39.2%;
+  }
+  body section#animated_sales .ball4 {
+    top: 33%;
+    left: 49.2%;
+  }
+  body section#animated_sales .ball5 {
+    top: 63%;
+    left: 59.2%;
+  }
+  body section#animated_sales .ball6 {
+    top: 50%;
+    left: 69.2%;
+  }
+  body section#animated_sales .ball7 {
+    top: 54%;
+    left: 79.2%;
+  }
+  body section#animated_sales .ball8 {
+    top: 30%;
+    left: 89.2%;
+  }
+  body section#animated_sales .pulse {
+    top: 68.8%;
+    left: 9.1%;
+  }
+  body section#animated_sales .pulse1 {
+    top: 57.8%;
+    left: 19.1%;
+  }
+  body section#animated_sales .pulse2 {
+    top: 61.8%;
+    left: 29.1%;
+  }
+  body section#animated_sales .pulse3 {
+    top: 42.8%;
+    left: 39.1%;
+  }
+  body section#animated_sales .pulse4 {
+    top: 32.8%;
+    left: 49.1%;
+  }
+  body section#animated_sales .pulse5 {
+    top: 62.8%;
+    left: 59.1%;
+  }
+  body section#animated_sales .pulse6 {
+    top: 49.8%;
+    left: 69.1%;
+  }
+  body section#animated_sales .pulse7 {
+    top: 53.8%;
+    left: 79.1%;
+  }
+  body section#animated_sales .pulse8 {
+    top: 29.8%;
+    left: 89.1%;
   }
 }
 @media (max-width: 320px) {

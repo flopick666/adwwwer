@@ -2,7 +2,25 @@
   position:relative;
   background: $ebony;
   /* GRAPH */
-  h2 { text-align: center;}
+  h2 {
+    text-align: center;
+    line-height: 3rem;
+    margin: 0 0 4rem 0;
+    @media (min-width: $screen-sm) {
+      margin: 6rem 0 4rem 0;
+    }
+  }
+  h4 {
+    line-height: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+  }
   .content {
     height:300px;
     margin:0 auto;
@@ -269,7 +287,6 @@
     0%   { width:0px;}
     100% { width:36%;}
   }
-
   @-webkit-keyframes point {
     0%  {-webkit-transform:scale(0,0);}
     100%{-webkit-transform:scale(1,1);}
@@ -308,6 +325,28 @@
     .pulse6 { top:49.8%; left:68.2%; }
     .pulse7 { top:53.8%; left:78.2%; }
     .pulse8 { top:29.8%; left:88.2%; }
+  }
+  @media (min-width: $screen-sm ) {
+    /* COORDINATE POINTS */
+    .ball  { top:69%; left:9.2%; }
+    .ball1 { top:58%; left:19.2%; }
+    .ball2 { top:62%; left:29.2%; }
+    .ball3 { top:43%; left:39.2%; }
+    .ball4 { top:33%; left:49.2%; }
+    .ball5 { top:63%; left:59.2%; }
+    .ball6 { top:50%; left:69.2%; }
+    .ball7 { top:54%; left:79.2%; }
+    .ball8 { top:30%; left:89.2%; }
+
+    .pulse  { top:68.8%; left:9.1%; }
+    .pulse1 { top:57.8%; left:19.1%; }
+    .pulse2 { top:61.8%; left:29.1%; }
+    .pulse3 { top:42.8%; left:39.1%; }
+    .pulse4 { top:32.8%; left:49.1%; }
+    .pulse5 { top:62.8%; left:59.1%; }
+    .pulse6 { top:49.8%; left:69.1%; }
+    .pulse7 { top:53.8%; left:79.1%; }
+    .pulse8 { top:29.8%; left:89.1%; }
   }
   //Start 6x iphone
   @media (max-width: 320px) {

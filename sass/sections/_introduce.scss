@@ -63,12 +63,13 @@
     @media (min-width: $screen-sm) {
       .col-xs-12 {
         padding-top: 10rem;
-        height: 390px;
+        height: 380px;
       }
     }
   }
   a.button-more {
     margin: 4rem 0 2rem 0;
+    width: auto;
   }
   p:last-child {
     margin: 0;
