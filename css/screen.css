@@ -8779,6 +8779,15 @@ body section#project_info #responsive p {
   line-height: 24px;
   margin-bottom: 3rem;
 }
+body section#project_info #responsive a.button-more {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  body section#project_info #responsive a.button-more {
+    display: inline-block;
+  }
+}
 @media (min-width: 1200px) {
   body section#project_info #responsive h2 {
     padding-top: 55px;
@@ -8794,6 +8803,7 @@ body section#project_info #application .application-section div.line {
   background: #149d8b;
   height: 1px;
   width: 35px;
+  margin: 17px auto;
   transform: rotate(90deg);
 }
 body section#project_info #application .application-section div.icon {
@@ -8821,24 +8831,70 @@ body section#project_info #application .application-section div.laptop .screen {
   padding: 1px 10px;
   overflow: hidden;
 }
-@media (min-width: 768px) {
+body section#project_info #application .application-section div.laptop .screen h3 {
+  margin-bottom: 20px;
+}
+body section#project_info #application .application-section div.laptop .screen .description {
+  display: none;
+}
+body section#project_info #application .application-section div.laptop .screen a.button-more {
+  color: white;
+  border-color: white;
+  padding: 10px 0;
+}
+body section#project_info #application .application-section div.laptop .screen a.button-more:hover {
+  background: white;
+  color: #20b7a3;
+}
+@media (min-width: 992px) {
   body section#project_info #application .application-section div {
+    margin: 0 10px;
     display: inline-block;
   }
   body section#project_info #application .application-section div.laptop {
-    max-width: 640px;
-    background: url('../img/laptop.png');
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 370px;
-    padding: 23px 78px 0 76px;
+    max-width: 460px;
+    height: 270px;
+    padding: 16px 56px 0 55px;
+    margin: 0 -35px;
   }
   body section#project_info #application .application-section div.laptop .screen {
-    background: #149d8b;
-    color: white;
+    height: 218px;
+    padding: 15px;
+    display: block;
+    margin: 0;
+  }
+  body section#project_info #application .application-section div.laptop .screen .description {
+    display: block;
+    margin-bottom: 20px;
+  }
+  body section#project_info #application .application-section div.line, body section#project_info #application .application-section div.icon {
+    position: relative;
+    top: -90px;
+  }
+  body section#project_info #application .application-section div.line {
+    transform: rotate(0deg);
+    top: -85px;
+  }
+}
+@media (min-width: 1200px) {
+  body section#project_info #application .application-section div {
+    margin: 0 20px;
+  }
+  body section#project_info #application .application-section div.laptop {
+    max-width: 640px;
+    height: 370px;
+    padding: 23px 78px 0 76px;
+    margin: 0 -40px;
+  }
+  body section#project_info #application .application-section div.laptop .screen {
     height: 305px;
     padding: 70px;
+  }
+  body section#project_info #application .application-section div.line, body section#project_info #application .application-section div.icon {
+    top: -140px;
+  }
+  body section#project_info #application .application-section div.line {
+    top: -135px;
   }
 }
 body section#latest_news {
@@ -10424,7 +10480,7 @@ body .tabbable.responsive .nav-tabs li a {
   border: none;
   background: none;
   color: #9B9B9B;
-  border-top: 4px solid black;
+  border-top: 4px solid #010509;
 }
 body .tabbable.responsive .nav-tabs li a:hover {
   border-style: none;
