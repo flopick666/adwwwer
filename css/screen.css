@@ -9308,75 +9308,75 @@ body section#animated_sales .ball a:hover small, body section#animated_sales .ba
 }
 body section#animated_sales .ball {
   top: 69%;
-  left: 8.9%;
+  left: 8.8%;
 }
 body section#animated_sales .ball1 {
   top: 58%;
-  left: 18.9%;
+  left: 18.8%;
 }
 body section#animated_sales .ball2 {
   top: 62%;
-  left: 28.9%;
+  left: 28.8%;
 }
 body section#animated_sales .ball3 {
   top: 43%;
-  left: 38.9%;
+  left: 38.8%;
 }
 body section#animated_sales .ball4 {
   top: 33%;
-  left: 48.9%;
+  left: 48.8%;
 }
 body section#animated_sales .ball5 {
   top: 63%;
-  left: 58.9%;
+  left: 58.8%;
 }
 body section#animated_sales .ball6 {
   top: 50%;
-  left: 68.9%;
+  left: 68.8%;
 }
 body section#animated_sales .ball7 {
   top: 54%;
-  left: 78.9%;
+  left: 78.8%;
 }
 body section#animated_sales .ball8 {
   top: 30%;
-  left: 88.9%;
+  left: 88.8%;
 }
 body section#animated_sales .pulse {
-  top: 69%;
-  left: 8.2%;
+  top: 68.8%;
+  left: 8.6%;
 }
 body section#animated_sales .pulse1 {
-  top: 58%;
-  left: 18.2%;
+  top: 57.8%;
+  left: 18.6%;
 }
 body section#animated_sales .pulse2 {
-  top: 62%;
-  left: 28.2%;
+  top: 61.8%;
+  left: 28.6%;
 }
 body section#animated_sales .pulse3 {
-  top: 43%;
-  left: 38.2%;
+  top: 42.8%;
+  left: 38.6%;
 }
 body section#animated_sales .pulse4 {
-  top: 33%;
-  left: 48.2%;
+  top: 32.8%;
+  left: 48.6%;
 }
 body section#animated_sales .pulse5 {
-  top: 63%;
-  left: 58.2%;
+  top: 62.8%;
+  left: 58.6%;
 }
 body section#animated_sales .pulse6 {
-  top: 50%;
-  left: 68.2%;
+  top: 49.8%;
+  left: 68.6%;
 }
 body section#animated_sales .pulse7 {
-  top: 54%;
-  left: 78.2%;
+  top: 53.8%;
+  left: 78.6%;
 }
 body section#animated_sales .pulse8 {
-  top: 30%;
-  left: 88.2%;
+  top: 29.8%;
+  left: 88.6%;
 }
 body section#animated_sales #layerBall, body section#animated_sales #layerPulse {
   animation-delay: 1s;
@@ -9511,6 +9511,83 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   100% {
     -webkit-transform: scale(1, 1);
     opacity: 1;
+  }
+}
+@media (max-width: 320px) {
+  body section#animated_sales {
+    /* COORDINATE POINTS */
+  }
+  body section#animated_sales .ball {
+    top: 69%;
+    left: 8.7%;
+  }
+  body section#animated_sales .ball1 {
+    top: 58%;
+    left: 18.7%;
+  }
+  body section#animated_sales .ball2 {
+    top: 62%;
+    left: 28.7%;
+  }
+  body section#animated_sales .ball3 {
+    top: 43%;
+    left: 38.7%;
+  }
+  body section#animated_sales .ball4 {
+    top: 33%;
+    left: 48.7%;
+  }
+  body section#animated_sales .ball5 {
+    top: 63%;
+    left: 58.7%;
+  }
+  body section#animated_sales .ball6 {
+    top: 50%;
+    left: 68.7%;
+  }
+  body section#animated_sales .ball7 {
+    top: 54%;
+    left: 78.7%;
+  }
+  body section#animated_sales .ball8 {
+    top: 30%;
+    left: 88.7%;
+  }
+  body section#animated_sales .pulse {
+    top: 68.8%;
+    left: 8.2%;
+  }
+  body section#animated_sales .pulse1 {
+    top: 57.8%;
+    left: 18.2%;
+  }
+  body section#animated_sales .pulse2 {
+    top: 61.8%;
+    left: 28.2%;
+  }
+  body section#animated_sales .pulse3 {
+    top: 42.8%;
+    left: 38.2%;
+  }
+  body section#animated_sales .pulse4 {
+    top: 32.8%;
+    left: 48.2%;
+  }
+  body section#animated_sales .pulse5 {
+    top: 62.8%;
+    left: 58.2%;
+  }
+  body section#animated_sales .pulse6 {
+    top: 49.8%;
+    left: 68.2%;
+  }
+  body section#animated_sales .pulse7 {
+    top: 53.8%;
+    left: 78.2%;
+  }
+  body section#animated_sales .pulse8 {
+    top: 29.8%;
+    left: 88.2%;
   }
 }
 @media (max-width: 320px) {
@@ -9679,7 +9756,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 14%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move1 {
@@ -9688,7 +9764,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move2 {
@@ -9697,7 +9772,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 17%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move3 {
@@ -9706,7 +9780,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 12%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move4 {
@@ -9715,7 +9788,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 23%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move5 {
@@ -9724,7 +9796,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 15%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move6 {
@@ -9733,7 +9804,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move7 {
@@ -9742,7 +9812,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 20%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
 }
@@ -9796,7 +9865,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 14%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move1 {
@@ -9805,7 +9873,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move2 {
@@ -9814,7 +9881,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 25%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move3 {
@@ -9823,7 +9889,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 14%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move4 {
@@ -9832,7 +9897,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 34%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move5 {
@@ -9841,7 +9905,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 16%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move6 {
@@ -9850,7 +9913,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move7 {
@@ -9859,7 +9921,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 30%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
 }
@@ -9913,7 +9974,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 14%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move1 {
@@ -9922,7 +9982,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move2 {
@@ -9931,7 +9990,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 20%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move3 {
@@ -9940,7 +9998,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 12%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move4 {
@@ -9949,7 +10006,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 28%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move5 {
@@ -9958,7 +10014,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 16%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move6 {
@@ -9967,7 +10022,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 10%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
   @-webkit-keyframes move7 {
@@ -9976,7 +10030,6 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
     }
     100% {
       width: 24%;
-      box-shadow: 0px 0px 5px 1px rgba(0, 198, 255, 0.5);
     }
   }
 }

@@ -205,25 +205,25 @@
   }
 
   /* COORDINATE POINTS */
-  .ball  { top:69%; left:8.9%; }
-  .ball1 { top:58%; left:18.9%; }
-  .ball2 { top:62%; left:28.9%; }
-  .ball3 { top:43%; left:38.9%; }
-  .ball4 { top:33%; left:48.9%; }
-  .ball5 { top:63%; left:58.9%; }
-  .ball6 { top:50%; left:68.9%; }
-  .ball7 { top:54%; left:78.9%; }
-  .ball8 { top:30%; left:88.9%; }
+  .ball  { top:69%; left:8.8%; }
+  .ball1 { top:58%; left:18.8%; }
+  .ball2 { top:62%; left:28.8%; }
+  .ball3 { top:43%; left:38.8%; }
+  .ball4 { top:33%; left:48.8%; }
+  .ball5 { top:63%; left:58.8%; }
+  .ball6 { top:50%; left:68.8%; }
+  .ball7 { top:54%; left:78.8%; }
+  .ball8 { top:30%; left:88.8%; }
 
-  .pulse  { top:69%; left:8.2%; }
-  .pulse1 { top:58%; left:18.2%; }
-  .pulse2 { top:62%; left:28.2%; }
-  .pulse3 { top:43%; left:38.2%; }
-  .pulse4 { top:33%; left:48.2%; }
-  .pulse5 { top:63%; left:58.2%; }
-  .pulse6 { top:50%; left:68.2%; }
-  .pulse7 { top:54%; left:78.2%; }
-  .pulse8 { top:30%; left:88.2%; }
+  .pulse  { top:68.8%; left:8.6%; }
+  .pulse1 { top:57.8%; left:18.6%; }
+  .pulse2 { top:61.8%; left:28.6%; }
+  .pulse3 { top:42.8%; left:38.6%; }
+  .pulse4 { top:32.8%; left:48.6%; }
+  .pulse5 { top:62.8%; left:58.6%; }
+  .pulse6 { top:49.8%; left:68.6%; }
+  .pulse7 { top:53.8%; left:78.6%; }
+  .pulse8 { top:29.8%; left:88.6%; }
 
   /* CONTROL LAYER DELAY */
   #layerBall, #layerPulse   { animation-delay:1s; }
@@ -287,6 +287,28 @@
     100%{ -webkit-transform:scale(1,1); opacity:1;}
   }
 
+  @media (max-width: 320px) {
+    /* COORDINATE POINTS */
+    .ball  { top:69%; left:8.7%; }
+    .ball1 { top:58%; left:18.7%; }
+    .ball2 { top:62%; left:28.7%; }
+    .ball3 { top:43%; left:38.7%; }
+    .ball4 { top:33%; left:48.7%; }
+    .ball5 { top:63%; left:58.7%; }
+    .ball6 { top:50%; left:68.7%; }
+    .ball7 { top:54%; left:78.7%; }
+    .ball8 { top:30%; left:88.7%; }
+
+    .pulse  { top:68.8%; left:8.2%; }
+    .pulse1 { top:57.8%; left:18.2%; }
+    .pulse2 { top:61.8%; left:28.2%; }
+    .pulse3 { top:42.8%; left:38.2%; }
+    .pulse4 { top:32.8%; left:48.2%; }
+    .pulse5 { top:62.8%; left:58.2%; }
+    .pulse6 { top:49.8%; left:68.2%; }
+    .pulse7 { top:53.8%; left:78.2%; }
+    .pulse8 { top:29.8%; left:88.2%; }
+  }
   //Start 6x iphone
   @media (max-width: 320px) {
     .running .line {
@@ -362,6 +384,7 @@
       0%   { width:0px;}
       100% { width:37%;}
     }
+
   }
   //Start tablet here
   @media (min-width: $screen-sm) {
@@ -413,35 +436,35 @@
     /* ANIMATION */
     @-webkit-keyframes move {
       0%   { width:0px;}
-      100% { width:14%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:14%; }
     }
     @-webkit-keyframes move1 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move2 {
       0%   { width:0px;}
-      100% { width:17%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:17%; }
     }
     @-webkit-keyframes move3 {
       0%   { width:0px;}
-      100% { width:12%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:12%; }
     }
     @-webkit-keyframes move4 {
       0%   { width:0px;}
-      100% { width:23%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:23%; }
     }
     @-webkit-keyframes move5 {
       0%   { width:0px;}
-      100% { width:15%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:15%; }
     }
     @-webkit-keyframes move6 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move7 {
       0%   { width:0px;}
-      100% { width:20%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:20%; }
     }
   }
   //Start desktop small here
@@ -489,35 +512,35 @@
     /* ANIMATION */
     @-webkit-keyframes move {
       0%   { width:0px;}
-      100% { width:14%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:14%; }
     }
     @-webkit-keyframes move1 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move2 {
       0%   { width:0px;}
-      100% { width:25%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:25%; }
     }
     @-webkit-keyframes move3 {
       0%   { width:0px;}
-      100% { width:14%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:14%; }
     }
     @-webkit-keyframes move4 {
       0%   { width:0px;}
-      100% { width:34%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:34%; }
     }
     @-webkit-keyframes move5 {
       0%   { width:0px;}
-      100% { width:16%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:16%; }
     }
     @-webkit-keyframes move6 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move7 {
       0%   { width:0px;}
-      100% { width:30%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:30%; }
     }
   }
   //Start desktop large here
@@ -566,35 +589,35 @@
     /* ANIMATION */
     @-webkit-keyframes move {
       0%   { width:0px;}
-      100% { width:14%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:14%; }
     }
     @-webkit-keyframes move1 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move2 {
       0%   { width:0px;}
-      100% { width:20%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:20%; }
     }
     @-webkit-keyframes move3 {
       0%   { width:0px;}
-      100% { width:12%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:12%; }
     }
     @-webkit-keyframes move4 {
       0%   { width:0px;}
-      100% { width:28%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:28%; }
     }
     @-webkit-keyframes move5 {
       0%   { width:0px;}
-      100% { width:16%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:16%; }
     }
     @-webkit-keyframes move6 {
       0%   { width:0px;}
-      100% { width:10%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:10%; }
     }
     @-webkit-keyframes move7 {
       0%   { width:0px;}
-      100% { width:24%; box-shadow:0px 0px 5px 1px rgba(0,198,255,0.5); }
+      100% { width:24%; }
     }
   }
 }
