@@ -8084,17 +8084,20 @@ body section#recent_works .owl-controls {
   margin: 0;
 }
 body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
-  font-size: 3.6rem;
-  position: absolute;
-  top: 43%;
-  opacity: 1;
+  font-size: 2.4rem;
   font-family: FontAwesome;
   text-indent: -9999px;
-  width: 42px;
-  line-height: 3.6rem;
   color: white;
   background: #20b7a3;
   border: 1px solid #20b7a3;
+  border-radius: 50%;
+  position: absolute;
+  top: 43%;
+  opacity: 1;
+  height: 70px;
+  width: 70px;
+  padding: 0;
+  margin: 0;
   transition: 1s;
 }
 body section#recent_works .owl-controls .owl-prev:hover, body section#recent_works .owl-controls .owl-next:hover {
@@ -8105,33 +8108,21 @@ body section#recent_works .owl-controls .owl-prev:before, body section#recent_wo
   position: absolute;
   display: block;
   text-indent: 0;
+  line-height: 65px;
 }
 body section#recent_works .owl-controls .owl-prev {
-  left: 0;
+  left: 20px;
 }
 body section#recent_works .owl-controls .owl-prev:before {
   content: '\f104';
-  left: 12px;
+  left: 40%;
 }
 body section#recent_works .owl-controls .owl-next {
-  right: 0;
+  right: 20px;
 }
 body section#recent_works .owl-controls .owl-next:before {
   content: '\f105';
-  right: 12px;
-}
-@media (min-width: 768px) {
-  body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
-    font-size: 6rem;
-    line-height: 43px;
-    width: 4.8rem;
-  }
-  body section#recent_works .owl-controls .owl-prev:before {
-    left: 10px;
-  }
-  body section#recent_works .owl-controls .owl-next:after {
-    right: 10px;
-  }
+  right: 40%;
 }
 body section#recent_works .item {
   position: relative;
