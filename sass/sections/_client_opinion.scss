@@ -1,12 +1,11 @@
 &#client_opinion {
   background: image-url('client_opinion.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 100%;
   background-attachment: fixed;
   text-align: center;
-  @media (min-width: $screen-sm) {
-    height: 695px;
-    overflow: hidden;
+  &:before {
+    background: $ebony;
   }
   .owl-controls {
     overflow: hidden;

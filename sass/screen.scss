@@ -49,12 +49,12 @@ body {
     font-size: 3rem;
     line-height: 30px;
     text-transform: uppercase;
-    margin: 0 0 5rem 0;
+    margin: 5rem 0;
     @media (min-width: $screen-sm) {
       font-size: 4rem;
     }
     @media (min-width: $screen-md) {
-      margin: 0 0 8rem 0;
+      margin: 8rem 0;
     }
   }
   h3 {

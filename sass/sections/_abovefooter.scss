@@ -1,6 +1,7 @@
 &#abovefooter {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0;
+  padding-top: 5rem;
   line-height: 24px;
   h3 { margin: 0 0 20px 0;}
   .col-xs-12 { margin-bottom: 20px;}
@@ -30,6 +31,11 @@
           border: none;
           border-radius: 0;
           font-size: 14px;
+          @include input-placeholder {
+            color: $dusty_gray;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+          }
         }
         button {
           border: none;
@@ -43,8 +49,17 @@
     }
     @media (min-width: $screen-sm) {
       margin-bottom: 0;
-      .input-group {
-        max-width: 350px;
+      form {
+        .input-group {
+          max-width: 350px;
+          input {
+            height: 50px;
+          }
+          button {
+            height: 50px;
+            width: 50px;
+          }
+        }
       }
     }
   }

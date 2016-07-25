@@ -4,6 +4,9 @@
   background-position: 0 0;
   background-attachment: fixed;
   padding-bottom: 0;
+  &:before {
+    background: $black_pearl;
+  }
   .lSAction > a { top: 5%;}
   #owl-recent-post {
     margin: 0 auto;

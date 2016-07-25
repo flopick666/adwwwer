@@ -2,9 +2,10 @@
   background: image-url('contact_bg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  // background-size: cover;
   min-height: 530px;
-  position: relative;
+  &:before {
+    background: $black_pearl;
+  }
   .modal_popup {
     background: $java;
     font-family: 'Roboto', sans-serif;

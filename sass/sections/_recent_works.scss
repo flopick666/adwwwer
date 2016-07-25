@@ -1,5 +1,8 @@
 &#recent_works {
   background: $ebony;
+  &:before {
+    background: $black_pearl;
+  }
   .owl-controls {
     overflow: hidden;
     margin: 0;
@@ -57,7 +60,7 @@
         &:before,
         &:after {
           line-height: 65px;
-        }        
+        }
       }
       .owl-prev {
         &:before {

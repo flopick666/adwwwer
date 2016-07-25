@@ -1,6 +1,8 @@
 &#diagrams {
+  padding-top: 5rem;
   text-align: center;
   @media (min-width: $screen-md) {
+    padding-top: 8rem;
     .col-xs-6 {
       border-left: 1px solid $cape_cod;
       &:last-child {

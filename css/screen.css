@@ -7449,7 +7449,7 @@ body h2 {
   font-size: 3rem;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 0 0 5rem 0;
+  margin: 5rem 0;
 }
 @media (min-width: 768px) {
   body h2 {
@@ -7458,7 +7458,7 @@ body h2 {
 }
 @media (min-width: 992px) {
   body h2 {
-    margin: 0 0 8rem 0;
+    margin: 8rem 0;
   }
 }
 body h3 {
@@ -7762,21 +7762,21 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
 body section {
   clear: both;
   padding-bottom: 5rem;
-  padding-top: 5rem;
+  position: relative;
 }
 body section:before {
   display: block;
-  content: "";
-  height: 80px;
-  margin: -80px 0 0;
+  content: " ";
+  height: 49px;
+  margin-top: -49px;
 }
 @media (min-width: 992px) {
   body section {
     padding-bottom: 8rem;
-    padding-top: 8rem;
   }
-  body section#introduce, body section#first {
-    padding-top: 8rem;
+  body section:before {
+    height: 79px;
+    margin-top: -79px;
   }
 }
 body section#mobile_top {
@@ -7876,6 +7876,9 @@ body section#webgl_section h1 span:first-child {
   font-weight: 500;
 }
 @media (min-width: 992px) {
+  body section#webgl_section {
+    padding-top: 8rem;
+  }
   body section#webgl_section h1 {
     font-size: 6.5rem;
     margin-top: 180px;
@@ -8032,19 +8035,15 @@ body section#introduce #services #main-services .col-xs-12 .circle.red i::after 
   background-color: #20b7a3;
 }
 @media (min-width: 768px) {
-  body section#introduce #services #main-services {
-    padding-bottom: 8rem;
-  }
   body section#introduce #services #main-services .col-xs-12 {
     padding-top: 10rem;
-    height: 390px;
+    height: 370px;
   }
 }
 body section#introduce #services #secondary-services {
   display: none;
   border-top: 1px solid #161616;
   line-height: 24px;
-  padding-bottom: 5rem;
   padding-top: 5rem;
 }
 body section#introduce #services #secondary-services .col-xs-12 {
@@ -8064,10 +8063,6 @@ body section#introduce #services #secondary-services .col-xs-12 h3 .fa {
   margin-right: 15px;
 }
 @media (min-width: 768px) {
-  body section#introduce #services #secondary-services {
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-  }
   body section#introduce #services #secondary-services .col-xs-12 {
     margin-bottom: 5rem;
     height: 110px;
@@ -8084,6 +8079,9 @@ body section#introduce p:last-child {
 }
 body section#recent_works {
   background: #060a0e;
+}
+body section#recent_works:before {
+  background: #010509;
 }
 body section#recent_works .owl-controls {
   overflow: hidden;
@@ -8252,6 +8250,7 @@ body section#best_sellers .product-item a.buy:hover .fa:before {
 body section#become_member {
   padding: 35px 0;
   margin-bottom: 50px;
+  z-index: 200;
 }
 body section#become_member h2 {
   margin: 0;
@@ -8284,6 +8283,7 @@ body section#become_member.green:before {
   border-right: 16px solid transparent;
   border-bottom: 8px solid #20b7a3;
   margin-left: -16px;
+  margin-top: 0;
 }
 body section#become_member.green button#hide-green-block {
   position: absolute;
@@ -8361,6 +8361,9 @@ body section#recent_post {
   background-position: 0 0;
   background-attachment: fixed;
   padding-bottom: 0;
+}
+body section#recent_post:before {
+  background: #010509;
 }
 body section#recent_post .lSAction > a {
   top: 5%;
@@ -9044,9 +9047,12 @@ body section#project_info #application .application-section div.laptop .screen a
 body section#latest_news {
   background: #060a0e;
 }
+body section#latest_news:before {
+  background: #010509;
+}
 body section#latest_news #owl-latest-news {
   max-width: 1170px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 5rem;
 }
 body section#latest_news #owl-latest-news .item {
   padding: 0 15px;
@@ -9101,6 +9107,9 @@ body section#latest_news #owl-latest-news .item .description {
   line-height: 24px;
 }
 @media (max-width: 768px) {
+  body section#latest_news #owl-latest-news .item {
+    padding-bottom: 8rem;
+  }
   body section#latest_news #owl-latest-news .item .item {
     margin: 10px;
   }
@@ -9108,15 +9117,12 @@ body section#latest_news #owl-latest-news .item .description {
 body section#client_opinion {
   background: url('../img/client_opinion.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 100%;
   background-attachment: fixed;
   text-align: center;
 }
-@media (min-width: 768px) {
-  body section#client_opinion {
-    height: 695px;
-    overflow: hidden;
-  }
+body section#client_opinion:before {
+  background: #060a0e;
 }
 body section#client_opinion .owl-controls {
   overflow: hidden;
@@ -10277,9 +10283,13 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
 }
 body section#diagrams {
+  padding-top: 5rem;
   text-align: center;
 }
 @media (min-width: 992px) {
+  body section#diagrams {
+    padding-top: 8rem;
+  }
   body section#diagrams .col-xs-6 {
     border-left: 1px solid #3c4b4b;
   }
@@ -10520,7 +10530,9 @@ body section#contact_info {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 530px;
-  position: relative;
+}
+body section#contact_info:before {
+  background: #010509;
 }
 body section#contact_info .modal_popup {
   background: #20b7a3;
@@ -10593,6 +10605,7 @@ body section#contact_info .modal_popup .button-more:hover {
 body section#abovefooter {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0;
+  padding-top: 5rem;
   line-height: 24px;
 }
 body section#abovefooter h3 {
@@ -10629,6 +10642,26 @@ body section#abovefooter .newsletter form .input-group input {
   border-radius: 0;
   font-size: 14px;
 }
+body section#abovefooter .newsletter form .input-group input:-moz-placeholder {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+body section#abovefooter .newsletter form .input-group input::-moz-placeholder {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+body section#abovefooter .newsletter form .input-group input:-ms-input-placeholder {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+body section#abovefooter .newsletter form .input-group input::-webkit-input-placeholder {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
 body section#abovefooter .newsletter form .input-group button {
   border: none;
   border-radius: 0;
@@ -10641,8 +10674,15 @@ body section#abovefooter .newsletter form .input-group button {
   body section#abovefooter .newsletter {
     margin-bottom: 0;
   }
-  body section#abovefooter .newsletter .input-group {
+  body section#abovefooter .newsletter form .input-group {
     max-width: 350px;
+  }
+  body section#abovefooter .newsletter form .input-group input {
+    height: 50px;
+  }
+  body section#abovefooter .newsletter form .input-group button {
+    height: 50px;
+    width: 50px;
   }
 }
 body section#abovefooter .twitter-tweet {
@@ -10827,7 +10867,7 @@ body .tabbable.responsive .tab-content {
   border-bottom: 1px solid #161616;
   border-top: 1px solid #161616;
   padding: 30px 20px 10px;
-  margin-bottom: 30px;
+  margin-bottom: 7rem;
 }
 @media (min-width: 768px) {
   body .tabbable.responsive .nav-tabs {
