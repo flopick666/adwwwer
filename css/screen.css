@@ -7471,20 +7471,34 @@ body ul {
   font-family: 'Roboto', sans-serif;
 }
 body .button-more, body a.button-more {
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #20b7a3;
-  padding: 15px 30px;
-  cursor: pointer;
   display: inline-block;
-  width: 190px;
+  touch-action: manipulation;
+  border: 1px solid #20b7a3;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  font: normal 14px/1 'Open Sans', sans-serif;
+  padding: 15px 30px;
+  box-shadow: inset 0 0 20px rgba(32, 183, 163, 0);
+  text-shadow: none;
+  outline: 1px solid;
+  outline-color: rgba(32, 183, 163, 0.5);
+  outline-offset: 0px;
+  -webkit-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 body .button-more:hover, body a.button-more:hover {
-  background: #20b7a3;
-  color: white;
+  box-shadow: inset 0 0 20px rgba(32, 183, 163, 0.5), 0 0 20px rgba(32, 183, 163, 0.2);
+  outline-color: rgba(32, 183, 163, 0) !important;
+  outline: 1px solid;
+  outline-offset: 10px;
+  text-shadow: 1px 1px 2px #427388;
   text-decoration: none;
+  color: #20b7a3;
+  background-color: transparent;
+  border-color: #178375;
 }
 body .green {
   color: #20b7a3;
@@ -7824,7 +7838,6 @@ body section#webgl_section {
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 4px solid #20b7a3;
 }
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;
@@ -7902,6 +7915,9 @@ body section#first h1 p:last-child {
     font-size: 6.5rem;
   }
 }
+body section#introduce {
+  font-family: 'Roboto', sans-serif;
+}
 body section#introduce .carousel-container {
   position: relative;
   width: 100%;
@@ -7939,41 +7955,122 @@ body section#introduce .carousel-container #introduce-carousel .carousel-feature
 body section#introduce #services {
   overflow: hidden;
 }
-body section#introduce #services .col-xs-12 {
-  display: none;
+body section#introduce #services #main-services {
+  padding-bottom: 5rem;
+}
+body section#introduce #services #main-services .col-xs-12 {
   overflow: hidden;
   padding-top: 4rem;
   line-height: 24px;
 }
-body section#introduce #services .col-xs-12 h3 {
+body section#introduce #services #main-services .col-xs-12 h3 {
   margin-bottom: 1.5rem;
 }
-body section#introduce #services .col-xs-12 .circle {
-  height: 130px;
-  width: 130px;
-  line-height: 130px;
-  border-radius: 50%;
-  font-size: 55px;
-  background-color: #20b7a3;
-  margin: 0 auto 4rem;
+body section#introduce #services #main-services .col-xs-12 .circle {
+  text-align: center;
 }
-body section#introduce #services .col-xs-12 .circle a {
-  color: #fff;
-}
-body section#introduce #services .col-xs-12 .circle a .fa {
+body section#introduce #services #main-services .col-xs-12 .circle i {
+  color: white;
   display: inline-block;
-  font-size: inherit;
-  text-rendering: auto;
-  transform: translate(0, 0);
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: visible;
+  -webkit-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+body section#introduce #services #main-services .col-xs-12 .circle i::before {
+  position: relative;
+  font-size: 50px;
+  line-height: 130px;
+  z-index: 1;
+}
+body section#introduce #services #main-services .col-xs-12 .circle i::after {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  content: "";
+  width: 128px;
+  height: 128px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #20b7a3;
+  -webkit-transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transform: scale(0.92);
+  -ms-transform: scale(0.92);
+  -webkit-transform: scale(0.92);
+  transform: scale(0.92);
+  z-index: 0;
+}
+body section#introduce #services #main-services .col-xs-12 .circle:hover i {
+  color: #20b7a3 !important;
+  border-color: #20b7a3;
+}
+body section#introduce #services #main-services .col-xs-12 .circle:hover i::after {
+  opacity: 0;
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+body section#introduce #services #main-services .col-xs-12 .circle.red i {
+  color: white;
+}
+body section#introduce #services #main-services .col-xs-12 .circle.red i::after {
+  background-color: #20b7a3;
 }
 @media (min-width: 768px) {
-  body section#introduce #services .col-xs-12 {
+  body section#introduce #services #main-services {
+    padding-bottom: 8rem;
+  }
+  body section#introduce #services #main-services .col-xs-12 {
     padding-top: 10rem;
-    height: 380px;
+    height: 390px;
+  }
+}
+body section#introduce #services #secondary-services {
+  display: none;
+  border-top: 1px solid #161616;
+  line-height: 24px;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+body section#introduce #services #secondary-services .col-xs-12 {
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+body section#introduce #services #secondary-services .col-xs-12 h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  padding-bottom: 2rem;
+  color: white;
+}
+body section#introduce #services #secondary-services .col-xs-12 h3 .fa {
+  font-size: 30px;
+  color: #20b7a3;
+  margin-right: 15px;
+}
+@media (min-width: 768px) {
+  body section#introduce #services #secondary-services {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+  body section#introduce #services #secondary-services .col-xs-12 {
+    margin-bottom: 5rem;
+    height: 110px;
+  }
+  body section#introduce #services #secondary-services .col-xs-12 h3 {
+    padding-bottom: 3rem;
   }
 }
 body section#introduce a.button-more {
-  margin: 4rem 0 2rem 0;
   width: auto;
 }
 body section#introduce p:last-child {
@@ -7987,41 +8084,54 @@ body section#recent_works .owl-controls {
   margin: 0;
 }
 body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+  font-size: 3.6rem;
   position: absolute;
   top: 43%;
   opacity: 1;
   font-family: FontAwesome;
   text-indent: -9999px;
   width: 42px;
-  font-size: 4rem;
   line-height: 3.6rem;
-  color: #20b7a3;
-  background: white;
+  color: white;
+  background: #20b7a3;
+  border: 1px solid #20b7a3;
   transition: 1s;
 }
 body section#recent_works .owl-controls .owl-prev:hover, body section#recent_works .owl-controls .owl-next:hover {
-  color: white;
-  background: #20b7a3;
+  color: #20b7a3;
+  background: #060a0e;
+}
+body section#recent_works .owl-controls .owl-prev:before, body section#recent_works .owl-controls .owl-prev:after, body section#recent_works .owl-controls .owl-next:before, body section#recent_works .owl-controls .owl-next:after {
+  position: absolute;
+  display: block;
+  text-indent: 0;
 }
 body section#recent_works .owl-controls .owl-prev {
   left: 0;
 }
 body section#recent_works .owl-controls .owl-prev:before {
-  position: absolute;
-  display: block;
   content: '\f104';
   left: 12px;
-  text-indent: 0;
 }
 body section#recent_works .owl-controls .owl-next {
   right: 0;
 }
 body section#recent_works .owl-controls .owl-next:before {
-  position: absolute;
-  display: block;
   content: '\f105';
   right: 12px;
-  text-indent: 0;
+}
+@media (min-width: 768px) {
+  body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+    font-size: 6rem;
+    line-height: 43px;
+    width: 4.8rem;
+  }
+  body section#recent_works .owl-controls .owl-prev:before {
+    left: 10px;
+  }
+  body section#recent_works .owl-controls .owl-next:after {
+    right: 10px;
+  }
 }
 body section#recent_works .item {
   position: relative;
@@ -8331,11 +8441,12 @@ body section#recent_post #owl-recent-post .author .author_photo {
 }
 body section#recent_post #owl-recent-post .author h3.author_name {
   padding: 0 15px;
-  font-size: 2.4rem;
+  font-size: 3rem;
+  font-weight: normal;
 }
 body section#recent_post #owl-recent-post .author .post_author_statistic {
   background: #060a0e;
-  padding: 15px;
+  padding: 13px 20px;
   text-align: center;
   font-size: 12px;
   text-transform: uppercase;
@@ -8343,16 +8454,18 @@ body section#recent_post #owl-recent-post .author .post_author_statistic {
 body section#recent_post #owl-recent-post .author .post_author_statistic p {
   margin: 0 4%;
   display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  line-height: 40px;
 }
 body section#recent_post #owl-recent-post .author .post_author_statistic p span {
+  line-height: normal;
   display: block;
   position: relative;
-  padding: 10px 20px;
+  padding: 5px 20px;
   margin-bottom: 10px;
-  border: 1px solid #798084;
+  border: 1px solid #161616;
   color: white;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -8368,7 +8481,7 @@ body section#recent_post #owl-recent-post .author .post_author_statistic p span:
 body section#recent_post #owl-recent-post .author .post_author_statistic p span:before {
   bottom: -8px;
   left: 30px;
-  border-top-color: #798084;
+  border-top-color: #161616;
   border-width: 7px;
 }
 body section#recent_post #owl-recent-post .author .post_author_statistic p span:after {
@@ -8419,6 +8532,7 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
     float: left;
     width: 70%;
     text-align: left;
+    padding: 20px 15px;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p {
     margin: 0;
@@ -8427,7 +8541,7 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
   body section#recent_post #owl-recent-post .author .post_author_statistic p span {
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 15px;
+    margin-right: 10px;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p span:after, body section#recent_post #owl-recent-post .author .post_author_statistic p span:before {
     content: '';
@@ -8439,13 +8553,13 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
     border-style: solid;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p span:after {
-    top: 16px;
+    top: 9px;
     border-color: transparent transparent transparent #060a0e;
     border-width: 10px;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p span:before {
-    top: 15px;
-    border-color: transparent transparent transparent #798084;
+    top: 8px;
+    border-color: transparent transparent transparent #161616;
     border-width: 11px;
   }
   body section#recent_post #owl-recent-post .author .read_blog {
@@ -8502,12 +8616,16 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
   body section#recent_post #owl-recent-post .author {
     padding: 0 15px;
   }
+  body section#recent_post #owl-recent-post .author .post_author_statistic {
+    padding: 20px 30px;
+  }
   body section#recent_post #owl-recent-post .author .post_overview {
     overflow: hidden;
   }
   body section#recent_post #owl-recent-post .author .post_overview h3 {
     line-height: 75px;
     margin: 0;
+    padding: 0 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -8519,6 +8637,12 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
   }
   body section#recent_post #owl-recent-post .row.post .col-sm-8 .recent_content {
     height: 200px;
+  }
+  body section#recent_post #owl-recent-post .author .post_author_statistic p {
+    padding-right: 30px;
+  }
+  body section#recent_post #owl-recent-post .author .post_author_statistic p span {
+    margin-right: 20px;
   }
 }
 body section#project_info .menu {
@@ -9037,6 +9161,7 @@ body section#client_opinion #quote-carousel blockquote {
 body section#client_opinion #quote-carousel blockquote p {
   width: 75%;
   margin: 0 auto;
+  line-height: 24px;
 }
 body section#client_opinion #quote-carousel blockquote p.author {
   margin: 15px auto;
@@ -9074,11 +9199,11 @@ body section#client_opinion #quote-carousel blockquote .item {
   }
   body section#client_opinion #quote-carousel blockquote:before {
     content: '\f10d';
-    left: 0;
+    left: 20px;
   }
   body section#client_opinion #quote-carousel blockquote:after {
     content: '\f10e';
-    right: 0;
+    right: 20px;
   }
 }
 body section#animated_sales {
@@ -9089,6 +9214,10 @@ body section#animated_sales {
   /* COORDINATE POINTS */
   /* CONTROL LAYER DELAY */
   /* ANIMATION */
+}
+body section#animated_sales .fa {
+  display: block;
+  padding-top: 10px;
 }
 body section#animated_sales h2 {
   text-align: center;

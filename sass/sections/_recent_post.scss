@@ -2,7 +2,6 @@
   background: image-url('recent_post.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
-  // background-size: cover;
   background-attachment: fixed;
   padding-bottom: 0;
   .lSAction > a { top: 5%;}
@@ -96,26 +95,31 @@
       }
       h3.author_name {
         padding: 0 15px;
-        font-size: 2.4rem;
+        font-size: 3rem;
+        font-weight: normal;
       }
+
       .post_author_statistic {
         background: $ebony;
-        padding: 15px;
+        padding: 13px 20px;
         text-align: center;
         font-size: 12px;
         text-transform: uppercase;
         p {
           margin: 0 4%;
           display: inline-block;
+          font-family: 'Roboto', sans-serif;
+          line-height: 40px;
           span {
+            line-height: normal;
             display: block;
             position: relative;
-            padding: 10px 20px;
+            padding: 5px 20px;
             margin-bottom: 10px;
-            border: 1px solid $abbey;
+            border: 1px solid $cod_gray;
             color: white;
             text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
+
             font-size: 20px;
             font-weight: 700;
             &:before, &:after {
@@ -130,7 +134,7 @@
             &:before {
               bottom: -8px;
               left: 30px;
-              border-top-color: $abbey;
+              border-top-color: $cod_gray;
               border-width: 7px;
             }
             &:after {
@@ -188,13 +192,14 @@
           float: left;
           width: 70%;
           text-align: left;
+          padding: 20px 15px;
           p {
             margin: 0;
             padding-right: 10px;
             span {
               display: inline-block;
               margin-bottom: 0;
-              margin-right: 15px;
+              margin-right: 10px;
               &:after,
               &:before {
                 content: '';
@@ -206,13 +211,13 @@
                 border-style: solid;
               }
               &:after {
-                top: 16px;
+                top: 9px;
                 border-color: transparent transparent transparent $ebony;
                 border-width: 10px;
               }
               &:before {
-                top: 15px;
-                border-color: transparent transparent transparent $abbey;
+                top: 8px;
+                border-color: transparent transparent transparent $cod_gray;
                 border-width: 11px;
               }
             }
@@ -269,12 +274,16 @@
         }
       }
       .author {
+        .post_author_statistic {
+          padding: 20px 30px;
+        }
         padding: 0 15px;
         .post_overview {
           overflow: hidden;
           h3 {
             line-height: 75px;
             margin: 0;
+            padding: 0 3rem;
           }
         }
       }
@@ -286,6 +295,16 @@
         .col-sm-8 {
           .recent_content {
             height: 200px;
+          }
+        }
+      }
+      .author {
+        .post_author_statistic {
+          p {
+            padding-right: 30px;
+            span {
+              margin-right: 20px;
+            }
           }
         }
       }

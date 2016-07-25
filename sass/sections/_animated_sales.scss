@@ -1,6 +1,10 @@
 &#animated_sales {
   position:relative;
   background: $ebony;
+  .fa {
+    display: block;
+    padding-top: 10px;
+  }
   /* GRAPH */
   h2 {
     text-align: center;

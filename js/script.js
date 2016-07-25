@@ -18,7 +18,7 @@ $(document).ready(function () {
         }
         getMainMenuItem($(item).parent().parent().prev(), ++i);
     }
-    
+
   //Active class according to scroll
   $(window).scroll(function(){
     var scrollTop = $(document).scrollTop();
@@ -47,9 +47,9 @@ $(document).ready(function () {
     var $window = $(window);
     var donothing_introduce = false;
     var donothing_diagram = false;
-    var donothing_recentwork = false;
-    var donothing_recentpost = false;
-    var donothing_latestnews = false;
+      // var donothing_recentwork = false;
+      // var donothing_recentpost = false;
+      // var donothing_latestnews = false;
     var donothing_client_opinion = false;
     var donothing_animation_diagramm = false;
     // console.log ('permennaya ' + donothing);
@@ -82,7 +82,7 @@ $(document).ready(function () {
             donothing_animation_diagramm = true;
           }
         }
-        
+
         $('#diagrams').find('.diagram_circles').each(function(n,e){
             z = e;
 
@@ -110,19 +110,27 @@ $(document).ready(function () {
 
 
     // Load the first 4 list items for Services Section
-    $('#services .col-xs-12:lt(4)').show();
-    var items =  8;
-    var shown =  4;
-    $('#loadMore').click(function () {
-      shown = $('#services .col-xs-12:visible').size()+4;
-      if (shown < items) {
-        $('#services .col-xs-12:lt('+shown+')').show();
-      }
-      else {
-        $('#services .col-xs-12:lt('+items+')').show();
-        $('#loadMore').hide();
-      }
+    // $('#services .col-xs-12:lt(4)').show();
+    // var items =  8;
+    // var shown =  4;
+    // $('#loadMore').click(function () {
+    //   shown = $('#services .col-xs-12:visible').size()+4;
+    //   if (shown < items) {
+    //     $('#services .col-xs-12:lt('+shown+')').show();
+    //   }
+    //   else {
+    //     $('#services .col-xs-12:lt('+items+')').show();
+    //     $('#loadMore').hide();
+    //   }
+    // });
+    /*Hide Become a member block*/
+    $( "#services #loadMore" ).click(function() {
+      // e.preventDefault();
+      $( "#services #secondary-services" ).slideToggle( "slow");
+      $(this).text( $(this).text() == 'Show all services' ? "Hide all services" : "Show all services");
     });
+
+
 
     /*Hide Become a member block*/
     $( "#hide-green-block" ).click(function() {
@@ -245,7 +253,7 @@ $(document).ready(function () {
     if ( false === $.browser.mobile ) {
 
         $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
-        
+
         var webgl = $('#earth'),
         sectionWebGl = $('#webgl');
 
