@@ -7764,6 +7764,12 @@ body section {
   padding-bottom: 5rem;
   padding-top: 5rem;
 }
+body section:before {
+  display: block;
+  content: "";
+  height: 80px;
+  margin: -80px 0 0;
+}
 @media (min-width: 992px) {
   body section {
     padding-bottom: 8rem;
@@ -8094,8 +8100,8 @@ body section#recent_works .owl-controls .owl-prev, body section#recent_works .ow
   position: absolute;
   top: 43%;
   opacity: 1;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   padding: 0;
   margin: 0;
   transition: 1s;
@@ -8108,21 +8114,39 @@ body section#recent_works .owl-controls .owl-prev:before, body section#recent_wo
   position: absolute;
   display: block;
   text-indent: 0;
-  line-height: 65px;
+  line-height: 45px;
 }
 body section#recent_works .owl-controls .owl-prev {
   left: 20px;
 }
 body section#recent_works .owl-controls .owl-prev:before {
   content: '\f104';
-  left: 40%;
+  left: 50%;
+  margin-left: -6px;
 }
 body section#recent_works .owl-controls .owl-next {
   right: 20px;
 }
 body section#recent_works .owl-controls .owl-next:before {
   content: '\f105';
-  right: 40%;
+  right: 50%;
+  margin-right: -6px;
+}
+@media (min-width: 768px) {
+  body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+    font-size: 3.6rem;
+    width: 70px;
+    height: 70px;
+  }
+  body section#recent_works .owl-controls .owl-prev:before, body section#recent_works .owl-controls .owl-prev:after, body section#recent_works .owl-controls .owl-next:before, body section#recent_works .owl-controls .owl-next:after {
+    line-height: 65px;
+  }
+  body section#recent_works .owl-controls .owl-prev:before {
+    margin-left: -8px;
+  }
+  body section#recent_works .owl-controls .owl-next:before {
+    margin-right: -8px;
+  }
 }
 body section#recent_works .item {
   position: relative;
