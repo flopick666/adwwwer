@@ -268,6 +268,7 @@ $(document).ready(function () {
             if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
                 webgl.detach();
                 $('#show_webgl_button').html('show animation');
+                $('#show_webgl_button').removeAttr('href');
             }
         });
 
