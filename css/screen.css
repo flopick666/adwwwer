@@ -11057,6 +11057,18 @@ body .modal-dialog .modal-content .button-more:hover {
   background: white;
   color: #20b7a3;
 }
+body .pp_pic_holder.dark_square {
+  border: 1px solid #3c4b4b;
+  background: #060a0e;
+}
+body .pp_pic_holder.dark_square .pp_content,
+body .pp_pic_holder.dark_square .pp_middle,
+body .pp_pic_holder.dark_square .pp_left,
+body .pp_pic_holder.dark_square .pp_right,
+body .pp_pic_holder.dark_square .pp_top,
+body .pp_pic_holder.dark_square .pp_bottom {
+  background: #060a0e;
+}
 body #footer {
   background: #060a0e;
   padding: 2rem 0;
