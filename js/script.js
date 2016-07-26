@@ -187,6 +187,7 @@ $(document).ready(function () {
     });
 
     //Recebt Work section Carousel
+    $("#owl-recent-work a[rel^='prettyPhoto']").prettyPhoto();
     $("#owl-recent-work").owlCarousel({
       autoPlay: false, //Set AutoPlay to 3 seconds
       items : 5, //5 items above 1200px browser width
@@ -261,7 +262,7 @@ $(document).ready(function () {
 //            var p = Math.round((loaded * 100) / total);
 //            p = p.toString() + '%';
 //            console.log(p);
-            
+
             if ( loaded == total ) {
                 webgl.show();
                 $('#loadingProgressG').hide();
