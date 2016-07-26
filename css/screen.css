@@ -11067,8 +11067,8 @@ body .pp_pic_holder.dark_square .ppt {
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
-  line-height: 30px;
-  margin: 0;
+  line-height: 50px;
+  margin: 0 auto;
 }
 body .pp_pic_holder.dark_square .pp_top, body .pp_pic_holder.dark_square .pp_bottom {
   display: none;
