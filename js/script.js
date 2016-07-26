@@ -188,12 +188,12 @@ $(document).ready(function () {
 
     //Recebt Work section Carousel
     $("#owl-recent-work").owlCarousel({
-      autoPlay: 7500, //Set AutoPlay to 3 seconds
-      items : 5, //5 items above 1000px browser width
-      itemsDesktop : [1000,5], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,3], // betweem 900px and 601px
-      itemsTablet: [600,2], //2 items between 600 and 0
-      itemsMobile : [320,1], // itemsMobile disabled - inherit from itemsTablet option
+      autoPlay: false, //Set AutoPlay to 3 seconds
+      items : 5, //5 items above 1200px browser width
+      itemsDesktop : [1200,4], //4 items between 1200px and 960px
+      itemsDesktopSmall : [960,3], // betweem 960px and 768px
+      itemsTablet: [768,2], //2 items between 768 and 640px
+      itemsMobile : [640,1], // itemsMobile
       navigation : true,
       navigationText : ["prev","next"],
       rewindNav : true,

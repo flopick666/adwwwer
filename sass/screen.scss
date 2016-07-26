@@ -1,11 +1,15 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/images";
+@import "compass/css3/selection";
 @import "bootstrap/stylesheets/_bootstrap.scss";
 @import "variables.scss";
 html { box-sizing: border-box;}
 *, *:before, *:after {
   box-sizing: inherit;
+}
+* {
+  @include selection($java, white)
 }
 body {
   background: $black_pearl;
@@ -15,6 +19,7 @@ body {
     color: $java;
     transition: 1s;
     outline: 0;
+
     &:hover, &:focus, &:active {
       color: $java;
       outline: 0;

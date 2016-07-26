@@ -705,8 +705,8 @@
     // If greater than one, use as a forced width/height for all of the images
     largeFeatureWidth :   0,
     largeFeatureHeight:		0,
-    smallFeatureWidth:    .5,
-    smallFeatureHeight:		.5,
+    smallFeatureWidth:    .6,
+    smallFeatureHeight:		.7,
     // how much to pad the top of the carousel
     topPadding:           20,
     // spacing between the sides of the container

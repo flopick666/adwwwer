@@ -1,10 +1,14 @@
 &#introduce {
   font-family: 'Roboto', sans-serif;
+  p.visible-xs {
+    margin-top: 5rem;
+  }
   .carousel-container {
     position:relative;
     width: 100%;
     border-bottom: 1px solid $cod_gray;
-    margin: 2rem auto 0;
+    margin: 8rem auto 0;
+
     #introduce-carousel {
       height:255px;
       max-width:960px;

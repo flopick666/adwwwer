@@ -22,6 +22,12 @@
       padding: 0;
       margin: 0;
       transition: 1s;
+      @media(min-width: $screen-sm) {
+        top: 35%;
+      }
+      @media(min-width: $screen-md) {
+        top: 40%;
+      }
       &:hover {
         color: $java;
         background: $ebony;
@@ -51,6 +57,70 @@
       }
     }
   }
+  .item {
+    position: relative;
+    transition: 1s;
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: white;
+      img { width: 100%;}
+      .recent_hover {
+        opacity: 0;
+        background: rgba(32,183,163,0.5);
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        .content {
+          position: absolute;
+          height: auto;
+          width: 100%;
+          top: 30%;
+          left: 0;
+          text-align: center;
+          .fa {
+            font-size: 45px;
+            margin-bottom: 20px;
+            display: inline-block;
+            line-height: 1;
+            transform: scale(1.5) rotate(-10deg);
+            transition: all 0.3s ease;
+            @media(min-width: $screen-lg) {
+
+            }
+            @media(min-width: $screen-lg) {
+              font-size: 45px;
+              margin-bottom: 20px;
+            }
+          }
+          h4 {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 300;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      &:hover {
+        .recent_hover {
+          opacity: 1;
+          .content {
+            .fa {
+              transform: scale(1) rotate(0deg);
+            }
+          }
+        }
+      }
+    }
+  }
   @media(min-width: $screen-sm) {
     .owl-controls {
       .owl-prev, .owl-next {
@@ -71,36 +141,6 @@
         &:before {
           margin-right: -8px;
         }
-      }
-    }
-  }
-  .item {
-    position: relative;
-    transition: 1s;
-    img {
-      width: 100%;
-    }
-    .recent_hover {
-      display: none;
-      background: rgba(32,183,163,0.95);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      color: white;
-      padding-top: 20%;
-      text-align: center;
-      font-size: 2rem;
-      i, span {
-        display: block;
-      }
-      i {
-        font-size: 4rem;
-        margin: 20px 0;
-      }
-      span {
-        font-size: 1.4rem;
       }
     }
   }

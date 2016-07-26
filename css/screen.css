@@ -7406,6 +7406,15 @@ html {
   box-sizing: inherit;
 }
 
+*::-moz-selection {
+  color: white;
+  background-color: #20b7a3;
+}
+*::selection {
+  color: white;
+  background-color: #20b7a3;
+}
+
 body {
   background: #010509;
   color: #9B9B9B;
@@ -7927,11 +7936,14 @@ body section#first h1 p:last-child {
 body section#introduce {
   font-family: 'Roboto', sans-serif;
 }
+body section#introduce p.visible-xs {
+  margin-top: 5rem;
+}
 body section#introduce .carousel-container {
   position: relative;
   width: 100%;
   border-bottom: 1px solid #161616;
-  margin: 2rem auto 0;
+  margin: 8rem auto 0;
 }
 body section#introduce .carousel-container #introduce-carousel {
   height: 255px;
@@ -8104,6 +8116,16 @@ body section#recent_works .owl-controls .owl-prev, body section#recent_works .ow
   margin: 0;
   transition: 1s;
 }
+@media (min-width: 768px) {
+  body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+    top: 35%;
+  }
+}
+@media (min-width: 992px) {
+  body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
+    top: 40%;
+  }
+}
 body section#recent_works .owl-controls .owl-prev:hover, body section#recent_works .owl-controls .owl-next:hover {
   color: #20b7a3;
   background: #060a0e;
@@ -8130,6 +8152,67 @@ body section#recent_works .owl-controls .owl-next:before {
   right: 50%;
   margin-right: -6px;
 }
+body section#recent_works .item {
+  position: relative;
+  transition: 1s;
+}
+body section#recent_works .item a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+body section#recent_works .item a img {
+  width: 100%;
+}
+body section#recent_works .item a .recent_hover {
+  opacity: 0;
+  background: rgba(32, 183, 163, 0.5);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+body section#recent_works .item a .recent_hover .content {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 30%;
+  left: 0;
+  text-align: center;
+}
+body section#recent_works .item a .recent_hover .content .fa {
+  font-size: 45px;
+  margin-bottom: 20px;
+  display: inline-block;
+  line-height: 1;
+  transform: scale(1.5) rotate(-10deg);
+  transition: all 0.3s ease;
+}
+@media (min-width: 1200px) {
+  body section#recent_works .item a .recent_hover .content .fa {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
+body section#recent_works .item a .recent_hover .content h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+}
+body section#recent_works .item a .recent_hover .content span {
+  font-size: 14px;
+}
+body section#recent_works .item a:hover .recent_hover {
+  opacity: 1;
+}
+body section#recent_works .item a:hover .recent_hover .content .fa {
+  transform: scale(1) rotate(0deg);
+}
 @media (min-width: 768px) {
   body section#recent_works .owl-controls .owl-prev, body section#recent_works .owl-controls .owl-next {
     font-size: 3.6rem;
@@ -8145,36 +8228,6 @@ body section#recent_works .owl-controls .owl-next:before {
   body section#recent_works .owl-controls .owl-next:before {
     margin-right: -8px;
   }
-}
-body section#recent_works .item {
-  position: relative;
-  transition: 1s;
-}
-body section#recent_works .item img {
-  width: 100%;
-}
-body section#recent_works .item .recent_hover {
-  display: none;
-  background: rgba(32, 183, 163, 0.95);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  padding-top: 20%;
-  text-align: center;
-  font-size: 2rem;
-}
-body section#recent_works .item .recent_hover i, body section#recent_works .item .recent_hover span {
-  display: block;
-}
-body section#recent_works .item .recent_hover i {
-  font-size: 4rem;
-  margin: 20px 0;
-}
-body section#recent_works .item .recent_hover span {
-  font-size: 1.4rem;
 }
 body section#best_sellers .button-more {
   width: auto;
