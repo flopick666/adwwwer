@@ -250,14 +250,13 @@ $(document).ready(function () {
 
         THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
 //            console.log( item, loaded, total );
-            var p = Math.round((loaded * 100) / total);
-            p = p.toString() + '%';
-            console.log(p);
+//            var p = Math.round((loaded * 100) / total);
+//            p = p.toString() + '%';
+//            console.log(p);
             
-//            $('#ppp').html(p);
-
             if ( loaded == total ) {
                 webgl.show();
+                $('#loadingProgressG').hide();
             }
         };
 
