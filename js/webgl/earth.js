@@ -157,10 +157,11 @@
     var mesh = new THREE.Mesh(athmo, material);
     mesh.position.set(0.025, 0.0015, 0.025);
     scene.add(mesh);
-
+    
     var controls = new THREE.TrackballControls(camera, webglEl.parentElement.parentElement);
     controls.minDistance = 1.5;
     controls.maxDistance = 10;
+    controls.zoomSpeed = 0.3;
 
     webglEl.appendChild(renderer.domElement);
 
