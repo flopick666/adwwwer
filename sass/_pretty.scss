@@ -1,0 +1,21 @@
+.pp_pic_holder.dark_square {
+  border: 1px solid #3c4b4b;
+  background: #060a0e;
+  .ppt {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+  }
+  .pp_top, .pp_bottom { display: none;}
+
+  .pp_content,
+  .pp_middle,
+  .pp_left,
+  .pp_right {
+    background: #060a0e;
+  }
+}
