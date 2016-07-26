@@ -159,7 +159,8 @@
     scene.add(mesh);
 
     var controls = new THREE.TrackballControls(camera, webglEl.parentElement.parentElement);
-    controls.minDistance = 1;
+    controls.minDistance = 2;
+    controls.maxDistance = 10;
 
     webglEl.appendChild(renderer.domElement);
 
