@@ -241,7 +241,6 @@ $(document).ready(function () {
 
 
     // WebGl section
-
     if ( false === $.browser.mobile ) {
 
         $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
@@ -250,7 +249,13 @@ $(document).ready(function () {
         sectionWebGl = $('#webgl');
 
         THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
-            console.log( item, loaded, total );
+//            console.log( item, loaded, total );
+            var p = Math.round((loaded * 100) / total);
+            p = p.toString() + '%';
+            console.log(p);
+            
+//            $('#ppp').html(p);
+
             if ( loaded == total ) {
                 webgl.show();
             }
