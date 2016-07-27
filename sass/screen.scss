@@ -2,6 +2,7 @@
 @import "compass/css3";
 @import "compass/css3/images";
 @import "compass/css3/selection";
+@import "compass/css3/appearance";
 @import "bootstrap/stylesheets/_bootstrap.scss";
 @import "variables.scss";
 html { box-sizing: border-box;}
@@ -139,6 +140,7 @@ body {
   @import "header.scss";
   @import "sections/sections.scss";
   @import "tabs.scss";
+  @import "cart.scss";
   @import "modal.scss";
   @import "pretty.scss";
   @import "footer.scss";

@@ -32,6 +32,9 @@
 	<script type="text/javascript" src="js/pretty_photo/js/jquery.prettyPhoto.js"></script>
 	<link href="js/pretty_photo/css/prettyPhoto.css" rel="stylesheet">
 
+	<!--Cart script  -->
+	<script type="text/javascript" src="js/cart/cart.js"></script>
+
 	<!-- Circle diagrams-->
 	<script type="text/javascript" src="js/circliful/jquery.circliful.js" ></script>
 	<link href="js/circliful/jquery.circliful.css" rel="stylesheet" type="text/css" />
@@ -431,7 +434,7 @@
 									<div class="col-xs-12 col-sm-6 col-md-3 wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img.jpg' alt="" title="" /></p>
-											<p class="name">Marley Football - <span class="green">$174<sup>99</sup></span></p>
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
 											<hr/>
 											<p class="stars">
 												<i class="fa fa-star" aria-hidden="true"></i>
@@ -442,13 +445,40 @@
 											</p>
 											<p class="reviews">247 reviews</p>
 											<div class="clearfix"></div>
-											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+
+											<!-- <a href="#0" class="cd-add-to-cart" data-price="25.99">Add To Cart</a> -->
+											<div class="cd-cart-container empty">
+												<a href="#0" class="cd-cart-trigger">
+													Cart
+													<ul class="count"> <!-- cart items count -->
+														<li>0</li>
+														<li>0</li>
+													</ul> <!-- .count -->
+												</a>
+												<div class="cd-cart">
+													<div class="wrapper">
+														<header>
+															<h2>Cart</h2>
+															<span class="undo">Item removed. <a href="#0">Undo</a></span>
+														</header>
+														<div class="body">
+															<ul>
+																<!-- products added to the cart will be inserted here using JavaScript -->
+															</ul>
+														</div>
+														<footer>
+															<a href="#0" class="checkout"><em>Checkout - $<span>0</span></em></a>
+														</footer>
+													</div>
+												</div> <!-- .cd-cart -->
+											</div> <!-- cd-cart-container -->
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img2.jpg' alt="" title="" /></p>
-											<p class="name">Marley Football - <span class="green">$174<sup>99</sup></span></p>
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
 											<hr/>
 											<p class="stars">
 												<i class="fa fa-star" aria-hidden="true"></i>
@@ -459,13 +489,14 @@
 											</p>
 											<p class="reviews">247 reviews</p>
 											<div class="clearfix"></div>
-											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+											<!-- <a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a> -->
+											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img3.jpg' alt="" title="" /></p>
-											<p class="name">Marley Football - <span class="green">$174<sup>99</sup></span></p>
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
 											<hr/>
 											<p class="stars">
 												<i class="fa fa-star" aria-hidden="true"></i>
@@ -476,13 +507,13 @@
 											</p>
 											<p class="reviews">247 reviews</p>
 											<div class="clearfix"></div>
-											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
 										<div class="product-item text-center">
 											<p><img src='img/product_img4.jpg' alt="" title="" /></p>
-											<p class="name">Super T-Shirt - <span class="green">$174<sup>99</sup></span></p>
+											<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
 											<hr/>
 											<p class="stars">
 												<i class="fa fa-star" aria-hidden="true"></i>
@@ -493,7 +524,7 @@
 											</p>
 											<p class="reviews">247 reviews</p>
 											<div class="clearfix"></div>
-											<a href="#" class="buy"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
+											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
 								</div>
