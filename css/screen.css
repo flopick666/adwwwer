@@ -8248,7 +8248,7 @@ body section#best_sellers .product-item hr {
 }
 body section#best_sellers .product-item .name {
   margin: 0;
-  padding: 10px 0 0;
+  padding: 20px 0 0;
   font-size: 16px;
   color: white;
   font-weight: 500;
@@ -8257,16 +8257,18 @@ body section#best_sellers .product-item .stars {
   color: #ffef69;
   float: left;
   font-size: 20px;
+  margin-bottom: 0;
 }
 body section#best_sellers .product-item .stars .fa {
-  line-height: 20px;
+  line-height: 30px;
 }
 body section#best_sellers .product-item .reviews {
   float: right;
   border: 1px solid #161616;
   position: relative;
-  line-height: 26px;
+  line-height: 28px;
   padding: 0 10px;
+  margin-bottom: 0;
   font-size: 12px;
 }
 body section#best_sellers .product-item .reviews:after {
@@ -10921,8 +10923,8 @@ body .tabbable.responsive .tab-content {
   border-right: 1px solid #161616;
   border-bottom: 1px solid #161616;
   border-top: 1px solid #161616;
-  padding: 30px 20px 10px;
-  margin-bottom: 7rem;
+  padding: 30px 20px 30px;
+  margin-bottom: 6rem;
 }
 @media (min-width: 768px) {
   body .tabbable.responsive .nav-tabs {
