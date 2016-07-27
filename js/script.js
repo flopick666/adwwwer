@@ -1,23 +1,21 @@
 $(document).ready(function () {
-    //hide menu when select menu item
-    $('#navbar-collapse-1 li').each(function(e,n){
-        if ( !$(n).hasClass('dropdown')){
-            $(n).on('click', function(){
-                $('#navbar-collapse-1').removeClass('in');
-            });
-        }});
-    //for display active item
-    function getMainMenuItem(item, i)
-    {
-        if ( i == 3 ) {
-            return false;
-        }
-
-        if ( $(item).hasClass('dropdown-toggle') ) {
-            $(item).addClass('active');
-        }
-        getMainMenuItem($(item).parent().parent().prev(), ++i);
-    }
+  //hide menu when select menu item
+  $('#navbar-collapse-1 li').each(function(e,n){
+      if ( !$(n).hasClass('dropdown')){
+          $(n).on('click', function(){
+              $('#navbar-collapse-1').removeClass('in');
+          });
+      }});
+  //for display active item
+  function getMainMenuItem(item, i) {
+      if ( i == 3 ) {
+          return false;
+      }
+      if ( $(item).hasClass('dropdown-toggle') ) {
+          $(item).addClass('active');
+      }
+      getMainMenuItem($(item).parent().parent().prev(), ++i);
+  }
 
   //Active class according to scroll
   $(window).scroll(function(){
@@ -41,16 +39,9 @@ $(document).ready(function () {
     $(this).parent().toggleClass('open');
   });
 
-
     // try to do somth with scroll
     var $animation_elements = $('.animation-element');
     var $window = $(window);
-    var donothing_introduce = false;
-    var donothing_diagram = false;
-      // var donothing_recentwork = false;
-      // var donothing_recentpost = false;
-      // var donothing_latestnews = false;
-    var donothing_client_opinion = false;
     var donothing_animation_diagramm = false;
     // console.log ('permennaya ' + donothing);
     function check_if_in_view() {
@@ -78,59 +69,37 @@ $(document).ready(function () {
               $(this).addClass('running');
                   next();
               });
-              // return false;
             donothing_animation_diagramm = true;
           }
         }
 
         $('#diagrams').find('.diagram_circles').each(function(n,e){
             z = e;
+            var $el = $(e);
+            var el_height = $el.outerHeight();
+            var el_top_position = $el.offset().top;
+            var el_bottom_position = (el_top_position + el_height);
 
-              var $el = $(e);
-              var el_height = $el.outerHeight();
-              var el_top_position = $el.offset().top;
-              var el_bottom_position = (el_top_position + el_height);
-
-              if ( 0 == $el.data('run') ) {
-                  if ( (el_bottom_position >= window_top_position) &&
-                      (el_top_position <= window_bottom_position) ) {
-
-                      $el.circliful({
-                          percent: $el.data('percent')
-                      });
-                      $el.data('run', '1');
-                  }
+            if ( 0 == $el.data('run') ) {
+              if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
+                $el.circliful({
+                    percent: $el.data('percent')
+                });
+                $el.data('run', '1');
               }
+            }
         });
       });
     }
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
 
-
-
-    // Load the first 4 list items for Services Section
-    // $('#services .col-xs-12:lt(4)').show();
-    // var items =  8;
-    // var shown =  4;
-    // $('#loadMore').click(function () {
-    //   shown = $('#services .col-xs-12:visible').size()+4;
-    //   if (shown < items) {
-    //     $('#services .col-xs-12:lt('+shown+')').show();
-    //   }
-    //   else {
-    //     $('#services .col-xs-12:lt('+items+')').show();
-    //     $('#loadMore').hide();
-    //   }
-    // });
-    /*Hide Become a member block*/
+    /*Load more services block*/
     $( "#services #loadMore" ).click(function() {
       // e.preventDefault();
       $( "#services #secondary-services" ).slideToggle( "slow");
       $(this).text( $(this).text() == 'Show all services' ? "Hide all services" : "Show all services");
     });
-
-
 
     /*Hide Become a member block*/
     $( "#hide-green-block" ).click(function() {
@@ -144,7 +113,7 @@ $(document).ready(function () {
 
     //Clent Option section Carousel
     $("#owl-clients").owlCarousel({
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
+      autoPlay: false, //Set AutoPlay to 3 seconds
       items : 1, //5 items above 1000px browser width
       itemsDesktop : [1000,1],
       itemsDesktopSmall : [960,1], // betweem 900px and 601px
@@ -189,7 +158,7 @@ $(document).ready(function () {
     //Recebt Work section Carousel
     $("#owl-recent-work a[rel^='prettyPhoto']").prettyPhoto();
     $("#owl-recent-work").owlCarousel({
-      autoPlay: false, //Set AutoPlay to 3 seconds
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
       items : 5, //5 items above 1200px browser width
       itemsDesktop : [1200,4], //4 items between 1200px and 960px
       itemsDesktopSmall : [960,3], // betweem 960px and 768px

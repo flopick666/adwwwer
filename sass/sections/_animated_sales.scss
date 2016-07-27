@@ -1,21 +1,23 @@
 &#animated_sales {
   position:relative;
   background: $ebony;
+  font-family: 'Roboto', sans-serif;
   .fa {
     display: block;
     padding-top: 10px;
+    padding-left: 1px
   }
   /* GRAPH */
   h2 {
     text-align: center;
     line-height: 3rem;
-    margin: 0 0 4rem 0;
+    margin: 0 0 3rem 0;
     @media (min-width: $screen-sm) {
-      margin: 6rem 0 4rem 0;
+      margin: 5.5rem 0 4rem 0;
     }
   }
   h4 {
-    line-height: normal;
+    line-height: 30px;
     font-weight: 300;
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -23,7 +25,7 @@
   p {
     margin-bottom: 2rem;
     line-height: 24px;
-    font-family: 'Roboto', sans-serif;
+
   }
   .content {
     height:300px;

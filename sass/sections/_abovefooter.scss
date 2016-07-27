@@ -3,10 +3,22 @@
   padding-bottom: 0;
   padding-top: 5rem;
   line-height: 24px;
-  h3 { margin: 0 0 20px 0;}
+  h3 { margin: 0 0 25px 0;}
   .col-xs-12 { margin-bottom: 20px;}
+  @media (min-width: $screen-lg) {
+    .col-xs-12 {
+      margin-bottom: 0;
+    }
+  }
   .site-about {
     h3 { text-transform: uppercase;}
+  }
+  .site-about {
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
   }
   .newsletter {
     margin-bottom: 2rem;
@@ -24,6 +36,7 @@
           color: white;
           border: none;
           border-radius: 0;
+          font-size: 18px;
         }
         input {
           background: none;
@@ -64,13 +77,14 @@
     }
   }
   .twitter-tweet {
+    font-family: 'Open Sans', sans-serif;
     border: none;
-    padding: 0 0 0 100px;
+    padding: 35px 0 0 100px;
     margin-bottom: 3rem;
     font-size: 12px;
     background: image-url('tweeter-icon.png');
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left bottom;
     min-height: 65px;
     p { margin-bottom: 0}
     a {
@@ -85,8 +99,8 @@
       color: $java;
       display: inline-block;
       border: 1px solid $java;
-      padding: 7px 15px;
-      margin: 0 10px 15px 0;
+      padding: 7px 20px;
+      margin: 0 7px 13px 0;
       font-size: 14px;
       &:hover {
         color: black;
@@ -96,8 +110,9 @@
     }
   }
   .social {
+    padding-top: 35px;
     a {
-      margin-right: 15px;
+      margin-right: 10px;
       color: white;
       &:hover {
         color: $java;

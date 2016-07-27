@@ -42,7 +42,7 @@
             var percent = settings.percent;
             var iconY = 83;
             var iconX = 100;
-            var textY = 110;
+            var textY = 75;
             var textX = 100;
             var additionalCss;
             var elements;
@@ -102,11 +102,11 @@
             circleContainer
                 .addClass('svg-container')
                 .append(
-                    $('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 194 186" class="circliful">' +
+                    $('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 125" class="circliful">' +
                         elements +
-                        '<circle cx="100" cy="100" r="57" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="360" transform="rotate(-90,100,100)" />' +
-                        '<circle class="circle" cx="100" cy="100" r="57" class="border" fill="none" stroke="' + settings.foregroundColor + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />' +
-                        '<circle cx="100" cy="100" r="' + settings.pointSize + '" fill="' + settings.pointColor + '" />' +
+                        '<circle cx="135" cy="100" r="57" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="360" transform="rotate(-90,100,100)" />' +
+                        '<circle class="circle" cx="135" cy="100" r="57" class="border" fill="none" stroke="' + settings.foregroundColor + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />' +
+                        '<circle cx="135" cy="100" r="' + settings.pointSize + '" fill="' + settings.pointColor + '" />' +
                         icon +
                         '<text class="timer" text-anchor="middle" x="' + textX + '" y="' + textY + '" style="font-size: ' + settings.percentageTextSize + 'px; ' + additionalCss + ';' + settings.textAdditionalCss + '" fill="' + settings.fontColor + '">0%</text>')
                 );

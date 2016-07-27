@@ -1,6 +1,9 @@
 &#diagrams {
   padding-top: 5rem;
   text-align: center;
+  h3 {
+    margin-top: 4rem;
+  }
   @media (min-width: $screen-md) {
     padding-top: 8rem;
     .col-xs-6 {
