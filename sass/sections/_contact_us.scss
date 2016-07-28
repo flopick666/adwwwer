@@ -1,12 +1,40 @@
-&#contact_info {
-  background: image-url('contact_bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 530px;
+&#contact_us {
+  min-height: 610px;
   &:before {
     background: $black_pearl;
+    position: relative;
+    z-index: 10;
   }
-  .modal_popup {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0.7;
+  }
+  &.clearmap {
+    &:after {
+      display: none;
+    }
+  }
+  #googlemaps {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+  }
+  #contactform {
+    position: relative;
+    z-index: 10; /* The z-index should be higher than Google Maps */
+    margin: 60px auto 0;
+    height: auto;
+    // opacity: .45; /* Set the opacity for a slightly transparent Google Form */
     background: $java;
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -36,6 +64,7 @@
       border-top: 20px solid $java;
       margin-left: -20px;
     }
+
     h3 {
       margin-top: 0;
       margin-bottom: 20px;

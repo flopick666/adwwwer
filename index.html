@@ -42,9 +42,6 @@
 	<!-- Tabs responsive -->
 	<script type="text/javascript" src="js/tabs/responsive-tabs.js"></script>
 
-	<!-- Video Section animation -->
-	<link href="js/video_upload/view.css" rel="stylesheet" type="text/css" />
-
 	<!-- wowjs -->
 	<script type="text/javascript" src="js/wow/wow.js"></script>
 	<link href="js/wow/css/libs/animate.css" rel="stylesheet" type="text/css" />
@@ -57,6 +54,9 @@
 	<!--Custom JS  -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="sass/bootstrap/javascripts/bootstrap.min.js"></script>
+	<!-- Include the Google Maps API library - required for embedding maps -->
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
   <!-- GLSL vertex shader for the moon -->
   <script id="norm-vert-shader" type="x-shader/x-vertex">
 
@@ -1030,28 +1030,28 @@
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<h2 class="green">Responsive theme for you!</h2>
-									<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis dolore. </p>
+									<p class="description">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis dolore. </p>
 									<p><a href="#" class="button-more">Read More</a></p>
 								</div>
 							</div>
 						</div>
 		        <div role="tabpanel" id="application" class="tab-pane fade text-center">
 							<div class="application-section">
-								<div class="icon wow bounceIn" data-wow-duration="2s"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
+								<div class="icon"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
 								<div class="line"></div>
-								<div class="icon wow bounceIn" data-wow-duration="2s"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+								<div class="icon"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
 								<div class="line"></div>
 								<div class="laptop">
-									<div class="screen wow flash" data-wow-duration="2s">
+									<div class="screen">
 										<h3><i class="fa fa-eye" aria-hidden="true"></i> Innovate design</h3>
 										<p class="description">Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper et lobortis nisl ut aliquip.</p>
 										<p><a href="#" class="button-more">Read More</a></p>
 									</div>
 								</div>
 								<div class="line"></div>
-								<div class="icon wow bounceIn" data-wow-duration="2s"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+								<div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
 								<div class="line"></div>
-								<div class="icon wow bounceIn" data-wow-duration="2s"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+								<div class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
 							</div>
 						</div>
 		    </div>
@@ -1065,47 +1065,47 @@
 		<div class="container"><hr/></div>
 		<div id="owl-latest-news" class="owl-carousel">
 			<div class="item">
-				<div class="news-image"><img src="img/news_img.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img.png" /></a></div>
 				<div class="date">23 <span>Apr, 2015</span></div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna.</div>
 			</div>
 			<div class="item">
-				<div class="news-image"><img src="img/news_img2.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img2.png" /></a></div>
 				<div class="date">
 					14 <span>Apr, 2015</span>
 				</div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.</div>
 			</div>
 			<div class="item">
-				<div class="news-image"><img src="img/news_img3.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img3.png" /></a></div>
 				<div class="date">
 					31 <span>Apr, 2015</span>
 				</div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto.</div>
 			</div>
 			<div class="item">
-				<div class="news-image"><img src="img/news_img.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img.png" /></a></div>
 				<div class="date">23 <span>Apr, 2015</span></div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis.</div>
 			</div>
 			<div class="item">
-				<div class="news-image"><img src="img/news_img2.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img2.png" /></a></div>
 				<div class="date">
 					14 <span>Apr, 2015</span>
 				</div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Claritatem insitam est usus Typi non habent esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero.</div>
 			</div>
 			<div class="item">
-				<div class="news-image"><img src="img/news_img3.png" /></div>
+				<div class="news-image"><a href="#"><img src="img/news_img3.png" /></a></div>
 				<div class="date">
 					31 <span>Apr, 2015</span>
 				</div>
-				<h3 class="news-title">Typi non habent claritatem insitam est usus</h3>
+				<h3 class="news-title"><a href="#">Typi non habent claritatem insitam est usus</a></h3>
 				<div class="description">Dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit.</div>
 			</div>
 		</div>
@@ -1405,15 +1405,14 @@
 		</div>
 	</section>
 	<!--End Section Choose your plan-->
-	<!-- Section Contact info-->
-	<section id="contact_info">
-		<div class="container">
-			<div class="modal_popup wow zoomInDown" data-wow-duration="2s">
-				<h3>Voyager theme</h3>
-				<p>Øyrane 3 A, 6800 Førde. Org. nr. 994 576 240MVA <br/>Phone: +460 123 456 789 <br/> support@webuniverse.com</p>
-				<a href="#" class="button-more">contact form</a>
-				<div class="close_popup"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
-			</div>
+	<!-- Section Contact us-->
+	<section id="contact_us">
+		<div id="googlemaps"></div>
+		<div id="contactform">
+			<h3>Voyager theme</h3>
+			<p>Øyrane 3 A, 6800 Førde. Org. nr. 994 576 240MVA <br/>Phone: +460 123 456 789 <br/> support@webuniverse.com</p>
+			<a href="#" class="button-more">contact form</a>
+			<div class="close_popup"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
 		</div>
 	</section>
 	<!--End Section Contact info-->

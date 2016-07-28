@@ -77,16 +77,18 @@
               }
             }
             .dropdown-menu {
-              background: $cod_gray;
+              background: $ebony;
+              border: 1px solid $cod_gray;
               padding-left: 30px;
               text-transform: none;
-              border: none;
               border-radius: 0;
               .dropdown-submenu {
                 position:relative;
                 > .dropdown-menu {
                   top:0;
                   left:100%;
+                  background: $black_pearl;
+                  border: none;
                 }
                 &:hover > a:after {border-left-color:#555;}
                 &.pull-left{

@@ -144,19 +144,14 @@
       display: table-cell;
       vertical-align: middle;
       width: 33%;
-      @media (min-width: $screen-sm) {
-        width: auto;
-      }
       a {
         display: block;
         border-radius: 0;
         border: none;
         margin: 0;
-        // padding: 10px 50px;
         background: $ebony;
         border: 1px solid $cod_gray;
         color: $dusty_gray;
-        // font-weight: 100;
         font-weight: 300;
         font-size: 12px;
         outline: 0;
@@ -174,6 +169,10 @@
         border: 1px solid $mountain_meadow;
         color: black;
       }
+    }
+    @media (min-width: $screen-sm) {
+      max-width: 540px;
+      margin: 0 auto;
     }
   }
   .tab-content {
