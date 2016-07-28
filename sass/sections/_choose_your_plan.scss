@@ -9,9 +9,10 @@
     position: relative;
     transition: 1s;
     .price {
-      font-size: 70px;
+      font-size: 72px;
+      line-height: 72px;
       color: $java;
-      font-weight: 200;
+      font-weight: 300;
       transition: 1s;
     }
     .name {
@@ -19,15 +20,15 @@
       color: white;
     }
     .date {
-      margin-bottom: 15px;
+      margin: 15px 0;
     }
     hr {
       border-color: $cape_cod;
       transition: 1s;
-      margin: 30px 0;
+      margin: 35px 0;
     }
     ul {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       li {
         padding-bottom: 10px;
         .glyphicon {
@@ -47,7 +48,7 @@
     &.best, &:hover {
       background: $java;
       color: white;
-      hr { border-color: white;}
+      hr { border-color: #e6e7e6;}
       .price { color: white;}
       ul li{
         .glyphicon-ok { color: white;}
@@ -58,6 +59,7 @@
         &:hover {
           background: white;
           color: $java;
+          text-shadow: none;
         }
       }
     }
@@ -66,7 +68,7 @@
   @media (min-width: $screen-sm) {
     padding-bottom: 5rem;
     .plan {
-      padding: 30px;
+      padding: 40px 30px;
     }
   }
   @media (min-width: $screen-md) {

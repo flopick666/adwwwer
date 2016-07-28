@@ -76,6 +76,7 @@
           border-top: 4px solid $java;
           line-height: 5rem;
           background: $ebony;
+          color: white;
         }
       }
     }
@@ -86,8 +87,8 @@
     border-right: 1px solid $cod_gray;
     border-bottom: 1px solid $cod_gray;
     border-top: 1px solid $cod_gray;
-    padding: 30px 20px 10px;
-    margin-bottom: 7rem;
+    padding: 30px 20px 30px;
+    margin-bottom: 6rem;
   }
   @media (min-width: $screen-sm) {
     .nav-tabs {

@@ -1,7 +1,4 @@
 &#best_sellers {
-  .button-more {
-    width: auto;
-  }
   .product-item {
     position: relative;
     font-family: 'Maven Pro', sans-serif;
@@ -14,7 +11,7 @@
     }
     .name {
       margin: 0;
-      padding: 10px 0 0;
+      padding: 20px 0 0;
       font-size: 16px;
       color: white;
       font-weight: 500;
@@ -23,16 +20,18 @@
       color: $paris_daisy;
       float: left;
       font-size: 20px;
+      margin-bottom: 0;
       .fa {
-        line-height: 20px;
+        line-height: 30px;
       }
     }
     .reviews {
       float: right;
       border: 1px solid $cod_gray;
       position: relative;
-      line-height: 26px;
+      line-height: 28px;
       padding: 0 10px;
+      margin-bottom: 0;
       font-size: 12px;
       &:after {
         content: '';
