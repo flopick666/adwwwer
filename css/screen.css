@@ -7654,6 +7654,7 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
   left: 100%;
   background: #010509;
   border: none;
+  margin: 0;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu:hover > a:after {
   border-left-color: #555;
@@ -7705,7 +7706,8 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     float: left !important;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li {
-    padding-left: 10px;
+    margin-left: 10px;
+    padding: 0;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li > a {
     padding-left: 5px;
@@ -7741,9 +7743,6 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover:after {
     color: #010509;
   }
-  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-menu {
-    margin-left: 1px;
-  }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown.open > a.dropdown-toggle:before {
     display: none;
   }
@@ -7773,7 +7772,7 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
 }
 @media (min-width: 992px) {
   body #header nav.navbar #navbar-collapse-1 > ul > li {
-    padding-left: 30px;
+    margin-left: 30px;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li > a {
     line-height: 60px;
