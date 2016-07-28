@@ -7599,6 +7599,7 @@ body #header nav.navbar .navbar-brand img {
 }
 body #header nav.navbar #navbar-collapse-1 {
   max-height: none;
+  font-family: 'Open Sans', sans-serif;
 }
 body #header nav.navbar #navbar-collapse-1 ul {
   text-transform: uppercase;
@@ -7637,14 +7638,18 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:af
   font-family: FontAwesome;
   font-size: 1rem;
   float: right;
-  color: #20b7a3;
+}
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown > a.dropdown-toggle:after:hover {
+  color: black;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu {
   background: #060a0e;
   border: 1px solid #161616;
-  padding-left: 30px;
   text-transform: none;
   border-radius: 0;
+}
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu a:before {
+  display: none;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu {
   position: relative;
@@ -7655,6 +7660,9 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
   background: #010509;
   border: none;
   margin: 0;
+}
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu > .dropdown-menu a {
+  padding: 10px 20px;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu:hover > a:after {
   border-left-color: #555;
@@ -7724,23 +7732,44 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown > a.dropdown-toggle:hover:after {
     display: none;
   }
-  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown a {
-    padding: 10px 20px;
-  }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown a:hover {
     background: none;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu {
-    padding: 0;
+    padding: 15px 0;
     right: auto;
     left: 0;
     background: #060a0e;
+    width: 200px;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a {
+    font-size: 13px;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover {
+    color: #20b7a3;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover:after {
+    color: #20b7a3;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-submenu {
+    position: relative;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-submenu .dropdown-menu {
+    width: 120px;
+    min-width: 0;
+    padding: 8px 0;
+    margin-left: 1px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-submenu .dropdown-menu li a {
+    font-size: 12px;
+    padding: 4px 20px;
+  }
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-submenu .dropdown-menu li a:hover {
     background: #20b7a3;
     color: #010509;
   }
-  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover:after {
+  body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu .dropdown-submenu .dropdown-menu li a:hover:after {
     color: #010509;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown.open > a.dropdown-toggle:before {

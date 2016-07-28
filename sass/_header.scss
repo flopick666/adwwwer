@@ -36,6 +36,7 @@
     }
     #navbar-collapse-1 {
       max-height: none;
+      font-family: 'Open Sans', sans-serif;
       ul {
         text-transform: uppercase;
         li {
@@ -73,15 +74,22 @@
                 font-family: FontAwesome;
                 font-size: 1rem;
                 float:right;
-                color: $java;
+                // color: $java;
+                &:hover {
+                  color: black;
+                }
               }
             }
             .dropdown-menu {
               background: $ebony;
               border: 1px solid $cod_gray;
-              padding-left: 30px;
               text-transform: none;
               border-radius: 0;
+              a {
+                &:before {
+                  display: none;
+                }
+              }
               .dropdown-submenu {
                 position:relative;
                 > .dropdown-menu {
@@ -90,6 +98,9 @@
                   background: $black_pearl;
                   border: none;
                   margin: 0;
+                  a {
+                    padding: 10px 20px;
+                  }
                 }
                 &:hover > a:after {border-left-color:#555;}
                 &.pull-left{
@@ -166,22 +177,46 @@
                 }
               }
               a {
-                padding: 10px 20px;
                 &:hover {
                   background: none;
                 }
               }
               .dropdown-menu {
-                padding: 0;
+                padding: 15px 0;
                 right: auto;
                 left: 0;
                 background: $ebony;
+                width: 200px;
                 li a {
+                  font-size: 13px;
                   &:hover {
-                    background: $java;
-                    color: $black_pearl;
+                    // background: $java;
+                    color: $java;
                     &:after {
-                      color: $black_pearl;
+                      color: $java;
+                    }
+                  }
+                }
+                .dropdown-submenu {
+                  position:relative;
+                  .dropdown-menu {
+                    width: 120px;
+                    min-width: 0;
+                    padding: 8px 0;
+                    margin-left: 1px;
+                    font-family: 'Open Sans', sans-serif;
+                    li {
+                      a {
+                        font-size: 12px;
+                        padding: 4px 20px;
+                        &:hover {
+                          background: $java;
+                          color: $black_pearl;
+                          &:after {
+                            color: $black_pearl;
+                          }
+                        }
+                      }
                     }
                   }
                 }
