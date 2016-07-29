@@ -95,12 +95,8 @@ $.fn.extend({
 
         $('#project_info .tab-content').each(function () {
           if ($(this).find('.active .project_step').hasClass('in-view')) {
-            $(this).find('.step1').animateCss('fadeInUp');
-            $(this).find('.step2').animateCss('fadeInDown');
-            $(this).find('.step3').animateCss('fadeInUp');
-            $(this).find('.step4').animateCss('fadeInDown');
-            $(this).find('.step5').animateCss('fadeInUp');
-            $(this).find('.step6').animateCss('fadeInDown');
+            $(this).find('.step-up').animateCss('fadeInUp');
+            $(this).find('.step-down').animateCss('fadeInDown');
           } else if ($(this).find('.active .application-section').hasClass('in-view')) {
             $(this).find('.icon').animateCss('fadeInDown');
           } else {
@@ -300,11 +296,6 @@ $.fn.extend({
         sectionWebGl = $('#webgl');
 
         THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
-//            console.log( item, loaded, total );
-//            var p = Math.round((loaded * 100) / total);
-//            p = p.toString() + '%';
-//            console.log(p);
-
             if ( loaded == total ) {
                 webgl.show();
                 $('#loadingProgressG').hide();
