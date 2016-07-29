@@ -11008,7 +11008,7 @@ body section#contact_us:after {
   height: 100%;
   width: 100%;
   z-index: 2;
-  opacity: 0.7;
+  opacity: 0;
 }
 body section#contact_us.clearmap:after {
   display: none;
