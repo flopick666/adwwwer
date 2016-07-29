@@ -9,7 +9,7 @@
 
     var width = window.innerWidth,
             height = window.innerHeight,
-            height = 777;
+            heightt = 777;
 
     var radius = 0.5,
             segments = 64,
@@ -157,14 +157,21 @@
     var mesh = new THREE.Mesh(athmo, material);
     mesh.position.set(0.025, 0.0015, 0.025);
     scene.add(mesh);
-
+    
     var controls = new THREE.TrackballControls(camera, webglEl.parentElement.parentElement);
     controls.minDistance = 1.5;
     controls.maxDistance = 10;
+    controls.zoomSpeed = 0.3;
 
     webglEl.appendChild(renderer.domElement);
 
     render();
+    
+    $(window).on('resize',function(){
+        renderer.setSize($('#webgl_section').innerWidth(), $('#webgl_section').innerHeight());
+        camera.aspect = $('#webgl_section').innerWidth() / $('#webgl_section').innerHeight();
+        camera.updateProjectionMatrix();
+    });
 
     function render() {
         controls.update();

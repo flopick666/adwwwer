@@ -154,16 +154,16 @@
 			pp_titles = (isSet) ? jQuery.map(matchedObjects, function(n, i){ if($(n).attr(settings.hook).indexOf(theRel) != -1) return ($(n).find('img').attr('alt')) ? $(n).find('img').attr('alt') : ""; }) : $.makeArray($(this).find('img').attr('alt'));
 			pp_descriptions = (isSet) ? jQuery.map(matchedObjects, function(n, i){ if($(n).attr(settings.hook).indexOf(theRel) != -1) return ($(n).attr('title')) ? $(n).attr('title') : ""; }) : $.makeArray($(this).attr('title'));
 
-			if(pp_images.length > settings.overlay_gallery_max) settings.overlay_gallery = false;
-
-			set_position = jQuery.inArray($(this).attr('href'), pp_images); // Define where in the array the clicked item is positionned
-			rel_index = (isSet) ? set_position : $("a["+settings.hook+"^='"+theRel+"']").index($(this));
-
-			_build_overlay(this); // Build the overlay {this} being the caller
-
-			if(settings.allow_resize)
-				$(window).bind('scroll.prettyphoto',function(){ _center_overlay(); });
-
+//			if(pp_images.length > settings.overlay_gallery_max) settings.overlay_gallery = false;
+//
+//			set_position = jQuery.inArray($(this).attr('href'), pp_images); // Define where in the array the clicked item is positionned
+//			rel_index = (isSet) ? set_position : $("a["+settings.hook+"^='"+theRel+"']").index($(this));
+//
+//			_build_overlay(this); // Build the overlay {this} being the caller
+//
+//			if(settings.allow_resize)
+//				$(window).bind('scroll.prettyphoto',function(){ _center_overlay(); });
+//
 
 			$.prettyPhoto.open();
 
