@@ -43,8 +43,8 @@
       }
     }
   }
+
   #services {
-    overflow: hidden;
     #main-services {
       padding-bottom: 5rem;
       .col-xs-12 {
@@ -152,5 +152,8 @@
   p:last-child {
     margin: 0;
     padding: 0 5px;
+  }
+  .button-more {
+    z-index: 100;
   }
 }

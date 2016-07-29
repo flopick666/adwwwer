@@ -75,53 +75,58 @@ body {
   ul {
     font-family: 'Roboto', sans-serif;
   }
+
   .button-more, a.button-more {
-    color: #20b7a3;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: #20b7a3;
+    position: relative;
+    font: normal 14px/1 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 0;
+    box-shadow: inset 0 0 20px rgba(32,183,163,0);
+    text-shadow: none;
+    outline: 1px solid;
+    outline-color: rgba(32,183,163,0.5);
+    outline: 0px;
+    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
     display: inline-block;
-    margin-bottom: 0;
     text-align: center;
     vertical-align: middle;
     touch-action: manipulation;
     cursor: pointer;
+    color: #20b7a3;
+    background-color:transparent;
     background-image: none;
     border: 1px solid rgba(0, 0, 0, 0);
     white-space: nowrap;
     border-radius: 0px;
     user-select: none;
-    position: relative;
-    font: normal 14px/1 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    // padding: 17px 50px;
-    padding: 17px 0;
-    box-shadow: inset 0 0 20px rgba(32,183,163,0);
-    text-shadow: none;
-    outline: 1px solid;
-    outline-color: rgba(32,183,163,0.5);
-    outline-offset: 0px;
-    transition: all 1000ms cubic-bezier(0.19, 1, 0.22, 1);
-    text-align: center;
+    border-color: #20b7a3;
     min-width: 190px;
-    @include transition(all 1000ms cubic-bezier(0.19, 1, 0.22, 1));
-    margin-bottom: 2px;
     &:hover {
-      box-shadow: inset 0 0 20px rgba(32,183,163,0.5),0 0 20px rgba(32,183,163,0.2);
+      color: #20b7a3;
+      background-color:transparent;
+      border-color: #178375;
+      text-decoration: none;
+      box-shadow: inset 0 0 20px rgba(32,183,163,0.5), 0 0 20px rgba(32,183,163,0.2);
       outline-color: rgba(32,183,163,0) !important;
       outline: 1px solid;
       outline-offset: 10px;
       text-shadow: 1px 1px 2px #427388;
-      color: #20b7a3;
-      background-color: rgba(0, 0, 0, 0);
-      border-color: #178375;
-      text-decoration: none;
+    }
+    &:focus {
+      color:#20b7a3;background-color:transparent;border-color:#0d4a42
     }
     &:active {
+      box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+      outline: 0;
+      color: #20b7a3;
+      background-color:transparent;
+      border-color: #178375;
+      background-image: none;
       &:hover,
       &:focus {
         color: #20b7a3;
-        background-color: rgba(0, 0, 0, 0);
+        background-color:transparent;
         border-color: #0d4a42;
       }
     }
