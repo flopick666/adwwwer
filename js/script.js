@@ -88,26 +88,27 @@ $.fn.extend({
           // console.log($(this).text());
           if ($(this).hasClass('in-view')) {
             $(this).animateCss('zoomIn');
-            // $(this).removeClass('.animation-element');
           } else {
             $(this).removeClass('zoomIn animated');
           }
         });
 
+        $('#project_info .tab-content').each(function () {
+          if ($(this).find('.active .project_step').hasClass('in-view')) {
+            $(this).find('.step1').animateCss('fadeInUp');
+            $(this).find('.step2').animateCss('fadeInDown');
+            $(this).find('.step3').animateCss('fadeInUp');
+            $(this).find('.step4').animateCss('fadeInDown');
+            $(this).find('.step5').animateCss('fadeInUp');
+            $(this).find('.step6').animateCss('fadeInDown');
+          } else if ($(this).find('.active .application-section').hasClass('in-view')) {
+            $(this).find('.icon').animateCss('fadeInDown');
+          } else {
+            $(this).find('.project_step').removeClass('fadeInUp fadeInDown animated');
+            $(this).find('.icon').removeClass('fadeInDown animated');
+          }
+        });
 
-        // if ($('#introduce h2.animation-element').hasClass('in-view')) {
-        //   $('#introduce h2').animateCss('zoomIn');
-        //   // $(this).removeClass('.animation-element');
-        // } else {
-        //   $('#introduce h2').removeClass('zoomIn animated');
-        // }
-        //
-        // if ($('#recent_works h2.animation-element').hasClass('in-view')) {
-        //   $('#recent_works h2').animateCss('zoomIn');
-        //   // $(this).removeClass('.animation-element');
-        // } else {
-        //   $('#recent_works h2').removeClass('zoomIn animated');
-        // }
 
         $('#diagrams').find('.diagram_circles').each(function(n,e){
             z = e;
