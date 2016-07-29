@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+$.fn.extend({
+  animateCss: function (animationName) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName + 'animation-element');
+    });
+  }
+});
+
+
   //hide menu when select menu item
   $('#navbar-collapse-1 li').each(function(e,n){
     if ( !$(n).hasClass('dropdown')){
@@ -72,6 +83,31 @@ $(document).ready(function () {
             donothing_animation_diagramm = true;
           }
         }
+
+        $('section h2').each(function () {
+          // console.log($(this).text());
+          if ($(this).hasClass('in-view')) {
+            $(this).animateCss('zoomIn');
+            // $(this).removeClass('.animation-element');
+          } else {
+            $(this).removeClass('zoomIn animated');
+          }
+        });
+
+
+        // if ($('#introduce h2.animation-element').hasClass('in-view')) {
+        //   $('#introduce h2').animateCss('zoomIn');
+        //   // $(this).removeClass('.animation-element');
+        // } else {
+        //   $('#introduce h2').removeClass('zoomIn animated');
+        // }
+        //
+        // if ($('#recent_works h2.animation-element').hasClass('in-view')) {
+        //   $('#recent_works h2').animateCss('zoomIn');
+        //   // $(this).removeClass('.animation-element');
+        // } else {
+        //   $('#recent_works h2').removeClass('zoomIn animated');
+        // }
 
         $('#diagrams').find('.diagram_circles').each(function(n,e){
             z = e;

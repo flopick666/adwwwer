@@ -16,6 +16,9 @@ body {
   background: $black_pearl;
   color: $dusty_gray;
   font-family: 'Open Sans', sans-serif;
+  .animation-element.in-view {
+    -webkit-animation-iteration-count: 1;
+  }
   a {
     color: $java;
     transition: 1s;

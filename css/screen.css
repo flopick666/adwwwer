@@ -7422,6 +7422,9 @@ body {
   /* --------------------------------Primary style-------------------------------- */
   /* --------------------------------Main Components-------------------------------- */
 }
+body .animation-element.in-view {
+  -webkit-animation-iteration-count: 1;
+}
 body a {
   color: #20b7a3;
   transition: 1s;
@@ -7904,6 +7907,18 @@ body section#webgl_section {
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
+}
+body section#webgl_section #webgl {
+  height: 100vh;
+}
+body section#webgl_section canvas {
+  height: 100%;
+  width: 100%;
+}
+body section#webgl_section canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
 }
 body section#webgl_section canvas, body section#webgl_section .description {
   position: absolute;

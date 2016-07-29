@@ -42,16 +42,12 @@
 	<!-- Tabs responsive -->
 	<script type="text/javascript" src="js/tabs/responsive-tabs.js"></script>
 
-	<!-- wowjs -->
-	<script type="text/javascript" src="js/wow/wow.js"></script>
-	<link href="js/wow/css/libs/animate.css" rel="stylesheet" type="text/css" />
-	<script>
-		new WOW().init();
-	</script>
-
   <!-- Mobile Detect Script -->
   <script type="text/javascript" src="js/mobiledetect.js"></script>
 	<!--Custom JS  -->
+
+	<link href="js/animate.css" rel="stylesheet" type="text/css" />
+	<!-- <script type="text/javascript" src="js/css3-animate-it.js"></script> -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="sass/bootstrap/javascripts/bootstrap.min.js"></script>
 	<!-- Include the Google Maps API library - required for embedding maps -->
@@ -271,9 +267,9 @@
   </section>
 	<!-- end webgl section -->
 	<!-- Section Introduce-->
-  <section id="introduce" class="animation-element">
+  <section id="introduce">
     <div class="container">
-      <h2 class="wow zoomIn text-center" data-wow-duration="1s">introduce new awesome theme</h2>
+      <h2 class="text-center animation-element">introduce new awesome theme</h2>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna. <br/>Donec sapien diam, aliquet in ultricies nec. Pellentesque erat ipsum, facilisis quis ullamcorper non, ullamcorper vel velit. <a href="#">Morbi quis tristique nulla</a>. Aliquam varius, nulla in porttitor consectetur, dui sem feugiat ante, quis consectetur mauris lorem id quam.</p>
       <p class="text-center visible-xs"><img src='img/carousel-feature1.jpg' alt="" title="" /></p>
 	    <div class="carousel-container hidden-xs text-center">
@@ -285,22 +281,22 @@
 	    </div>
 			<div id="services">
 				<div id="main-services" class="row">
-	        <div class="col-xs-12 col-sm-6 col-md-3 text-center wow zoomIn" data-wow-duration="1s">
+	        <div class="col-xs-12 col-sm-6 col-md-3 text-center">
 						<div class="circle"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
 	          <h3>Innovate design</h3>
 	          <p>Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper et lobortis nisl ut aliquip.  </p>
 	        </div>
-	        <div class="col-xs-12 col-sm-6 col-md-3 text-center wow zoomIn" data-wow-duration="1s">
+	        <div class="col-xs-12 col-sm-6 col-md-3 text-center">
 						<div class="circle"><a href="#"><i class="fa fa-life-ring" aria-hidden="true"></i></a></div>
 	          <h3>24/7 support</h3>
 	          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum. </p>
 	        </div>
-	        <div class="col-xs-12 col-sm-6 col-md-3 text-center wow zoomIn" data-wow-duration="1s">
+	        <div class="col-xs-12 col-sm-6 col-md-3 text-center">
 						<div class="circle"><a href="#"><i class="fa fa-keyboard-o" aria-hidden="true"></i></a></div>
 	          <h3>Quality development</h3>
 	          <p>Vel illum dolore eu feugiat nulla facilisis at vero eros et liber tempor cum soluta nobis eleifend. </p>
 	        </div>
-	        <div class="col-xs-12 col-sm-6 col-md-3 text-center wow zoomIn" data-wow-duration="1s">
+	        <div class="col-xs-12 col-sm-6 col-md-3 text-center">
 						<div class="circle"><a href="#"><i class="fa fa-rocket" aria-hidden="true"></i></a></div>
 	          <h3>Fast working</h3>
 	          <p>Option congue nihil imperdiet doming id quod mazim placerat facer possim assum. </p>
@@ -339,8 +335,8 @@
   </section>
 	<!-- End Section Introduce -->
 	<!-- Section Recent work-->
-	<section id="recent_works" class="animation-element">
-		<h2 class="text-center wow zoomIn" data-wow-duration="2s">Recent work</h2>
+	<section id="recent_works">
+		<h2 class="text-center animation-element">Recent work</h2>
 		<div id="owl-recent-work" class="owl-carousel">
 		  <div class="item">
 					<a href="img/img1.jpg" rel="prettyPhoto" title="This is the description">
@@ -420,7 +416,7 @@
 	<!-- Section Best sellers-->
   <section id="best_sellers">
     <div class="container">
-      <h2 class="text-center wow zoomIn" data-wow-duration="2s">best sellers</h2>
+      <h2 class="text-center animation-element">best sellers</h2>
 			<div class="tabbable responsive">
 	      <ul class="nav nav-tabs">
 		        <li class="active"><a data-toggle="tab" href="#best">best sellers</a></li>
@@ -431,7 +427,7 @@
 		    <div class="tab-content">
 		        <div id="best" class="tab-pane fade in active">
 		            <div class="row">
-									<div class="col-xs-12 col-sm-6 col-md-3 wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3">
 										<div class="product-item text-center">
 											<p><img src='img/product_img.jpg' alt="" title="" /></p>
 											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -473,7 +469,7 @@
 											</div> <!-- cd-cart-container -->
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
 										<div class="product-item text-center">
 											<p><img src='img/product_img2.jpg' alt="" title="" /></p>
 											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -490,7 +486,7 @@
 											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 										<div class="product-item text-center">
 											<p><img src='img/product_img3.jpg' alt="" title="" /></p>
 											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -507,7 +503,7 @@
 											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm wow fadeIn" data-wow-duration="1s">
+									<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 										<div class="product-item text-center">
 											<p><img src='img/product_img4.jpg' alt="" title="" /></p>
 											<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
@@ -528,7 +524,7 @@
 		        </div>
 		        <div id="popular" class="tab-pane fade in">
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-3" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3">
 									<div class="product-item text-center">
 										<p><img src='img/product_img4.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -570,7 +566,7 @@
 										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
 									<div class="product-item text-center">
 										<p><img src='img/product_img3.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -587,7 +583,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -604,7 +600,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img2.jpg' alt="" title="" /></p>
 										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
@@ -625,7 +621,7 @@
 						</div>
 		        <div id="products" class="tab-pane fade in">
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-3" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3">
 									<div class="product-item text-center">
 										<p><img src='img/product_img.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -667,7 +663,7 @@
 										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
 									<div class="product-item text-center">
 										<p><img src='img/product_img4.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -684,7 +680,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img3.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -701,7 +697,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img.jpg' alt="" title="" /></p>
 										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
@@ -722,7 +718,7 @@
 						</div>
 		        <div id="specials" class="tab-pane fade in">
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-3" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3">
 									<div class="product-item text-center">
 										<p><img src='img/product_img.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -764,7 +760,7 @@
 										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
 									<div class="product-item text-center">
 										<p><img src='img/product_img4.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -781,7 +777,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img3.jpg' alt="" title="" /></p>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
@@ -798,7 +794,7 @@
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm" data-wow-duration="1s">
+								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs hidden-sm">
 									<div class="product-item text-center">
 										<p><img src='img/product_img.jpg' alt="" title="" /></p>
 										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
@@ -827,8 +823,8 @@
 	<section id="become_member" class="green">
 		<div class="container">
 			<div class="row">
-        <div class="col-xs-12 col-md-2"><i class="fa fa-money wow rubberBand" data-wow-duration="2s" aria-hidden="true"></i></div>
-				<div class="col-xs-12 col-md-10 wow fadeInRight" data-wow-duration="2s">
+        <div class="col-xs-12 col-md-2"><i class="fa fa-money" aria-hidden="true"></i></div>
+				<div class="col-xs-12 col-md-10">
 					<h2>save more up to 40%. become a member!</h2>
 					<p>One of the best program on the web for customers.</p>
 				</div>
@@ -838,8 +834,8 @@
 	</section>
 	<!--End Section Become a Member-->
 	<!-- Section Recent Post-->
-	<section id="recent_post" class="animation-element">
-		<h2 class="text-center wow zoomIn" data-wow-duration="2s">Recent Post</h2>
+	<section id="recent_post">
+		<h2 class="text-center animation-element">Recent Post</h2>
 		<div class="container"><hr/></div>
 		<div id="owl-recent-post" class="owl-carousel">
 		  <div class="item">
@@ -957,9 +953,9 @@
 	</section>
 	<!--End Section Recent Post-->
 	<!-- Section project info-->
-	<section id="project_info" class="animation-element">
+	<section id="project_info">
 		<div class="container">
-			<h2 class="text-center wow zoomIn" data-wow-duration="2s">project info</h2>
+			<h2 class="text-center animation-element">project info</h2>
 			<div class="pills">
 				<ul class="nav nav-pills" role="tablist">
 		        <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#timeline">timeline</a></li>
@@ -1060,8 +1056,8 @@
 	</section>
 	<!--End Section project info-->
 	<!-- Section Latest News-->
-	<section id="latest_news" class="animation-element">
-		<h2 class="text-center wow zoomIn" data-wow-duration="2s">Latest News</h2>
+	<section id="latest_news">
+		<h2 class="text-center animation-element">Latest News</h2>
 		<div class="container"><hr/></div>
 		<div id="owl-latest-news" class="owl-carousel">
 			<div class="item">
@@ -1113,10 +1109,10 @@
 	</section>
 	<!--End Section project info-->
 	<!-- Section Client Opinion-->
-	<section id="client_opinion" class="animation-element">
+	<section id="client_opinion">
 		<div class="container">
 			<div id="quote-carousel">
-				<h2 class="wow zoomIn" data-wow-duration="2s">What clients say about us</h2>
+				<h2 class="animation-element">What clients say about us</h2>
 				<div id="owl-clients">
           <!-- Quote 1 -->
           <div class="item">
@@ -1154,8 +1150,8 @@
 	<section id="animated_sales" class="animation-element">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-6 col-md-push-6 wow fadeInRightBig" data-wow-duration="2s">
-					<h2 class=" wow zoomIn" data-wow-duration="2s">Animated sales diagramm</h2>
+				<div class="col-xs-12 col-md-6 col-md-push-6">
+					<h2 class="animation-element">Animated sales diagramm</h2>
 					<h4 class="green">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod laoreet.</h4>
 					<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis dolore. </p>
 					<p><a href="#" class="more">Read More</a></p>
@@ -1227,10 +1223,10 @@
 	</section>
 	<!--End Section Animated_sales-->
 	<!-- Section Diagrams-->
-	<section id="diagrams" class="animation-element">
+	<section id="diagrams">
 		<div class="container">
 			<div class="row">
-                                <div class="col-xs-6 col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div id="circle1" class="diagram_circles" data-percent="58" data-run="0"></div>
 					<h3>New users</h3>
 				</div>
@@ -1255,7 +1251,7 @@
 		<div class="container">
 			<div class="row">
         <div class="col-xs-12 col-md-6">
-					<h2 class=" wow zoomIn" data-wow-duration="2s">Easy video upload</h2>
+					<h2 class="animation-element">Easy video upload</h2>
 					<div class="homepage">
 					  <div class="homepage-gallery homepage-section homepage-section--border">
 						  <div class="homepage-container">
@@ -1316,7 +1312,7 @@
 	<!-- Section Sign Up-->
 	<section id="sign_up" class="green">
 		<div class="container">
-			<div class="row wow bounceIn" data-wow-duration="2s">
+			<div class="row">
         <div class="col-xs-12 col-lg-4">
 					<h3>Sign up now and get live updates</h3>
 				</div>
@@ -1340,9 +1336,9 @@
 	<!-- Section Choose your plan-->
 	<section id="choose_your_plan">
 		<div class="container">
-      <h2 class="text-center wow zoomIn" data-wow-duration="2s">Choose your plan</h2>
+      <h2 class="text-center animation-element">Choose your plan</h2>
 			<div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-3 wow zoomIn" data-wow-duration="2s">
+        <div class="col-xs-12 col-sm-6 col-lg-3">
 					<div class="plan text-center">
 						<div class="price">25 $</div>
 						<div class="date">Per month for</div>
@@ -1357,7 +1353,7 @@
 						<a class="button-more">Read More</a>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-lg-3 wow zoomIn" data-wow-duration="2s">
+				<div class="col-xs-12 col-sm-6 col-lg-3">
 					<div class="plan text-center">
 						<div class="price">45 $</div>
 						<div class="date">Per month for</div>
@@ -1372,7 +1368,7 @@
 						<a class="button-more">Read More</a>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-lg-3 wow zoomIn" data-wow-duration="2s">
+				<div class="col-xs-12 col-sm-6 col-lg-3">
 					<div class="plan text-center best">
 						<div class="price">80 $</div>
 						<div class="date">Per month for</div>
@@ -1387,7 +1383,7 @@
 						<a class="button-more">Read More</a>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-lg-3 wow zoomIn" data-wow-duration="2s">
+				<div class="col-xs-12 col-sm-6 col-lg-3">
 					<div class="plan text-center">
 						<div class="price">160 $</div>
 						<div class="date">Per month for</div>
@@ -1420,11 +1416,11 @@
 	<section id="abovefooter">
 		<div class="container">
 			<div class="row">
-        <div class="col-xs-12 col-sm-6 site-about wow fadeInLeftBig" data-wow-duration="1s">
+        <div class="col-xs-12 col-sm-6 site-about">
 					<h3><img src='img/voyager-icon.png' alt="" title="" /> voyager</h3>
 					<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
 				</div>
-				<div class="col-xs-12 col-sm-6 tags wow fadeInRightBig" data-wow-duration="1s">
+				<div class="col-xs-12 col-sm-6 tags">
 					<h3>Tags widget</h3>
 					<a href="#">psd</a>
 					<a href="#">themeforest</a>
@@ -1437,7 +1433,7 @@
 				</div>
 			</div>
 			<div class="row">
-        <div class="col-xs-12 col-sm-6 newsletter wow fadeInLeftBig" data-wow-duration="1s">
+        <div class="col-xs-12 col-sm-6 newsletter">
 					<h3>Newsletter sign up</h3>
 					<form action="" method="post">
 						<div class="form-group">
@@ -1450,7 +1446,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-xs-12 col-sm-6 wow fadeInRightBig" data-wow-duration="1s">
+				<div class="col-xs-12 col-sm-6">
 					<div class="row">
 					<div class="col-md-6">
 						<blockquote class="twitter-tweet" data-lang="ru">
