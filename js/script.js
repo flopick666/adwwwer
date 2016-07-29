@@ -1,20 +1,31 @@
 $(document).ready(function () {
+
+$.fn.extend({
+  animateCss: function (animationName) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName + 'animation-element');
+    });
+  }
+});
+
+
   //hide menu when select menu item
   $('#navbar-collapse-1 li').each(function(e,n){
-      if ( !$(n).hasClass('dropdown')){
-          $(n).on('click', function(){
-              $('#navbar-collapse-1').removeClass('in');
-          });
-      }});
+    if ( !$(n).hasClass('dropdown')){
+      $(n).on('click', function(){
+        $('#navbar-collapse-1').removeClass('in');
+      });
+    }});
   //for display active item
   function getMainMenuItem(item, i) {
-      if ( i == 3 ) {
-          return false;
-      }
-      if ( $(item).hasClass('dropdown-toggle') ) {
-          $(item).addClass('active');
-      }
-      getMainMenuItem($(item).parent().parent().prev(), ++i);
+    if ( i == 3 ) {
+        return false;
+    }
+    if ( $(item).hasClass('dropdown-toggle') ) {
+        $(item).addClass('active');
+    }
+    getMainMenuItem($(item).parent().parent().prev(), ++i);
   }
 
   //Active class according to scroll
@@ -73,6 +84,31 @@ $(document).ready(function () {
           }
         }
 
+        $('section h2').each(function () {
+          // console.log($(this).text());
+          if ($(this).hasClass('in-view')) {
+            $(this).animateCss('zoomIn');
+            // $(this).removeClass('.animation-element');
+          } else {
+            $(this).removeClass('zoomIn animated');
+          }
+        });
+
+
+        // if ($('#introduce h2.animation-element').hasClass('in-view')) {
+        //   $('#introduce h2').animateCss('zoomIn');
+        //   // $(this).removeClass('.animation-element');
+        // } else {
+        //   $('#introduce h2').removeClass('zoomIn animated');
+        // }
+        //
+        // if ($('#recent_works h2.animation-element').hasClass('in-view')) {
+        //   $('#recent_works h2').animateCss('zoomIn');
+        //   // $(this).removeClass('.animation-element');
+        // } else {
+        //   $('#recent_works h2').removeClass('zoomIn animated');
+        // }
+
         $('#diagrams').find('.diagram_circles').each(function(n,e){
             z = e;
             var $el = $(e);
@@ -111,14 +147,20 @@ $(document).ready(function () {
 
     });
 
+    /*Hide Contact Us modal*/
+    $( "#contact_us #contactform .close_popup" ).click(function() {
+      $( "#contact_us" ).addClass( "clearmap");
+      $( "#contact_us #contactform" ).slideUp( "slow");
+    });
+
     //Clent Option section Carousel
     $("#owl-clients").owlCarousel({
       autoPlay: false, //Set AutoPlay to 3 seconds
       items : 1, //5 items above 1000px browser width
-      itemsDesktop : [1000,1],
-      itemsDesktopSmall : [960,1], // betweem 900px and 601px
-      itemsTablet: [600,1],
-      itemsMobile : [320,1],
+      itemsDesktop : [1200,1], //4 items between 1200px and 960px
+      itemsDesktopSmall : [960,1], // betweem 960px and 768px
+      itemsTablet: [768,1], //2 items between 768 and 640px
+      itemsMobile : [640,1], // itemsMobile
       navigation : true,
       rewindNav : true,
       scrollPerPage : false,
@@ -129,10 +171,10 @@ $(document).ready(function () {
     $("#owl-latest-news").owlCarousel({
       autoPlay: 100000, //Set AutoPlay to 3 seconds
       items : 3,
-      itemsDesktop : [1000,3],
-      itemsDesktopSmall : [960,2], // betweem 900px and 601px
-      itemsTablet: [610,1],
-      itemsMobile : [320,1],
+      itemsDesktop : [1200,3], //4 items between 1200px and 960px
+      itemsDesktopSmall : [960,2], // betweem 960px and 768px
+      itemsTablet: [768,2], //2 items between 768 and 640px
+      itemsMobile : [640,1], // itemsMobile
       navigation : true,
       navigationText : ["prev","next"],
       rewindNav : true,
@@ -144,10 +186,10 @@ $(document).ready(function () {
     $("#owl-recent-post").owlCarousel({
       autoPlay: 5000, //Set AutoPlay to 3 seconds
       items : 1, //5 items above 1000px browser width
-      itemsDesktop : [1000,1],
-      itemsDesktopSmall : [960,1], // betweem 900px and 601px
-      itemsTablet: [600,1],
-      itemsMobile : [320,1],
+      itemsDesktop : [1200,1], //4 items between 1200px and 960px
+      itemsDesktopSmall : [960,1], // betweem 960px and 768px
+      itemsTablet: [768,1], //2 items between 768 and 640px
+      itemsMobile : [640,1], // itemsMobile
       navigation : true,
       navigationText : ["prev","next"],
       rewindNav : true,
@@ -190,11 +232,11 @@ $(document).ready(function () {
       var timelineItems = $('.timeline__item');
       var emptyItems = timelineItems.filter('.timeline__item--empty');
       var next = emptyItems.first();
-      var delay = 2000;
+      var delay = 1000;
       if(next && next.length){
         next.removeClass('timeline__item--empty');
         if(emptyItems.length === 1){
-          delay = 5000;
+          delay = 1000;
         }
       } else {
         timelineItems.addClass('timeline__item--empty');
@@ -217,6 +259,31 @@ $(document).ready(function () {
     // Tabs responsive
     $(".tabbable.responsive").resptabs();
 
+    //Contact US block - googlemap with marker and settings for this
+    // The latitude and longitude of your business / place
+		var position = [61.456410, 5.840677];
+		function showGoogleMaps() {
+		    var latLng = new google.maps.LatLng(position[0], position[1]);
+		    var mapOptions = {
+		        zoom: 16, // initialize zoom level - the max value is 21
+		        streetViewControl: false, // hide the yellow Street View pegman
+		        scaleControl: true, // allow users to zoom the Google Map
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        center: latLng
+		    };
+		    map = new google.maps.Map(document.getElementById('googlemaps'),
+		        mapOptions);
+		    // Show the default red marker at the location
+		    marker = new google.maps.Marker({
+		        // position: latLng,
+						position: {lat: 61.456410, lng: 5.840677},
+		        map: map,
+		        draggable: false,
+		        animation: google.maps.Animation.DROP
+		    });
+		}
+		google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+    //End script Contact US block
 
     // WebGl section
     if ( false === $.browser.mobile ) {

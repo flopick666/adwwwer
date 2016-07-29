@@ -1,13 +1,19 @@
 &#latest_news {
   background: $ebony;
+  @media (min-width: $screen-lg) {
+    h2 {
+      margin-bottom: 7rem
+    }
+  }
   &:before {
     background: $black_pearl;
   }
   #owl-latest-news {
     max-width: 1170px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 6rem;
     .item {
       padding: 0 15px;
+      font-family: 'Roboto', sans-serif;
       .news-image {
         margin-bottom: 20px;
         height: 140px;
@@ -16,6 +22,10 @@
           width: 100%;
           position: relative;
           top: -50%;
+          transition: 1s;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
         @media (min-width: 611px) {
           height: auto;
@@ -25,21 +35,28 @@
         }
       }
       .news-title {
-        height: 80px;
+        min-height: 70px;
         overflow: hidden;
         margin-top: 0;
-        padding: 10px 0;
-        line-height: 32px;
+        padding: 15px 0 0 0;
+        line-height: 30px;
+        a {
+          color: white;
+          &:hover {
+            color: $java;
+            text-decoration: none;
+          }
+        }
       }
       .date {
         width: 65px;
-        height: 65px;
+        // height: 65px;
         font-size: 36px;
         color: $java;
         text-align: center;
         float: left;
-        margin-right: 20px;
-        font-family: 'Roboto', sans-serif;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
         font-weight: 900;
         span {
           display: block;
