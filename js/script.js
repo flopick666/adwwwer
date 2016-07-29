@@ -199,7 +199,6 @@ $.fn.extend({
     });
 
     //Recebt Work section Carousel
-    $("#owl-recent-work a[rel^='prettyPhoto']").prettyPhoto();
     $("#owl-recent-work").owlCarousel({
       autoPlay: 3000, //Set AutoPlay to 3 seconds
       items : 5, //5 items above 1200px browser width
@@ -213,20 +212,26 @@ $.fn.extend({
       scrollPerPage : false,
       pagination : false
     });
+    // popup for recent post
+    $('.test-popup-link').magnificPopup({
+      type: 'image'
+      // other options
+    });
 
     // Custom Navigation Events
     $(".next").click(function(){
       owl.trigger('owl.next');
-    })
+    });
     $(".prev").click(function(){
       owl.trigger('owl.prev');
-    })
+    });
     $(".play").click(function(){
       owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-    })
+    });
     $(".stop").click(function(){
       owl.trigger('owl.stop');
-    })
+    });
+
 
     // Video upload section animation
     function nextState(){
