@@ -9,7 +9,7 @@
 
     var width = window.innerWidth,
             height = window.innerHeight,
-            height = 777;
+            heightt = 777;
 
     var radius = 0.5,
             segments = 64,
@@ -166,6 +166,12 @@
     webglEl.appendChild(renderer.domElement);
 
     render();
+    
+    $(window).on('resize',function(){
+        renderer.setSize($('#webgl_section').innerWidth(), $('#webgl_section').innerHeight());
+        camera.aspect = $('#webgl_section').innerWidth() / $('#webgl_section').innerHeight();
+        camera.updateProjectionMatrix();
+    });
 
     function render() {
         controls.update();

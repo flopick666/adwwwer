@@ -9,7 +9,7 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 	this.object = object;
 	this.domElement = ( domElement !== undefined ) ? domElement : document;
-xxx = this.domElement;
+
 	// API
 
 	this.enabled = true;
