@@ -231,22 +231,28 @@ $.fn.extend({
 
     // Video upload section animation
     function nextState(){
-      var timelineItems = $('.timeline__item');
-      var emptyItems = timelineItems.filter('.timeline__item--empty');
-      var next = emptyItems.first();
-      var delay = 1000;
-      if(next && next.length){
-        next.removeClass('timeline__item--empty');
-        if(emptyItems.length === 1){
-          delay = 1000;
+        var timelineItems = $('.timeline__item');
+        var emptyItems = timelineItems.filter('.timeline__item--empty');
+        var next = emptyItems.first();
+        var delay = 1000;
+        if(next && next.length){
+            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
+                next.removeClass('timeline__item--empty');
+                if(emptyItems.length === 1){
+                  delay = 1000;
+                }
+            }
+        } else {
+           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
+               // todo
+            } else {
+                timelineItems.addClass('timeline__item--empty');
+            }
         }
-      } else {
-        timelineItems.addClass('timeline__item--empty');
-      }
-      setTimeout(nextState, delay);
+        setTimeout(nextState, delay);
     }
     nextState();
-
+    
     //Scroll to
     $('a[href^="#"]').on('click', function(event) {
       var target = $(this.getAttribute('href'));
