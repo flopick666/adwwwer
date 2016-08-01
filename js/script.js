@@ -27,6 +27,24 @@ $.fn.extend({
     }
     getMainMenuItem($(item).parent().parent().prev(), ++i);
   }
+  
+$(function () {
+    var currentHash = window.location.hash;
+    $(document).scroll(function () {
+        $('body').find('section').each(function () {
+            var top = window.pageYOffset;
+            var distance = top - $(this).offset().top;
+            var hash = $(this).attr('id');
+            x = $(this);
+            // 30 is an arbitrary padding choice, 
+            // if you want a precise check then use distance===0
+            if (distance < 30 && distance > -30 && currentHash != hash) {
+                window.location.hash = (hash);
+                currentHash = hash;
+            }
+        });
+    });
+});
 
   //Active class according to scroll
   $(window).scroll(function(){
@@ -54,7 +72,7 @@ $.fn.extend({
     var $animation_elements = $('.animation-element');
     var $window = $(window);
     var donothing_animation_diagramm = false;
-    // console.log ('permennaya ' + donothing);
+
     function check_if_in_view() {
       var window_height = $window.height();
       var window_top_position = $window.scrollTop();
