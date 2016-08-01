@@ -8308,6 +8308,23 @@ body section#best_sellers .product-item {
 body section#best_sellers .product-item hr {
   border-color: #1f2225;
 }
+body section#best_sellers .product-item .product_image {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+body section#best_sellers .product-item .product_image > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body section#best_sellers .product-item .product_image > div.back {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+body section#best_sellers .product-item .product_image > div.back:hover {
+  opacity: 1;
+}
 body section#best_sellers .product-item .name {
   margin: 0;
   padding: 20px 0 0;
@@ -9352,7 +9369,7 @@ body section#client_opinion #quote-carousel blockquote p .button-more {
   display: inline-block;
 }
 body section#client_opinion #quote-carousel blockquote .description {
-  height: 120px;
+  height: 110px;
   overflow: hidden;
   padding-top: 35px;
 }
@@ -10830,6 +10847,7 @@ body section#video_upload .video #youtube_canvas iframe {
 }
 body section#sign_up {
   text-align: center;
+  z-index: 999;
 }
 body section#sign_up h3 {
   margin-top: 0;
@@ -10858,6 +10876,9 @@ body section#sign_up .col-lg-8 .input-group .input-group-addon {
   border-radius: 0;
   width: 52px;
 }
+body section#sign_up .col-lg-8 .input-group .input-group-addon .fa {
+  font-size: 18px;
+}
 body section#sign_up .col-lg-8 .input-group input {
   background: none;
   color: white;
@@ -10874,10 +10895,14 @@ body section#sign_up .col-lg-8 button {
   margin: 0 auto;
   display: block;
 }
+body section#sign_up .col-lg-8 button .fa {
+  font-size: 5rem;
+}
 body section#sign_up .col-lg-8 button .button-more {
   border: 1px solid white;
   transition: 1s;
   width: auto;
+  color: white;
 }
 body section#sign_up .col-lg-8 button .button-more:hover {
   background: white;
@@ -10910,8 +10935,8 @@ body section#sign_up .col-lg-8 button .button-more:hover {
   }
 }
 @media (min-width: 1200px) {
-  body section#sign_up .col-lg-8 {
-    text-align: right;
+  body section#sign_up .col-lg-8 .input-group {
+    width: 315px;
   }
 }
 body section#choose_your_plan {
