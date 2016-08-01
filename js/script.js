@@ -106,21 +106,41 @@ $.fn.extend({
         });
 
 
-        $('#diagrams').find('.diagram_circles').each(function(n,e){
-            z = e;
-            var $el = $(e);
-            var el_height = $el.outerHeight();
-            var el_top_position = $el.offset().top;
-            var el_bottom_position = (el_top_position + el_height);
+        // $('#diagrams').find('.diagram_circles').each(function(n,e){
+        //     z = e;
+        //     var $el = $(e);
+        //     var el_height = $el.outerHeight();
+        //     var el_top_position = $el.offset().top;
+        //     var el_bottom_position = (el_top_position + el_height);
+        //
+        //     if ( 0 == $el.data('run') ) {
+        //       if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
+        //         $el.circliful({
+        //             percent: $el.data('percent')
+        //         });
+        //         $el.data('run', '1');
+        //       }
+        //     }
+        // });
 
-            if ( 0 == $el.data('run') ) {
-              if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
-                $el.circliful({
-                    percent: $el.data('percent')
-                });
-                $el.data('run', '1');
-              }
-            }
+        $('#diagrams .diagram_circles').circliful({
+          dimension: 130,
+          "background-radius": 62.5,
+          "background-stroke-color": "white",
+          "background-width": 1,
+          "background-fill-color": "#010509",
+          "foreground-color": "#20b7a3",
+          "foreground-radius": 63,
+          "foreground-width": 2,
+          "start-point" : -0.5,
+          "use-total" : false,
+          getText : function(){
+  					if (this.usesTotal()){
+  						return Math.round(this.getCurrentValue())+" kW";
+  					}else {
+  						return this.getCurrentValue()+" %";
+  					}
+  				},
         });
       });
     }

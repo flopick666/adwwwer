@@ -1,173 +1,389 @@
-"use strict";
-
 (function ($) {
+    $.fn.circliful = function (method) {
+		var argumentsToPass = Array.prototype.slice.call(arguments);
+		if (typeof method == "object"){
+			method = "init";
+		}else {
+			argumentsToPass.shift();
+		}
+		/**
+		* Attach to each DOM element a Circliful Object and call the init method if there is no object attached
+		* if the object already exists, call the given method with the given parameters
+		*/
+        return this.each(function (key,element) {
+			if (typeof jQuery(element).data('circliful') == "undefined"){
+				jQuery(element).data('circliful', new Circliful(jQuery(element)));
+				method = "init";
+				if (typeof $.fn.circliful.drawer !== "undefined"){
+					argumentsToPass[0].drawer = new ($.fn.circliful.drawer)();
+				}
+			}
+			jQuery(element).data('circliful')[method].apply(jQuery(element).data('circliful'),argumentsToPass);
+		});
+    };
 
-    $.fn.circliful = function (options, callback) {
+	function CirclifulDrawer(){
+		var parent;
+		this.init = function(){
+			this.canvas = $('<canvas></canvas>');
+			parent.getHtmlContainer().append(this.canvas);
+			this.getContext().translate(0.5,0.5);
+		}
+		this.setParent = function(prt){
+			parent = prt;
+		}
+		/**
+		* @private
+		* Draw the frame for the current values
+		*/
+		this.draw = function(){
+			var context = this.getContext();
+			context.clearRect(0, 0, this.canvas.width(), this.canvas.height());
 
-        var settings = $.extend({
-            // These are the defaults.
-            //startDegree: 0,
-            foregroundColor: "#20b7a3",
-            backgroundColor: "#fff",
-            pointColor: "none",
-            fillColor: 'none',
-            foregroundBorderWidth: 3,
-            backgroundBorderWidth: 3,
-            pointSize: 28.5,
-            fontColor: '#20b7a3',
-            percent: 75,
-            animation: 1,
-            animationStep: 5,
-            icon: 'none',
-            iconSize: '30',
-            iconColor: '#ccc',
-            iconPosition: 'top',
-            target: 0,
-            start: 0,
-            showPercent: 1,
-            percentageTextSize: 36,
-            textAdditionalCss: '',
-            targetPercent: 0,
-            targetTextSize: 17,
-            targetColor: '#2980B9',
-            text: null,
-            textStyle: null,
-            textColor: '#666',
-            multiPercentage: 0,
-            percentages: null
-        }, options);
+			if (parent.settings['background-fill']){
+				context.beginPath();
+	            context.arc(this.canvas.width()/2, this.canvas.height()/2, parent.settings['background-radius']-1,  this.getAngleFromValue(0), this.getAngleFromValue(parent.settings.total), false);
+            	context.fillStyle = parent.settings['background-fill-color'];
+	            context.fill();
+			}
+			context.beginPath();
+            context.arc(this.canvas.width()/2, this.canvas.height()/2, parent.settings['background-radius']-parent.settings['background-width']/2,  this.getAngleFromValue(0), this.getAngleFromValue(parent.settings.total), false);
+            context.strokeStyle = parent.settings['background-stroke-color'];
+            context.lineWidth = parent.settings['background-width'];
+			context.stroke();
 
-        return this.each(function () {
-            var circleContainer = $(this);
-            var percent = settings.percent;
-            var iconY = 83;
-            var iconX = 100;
-            var textY = 75;
-            var textX = 100;
-            var additionalCss;
-            var elements;
-            var icon;
-            var backgroundBorderWidth = settings.backgroundBorderWidth;
+			context.beginPath();
+	        context.arc(this.canvas.width()/2, this.canvas.height()/2, parent.settings['foreground-radius']-parent.settings['foreground-width']/2, this.getAngleFromValue(0), this.getAngleFromValue(parent.currentValue), false);
+	        context.strokeStyle = parent.settings['foreground-color'];
+	        context.lineWidth = parent.settings['foreground-width'];
+	        context.stroke();
 
-            if(settings.iconPosition == 'bottom') {
-                iconY = 124;
-                textY = 95;
-            } else if(settings.iconPosition == 'left') {
-                iconX = 80;
-                iconY = 110;
-                textX = 117;
-            } else if(settings.iconPosition == 'middle') {
-                if(settings.multiPercentage == 1) {console.log(typeof settings.percentages == "object")
-                    if(typeof settings.percentages == "object") {
-                        backgroundBorderWidth = 30;
-                    } else {
-                        iconY = 110;
-                        elements = '<g stroke="' + (settings.backgroundColor != 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="133" y1="50" x2="140" y2="40" stroke-width="2"  /></g>';
-                        elements += '<g stroke="' + (settings.backgroundColor != 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="140" y1="40" x2="200" y2="40" stroke-width="2"  /></g>';
-                        textX = 228;
-                        textY = 47;
-                    }
-                } else {
-                    iconY = 110;
-                    elements = '<g stroke="' + (settings.backgroundColor != 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="133" y1="50" x2="140" y2="40" stroke-width="2"  /></g>';
-                    elements += '<g stroke="' + (settings.backgroundColor != 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="140" y1="40" x2="200" y2="40" stroke-width="2"  /></g>';
-                    textX = 175;
-                    textY = 35;
-                }
-            } else if(settings.iconPosition == 'right') {
-                iconX = 120;
-                iconY = 110;
-                textX = 80;
-            }
+		}
+		/**
+		* @private
+		* Returns the context of the canvas
+		*/
+		this.getContext = function(){
+			return this.canvas.get(0).getContext('2d')
+		}
+		this.setSize = function(width,height){
+			this.canvas.attr({ width : width, height : height });
+		}
+		/**
+		* @private
+		* Calculate the angle corresponding to the given value
+		*/
+		this.getAngleFromValue = function(value){
+			return (parent.settings['start-point']+value/parent.settings.total*parent.settings['max-angle'])*Math.PI;
+		}
 
-            if(settings.targetPercent > 0) {
-                textY = 95;
-                elements = '<g stroke="' + (settings.backgroundColor != 'none' ? settings.backgroundColor : '#ccc') + '" ><line x1="75" y1="101" x2="125" y2="101" stroke-width="1"  /></g>';
-                elements += '<text text-anchor="middle" x="' + textX + '" y="120" style="font-size: ' + settings.targetTextSize + 'px;" fill="' + settings.targetColor + '">' + settings.targetPercent + '%</text>';
-                elements += '<circle cx="100" cy="100" r="69" fill="none" stroke="' + settings.backgroundColor + '" stroke-width="3" stroke-dasharray="450" transform="rotate(-90,100,100)" />';
-                elements += '<circle cx="100" cy="100" r="69" fill="none" stroke="' + settings.targetColor + '" stroke-width="3" stroke-dasharray="' + (360 / 100 * settings.targetPercent) + ', 20000" transform="rotate(-90,100,100)" />';
+	}
+	/**
+	*	The Circliful Class
+	*	Its creation requires a DOM element
+	*/
+	function Circliful(htmlContainer){
+		var defaultSettings = {
+		        "background-radius": 100,				/* Radius of the background circle */
+		        "background-stroke-color": "#eee",		/* color of the outer background circle */
+		        "background-width": 20,					/* width of the outer background circle */
+		        "background-fill-color": "gray",		/* color of the inner background circle */
+		        "background-fill": true,				/* is the inner background circle filled */
 
-            }
+		        "foreground-color": "#61a9dc",			/* color of the foreground circle arc */
+		        "foreground-radius": 90,				/* radius of the foreground circle arc */
+		        "foreground-width": 20,					/* width of the foreground circle arc */
 
-            if(settings.text != null && settings.multiPercentage == 0) {
-                elements += '<text text-anchor="middle" x="100" y="125" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-            } else if(settings.text != null && settings.multiPercentage == 1) {
-                elements += '<text text-anchor="middle" x="228" y="65" style="' + settings.textStyle + '" fill="' + settings.textColor + '">' + settings.text + '</text>';
-            }
+				"start-point" : -0.5,					/* start point for the foreground circle arc : is multiplied by Math.PI -0.5 corresponds to the top of a circle, 0 to the right point */
+				"max-angle" : 2,						/* max angle for the foreground circle arc : is multiplied by Math.PI 1 corresponds to a half circle, 2 to a full circle */
 
-            if (settings.icon != 'none') {
-                icon = '<text text-anchor="middle" x="' + iconX + '" y="' + iconY + '" class="icon" style="font-size: ' + settings.iconSize + 'px" fill="' + settings.iconColor + '">&#x' + settings.icon + '</text>';
-            }
+				"time-between-frames" : 10,				/* milliseconds between each frame */
 
-            circleContainer
-                .addClass('svg-container')
-                .append(
-                    $('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 125" class="circliful">' +
-                        elements +
-                        '<circle cx="135" cy="100" r="57" class="border" fill="' + settings.fillColor + '" stroke="' + settings.backgroundColor + '" stroke-width="' + backgroundBorderWidth + '" stroke-dasharray="360" transform="rotate(-90,100,100)" />' +
-                        '<circle class="circle" cx="135" cy="100" r="57" class="border" fill="none" stroke="' + settings.foregroundColor + '" stroke-width="' + settings.foregroundBorderWidth + '" stroke-dasharray="0,20000" transform="rotate(-90,100,100)" />' +
-                        '<circle cx="135" cy="100" r="' + settings.pointSize + '" fill="' + settings.pointColor + '" />' +
-                        icon +
-                        '<text class="timer" text-anchor="middle" x="' + textX + '" y="' + textY + '" style="font-size: ' + settings.percentageTextSize + 'px; ' + additionalCss + ';' + settings.textAdditionalCss + '" fill="' + settings.fontColor + '">0%</text>')
-                );
+				"animation-step" : 1,					/* step of advance for each frame : given in pourcentage : 1-100 */
+		        dimension: 250,							/* Dimension of the canvas element */
 
-            var circle = circleContainer.find('.circle');
-            var myTimer = circleContainer.find('.timer');
-            var interval = 30;
-            var angle = 0;
-            var angleIncrement = settings.animationStep;
-            var last = 0;
-            var summary = 0;
-            var oneStep = 0;
+				"display-style" : "full",				/* Style of the display : full or half : used only to calculate the position and width of various texts */
+				"circle-text-class" : "circle-text",	/* class applied to the DOM element containing the main circle text */
+				"info-text-class" : "circle-info",		/* class applied to the DOM element containing the text info circle */
 
-            if (settings.start > 0 && settings.target > 0) {
-                percent = settings.start / (settings.target / 100);
-                oneStep = settings.target / 100;
-            }
+		        percent: 100,							/* value to be displayed */
 
-            if (settings.animation == 1) {
-                var timer = window.setInterval(function () {
-                    if ((angle) >= (360 / 100 * percent)) {
-                        window.clearInterval(timer);
-                        last = 1;
-                    } else {
-                        angle += angleIncrement;
-                        summary += oneStep;
-                    }
+				"use-total" : true,						/* true if the element functions with values / false if it works with percentages */
+				total : 100,							/* the total used if the use-total = true */
 
-                    if (angle / 3.6 >= percent && last == 1) {
-                        angle = 3.6 * percent;
-                    }
+				"icon-class" : "users",					/* class to be applied to the icon element */
+				"icon-display" : false,					/* true to display the icon / false otherwise */
 
-                    if (summary > settings.target && last == 1) {
-                        summary = settings.target;
-                    }
+				getText : function(){					/*	method called to obtain the text of the main circle text */
+					return this.getCurrentValue();
+				},
+				getInfoText : function(){				/*	method called to obtain the text of the info text */
+					return "";
+				},
+				drawer : new CirclifulDrawer()
 
-                    circle
-                        .attr("stroke-dasharray", angle + ", 20000");
+		    };
+		this.circleText = $('<span></span>');
+		this.infoText = $('<span></span>');
+		this.icon = $('<i></i>');
+		this.settings = {};
+		this.currentValue = 0;
+		this.targetValue = 0;
+		this.valueReachedListenerList = [];
 
-                    if (settings.showPercent == 1) {
-                        myTimer
-                            .text(parseInt(angle / 360 * 100) + '%');
-                    } else {
-                        myTimer
-                            .text(summary);
-                    }
+		/**
+		* Method called on init of the object
+		* Defines the options : default settings are overriden by given options that are overriden by data- attributes
+		* Appends the various DOM elements
+		* Updates the display
+		*/
+		this.init = function(options){
+			this.settings = $.extend({},defaultSettings);
+			for(var i in options){
+				if (typeof this.settings[i] != "undefined"){
+					this.settings[i] = options[i]
+				}
+			}
 
-                }.bind(circle), interval);
-            } else {
-                circle
-                    .attr("stroke-dasharray", (360 / 100 * percent) + ", 20000");
+			var data = htmlContainer.data();
+			for(var i in data){
+				if (typeof this.settings[i] != "undefined"){
+					this.settings[i]=htmlContainer.data(i);
+				}
+			}
+			this.setDrawer(this.settings.drawer);
+			htmlContainer.append(this.circleText);
+			htmlContainer.append(this.infoText);
+			this.circleText.append(this.icon);
+			htmlContainer.addClass('circliful');
+			this.setSize(this.settings.dimension);
+			this.setDisplayStyle(this.settings['display-style']);
+			this.setInfoText();
+			this.setIconClass(this.settings['icon-class']);
+			this.setIconDisplay(this.settings['icon-display']);
+			if (this.settings['use-total']){
+				this.animateToValue(this.settings.percent);
+			}else {
+				this.animateToPercentage(this.settings.percent);
+			}
+		}
+		this.getHtmlContainer = function(){
+			return htmlContainer;
+		};
+		/**
+		* @public
+		* Destroy the current circliful
+		*/
+		this.destroy = function(){
+			htmlContainer.empty();
+			htmlContainer.removeData('circliful');
+			htmlContainer.removeClass('circliful');
+		}
 
-                if (settings.showPercent == 1) {
-                    myTimer
-                        .text(percent + '%');
-                } else {
-                    myTimer
-                        .text(settings.target);
-                }
-            }
-        });
-    }
+		/**
+		* @private
+		* Returns the context of the canvas
+		*/
+		this.setSetting = function(name,value){
+			this.settings[name]=value;
+			this.settings['drawer'].draw();
+		}
+
+		/**
+		* Defines the drawing method
+		*/
+		this.setDrawer=function(drawer){
+			this.settings['drawer']=drawer;
+			drawer.setParent(this);
+			drawer.init();
+		}
+		/**
+		* Defines the use-total option
+		*/
+		this.setUseTotal=function(useTotal){
+			this.settings['use-total']=useTotal;
+		}
+		/**
+		* returns the use-total option
+		*/
+		this.usesTotal = function(){
+			return this.settings['use-total'];
+		}
+		/**
+		* Defines the total to be used
+		*/
+		this.setTotal = function(total){
+			this.settings['total']=total;
+		}
+		/**
+		* Adds an event listener for the value reached event : called when any value is reached
+		*/
+		this.addValueReachedListener = function(listener){
+			this.valueReachedListenerList.push(listener);
+		}
+		/**
+		* Go directly to the given value
+		*/
+		this.setValue = function(value){
+			this.currentValue = value;
+			this.targetValue = value;
+			this.setText();
+			this.settings['drawer'].draw();
+			for(var i in this.valueReachedListenerList){
+				this.valueReachedListenerList[i].apply(this);
+			}
+		}
+		/**
+		* Go directly to the given percentage
+		*/
+		this.setPercentage = function(percent){
+			this.setTotal(100);
+			this.setValue(percent);
+		}
+		/**
+		* Returns the current Value
+		*/
+		this.getCurrentValue = function(){
+			return this.currentValue;
+		}
+		/**
+		* Returns the target Value
+		*/
+		this.getTargetValue = function(){
+			return this.targetValue;
+		}
+		/**
+		* Defines the dimension of the canvas
+		*/
+		this.setSize = function(dimension){
+			htmlContainer.width(dimension);
+			this.settings.dimension = dimension;
+			this.settings['drawer'].setSize(dimension,dimension);
+			this.adaptCircleTextLineHeight();
+			this.adaptCircleInfoLineHeight();
+		}
+		/**
+		* Defines the display style : full or half
+		*/
+		this.setDisplayStyle = function(style){
+			this.settings['display-style'] = style;
+			this.circleText.attr('class',this.settings['circle-text-class']+' circle-text-'+style);
+			this.infoText.attr('class',this.settings['info-text-class']+' circle-info-'+style);
+			this.adaptCircleTextLineHeight();
+			this.adaptCircleInfoLineHeight();
+		}
+		/**
+		* Defines the class of the main circle text DOM element
+		*/
+		this.setCircleTextClass = function(circleTextClass){
+			this.settings['circle-text-class'] = circleTextClass;
+			this.setDisplayStyle(this.settings['display-style']);
+		}
+		/**
+		* Defines the class of the info text DOM element
+		*/
+		this.setInfoTextClass = function(infoTextClass){
+			this.settings['info-text-class'] = infoTextClass;
+			this.setDisplayStyle(this.settings['display-style']);
+		}
+		/**
+		* Modifies the line height for the main circle text DOM element
+		*/
+		this.adaptCircleTextLineHeight = function(){
+			var lineHeight = this.settings.dimension;
+			if (this.settings['display-style']=="half"){
+				lineHeight = this.settings.dimension / 1.4;
+			}
+			this.circleText.css({ 'line-height': lineHeight + 'px' });
+		}
+		/**
+		* Modifies the line height for the info text DOM element
+		*/
+		this.adaptCircleInfoLineHeight = function(){
+			var lineHeight = this.settings.dimension*1.25;
+			if (this.settings['display-style']=="half"){
+				lineHeight = this.settings.dimension / 1.1;
+			}
+			this.infoText.css({ 'line-height': lineHeight + 'px' });
+		}
+		/**
+		* Creates an animation to the given value
+		*/
+		this.animateToValue = function(value){
+			this.targetValue = value;
+			var difference = this.targetValue-this.currentValue;
+			this.direction = difference>0?1:(difference<0?-1:0);
+			this.stepToAnimation();
+		}
+		/**
+		* Creates an animation to the given percentage
+		*/
+		this.animateToPercentage = function(percent){
+			this.setTotal(100);
+			this.animateToValue(percent);
+		}
+		/**
+		* @private
+		* Makes a new step in the animation toward the target value
+		*/
+		this.stepToAnimation = function(){
+			this.timer += this.settings['animation-step'];
+			this.currentValue += this.settings['animation-step']*(this.settings.total/100)*this.direction;
+			this.settings['drawer'].draw();
+			this.setText();
+			var parent = this;
+			var animationRequester = function(time){
+					if (typeof parent.lastFrameDate == "undefined"){
+						parent.lastFrameDate = time;
+					}
+					if (time-parent.lastFrameDate>parent.settings['time-between-frames']){
+						parent.lastFrameDate = time;
+						parent.stepToAnimation();
+						return;
+					}
+					requestAnimationFrame(animationRequester,parent);
+				};
+			if (this.currentValue*this.direction<this.targetValue*this.direction){
+				requestAnimationFrame(animationRequester,this);
+				return;
+			}
+			if (this.settings['use-total']){
+				this.setValue(this.targetValue);
+			}else {
+				this.setValue(this.targetValue);
+			}
+			for(var i in this.valueReachedListenerList){
+				this.valueReachedListenerList[i].apply(this);
+			}
+		}
+		/**
+		* Calls the text callback method to define the content of the main circle text DOM element
+		*/
+		this.setText = function(){
+			this.circleText.html(this.settings.getText.apply(this));
+			this.circleText.append(this.icon);
+		};
+		/**
+		* Set the display status of the icon
+		*/
+		this.setIconDisplay = function(display){
+			this.settings['icon-display']=display;
+			this.icon.css({'display' : display?"inline":"none"});
+		}
+		/**
+		* Set the class of the icon DOM Element
+		*/
+		this.setIconClass = function(classes){
+			this.settings['icon-class'] = classes;
+			this.icon.attr('class','fa '+classes);
+		};
+		/**
+		* Calls the text callback method to define the content of the info text DOM element
+		*/
+		this.setInfoText = function(){
+			this.infoText.html(this.settings.getInfoText.apply(this));
+		};
+
+	}
 
 }(jQuery));
