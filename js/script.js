@@ -236,14 +236,14 @@ $.fn.extend({
         var next = emptyItems.first();
         var delay = 1000;
         if(next && next.length){
-            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
+            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - window.innerHeight ) {
                 next.removeClass('timeline__item--empty');
                 if(emptyItems.length === 1){
                   delay = 1000;
                 }
             }
         } else {
-           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
+           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - window.innerHeight ) {
                // todo
             } else {
                 timelineItems.addClass('timeline__item--empty');
