@@ -7684,17 +7684,20 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
   left: -100%;
   margin-left: 10px;
 }
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle {
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle, body #header nav.navbar #navbar-collapse-1 ul li.dropdown:hover > a.dropdown-toggle {
   color: #20b7a3;
 }
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after {
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:after, body #header nav.navbar #navbar-collapse-1 ul li.dropdown:hover > a.dropdown-toggle:after {
   content: "\f107";
   color: #20b7a3;
 }
-body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:before {
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > a.dropdown-toggle:before, body #header nav.navbar #navbar-collapse-1 ul li.dropdown:hover > a.dropdown-toggle:before {
   left: 0;
   height: 2px;
   width: 100%;
+}
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown.open > .dropdown-menu, body #header nav.navbar #navbar-collapse-1 ul li.dropdown:hover > .dropdown-menu {
+  display: block;
 }
 body #header nav.navbar #navbar-collapse-1 ul#login {
   background: #20b7a3;
@@ -11127,6 +11130,140 @@ body section#contact_us #contactform .button-more:hover {
   background: white;
   color: #20b7a3;
 }
+body section#contact_us #contact-form {
+  background: #149d8b;
+  height: 530px;
+  position: absolute;
+  overflow: auto;
+  left: 0;
+  top: 8rem;
+  z-index: 999;
+  width: 100%;
+  display: none;
+}
+body section#contact_us #contact-form .top {
+  margin: 8.5rem 0 4rem 0;
+  overflow: hidden;
+}
+body section#contact_us #contact-form .top h2 {
+  font-size: 22px;
+  font-weight: 100;
+  margin: 0;
+  float: left;
+}
+body section#contact_us #contact-form .top a.back {
+  float: right;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+}
+body section#contact_us #contact-form .top a.back .fa {
+  transition: 1s;
+  background: #20b7a3;
+  font-size: 20px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  margin-left: 2rem;
+  border-radius: 50%;
+}
+body section#contact_us #contact-form .top a.back .fa:before {
+  margin-left: -3px;
+}
+body section#contact_us #contact-form .top a.back:hover {
+  text-decoration: none;
+}
+body section#contact_us #contact-form .top a.back:hover .fa {
+  background: white;
+  color: #20b7a3;
+}
+body section#contact_us #contact-form form .input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #20b7a3;
+  font-family: 'Open Sans', sans-serif;
+}
+body section#contact_us #contact-form form .input-group .input-group-addon {
+  background: #20b7a3;
+  color: white;
+  border: none;
+  border-radius: 0;
+  width: 52px;
+}
+body section#contact_us #contact-form form .input-group .input-group-addon .fa {
+  font-size: 18px;
+}
+body section#contact_us #contact-form form .input-group.upload {
+  border: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+body section#contact_us #contact-form form .input-group.upload .image-upload {
+  display: inline-block;
+  background: #20b7a3;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 15px;
+  margin-left: 4px;
+}
+body section#contact_us #contact-form form .input-group.upload .image-upload label {
+  display: block;
+  cursor: pointer;
+}
+body section#contact_us #contact-form form .input-group.upload .image-upload label .fa {
+  font-size: 18px;
+  margin-left: 2px;
+}
+body section#contact_us #contact-form form .input-group.upload .image-upload input {
+  display: none;
+}
+body section#contact_us #contact-form form .input-group.message .input-group-addon {
+  vertical-align: top;
+  padding-top: 20px;
+}
+body section#contact_us #contact-form form .input-group.message textarea {
+  background: none;
+  height: 190px;
+  border: none;
+  padding-top: 16px;
+  font-weight: 100;
+}
+body section#contact_us #contact-form form .input-group input {
+  height: 52px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 0;
+  vertical-align: middle;
+  font-weight: 300;
+}
+body section#contact_us #contact-form form .form-group {
+  margin-bottom: 3rem;
+}
+body section#contact_us #contact-form form .button-more {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  transition: 1s;
+  font-size: 16px;
+  width: 100%;
+  max-width: none;
+}
+body section#contact_us #contact-form form .button-more:hover {
+  background: white;
+  color: #20b7a3;
+}
 body section#abovefooter {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0;
@@ -12051,18 +12188,27 @@ body .cd-cart-container.cart-open .cd-cart .checkout:hover em:after {
 }
 body .modal-dialog {
   margin-top: 10%;
-}
-@media (max-width: 768px) {
-  body .modal-dialog {
-    margin: 10%;
-  }
+  width: auto;
+  max-width: 410px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
 }
 body .modal-dialog .modal-content {
-  background: #20b7a3;
   color: white;
   border-radius: 0;
 }
-body .modal-dialog .modal-content button.close {
+body .modal-dialog .modal-content p {
+  font-weight: 100;
+  margin: 0;
+  text-transform: uppercase;
+}
+body .modal-dialog .modal-content .modal-header {
+  text-align: center;
+  border: none;
+  padding: 30px;
+  background: #20b7a3;
+}
+body .modal-dialog .modal-content .modal-header button.close {
   border-radius: 50px;
   background: #20b7a3;
   position: absolute;
@@ -12073,56 +12219,137 @@ body .modal-dialog .modal-content button.close {
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  line-height: 40px;
   border: 1px solid white;
   opacity: 1;
 }
-body .modal-dialog .modal-content .modal-header {
-  text-align: center;
-  border: none;
-  padding-bottom: 0;
-}
 body .modal-dialog .modal-content .modal-header h4 {
-  margin-bottom: 2rem;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  font-size: 3rem;
 }
 body .modal-dialog .modal-content .modal-body {
-  padding-top: 0;
+  padding: 30px;
+  background: #149d8b;
 }
-body .modal-dialog .modal-content label {
+body .modal-dialog .modal-content .modal-footer {
+  padding: 30px;
+  background: #20b7a3;
+  text-align: left;
+  border: none;
+}
+body .modal-dialog .modal-content form p a {
+  color: #7dffee;
+  text-decoration: underline;
+  font-weight: 500;
+}
+body .modal-dialog .modal-content form p a:hover {
+  color: white;
+  text-decoration: none;
+}
+body .modal-dialog .modal-content form .input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #20b7a3;
+  font-family: 'Open Sans', sans-serif;
+}
+body .modal-dialog .modal-content form .input-group .input-group-addon {
+  background: #20b7a3;
+  color: white;
+  border: none;
+  border-radius: 0;
+  width: 52px;
+}
+body .modal-dialog .modal-content form .input-group .input-group-addon .fa {
+  font-size: 18px;
+}
+body .modal-dialog .modal-content form .input-group input {
+  height: 52px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 0;
+  vertical-align: middle;
+  font-weight: 300;
+}
+body .modal-dialog .modal-content form .input-group:last-child {
+  margin-bottom: 0;
+}
+body .modal-dialog .modal-content form .form-group {
+  margin-bottom: 3rem;
+}
+body .modal-dialog .modal-content form .form-group .check {
+  font-size: 1.1rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  /* to hide the checkbox itself */
+  /* unchecked icon */
+  /* checked icon */
+}
+body .modal-dialog .modal-content form .form-group .check label {
   font-weight: normal;
+  line-height: 25px;
+  height: 25px;
 }
-body .modal-dialog .modal-content .button-more {
+body .modal-dialog .modal-content form .form-group .check input[type=checkbox] {
+  display: none;
+}
+body .modal-dialog .modal-content form .form-group .check input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  border: 1px solid #4bd4c2;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  margin-bottom: -px;
+  margin-left: 3rem;
+  margin-right: 2rem;
+}
+body .modal-dialog .modal-content form .form-group .check input[type=checkbox] + label:before {
+  content: " ";
+}
+body .modal-dialog .modal-content form .form-group .check input[type=checkbox]:checked + label:before {
+  content: "\f00c";
+}
+body .modal-dialog .modal-content form .button-more {
   background: none;
   color: white;
   border: 1px solid white;
   transition: 1s;
   font-size: 16px;
+  width: 100%;
+  max-width: none;
 }
-body .modal-dialog .modal-content .button-more:hover {
+body .modal-dialog .modal-content form .button-more:hover {
   background: white;
   color: #20b7a3;
 }
-body .pp_pic_holder.dark_square {
-  border: 1px solid #3c4b4b;
-  background: #060a0e;
+body .modal-dialog .modal-content form .social {
+  overflow: hidden;
+  margin-top: 3rem;
 }
-body .pp_pic_holder.dark_square .ppt {
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 300;
-  text-align: center;
-  line-height: 50px;
-  margin: 0 auto;
+body .modal-dialog .modal-content form .social button {
+  display: inline-block;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  width: 170px;
+  transition: 1s;
 }
-body .pp_pic_holder.dark_square .pp_top, body .pp_pic_holder.dark_square .pp_bottom {
-  display: none;
+body .modal-dialog .modal-content form .social button:hover {
+  transform: scale(1.05);
 }
-body .pp_pic_holder.dark_square .pp_content,
-body .pp_pic_holder.dark_square .pp_middle,
-body .pp_pic_holder.dark_square .pp_left,
-body .pp_pic_holder.dark_square .pp_right {
-  background: #060a0e;
+body .modal-dialog .modal-content form .social button.fb {
+  background: #3b5998;
+  float: left;
+}
+body .modal-dialog .modal-content form .social button.goo {
+  background: #de5245;
+  float: right;
+}
+@media (max-width: 768px) {
+  body .modal-dialog {
+    margin: 10%;
+  }
 }
 body #footer {
   background: #060a0e;

@@ -106,41 +106,21 @@ $.fn.extend({
         });
 
 
-        // $('#diagrams').find('.diagram_circles').each(function(n,e){
-        //     z = e;
-        //     var $el = $(e);
-        //     var el_height = $el.outerHeight();
-        //     var el_top_position = $el.offset().top;
-        //     var el_bottom_position = (el_top_position + el_height);
-        //
-        //     if ( 0 == $el.data('run') ) {
-        //       if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
-        //         $el.circliful({
-        //             percent: $el.data('percent')
-        //         });
-        //         $el.data('run', '1');
-        //       }
-        //     }
-        // });
+        $('#diagrams').find('.diagram_circles').each(function(n,e){
+            z = e;
+            var $el = $(e);
+            var el_height = $el.outerHeight();
+            var el_top_position = $el.offset().top;
+            var el_bottom_position = (el_top_position + el_height);
 
-        $('#diagrams .diagram_circles').circliful({
-          dimension: 130,
-          "background-radius": 62.5,
-          "background-stroke-color": "white",
-          "background-width": 1,
-          "background-fill-color": "#010509",
-          "foreground-color": "#20b7a3",
-          "foreground-radius": 63,
-          "foreground-width": 2,
-          "start-point" : -0.5,
-          "use-total" : false,
-          getText : function(){
-  					if (this.usesTotal()){
-  						return Math.round(this.getCurrentValue())+" kW";
-  					}else {
-  						return this.getCurrentValue()+" %";
-  					}
-  				},
+            if ( 0 == $el.data('run') ) {
+              if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
+                $el.circliful({
+                    percent: $el.data('percent')
+                });
+                $el.data('run', '1');
+              }
+            }
         });
       });
     }
@@ -153,6 +133,12 @@ $.fn.extend({
       $( "#services #secondary-services" ).slideToggle( "slow");
       $(this).text( $(this).text() == 'Show all services' ? "Hide all services" : "Show all services");
     });
+
+    /*Show Contact us form*/
+    $( "#contact-form-button, #contact-form-button-close" ).click(function() {
+      $( "#contact-form" ).slideToggle( "slow");
+    });
+
 
     /*Hide Become a member block*/
     $( "#hide-green-block" ).click(function() {
@@ -251,28 +237,22 @@ $.fn.extend({
 
     // Video upload section animation
     function nextState(){
-        var timelineItems = $('.timeline__item');
-        var emptyItems = timelineItems.filter('.timeline__item--empty');
-        var next = emptyItems.first();
-        var delay = 1000;
-        if(next && next.length){
-            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
-                next.removeClass('timeline__item--empty');
-                if(emptyItems.length === 1){
-                  delay = 1000;
-                }
-            }
-        } else {
-           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - 100 && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - 100 ) {
-               // todo
-            } else {
-                timelineItems.addClass('timeline__item--empty');
-            }
+      var timelineItems = $('.timeline__item');
+      var emptyItems = timelineItems.filter('.timeline__item--empty');
+      var next = emptyItems.first();
+      var delay = 1000;
+      if(next && next.length){
+        next.removeClass('timeline__item--empty');
+        if(emptyItems.length === 1){
+          delay = 1000;
         }
-        setTimeout(nextState, delay);
+      } else {
+        timelineItems.addClass('timeline__item--empty');
+      }
+      setTimeout(nextState, delay);
     }
     nextState();
-    
+
     //Scroll to
     $('a[href^="#"]').on('click', function(event) {
       var target = $(this.getAttribute('href'));
@@ -294,7 +274,11 @@ $.fn.extend({
 		    var mapOptions = {
 		        zoom: 16, // initialize zoom level - the max value is 21
 		        streetViewControl: false, // hide the yellow Street View pegman
-		        scaleControl: true, // allow users to zoom the Google Map
+		        scaleControl: false, // dany users to zoom the Google Map
+            scrollwheel: false,
+            navigationControl: false,
+            mapTypeControl: false,
+            draggable: false,
 		        mapTypeId: google.maps.MapTypeId.ROADMAP,
 		        center: latLng,
             styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]

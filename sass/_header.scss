@@ -112,7 +112,7 @@
                 }
               }
             }
-            &.open {
+            &.open, &:hover {
               > a.dropdown-toggle {
                 color: $java;
                 &:after {
@@ -124,6 +124,9 @@
                   height: 2px;
                   width: 100%;
                 }
+              }
+              > .dropdown-menu {
+                display: block;
               }
             }
           }

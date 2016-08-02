@@ -24,24 +24,14 @@
 
 	<!-- feature_carousel-->
 	<script type="text/javascript" src="js/feature_carousel/jquery.featureCarousel.js" charset="utf-8"></script>
-
 	<!-- owljs -->
 	<script type="text/javascript" src="js/owl/owl.carousel.js"></script>
 	<link href="js/owl/owl.carousel.css" rel="stylesheet">
 	<link href="js/owl/owl.theme.css" rel="stylesheet">
 
-	<!--Cart script  -->
-	<script type="text/javascript" src="js/cart/cart.js"></script>
-
 	<!-- Circle diagrams-->
-	<!-- <script type="text/javascript" src="js/circliful/jquery.circliful.js" ></script>
-	<link href="js/circliful/jquery.circliful.css" rel="stylesheet" type="text/css" /> -->
-
-	<!-- Circle diagrams ver2 -->
+	<script type="text/javascript" src="js/circliful/jquery.circliful.js" ></script>
 	<link href="js/circliful/jquery.circliful.css" rel="stylesheet" type="text/css" />
-	<script src="js/circliful/jquery.circliful.js"></script>
-	<!--[if lt IE 10]><script src="js/jquery.circliful.ie8.js"></script><![endif]-->
-	<script src="js/circliful/jquery.circliful.svg.js"></script>
 
 	<!-- mag popup-->
 	<script type="text/javascript" src="js/mag/jquery.magnific-popup.js" ></script>
@@ -157,22 +147,19 @@
           </button>
 					<a href="/" class="navbar-brand logo"><img src='img/voyager-icon.png' alt="" title="" /> voyager</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-					<ul id="main-menu" class="nav navbar-nav navbar-right">
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav">
 						<li><a href="#webgl_section">Home</a></li>
 						<li><a href="#introduce">about</a></li>
 						<li><a href="#best_sellers">shop</a></li>
 						<li><a href="#recent_post">blog</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">extras</a>
-							<ul class="dropdown-menu">
-		            <li><a href="#services">Services</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">extras</a>
+              <ul class="dropdown-menu">
+								<li><a href="#services">Services</a></li>
 		            <li><a href="#recent_works">Works</a></li>
-		            <!-- <li><a href="#">Mobile App</a></li> -->
-		            <!--  <li role="separator" class="divider"></li>-->
-		            <li class="dropdown dropdown-submenu">
+                <li class="dropdown dropdown-submenu">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Projects</a>
 									<ul class="dropdown-menu">
 										<li><a href="#project_info">Project</a></li>
@@ -183,49 +170,46 @@
 								<li><a href="#latest_news">News</a></li>
 								<li><a href="#client_opinion">Testimonials</a></li>
 								<li><a href="#choose_your_plan">Prices</a></li>
-		          </ul>
-						</li>
+              </ul>
+            </li>
 						<li><a href="#contact_us">contacts</a></li>
-					</ul>
+          </ul>
 					<ul id="login" class="secondary-menu nav navbar-nav navbar-right">
 						<li><a href="#" data-toggle="modal" data-target="#myModalHorizontal"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#myModalNorm"><i class="fa fa-plus" aria-hidden="true"></i> sign up</a></li>
 					</ul>
-        </div><!-- /.navbar-collapse -->
+      	</div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
 		<!-- Modal -->
-		<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade bs-example-modal-sm" id="myModalHorizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 						<div class="modal-content">
 								<!-- Modal Header -->
 								<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-										<h4 class="modal-title" id="myModalLabel">Log In</h4>
+										<!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+										<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+										<h4 class="modal-title" id="myModalLabel">Hello there!</h4>
+										<p>Access your voyager account below.</p>
 								</div>
-
 								<!-- Modal Body -->
 								<div class="modal-body">
-										<form class="form-horizontal" role="form">
-											<div class="form-group">
-												<label  class="col-sm-2 control-label" for="inputEmail3">Email</label>
-												<div class="col-sm-10"><input type="email" class="form-control" id="inputEmail3" placeholder="Email"/></div>
+									<form data-toggle="validator" role="form">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-user fa-1" aria-hidden="true"></i></span>
+												<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your name" type="text" required>
+											</div>
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+												<input id="prependedtext" name="prependedtext" class="form-control" placeholder="*********" type="password" required>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-2 control-label" for="inputPassword3" >Password</label>
-												<div class="col-sm-10"><input type="password" class="form-control" id="inputPassword3" placeholder="Password"/></div>
+												<button type="submit" class="button-more green">Log in</button>
 											</div>
-											<div class="form-group">
-												<div class="col-sm-offset-2 col-sm-10">
-													<div class="checkbox">
-														<label><input type="checkbox"/> Remember me</label>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="text-center col-sm-12">
-													<button type="submit" class="button-more green">Log in</button>
-												</div>
+											<p class="text-center">don’t have an account yet? <a href="#">register now</a></p>
+											<div class="social">
+												<button class="fb">facebook login</button>
+												<button class="goo">Google+ login</button>
 											</div>
 										</form>
 								</div>
@@ -236,27 +220,47 @@
 		<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 						<div class="modal-content">
-								<!-- Modal Header -->
-								<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-										<h4 class="modal-title" id="myModalLabel">Sign Up</h4>
-								</div>
-
+							<!-- Modal Header -->
+							<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+									<h4 class="modal-title" id="myModalLabel">Welcome!</h4>
+									<p>Create your account below.</p>
+							</div>
+							<form role="form">
 								<!-- Modal Body -->
 								<div class="modal-body">
-										<form role="form">
-											<div class="form-group">
-												<label for="exampleInputEmail1">Your Name</label>
-												<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter name"/>
-											</div>
-											<div class="form-group">
-												<label for="exampleInputPassword1">Password</label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-											</div>
-											<div class="text-center"><button type="submit" class="button-more green">Sign Up</button></div>
-										</form>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user fa-1" aria-hidden="true"></i></span>
+										<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your name" type="text" required>
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+										<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your email" type="email" required>
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+										<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your phone" type="tel" required>
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+										<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Password" type="password" required>
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+										<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Confirm password" type="password" required>
+									</div>
 								</div>
-
+								<div class="modal-footer">
+									<div class="form-group">
+										<div class="check">
+											<input class="styled-checkbox" id="terms" type="checkbox" value="terms" required>
+											<label for="terms">I agree to voyager’s terms and conditions</label>
+										</div>
+								  </div>
+					        <div class="form-group"><button type="submit" class="button-more green">Register</button></div>
+									<p class="text-center">Are you an existing member? <a href="#">login here</a></p>
+					      </div>
+							</form>
 						</div>
 				</div>
 		</div>
@@ -1283,10 +1287,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-6 col-md-3">
-					<div id="circle1" class="diagram_circles" data-percent="97"></div>
+					<div id="circle1" class="diagram_circles" data-percent="58" data-run="0"></div>
 					<h3>New users</h3>
 				</div>
-				<!-- <div class="col-xs-6 col-md-3">
+				<div class="col-xs-6 col-md-3">
 					<div id="circle2" class="diagram_circles" data-percent="75" data-run="0"></div>
 					<h3>Revisited</h3>
 				</div>
@@ -1297,7 +1301,7 @@
 				<div class="col-xs-6 col-md-3">
 					<div id="circle4" class="diagram_circles" data-percent="97" data-run="0"></div>
 					<h3>Active users</h3>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</section>
@@ -1463,8 +1467,51 @@
 		<div id="contactform">
 			<h3>Voyager theme</h3>
 			<p>Øyrane 3 A, 6800 Førde. Org. nr. 994 576 240MVA <br/>Phone: +460 123 456 789 <br/> support@webuniverse.com</p>
-			<a href="#" class="button-more">contact form</a>
+			<a class="button-more" id="contact-form-button">contact form</a>
 			<div class="close_popup"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+		</div>
+		<div id="contact-form">
+			<div class="container">
+				<div class="top">
+					<h2>Contact Us</h2>
+					<a class="back" id="contact-form-button-close">Back to address <i class="fa fa-angle-left" aria-hidden="true"></i></a>
+				</div>
+				<div class="row">
+					<form data-toggle="validator" role="form">
+						<div class="col-xs-12 col-sm-6">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-1" aria-hidden="true"></i></span>
+								<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your name" type="text" required>
+							</div>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+								<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your email" type="email" required>
+							</div>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+								<input id="prependedtext" name="prependedtext" class="form-control" placeholder="Your phone" type="tel" required>
+							</div>
+							<div class="input-group upload">
+								<div class="image-upload">
+								    <label for="file-input"><i class="fa fa-upload" aria-hidden="true"></i></label>
+								    <input id="file-input" type="file">
+								</div>
+								<span>browse and upload your files</span>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="input-group message">
+								<span class="input-group-addon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+								<textarea class="form-control" placeholder="Your message"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="button-more green">Send message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
 		</div>
 	</section>
 	<!--End Section Contact info-->
@@ -1491,15 +1538,13 @@
 			<div class="row">
         <div class="col-xs-12 col-sm-6 newsletter">
 					<h3>Newsletter sign up</h3>
-					<form action="" method="post">
-						<div class="form-group">
-								<div class="input-group">
-						      <input type="text" class="form-control" placeholder="yourname@email.com">
-						      <span class="input-group-btn">
-						        <button class="btn btn-default" type="button"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-						      </span>
-						    </div><!-- /input-group -->
-						</div>
+					<form data-toggle="validator" role="form">
+						<div class="input-group">
+				      <input type="text" class="form-control" placeholder="yourname@email.com">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+				      </span>
+				    </div><!-- /input-group -->
 					</form>
 				</div>
 				<div class="col-xs-12 col-sm-6">

@@ -1,52 +1,164 @@
 .modal-dialog {
   margin-top: 10%;
-  @media (max-width: $screen-sm) {
-    margin: 10%;
-  }
+  width: auto;
+  max-width: 410px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
   .modal-content {
-    background: $java;
     color: white;
     border-radius: 0;
-
-    button.close {
-      border-radius: 50px;
-      background: $java;
-      position: absolute;
-      right: -20px;
-      top: -20px;
-      height: 40px;
-      width: 40px;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-      line-height: 40px;
-      border: 1px solid white;
-      opacity: 1;
+    p {
+      font-weight: 100;
+      margin: 0;
+      text-transform: uppercase;
     }
+    // start header of modal
     .modal-header {
       text-align: center;
       border: none;
-      padding-bottom: 0;
+      padding: 30px;
+      background: $java;
+      button.close {
+        border-radius: 50px;
+        background: $java;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        border: 1px solid white;
+        opacity: 1;
+      }
       h4 {
-        margin-bottom: 2rem;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+        font-size: 3rem;
       }
     }
+    // start body of modal
     .modal-body {
-      padding-top: 0;
+      padding: 30px;
+      background: $mountain_meadow;
+
     }
-    label {
-      font-weight: normal;
+    .modal-footer {
+      padding: 30px;
+      background: $java;
+      text-align: left;
+      border: none;
     }
-    .button-more {
-      background: none;
-      color: white;
-      border: 1px solid white;
-      transition: 1s;
-      font-size: 16px;
-      &:hover {
-        background: white;
-        color: $java;
+    form {
+      p {
+        a {
+          color: #7dffee;
+          text-decoration: underline;
+          font-weight: 500;
+          &:hover {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+      .input-group {
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid $java;
+        font-family: 'Open Sans', sans-serif;
+        .input-group-addon {
+          background: #20b7a3;
+          color: white;
+          border: none;
+          border-radius: 0;
+          width: 52px;
+          .fa {
+            font-size: 18px;
+          }
+        }
+        input {
+          height: 52px;
+          background: none;
+          color: white;
+          border: none;
+          border-radius: 0;
+          vertical-align: middle;
+          font-weight: 300;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .form-group {
+        margin-bottom: 3rem;
+        .check {
+          font-size: 1.1rem;
+          font-weight: 100;
+          text-transform: uppercase;
+          label {
+            font-weight: normal;
+            line-height: 25px;
+            height: 25px;
+          }
+          input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+          input[type=checkbox] + label:before {
+            font-family: FontAwesome;
+            display: inline-block;
+            border: 1px solid #4bd4c2;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            margin-bottom: -8px;
+            margin-left: 3rem;
+            margin-right: 2rem;
+          }
+
+          input[type=checkbox] + label:before { content: " "; } /* unchecked icon */
+          input[type=checkbox]:checked + label:before { content: "\f00c"; } /* checked icon */
+        }
+
+      }
+      .button-more {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        transition: 1s;
+        font-size: 16px;
+        width: 100%;
+        max-width: none;
+        &:hover {
+          background: white;
+          color: $java;
+        }
+      }
+      .social {
+        overflow: hidden;
+        margin-top: 3rem;
+        button {
+          display: inline-block;
+          border: none;
+          height: 30px;
+          line-height: 30px;
+          width: 170px;
+          transition: 1s;
+          &:hover {
+            transform: scale(1.05);
+          }
+          &.fb {
+            background: #3b5998;
+            float: left;
+          }
+          &.goo {
+            background: #de5245;
+            float: right;
+          }
+
+        }
       }
     }
+  }
+  @media (max-width: $screen-sm) {
+    margin: 10%;
   }
 }
