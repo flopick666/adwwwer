@@ -260,22 +260,20 @@ $(function () {
         var next = emptyItems.first();
         var delay = 1000;
         if(next && next.length){
-            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - window.innerHeight ) {
+            if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() ) {
                 next.removeClass('timeline__item--empty');
                 if(emptyItems.length === 1){
                   delay = 1000;
                 }
             }
         } else {
-           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() - window.innerHeight ) {
+           if ( $(document).scrollTop() > $('body').find('#video_upload').offset().top - window.innerHeight && $(document).scrollTop() < $('body').find('#video_upload').offset().top + $('body').find('#video_upload').height() ) {
                // todo
             } else {
                 timelineItems.addClass('timeline__item--empty');
             }
         }
-      } else {
-        timelineItems.addClass('timeline__item--empty');
-      }
+
       setTimeout(nextState, delay);
     }
     nextState();
