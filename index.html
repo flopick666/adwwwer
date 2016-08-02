@@ -175,14 +175,14 @@
 						<li><a href="#contact_us">contacts</a></li>
           </ul>
 					<ul id="login" class="secondary-menu nav navbar-nav navbar-right">
-						<li><a href="#" data-toggle="modal" data-target="#myModalHorizontal"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
-						<li><a href="#" data-toggle="modal" data-target="#myModalNorm"><i class="fa fa-plus" aria-hidden="true"></i> sign up</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#login-form"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#signup-form"><i class="fa fa-plus" aria-hidden="true"></i> sign up</a></li>
 					</ul>
       	</div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
 		<!-- Modal -->
-		<div class="modal fade bs-example-modal-sm" id="myModalHorizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade bs-example-modal-sm" id="login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 						<div class="modal-content">
 								<!-- Modal Header -->
@@ -206,7 +206,7 @@
 											<div class="form-group">
 												<button type="submit" class="button-more green">Log in</button>
 											</div>
-											<p class="text-center">don’t have an account yet? <a href="#">register now</a></p>
+											<p class="text-center">don’t have an account yet? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signup-form">register now</a></p>
 											<div class="social">
 												<button class="fb">facebook login</button>
 												<button class="goo">Google+ login</button>
@@ -217,7 +217,7 @@
 				</div>
 		</div>
 		<!-- Modal -->
-		<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="signup-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 						<div class="modal-content">
 							<!-- Modal Header -->
@@ -258,7 +258,7 @@
 										</div>
 								  </div>
 					        <div class="form-group"><button type="submit" class="button-more green">Register</button></div>
-									<p class="text-center">Are you an existing member? <a href="#">login here</a></p>
+									<p class="text-center">Are you an existing member? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login-form">login here</a></p>
 					      </div>
 							</form>
 						</div>
