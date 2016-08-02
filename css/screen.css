@@ -12198,7 +12198,7 @@ body .modal-dialog .modal-content {
   border-radius: 0;
 }
 body .modal-dialog .modal-content p {
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
   text-transform: uppercase;
 }
@@ -12279,7 +12279,7 @@ body .modal-dialog .modal-content form .form-group {
 }
 body .modal-dialog .modal-content form .form-group .check {
   font-size: 1.1rem;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   /* to hide the checkbox itself */
   /* unchecked icon */
