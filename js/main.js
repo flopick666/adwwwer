@@ -209,6 +209,17 @@ $(document).ready(function () {
   // Tabs responsive
   $(".tabbable.responsive").resptabs();
 
+<<<<<<< HEAD
+=======
+  if ($('#animated_sales').hasClass('animated')) {
+    alert('!');
+    $('#animated_sales .content').removeClass('running').delay(10).queue(function(next){
+      $(this).addClass('running');
+      next();
+    });
+  }
+
+>>>>>>> 213eb8fbf90bcb24ddf32c9e6c037d86c63e3506
 
   // if ($('#diagrams').hasClass('animated') ) {
   //   var $el = $(e);
