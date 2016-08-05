@@ -125,7 +125,6 @@ $(function () {
 
 
         $('#diagrams').find('.diagram_circles').each(function(n,e){
-            z = e;
             var $el = $(e);
             var el_height = $el.outerHeight();
             var el_top_position = $el.offset().top;
