@@ -43,11 +43,12 @@
   <!-- Mobile Detect Script -->
   <script type="text/javascript" src="js/mobiledetect.js"></script>
 	<!--Custom JS  -->
-
+	<script src="js/modernizr-2.6.2.min.js"></script>
 	<link href="js/animate.css" rel="stylesheet" type="text/css" />
 
-	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="sass/bootstrap/javascripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
 	<!-- Include the Google Maps API library - required for embedding maps -->
 	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
@@ -145,7 +146,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-					<a href="/" class="navbar-brand logo"><img src='img/voyager-icon.png' alt="" title="" /> voyager</a>
+					<a href="index.html" class="navbar-brand logo"><img src='img/voyager-icon.png' alt="" title="" /> voyager</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
@@ -281,7 +282,7 @@
 	<!-- Section Introduce-->
   <section id="introduce">
     <div class="container">
-      <h2 class="text-center animation-element">introduce new awesome theme</h2>
+      <h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >introduce new awesome theme</h2>
       <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna. <br/>Donec sapien diam, aliquet in ultricies nec. Pellentesque erat ipsum, facilisis quis ullamcorper non, ullamcorper vel velit. <a href="#">Morbi quis tristique nulla</a>. Aliquam varius, nulla in porttitor consectetur, dui sem feugiat ante, quis consectetur mauris lorem id quam.</p>
       <p class="text-center visible-xs"><img src='img/carousel-feature1.jpg' alt="" title="" /></p>
 	    <div class="carousel-container hidden-xs text-center">
@@ -348,7 +349,7 @@
 	<!-- End Section Introduce -->
 	<!-- Section Recent work-->
 	<section id="recent_works">
-		<h2 class="text-center animation-element">Recent work</h2>
+		<h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >Recent work</h2>
 		<div id="owl-recent-work" class="owl-carousel">
 		  <div class="item">
 					<a href="img/img1.jpg" class="test-popup-link" title="This is the description">
@@ -428,7 +429,7 @@
 	<!-- Section Best sellers-->
   <section id="best_sellers">
     <div class="container">
-      <h2 class="text-center animation-element">best sellers</h2>
+      <h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >best sellers</h2>
 			<div class="tabbable responsive">
 	      <ul class="nav nav-tabs">
 		        <li class="active"><a data-toggle="tab" href="#best">best sellers</a></li>
@@ -445,17 +446,18 @@
 												<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 												<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 											</div>
-											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-											<hr/>
-											<p class="stars">
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star-o" aria-hidden="true"></i>
-											</p>
-											<p class="reviews">247 reviews</p>
-											<div class="clearfix"></div>
+											<div class="product-description">
+												<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+												<hr/>
+												<p class="stars">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star-o" aria-hidden="true"></i>
+												</p>
+												<p class="reviews">247 reviews</p>
+											</div>
 											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 											<div class="cd-cart-container empty">
 												<a href="#0" class="cd-cart-trigger">
@@ -510,17 +512,18 @@
 												<div class="front"><img src='img/product_img3.jpg' alt="" title="" /></div>
 												<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 											</div>
-											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-											<hr/>
-											<p class="stars">
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star-o" aria-hidden="true"></i>
-											</p>
-											<p class="reviews">247 reviews</p>
-											<div class="clearfix"></div>
+											<div class="product-description">
+												<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+												<hr/>
+												<p class="stars">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star-o" aria-hidden="true"></i>
+												</p>
+												<p class="reviews">247 reviews</p>
+											</div>
 											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
@@ -530,17 +533,18 @@
 												<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 												<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 											</div>
-											<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
-											<hr/>
-											<p class="stars">
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star" aria-hidden="true"></i>
-												<i class="fa fa-star-o" aria-hidden="true"></i>
-											</p>
-											<p class="reviews">247 reviews</p>
-											<div class="clearfix"></div>
+											<div class="product-description">
+												<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+												<hr/>
+												<p class="stars">
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star" aria-hidden="true"></i>
+													<i class="fa fa-star-o" aria-hidden="true"></i>
+												</p>
+												<p class="reviews">247 reviews</p>
+											</div>
 											<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 										</div>
 									</div>
@@ -554,43 +558,19 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
-										<div class="cd-cart-container empty">
-											<a href="#0" class="cd-cart-trigger">
-												Cart
-												<ul class="count"> <!-- cart items count -->
-													<li>0</li>
-													<li>0</li>
-												</ul> <!-- .count -->
-											</a>
-											<div class="cd-cart">
-												<div class="wrapper">
-													<header>
-														<h2>Cart</h2>
-														<span class="undo">Item removed. <a href="#0">Undo</a></span>
-													</header>
-													<div class="body">
-														<ul>
-															<!-- products added to the cart will be inserted here using JavaScript -->
-														</ul>
-													</div>
-													<footer>
-														<a href="#0" class="checkout"><em>Checkout - $<span>0</span></em></a>
-													</footer>
-												</div>
-											</div> <!-- .cd-cart -->
-										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
@@ -599,17 +579,18 @@
 											<div class="front"><img src='img/product_img3.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -619,17 +600,18 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -639,17 +621,18 @@
 											<div class="front"><img src='img/product_img2.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -663,43 +646,19 @@
 											<div class="front"><img src='img/product_img2.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
-										<div class="cd-cart-container empty">
-											<a href="#0" class="cd-cart-trigger">
-												Cart
-												<ul class="count"> <!-- cart items count -->
-													<li>0</li>
-													<li>0</li>
-												</ul> <!-- .count -->
-											</a>
-											<div class="cd-cart">
-												<div class="wrapper">
-													<header>
-														<h2>Cart</h2>
-														<span class="undo">Item removed. <a href="#0">Undo</a></span>
-													</header>
-													<div class="body">
-														<ul>
-															<!-- products added to the cart will be inserted here using JavaScript -->
-														</ul>
-													</div>
-													<footer>
-														<a href="#0" class="checkout"><em>Checkout - $<span>0</span></em></a>
-													</footer>
-												</div>
-											</div> <!-- .cd-cart -->
-										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
@@ -708,17 +667,18 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -728,17 +688,18 @@
 											<div class="front"><img src='img/product_img2.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -748,17 +709,18 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -772,43 +734,19 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
-										<div class="cd-cart-container empty">
-											<a href="#0" class="cd-cart-trigger">
-												Cart
-												<ul class="count"> <!-- cart items count -->
-													<li>0</li>
-													<li>0</li>
-												</ul> <!-- .count -->
-											</a>
-											<div class="cd-cart">
-												<div class="wrapper">
-													<header>
-														<h2>Cart</h2>
-														<span class="undo">Item removed. <a href="#0">Undo</a></span>
-													</header>
-													<div class="body">
-														<ul>
-															<!-- products added to the cart will be inserted here using JavaScript -->
-														</ul>
-													</div>
-													<footer>
-														<a href="#0" class="checkout"><em>Checkout - $<span>0</span></em></a>
-													</footer>
-												</div>
-											</div> <!-- .cd-cart -->
-										</div> <!-- cd-cart-container -->
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-3 hidden-xs">
@@ -817,17 +755,18 @@
 											<div class="front"><img src='img/product_img2.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -838,16 +777,18 @@
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
 										<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -857,17 +798,18 @@
 											<div class="front"><img src='img/product_img.jpg' alt="" title="" /></div>
 											<div class="back"><img src='img/product_img4.jpg' alt="" title="" /></div>
 										</div>
-										<p class="name">Super T-Shirt - <span class="green">$9<sup>99</sup></span></p>
-										<hr/>
-										<p class="stars">
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star" aria-hidden="true"></i>
-											<i class="fa fa-star-o" aria-hidden="true"></i>
-										</p>
-										<p class="reviews">247 reviews</p>
-										<div class="clearfix"></div>
+										<div class="product-description">
+											<p class="name">Marley Football - <span class="green">$9<sup>99</sup></span></p>
+											<hr/>
+											<p class="stars">
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star" aria-hidden="true"></i>
+												<i class="fa fa-star-o" aria-hidden="true"></i>
+											</p>
+											<p class="reviews">247 reviews</p>
+										</div>
 										<a href="#0" class="buy cd-add-to-cart" data-price="9.99"><i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i></a>
 									</div>
 								</div>
@@ -895,7 +837,7 @@
 	<!--End Section Become a Member-->
 	<!-- Section Recent Post-->
 	<section id="recent_post">
-		<h2 class="text-center animation-element">Recent Post</h2>
+		<h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >Recent Post</h2>
 		<div class="container"><hr/></div>
 		<div id="owl-recent-post" class="owl-carousel">
 		  <div class="item">
@@ -1015,7 +957,7 @@
 	<!-- Section project info-->
 	<section id="project_info">
 		<div class="container">
-			<h2 class="text-center animation-element">project info</h2>
+			<h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >project info</h2>
 			<div class="pills">
 				<ul class="nav nav-pills" role="tablist">
 		        <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#timeline">timeline</a></li>
@@ -1023,56 +965,56 @@
 		        <li role="presentation"><a role="tab" data-toggle="tab" href="#application">application</a></li>
 		    </ul>
 		    <div class="tab-content">
-		        <div role="tabpanel" id="timeline" class="tab-pane fade in active">
+		        <div role="tabpanel" id="timeline" class="tab-pane active">
 							<div class="project_progress_v2 hidden-xs">
-								<div class="project_step step1 step-up animation-element">
+								<div class="project_step step1 revealOnScroll" data-animation="fadeInUp" data-timeout="100">
 									<div class="date">Apr, 2015</div>
 									<div class="name">Diagramm</div>
 								</div>
-								<div class="project_step step2 step-down animation-element">
+								<div class="project_step step2 revealOnScroll" data-animation="fadeInDown" data-timeout="200">
 									<div class="name">Clients</div>
 									<div class="date">May, 2015</div>
 								</div>
-								<div class="project_step step3 step-up animation-element">
+								<div class="project_step step3 revealOnScroll" data-animation="fadeInUp" data-timeout="300">
 									<div class="date">Jun, 2015</div>
 									<div class="name">Rating</div>
 								</div>
-								<div class="project_step step4 step-down animation-element">
+								<div class="project_step step4 revealOnScroll" data-animation="fadeInDown" data-timeout="400">
 									<div class="name">World Map</div>
 									<div class="date">Jul, 2015</div>
 								</div>
-								<div class="project_step step5 step-up animation-element">
+								<div class="project_step step5 revealOnScroll" data-animation="fadeInUp" data-timeout="500">
 									<div class="date">Aug, 2015</div>
 									<div class="name">Graph</div>
 								</div>
-								<div class="project_step step6 step-down animation-element">
+								<div class="project_step step6 revealOnScroll" data-animation="fadeInDown" data-timeout="600">
 									<div class="name">Comparing</div>
 									<div class="date">Sep, 2015</div>
 								</div>
-								<hr class=" wow bounceIn" data-wow-duration="2s"/>
+								<hr/>
 							</div>
 							<div class="project_progress_mobile visible-xs">
-								<div class="project_step step1">
+								<div class="project_step step1 revealOnScroll" data-animation="fadeInLeft" data-timeout="100">
 									<div class="name">Diagramm</div>
 									<div class="date">Apr, 2015</div>
 								</div>
-								<div class="project_step step2">
+								<div class="project_step step2 revealOnScroll" data-animation="fadeInRight" data-timeout="100">
 									<div class="date">May, 2015</div>
 									<div class="name">Clients</div>
 								</div>
-								<div class="project_step step3">
+								<div class="project_step step3 revealOnScroll" data-animation="fadeInLeft" data-timeout="100">
 									<div class="name">Rating</div>
 									<div class="date">Jun, 2015</div>
 								</div>
-								<div class="project_step step4">
+								<div class="project_step step4 revealOnScroll" data-animation="fadeInRight" data-timeout="100">
 									<div class="date">Jul, 2015</div>
 									<div class="name">World Map</div>
 								</div>
-								<div class="project_step step5">
+								<div class="project_step step5 revealOnScroll" data-animation="fadeInLeft" data-timeout="100">
 									<div class="name">Graph</div>
 									<div class="date">Aug, 2015</div>
 								</div>
-								<div class="project_step step6">
+								<div class="project_step step6 revealOnScroll" data-animation="fadeInRight" data-timeout="100">
 									<div class="date">Sep, 2015</div>
 									<div class="name">Comparing</div>
 								</div>
@@ -1092,10 +1034,10 @@
 							</div>
 						</div>
 		        <div role="tabpanel" id="application" class="tab-pane fade text-center">
-							<div class="application-section animation-element">
-								<div class="icon"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
-								<div class="line"></div>
-								<div class="icon"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+							<div class="application-section ">
+								<div class="icon revealOnScroll" data-animation="zoomIn" data-timeout="300"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
+								<div class="line revealOnScroll" data-animation="zoomIn" data-timeout="300"></div>
+								<div class="icon revealOnScroll" data-animation="zoomIn" data-timeout="300"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
 								<div class="line"></div>
 								<div class="laptop">
 									<div class="screen">
@@ -1104,10 +1046,10 @@
 										<p><a href="#" class="button-more">Read More</a></p>
 									</div>
 								</div>
-								<div class="line"></div>
-								<div class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
-								<div class="line"></div>
-								<div class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+								<div class="line revealOnScroll" data-animation="zoomIn" data-timeout="300"></div>
+								<div class="icon revealOnScroll" data-animation="zoomIn" data-timeout="300"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+								<div class="line revealOnScroll" data-animation="zoomIn" data-timeout="300"></div>
+								<div class="icon revealOnScroll" data-animation="zoomIn" data-timeout="300"><i class="fa fa-cogs" aria-hidden="true"></i></div>
 							</div>
 						</div>
 		    </div>
@@ -1117,7 +1059,7 @@
 	<!--End Section project info-->
 	<!-- Section Latest News-->
 	<section id="latest_news">
-		<h2 class="text-center animation-element">Latest News</h2>
+		<h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >Latest News</h2>
 		<div class="container"><hr/></div>
 		<div id="owl-latest-news" class="owl-carousel">
 			<div class="item">
@@ -1172,7 +1114,7 @@
 	<section id="client_opinion">
 		<div class="container">
 			<div id="quote-carousel">
-				<h2 class="animation-element">What clients say about us</h2>
+				<h2 class="revealOnScroll"  data-animation="flipInX" data-timeout="100" >What clients say about us</h2>
 				<div id="owl-clients">
           <!-- Quote 1 -->
           <div class="item">
@@ -1207,83 +1149,74 @@
 	</section>
 	<!--End Section Client Opinion-->
 	<!-- Section Animated_sales-->
-	<section id="animated_sales" class="animation-element">
+	<section id="animated_sales" class="revealOnScroll" data-animation="graphic">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-push-6">
-					<h2 class="animation-element">Animated sales diagramm</h2>
+					<h2 class="revealOnScroll"  data-animation="flipInX" data-timeout="100">Animated sales diagramm</h2>
 					<h4 class="green">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod laoreet.</h4>
 					<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim praesent luptatum zzril delenit augue duis dolore. </p>
 					<p><a href="#" class="more">Read More</a></p>
 				</div>
 				<div class="col-xs-12 col-md-6 col-md-pull-6">
 					<div class="content">
-						<div id="line_horizontal" class="wow zoomIn" data-wow-duration="2s"></div>
+						<div id="line_horizontal" class="revealOnScroll" data-animation="bounceInDown" data-timeout="200"></div>
 						<div class="carcass">
-							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInUp" data-wow-duration="3s"></div>
-							<div class="line_vert wow bounceInDown" data-wow-duration="3s"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInDown" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInUp" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInDown" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInUp" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInDown" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInUp" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInDown" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInUp" data-timeout="300"></div>
+							<div class="line_vert revealOnScroll" data-animation="bounceInDown" data-timeout="300"></div>
 						</div>
-						<div class="mon month1 wow bounceInDown" data-wow-duration="3s">Apr</div>
-						<div class="mon month2 wow bounceInDown" data-wow-duration="3s">May</div>
-						<div class="mon month3 wow bounceInDown" data-wow-duration="3s">Jun</div>
-						<div class="mon month4 wow bounceInDown" data-wow-duration="3s">Jul</div>
-						<div class="mon month5 wow bounceInDown" data-wow-duration="3s">Aug</div>
-						<div class="serv serv1 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-cog" aria-hidden="true"></i></div>
-						<div class="serv serv2 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-heart" aria-hidden="true"></i></div>
-						<div class="serv serv3 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-star" aria-hidden="true"></i></div>
-						<div class="serv serv4 wow bounceInUp" data-wow-duration="3s"><i class="fa fa-coffee" aria-hidden="true"></i></div>
+						<div class="mon month1 revealOnScroll" data-animation="bounceInDown" data-timeout="300">Apr</div>
+						<div class="mon month2 revealOnScroll" data-animation="bounceInDown" data-timeout="300">May</div>
+						<div class="mon month3 revealOnScroll" data-animation="bounceInDown" data-timeout="300">Jun</div>
+						<div class="mon month4 revealOnScroll" data-animation="bounceInDown" data-timeout="300">Jul</div>
+						<div class="mon month5 revealOnScroll" data-animation="bounceInDown" data-timeout="300">Aug</div>
+						<div class="serv serv1 revealOnScroll" data-animation="bounceInUp" data-timeout="300"><i class="fa fa-cog" aria-hidden="true"></i></div>
+						<div class="serv serv2 revealOnScroll" data-animation="bounceInUp" data-timeout="300"><i class="fa fa-heart" aria-hidden="true"></i></div>
+						<div class="serv serv3 revealOnScroll" data-animation="bounceInUp" data-timeout="300"><i class="fa fa-star" aria-hidden="true"></i></div>
+						<div class="serv serv4 revealOnScroll" data-animation="bounceInUp" data-timeout="300"><i class="fa fa-coffee" aria-hidden="true"></i></div>
 
 						<div id="layerBall" class="ball"><a href="#"><small>100 Visit</small></a></div>
 						<div id="layerPulse" class="pulse"></div>
 						<div class="line"></div>
-
 						<div id="layerBall1" class="ball1"><a href="#"><small>300 Visits</small></a></div>
 						<div id="layerPulse1" class="pulse1"></div>
 						<div class="line1"></div>
-
 						<div id="layerBall2" class="ball2"><a href="#"><small>10 Visits</small></a></div>
 						<div id="layerPulse2" class="pulse2"></div>
 						<div class="line2"></div>
-
 						<div id="layerBall3" class="ball3"><a href="#"><small>4251 Visits</small></a></div>
 						<div id="layerPulse3" class="pulse3"></div>
 						<div class="line3"></div>
-
 						<div id="layerBall4" class="ball4"><a href="#"><small>1752 Visits</small></a></div>
 						<div id="layerPulse4" class="pulse4"></div>
 						<div class="line4"></div>
-
 						<div id="layerBall5" class="ball5"><a href="#"><small>1752 Visits</small></a></div>
 						<div id="layerPulse5" class="pulse5"></div>
 						<div class="line5"></div>
-
 						<div id="layerBall6" class="ball6"><a href="#"><small>0 Visits</small></a></div>
 						<div id="layerPulse6" class="pulse6"></div>
 						<div class="line6"></div>
-
 						<div id="layerBall7" class="ball7"><a href="#"><small>0 Visits</small></a></div>
 						<div id="layerPulse7" class="pulse7"></div>
 						<div class="line7"></div>
-
 						<div id="layerBall8" class="ball8"><a href="#"><small>0 Visits</small></a></div>
 						<div id="layerPulse8" class="pulse8"></div>
 						<div class="line8"></div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
 	<!--End Section Animated_sales-->
 	<!-- Section Diagrams-->
-	<section id="diagrams">
+	<section id="diagrams" class="revealOnScroll" data-animation="circle">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-6 col-md-3">
@@ -1311,7 +1244,7 @@
 		<div class="container">
 			<div class="row">
         <div class="col-xs-12 col-md-6">
-					<h2 class="animation-element">Easy video upload</h2>
+					<h2 class="revealOnScroll"  data-animation="flipInX" data-timeout="100" >Easy video upload</h2>
 					<div class="homepage">
 					  <div class="homepage-gallery homepage-section homepage-section--border">
 						  <div class="homepage-container">
@@ -1396,7 +1329,7 @@
 	<!-- Section Choose your plan-->
 	<section id="choose_your_plan">
 		<div class="container">
-      <h2 class="text-center animation-element">Choose your plan</h2>
+      <h2 class="text-center revealOnScroll"  data-animation="flipInX" data-timeout="100" >Choose your plan</h2>
 			<div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-3">
 					<div class="plan text-center">

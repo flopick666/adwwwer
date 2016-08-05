@@ -2,12 +2,16 @@
   padding: 35px 0;
   margin-bottom: 50px;
   z-index: 200;
+  overflow: visible;
+  border-bottom: 2px solid $mountain_meadow;
   h2 {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-weight: 300;
+    font-size: 4rem;
+    line-height: normal;
   }
   p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
   }
@@ -17,7 +21,7 @@
   }
   &.green {
     background: $java;
-    border: 1px solid $mountain_meadow;
+    border-bottom: 1px solid $mountain_meadow;
     color: white;
     position: relative;
     &:before {
@@ -54,18 +58,34 @@
   }
   .col-md-2 {
     text-align: center;
-    padding-top:4px;
-    padding-bottom:4px;
+    padding-top:5px;
+    padding-bottom:5px;
     margin-bottom: 20px;
     position: relative;
   }
   .col-md-10 {
     text-align: center;
+    position: relative;
+    padding: 0 30px;
+    p {
+      padding: 0 36px;
+    }
   }
   @media (min-width: $screen-md) {
     .col-md-2 {
       margin-bottom: 0;
-      &:after {
+    }
+    .col-md-10 {
+      text-align: left;
+      padding: 0 15px;
+      h2 {
+
+      }
+      p {
+        padding: 0;
+        margin-bottom: 5px;
+      }
+      &:before {
         content: '';
         display: block;
         background: white;
@@ -73,18 +93,26 @@
         width: 1px;
         height: 100%;
         position: absolute;
-        right: 8px;
+        left: -10px;
         top: 0;
       }
-    }
-    .col-md-10 {
-      text-align: left;
     }
   }
   @media (min-width: $screen-lg) {
     .col-md-2 {
       &:after {
         right: 15px;
+      }
+    }
+    .col-md-10 {
+      text-align: left;
+      padding: 0 15px;
+      h2 {
+        line-height: 30px;
+        margin-top: 10px;
+      }
+      &:before {
+        left: -15px;
       }
     }
   }
