@@ -2,20 +2,17 @@ section {
   clear: both;
   padding-bottom: 5rem;
   position: relative;
-  overflow: hidden;
   &:before {
     display: block;
     content: " ";
     height: 49px;
     margin-top: -49px;
-    // visibility: hidden;
   }
   @media (min-width: $screen-md) {
     padding-bottom: 8rem;
     &:before {
       height: 79px;
       margin-top: -79px;
-
     }
   }
   @import "sections/mobile_top.scss";

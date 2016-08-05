@@ -4,6 +4,7 @@
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 5rem;
   #webgl {
     height: 100vh;
   }
@@ -12,10 +13,10 @@
     width: 100%;
   }
   canvas {
-        width: 100vw;
-        height: 100vh;
-        display: block;
-      }
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
   canvas, .description {
     position: absolute;
     left: 0;
@@ -45,16 +46,44 @@
       }
     }
   }
-  @media (min-width: $screen-md) {
+  @media (min-width: 374px) {
+    .description {
+      padding-top: 12rem;
+    }
+    h1 {
+      margin: 0 auto 6rem;
+      max-width: 374px;
+    }
+  }
+  @media (min-width: $screen-sm) {
     padding-top: 8rem;
+    h1 {
+      max-width: none;
+    }
+    .description {
+      padding-top: 25%;
+    }
+  }
+  @media (min-width: $screen-md) {
     h1 {
       font-size: 6.5rem;
       margin-top: 0;
-      padding-top: 18rem;
+      // padding-top: 18rem;
       line-height: 90px;
       span:first-child {
         font-size: 5rem;
       }
+    }
+    .description {
+      padding-top: 20%;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    h1 {
+      padding-top: 18rem;
+    }
+    .description {
+      padding-top: 8rem;
     }
   }
 }

@@ -205,10 +205,11 @@ $(document).ready(function () {
   $(".tabbable.responsive").resptabs();
 
   if ($('#animated_sales').hasClass('animated')) {
-      $('#animated_sales .content').removeClass('running').delay(10).queue(function(next){
+    alert('!');
+    $('#animated_sales .content').removeClass('running').delay(10).queue(function(next){
       $(this).addClass('running');
-          next();
-      });
+      next();
+    });
   }
 
 
@@ -244,6 +245,8 @@ $(document).ready(function () {
   //       }
   //     }
   // });
+
+
   // Here contact_us functionallity
   /*Hide Contact Us modal*/
   $( "#contact_us #contactform .close_popup" ).click(function() {
