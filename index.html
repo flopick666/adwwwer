@@ -28,7 +28,6 @@
 	<link rel='stylesheet' type='text/css' href="js/owl/owl.carousel.css"/>
 	<!-- Circle diagrams-->
 	<script type="text/javascript" src="js/circliful/jquery.circliful.js"></script>
-	<!-- <link href="js/circliful/jquery.circliful.css" rel="stylesheet" type="text/css" /> -->
 	<!-- magnific-popup-->
 	<script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.js"></script>
 	<link rel='stylesheet' type='text/css' href="js/magnific-popup/magnific-popup.css"/>
@@ -155,7 +154,7 @@
 									<ul class="dropdown-menu">
 										<li><a href="#project_info">Project</a></li>
 										<li><a href="#animated_sales">Infographic</a></li>
-										<li><a href="#video_upload">Step-by-Step</a></li>
+										<li><a href="#video">Step-by-Step</a></li>
 									</ul>
 								</li>
 								<li><a href="#latest_news">News</a></li>
@@ -277,9 +276,9 @@
       <p class="text-center visible-xs"><img src='img/carousel-feature1.jpg' alt="" title="" /></p>
 	    <div class="carousel-container hidden-xs text-center">
 	      <div id="introduce-carousel">
-	        <div class="carousel-feature"><a data-toggle="modal" data-target="#signup-form"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature1.jpg" /></a></div>
-	        <div class="carousel-feature"><a data-toggle="modal" data-target="#signup-form"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature2.jpg" /></a></div>
-	        <div class="carousel-feature"><a data-toggle="modal" data-target="#signup-form"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature3.jpg"></a></div>
+	        <div class="carousel-feature"><a href="#"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature1.jpg" /></a></div>
+	        <div class="carousel-feature"><a href="#"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature2.jpg" /></a></div>
+	        <div class="carousel-feature"><a href="#"><img class="carousel-image" alt="Image Caption" src="img/carousel-feature3.jpg" /></a></div>
 	      </div>
 	    </div>
 			<div id="services">
@@ -1204,59 +1203,39 @@
 	</section>
 	<!--End Section Diagrams-->
 	<!-- Section Video upload-->
-	<section id="video_upload">
+	<section id="video">
 		<div class="container">
 			<div class="row">
         <div class="col-xs-12 col-md-6">
-					<h2 class="revealOnScroll"  data-animation="flipInX" data-timeout="100" >Easy video upload</h2>
-					<div class="homepage">
-					  <div class="homepage-gallery homepage-section homepage-section--border">
-						  <div class="homepage-container">
-						    <div class="zap-content-row">
-						      <div class="zap-content">
-						        <ul class="timeline">
-						          <li class="timeline__first">
-						            <div class="timeline__zap zap1"></div>
-						            <div class="timeline__content">
-						              <h3>Browse your video file</h3>
-						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						            </div>
-						          </li>
-						          <li class="timeline__item linia">
-						            <div class="timeline__connection">
-						              <div class="line line-animation"></div>
-						            </div>
-						          </li>
-						          <li class="timeline__item">
-						            <div class="timeline__zap-no-icon"></div>
-						            <div class="timeline__zap bounce-animation zap2"></div>
-						            <div class="timeline__content fade-animation">
-						              <h3>Push upload button</h3>
-						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						            </div>
-						          </li>
-						          <li class="timeline__item linia">
-						            <div class="timeline__connection">
-						              <div class="line line-animation"></div>
-						            </div>
-						          </li>
-						          <li class="timeline__item">
-						            <div class="timeline__zap-no-icon"></div>
-						            <div class="timeline__zap bounce-animation zap3"></div>
-						            <div class="timeline__content fade-animation">
-						              <h3>Enjoy your video on website</h3>
-						              <p class="timeline__message">Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						            </div>
-						          </li>
-						        </ul>
-						      </div>
-						    </div>
-						  </div>
+					<h2 class="revealOnScroll"  data-animation="flipInX" data-timeout="100">Easy video upload</h2>
+					<div class="video-steps">
+						<div class="video-step1 video-step">
+							<div class="video-icon revealOnScroll" data-animation="fadeIn" data-timeout="500"><i class="fa fa-folder" aria-hidden="true"></i></div>
+							<div class="video-step-description revealOnScroll" data-animation="fadeIn" data-timeout="500">
+								<h3>Browse your video file</h3>
+								<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+							</div>
+							<div class="line revealOnScroll" data-animation="video-line" data-timeout="500"></div>
+						</div>
+						<div class="video-step2 video-step">
+							<div class="video-icon revealOnScroll" data-animation="fadeIn" data-timeout="500"><i class="fa fa-upload" aria-hidden="true"></i></div>
+							<div class="video-step-description revealOnScroll" data-animation="fadeIn" data-timeout="500">
+								<h3>Push upload button</h3>
+								<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+							</div>
+							<div class="line revealOnScroll" data-animation="video-line" data-timeout="500"></div>
+						</div>
+						<div class="video-step3 video-step">
+							<div class="video-icon revealOnScroll" data-animation="fadeIn" data-timeout="500"><i class="fa fa-film" aria-hidden="true"></i></div>
+							<div class="video-step-description revealOnScroll" data-animation="fadeIn" data-timeout="500">
+								<h3>Enjoy your video on website</h3>
+								<p>Vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 text-center">
-					<div class="video">
+					<div class="video-laptop">
 							<div id="youtube_canvas">
 								<iframe frameborder="0" src="https://www.youtube.com/embed/GK_iOhRhwV4?hl=en&amp;autoplay=0&amp;cc_load_policy=0&amp;loop=0&amp;iv_load_policy=0&amp;fs=1&amp;showinfo=0"></iframe>
 							</div>

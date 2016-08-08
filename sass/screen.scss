@@ -29,7 +29,7 @@ body {
     color: $java;
     transition: 1s;
     outline: 0;
-
+    cursor: pointer;
     &:hover, &:focus, &:active {
       color: $java;
       outline: 0;

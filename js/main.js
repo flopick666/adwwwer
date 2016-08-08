@@ -25,7 +25,7 @@ $(document).ready(function () {
         } else {
             $this.addClass('animated ' + $this.data('animation'));
         }
-        
+
       }
     });
     // Hidden...
@@ -33,13 +33,11 @@ $(document).ready(function () {
     var $this     = $(this),
       offsetTop = $this.offset().top;
     if (scrolled + win_height_padded < offsetTop) {
-      $(this).removeClass('animated bounceInDown bounceInUp flipInX fadeInUp fadeInDown fadeInLeft fadeInRight zoomIn')
+      $(this).removeClass('animated bounceInDown bounceInUp fadeIn flipInX fadeInUp fadeInDown fadeInLeft fadeInRight zoomIn video-line')
     }
     });
   }
   revealOnScroll();
-
-
 
   //Animation Scrolling anchor links
   $('a[href^="#"]').on('click', function(event) {
@@ -218,7 +216,7 @@ $window.on('scroll resize', function() {
        var el_height = $el.outerHeight();
        var el_top_position = $el.offset().top;
        var el_bottom_position = (el_top_position + el_height);
-  
+
        if ( 0 == $el.data('run') ) {
          if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
            $el.circliful({
