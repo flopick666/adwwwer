@@ -50,24 +50,28 @@ $(document).ready(function () {
   });
 
   // Script for url on current section position
-  $(function () {
-      var currentHash = window.location.hash;
-      $(document).scroll(function () {
-          $('body').find('section').each(function () {
-              var top = window.pageYOffset;
-              var distance = top - $(this).offset().top;
-              var hash = $(this).attr('id');
-              x = $(this);
-              // 30 is an arbitrary padding choice,
-              // if you want a precise check then use distance===0
-              if (distance < 30 && distance > -30 && currentHash != hash) {
-                  window.location.hash = (hash);
-                  currentHash = hash;
-              }
-          });
-      });
-  });
+  // $(function () {
+  //     var currentHash = window.location.hash;
+  //     $(document).scroll(function () {
+  //         $('body').find('section').each(function () {
+  //             var top = window.pageYOffset;
+  //             var distance = top - $(this).offset().top;
+  //             var hash = $(this).attr('id');
+  //             x = $(this);
+  //             // 30 is an arbitrary padding choice,
+  //             // if you want a precise check then use distance===0
+  //             if (distance < 30 && distance > -30 && currentHash != hash) {
+  //                 window.location.hash = (hash);
+  //                 currentHash = hash;
+  //             }
+  //         });
+  //     });
+  // });
 
+  // Swow Overlay block
+  $('#overlay-show, #overlay-hide').click(function() {
+    $('#overlay').slideToggle('slow');
+  });
 
   // WebGl section
   if ( false === $.browser.mobile ) {

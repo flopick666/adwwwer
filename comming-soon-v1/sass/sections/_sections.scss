@@ -2,6 +2,8 @@ section {
   clear: both;
   padding-bottom: 5rem;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
   &:before {
     display: block;
     content: " ";
@@ -15,7 +17,16 @@ section {
       margin-top: -79px;
     }
   }
-
   @import "sections/webgl.scss";
+}
 
+#overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  // padding-top: 79px;
 }

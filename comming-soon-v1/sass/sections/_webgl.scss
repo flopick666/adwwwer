@@ -4,85 +4,63 @@
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 5rem;
+  position: fixed;
+  width: 100%;
   #webgl {
     height: 100vh;
-  }
-  canvas {
-    height: 100%;
-    width: 100%;
-  }
-  canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-  }
-  canvas, .description {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  .description {
-    z-index: 200;
-    padding-top: 8rem;
-    .button-more {
-      margin-bottom: 50px;
+    padding-top: 5rem;
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
     }
-  }
-  h1 {
-    color: $java;
-    font-family: 'Roboto', sans-serif;
-    font-size: 5rem;
-    font-weight: 700;
-    // margin-top: 20%;
-    text-transform: uppercase;
-    span {
-      color: white;
-      &:first-child {
-        text-transform: none;
-        font-size: 2.5rem;
-        font-weight: 500;
+    .container {
+      a.logo {
+        border: 1px solid $silver;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        padding-top: 4rem;
+        margin-bottom: 8rem;
+        font-size: 18px;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+        img {
+          display: block;
+          margin: 0 auto 20px;
+        }
+        &:hover {
+          color: $java;
+          border: 1px solid $java;
+        }
+      }
+      h1 {
+        color: $java;
+        font-family: 'Roboto', sans-serif;
+        font-size: 6.5rem;
+        font-weight: 700;
+        background: rgba(0, 0, 0, 0.6);
+        text-transform: uppercase;
+        margin: 0;
+        padding: 4rem 0;
+        line-height: 52px;
+        span {
+          color: white;
+        }
       }
     }
+
   }
-  @media (min-width: 374px) {
-    .description {
-      padding-top: 12rem;
-    }
-    h1 {
-      margin: 0 auto 6rem;
-      max-width: 374px;
-    }
-  }
+
   @media (min-width: $screen-sm) {
-    padding-top: 8rem;
-    h1 {
-      max-width: none;
-    }
-    .description {
-      padding-top: 25%;
-    }
-  }
-  @media (min-width: $screen-md) {
-    h1 {
-      font-size: 6.5rem;
-      margin-top: 0;
-      // padding-top: 18rem;
-      line-height: 90px;
-      span:first-child {
-        font-size: 5rem;
-      }
-    }
-    .description {
-      padding-top: 20%;
-    }
-  }
-  @media (min-width: $screen-lg) {
-    h1 {
-      padding-top: 18rem;
-    }
-    .description {
+    #webgl {
       padding-top: 8rem;
     }
   }

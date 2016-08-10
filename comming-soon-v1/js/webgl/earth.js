@@ -1,4 +1,3 @@
-// Created by Bjorn Sandvik - thematicmapping.org
 (function () {
 
     var webglEl = document.getElementById('earth');
@@ -10,9 +9,8 @@
 
     var width = window.innerWidth,
             height = window.innerHeight,
-            height = 777;
+            heightt = 777;
 
-    // Earth params
     var radius = 0.5,
             segments = 64,
             rotation = 6;
@@ -37,7 +35,6 @@
 
     var light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.set(5, 3, 5);
-    //scene.add(light);
 
     light = new THREE.SpotLight(0xffffff, 1, 0, Math.PI / 2, 1);
     light.position.set(10, 6, 10);
@@ -48,8 +45,6 @@
     light.shadowCameraNear = 2;
     light.shadowCameraFar = 25;
     light.shadowCameraFov = 10;
-
-    //light.shadowCameraVisible = true;
 
     light.shadowBias = 0.0001;
     light.shadowDarkness = 0.5;
@@ -64,8 +59,6 @@
     var textureFlare3 = THREE.ImageUtils.loadTexture("img/space/lensflare/lensflare3.png");
 
     addLight(0.55, 0.9, 0.5, 100, 60, 100);
-    //addLight(0.08, 0.8, 0.5, 100, 60, 100);
-    //addLight(0.995, 0.5, 0.9, 100, 60, 100);
 
     function addLight(h, s, l, x, y, z) {
 
@@ -119,7 +112,7 @@
     }
 
 
-    var sphere = createPlanet(radius, 0, 0, 0, segments, 'img/space/2_no_clouds_4k.jpg', 'img/space/elev_bump_4k.jpg', 'img/space/water_4k.png');
+    sphere = createPlanet(radius, 0, 0, 0, segments, 'img/space/2_no_clouds_4k.jpg', 'img/space/elev_bump_4k.jpg', 'img/space/water_4k.png');
     sphere.rotation.y = rotation;
     scene.add(sphere);
 
@@ -127,11 +120,9 @@
     clouds.rotation.y = rotation;
     scene.add(clouds);
 
-    //var moon = createPlanet(radius / 6, -0.7, 0.4, 0.7, segments, 'img/space/moon.jpg', null, null);
     var moon = createMoon();
     scene.add(moon);
 
-    //var stars = createStars(4000, 32);
     var stars = createSkybox(THREE.ImageUtils.loadTextureCube([
         'img/space/starfield/front.png',
         'img/space/starfield/back.png',
@@ -162,18 +153,25 @@
         transparent: true
     });
 
-
+    
     var mesh = new THREE.Mesh(athmo, material);
     mesh.position.set(0.025, 0.0015, 0.025);
     scene.add(mesh);
-
-//initSky();
-
-    var controls = new THREE.TrackballControls(camera);
+    
+    var controls = new THREE.TrackballControls(camera, webglEl.parentElement.parentElement);
+    controls.minDistance = 1.5;
+    controls.maxDistance = 10;
+    controls.zoomSpeed = 0.3;
 
     webglEl.appendChild(renderer.domElement);
 
     render();
+    
+    $(window).on('resize',function(){
+        renderer.setSize($('#webgl_section').innerWidth(), $('#webgl_section').innerHeight());
+        camera.aspect = $('#webgl_section').innerWidth() / $('#webgl_section').innerHeight();
+        camera.updateProjectionMatrix();
+    });
 
     function render() {
         controls.update();
@@ -233,6 +231,17 @@
         mesh.receiveShadow = true;
         mesh.castShadow = true;
         mesh.position.set(x, y, z);
+        
+//        var geomTest = new THREE.SphereGeometry(0.01,100,100);
+//        var matTest = new THREE.MeshPhongMaterial({
+//            color:'#7CFC00', 
+//            shading:THREE.FlatShading
+//        });
+//        var test = new THREE.Mesh(geomTest, matTest);
+//        test.position.x = 0.3;
+//        test.position.y = 0.3;
+//        test.position.z = 0.3;
+//        mesh.add(test);
 
         return mesh;
     }
@@ -247,16 +256,6 @@
                 );
 
         return mesh;
-    }
-
-    function createStars(radius, segments) {
-        return new THREE.Mesh(
-                new THREE.SphereGeometry(radius, segments, segments),
-                new THREE.MeshBasicMaterial({
-                    map: THREE.ImageUtils.loadTexture('img/space/galaxy_starfield.png'),
-                    side: THREE.BackSide
-                })
-                );
     }
 
     function createSkybox(texture) {
@@ -288,7 +287,7 @@
         var xSegments = segments;
         var ySegments = segments;
         var geo = new THREE.SphereGeometry(radius, xSegments, ySegments);
-
+        
         var textureMap = THREE.ImageUtils.loadTexture('img/space/moon.jpg');
         var normalMap = THREE.ImageUtils.loadTexture('img/space/normal.jpg');
 
@@ -322,65 +321,11 @@
         mesh.geometry.computeTangents();
         mesh.position.set(-0.7, 0.4, 0.7);
         mesh.rotation.set(0, 180, 0);
-
+        
         mesh.receiveShadow = true;
         mesh.castShadow = true;
-
+        
         return mesh;
     }
-
-
-    function initSky() {
-
-        // Add Sky Mesh
-        var sky = new THREE.Sky();
-        scene.add(sky.mesh);
-
-
-        // Add Sun Helper
-        var sunSphere = new THREE.Mesh(new THREE.SphereGeometry(20000, 30, 30),
-                new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: false}));
-        sunSphere.position.x = 2000;
-        sunSphere.visible = true;
-        scene.add(sunSphere);
-
-        /// GUI
-
-        var effectController = {
-            turbidity: 20,
-            reileigh: 0,
-            mieCoefficient: 0.00005,
-            mieDirectionalG: 0.99,
-            luminance: 1.1,
-            inclination: 0.46, // elevation / inclination
-            azimuth: 0.25, // Facing front,
-            sun: !true
-        };
-
-        var distance = 700000;
-
-        var uniforms = sky.uniforms;
-        uniforms.turbidity.value = effectController.turbidity;
-        uniforms.reileigh.value = effectController.reileigh;
-        uniforms.luminance.value = effectController.luminance;
-        uniforms.mieCoefficient.value = effectController.mieCoefficient;
-        uniforms.mieDirectionalG.value = effectController.mieDirectionalG;
-
-//        var theta = Math.PI * (effectController.inclination - 0.5);
-//        var phi = 2 * Math.PI * (effectController.azimuth - 0.5);
-//
-//        sunSphere.position.x = distance * Math.cos(phi);
-//        sunSphere.position.y = distance * Math.sin(phi) * Math.sin(theta);
-//        sunSphere.position.z = distance * Math.sin(phi) * Math.cos(theta);
-
-        sunSphere.position.set(10, 6, 10);
-
-        sunSphere.visible = effectController.sun;
-
-        sky.uniforms.sunPosition.value.copy(sunSphere.position);
-
-        camera.lookAt(sunSphere.position);
-    }
-
 }
 ());

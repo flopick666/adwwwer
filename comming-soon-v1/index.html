@@ -114,20 +114,94 @@
   <section id="webgl_section">
   	<div id="loadingProgressG"><div id="loadingProgressG_1" class="loadingProgressG"></div></div>
     <div id="webgl">
-			<div class="description">
-				<h1 class="text-center"><span class="white">Quick and amazing</span><br/> Reimagine <span class="white">what's</span> possible</h1>
-				<p class="text-center"><a class="button-more btn btn-default" id="show_webgl_button" href="#introduce">get started</a></p>
-				<p class="text-center"><a class="arrow_down" href="#introduce"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a></p>
+			<div class="container text-center">
+				<a href="index.html" class="logo"><img src='img/logo_b.png' alt="" title="" />voyager</a>
+				<h1 class="text-center">Reimagine <span class="white">what's</span> possible</h1>
+				<h2>OUR WEBSITE IS COMING SOON</h2>
+				<p class="text-center"><a class="arrow_down" href="#" id="overlay-show"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a></p>
 			</div>
 			<div id="earth" style="display: none"></div>
     </div>
   </section>
 	<!-- end webgl section -->
+	<div id="overlay">
+		<!-- start comming_welcome section -->
+	  <section id="comming_welcome">
+			<p class="text-center"><a class="arrow_up" href="#" id="overlay-hide"><i class="fa fa-angle-up fa-4x" aria-hidden="true"></i></a></p>
+			<div class="container">
+				<h2 class="text-center">Our website is coming soon</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue elit, dapibus dapibus porttitor id, lobortis tempor magna. Donec sapien diam, aliquet in ultricies nec. Pellentesque erat ipsum, facilisis quis ullamcorper non, ullamcorper vel velit. <a href="#">Morbi quis tristique nulla</a>. Aliquam varius, nulla in porttitor consectetur, dui sem feugiat ante, quis consectetur mauris lorem id quam.</p>
 
+				<div class="newsletter">
+					<h3>Newsletter sign up</h3>
+					<form data-toggle="validator">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="yourname@email.com">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+							</span>
+						</div><!-- /input-group -->
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<blockquote class="twitter-tweet" data-lang="ru">
+							<p><a data-toggle="modal" data-target="#signup-form">about 7 hours ago</a></p>
+							<p>We'll give more new soon <br/><a data-toggle="modal" data-target="#signup-form" class="white">http://themeforest</a></p>
+						</blockquote>
+						<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+					<div class="col-md-6 social">
+						<h3>Follow us</h3>
+						<a data-toggle="modal" data-target="#signup-form"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+						<a data-toggle="modal" data-target="#signup-form"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+						<a data-toggle="modal" data-target="#signup-form"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+						<a data-toggle="modal" data-target="#signup-form"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
+						<a data-toggle="modal" data-target="#signup-form"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<p class="text-center"><a class="arrow_down" href="#comming_contact"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a></p>
+	  </section>
+		<!-- end comming_welcome section -->
+		<!-- start comming_contact section -->
+		<section id="comming_contact">
+			<p class="text-center"><a class="arrow_up" href="#comming_welcome"><i class="fa fa-angle-up fa-4x" aria-hidden="true"></i></a></p>
+				<div class="container">
+					<h2 class="text-center">Keep in touch</h1>
+					<hr/>
+					<ul>
+						<li>24 Shine Paper street, New York, NY 25416, USA</li>
+						<li>+1 888 5239 12 63</li>
+						<li>voyager-theme</li>
+					</ul>
+					<form data-toggle="validator">
+						<div class="col-xs-12 col-sm-6">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-1" aria-hidden="true"></i></span>
+								<input id="contact-name" name="contact-name" class="form-control" placeholder="Your name" type="text" required>
+							</div>
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+								<input id="contact-email" name="contact-email" class="form-control" placeholder="Your email" type="email" required>
+							</div>
+							<div class="input-group message">
+								<span class="input-group-addon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+								<textarea class="form-control" placeholder="Your message"></textarea>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="button-more green">Send message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+		</section>
+		<!-- end comming_contact section -->
+	</div>
   <script src="js/webgl/three.min.js" type="text/javascript"></script>
   <script src="js/webgl/Detector.js" type="text/javascript"></script>
   <script src="js/webgl/TrackballControls.js" type="text/javascript"></script>
   <script src="js/webgl/SkyShader.js" type="text/javascript"></script>
-  
+
 </body>
 </html>
