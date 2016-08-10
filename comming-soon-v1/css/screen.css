@@ -7618,6 +7618,10 @@ body section#webgl_section #webgl canvas {
   top: 0;
   width: 100%;
 }
+body section#webgl_section #webgl .container {
+  position: relative;
+  z-index: 200;
+}
 body section#webgl_section #webgl .container a.logo {
   border: 1px solid #c7c7c7;
   color: white;

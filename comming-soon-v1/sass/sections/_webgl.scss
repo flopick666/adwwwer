@@ -19,6 +19,9 @@
       width: 100%;
     }
     .container {
+      position: relative;
+      z-index: 200;
+
       a.logo {
         border: 1px solid $silver;
         color: white;
