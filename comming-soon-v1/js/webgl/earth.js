@@ -59,9 +59,9 @@
 
     scene.add(light);
 
-    var textureFlare0 = THREE.ImageUtils.loadTexture("images/space/lensflare/lensflare0.png");
-    var textureFlare2 = THREE.ImageUtils.loadTexture("images/space/lensflare/lensflare2.png");
-    var textureFlare3 = THREE.ImageUtils.loadTexture("images/space/lensflare/lensflare3.png");
+    var textureFlare0 = THREE.ImageUtils.loadTexture("img/space/lensflare/lensflare0.png");
+    var textureFlare2 = THREE.ImageUtils.loadTexture("img/space/lensflare/lensflare2.png");
+    var textureFlare3 = THREE.ImageUtils.loadTexture("img/space/lensflare/lensflare3.png");
 
     addLight(0.55, 0.9, 0.5, 100, 60, 100);
     //addLight(0.08, 0.8, 0.5, 100, 60, 100);
@@ -119,7 +119,7 @@
     }
 
 
-    var sphere = createPlanet(radius, 0, 0, 0, segments, 'images/space/2_no_clouds_4k.jpg', 'images/space/elev_bump_4k.jpg', 'images/space/water_4k.png');
+    var sphere = createPlanet(radius, 0, 0, 0, segments, 'img/space/2_no_clouds_4k.jpg', 'img/space/elev_bump_4k.jpg', 'img/space/water_4k.png');
     sphere.rotation.y = rotation;
     scene.add(sphere);
 
@@ -127,18 +127,18 @@
     clouds.rotation.y = rotation;
     scene.add(clouds);
 
-    //var moon = createPlanet(radius / 6, -0.7, 0.4, 0.7, segments, 'images/space/moon.jpg', null, null);
+    //var moon = createPlanet(radius / 6, -0.7, 0.4, 0.7, segments, 'img/space/moon.jpg', null, null);
     var moon = createMoon();
     scene.add(moon);
 
     //var stars = createStars(4000, 32);
     var stars = createSkybox(THREE.ImageUtils.loadTextureCube([
-        'images/space/starfield/front.png',
-        'images/space/starfield/back.png',
-        'images/space/starfield/left.png',
-        'images/space/starfield/right.png',
-        'images/space/starfield/top.png',
-        'images/space/starfield/bottom.png'
+        'img/space/starfield/front.png',
+        'img/space/starfield/back.png',
+        'img/space/starfield/left.png',
+        'img/space/starfield/right.png',
+        'img/space/starfield/top.png',
+        'img/space/starfield/bottom.png'
     ]));
     scene.add(stars);
 
@@ -162,7 +162,7 @@
         transparent: true
     });
 
-    
+
     var mesh = new THREE.Mesh(athmo, material);
     mesh.position.set(0.025, 0.0015, 0.025);
     scene.add(mesh);
@@ -209,10 +209,10 @@
         return new THREE.Mesh(
                 new THREE.SphereGeometry(radius, segments, segments),
                 new THREE.MeshPhongMaterial({
-                    map: THREE.ImageUtils.loadTexture('images/space/2_no_clouds_4k.jpg'),
-                    bumpMap: THREE.ImageUtils.loadTexture('images/space/elev_bump_4k.jpg'),
+                    map: THREE.ImageUtils.loadTexture('img/space/2_no_clouds_4k.jpg'),
+                    bumpMap: THREE.ImageUtils.loadTexture('img/space/elev_bump_4k.jpg'),
                     bumpScale: 0.005,
-                    specularMap: THREE.ImageUtils.loadTexture('images/space/water_4k.png'),
+                    specularMap: THREE.ImageUtils.loadTexture('img/space/water_4k.png'),
                     specular: new THREE.Color('grey')
                 })
                 );
@@ -241,7 +241,7 @@
         var mesh = new THREE.Mesh(
                 new THREE.SphereGeometry(radius + 0.003, segments, segments),
                 new THREE.MeshPhongMaterial({
-                    map: THREE.ImageUtils.loadTexture('images/space/fair_clouds_4k.png'),
+                    map: THREE.ImageUtils.loadTexture('img/space/fair_clouds_4k.png'),
                     transparent: true
                 })
                 );
@@ -253,7 +253,7 @@
         return new THREE.Mesh(
                 new THREE.SphereGeometry(radius, segments, segments),
                 new THREE.MeshBasicMaterial({
-                    map: THREE.ImageUtils.loadTexture('images/space/galaxy_starfield.png'),
+                    map: THREE.ImageUtils.loadTexture('img/space/galaxy_starfield.png'),
                     side: THREE.BackSide
                 })
                 );
@@ -288,9 +288,9 @@
         var xSegments = segments;
         var ySegments = segments;
         var geo = new THREE.SphereGeometry(radius, xSegments, ySegments);
-        
-        var textureMap = THREE.ImageUtils.loadTexture('images/space/moon.jpg');
-        var normalMap = THREE.ImageUtils.loadTexture('images/space/normal.jpg');
+
+        var textureMap = THREE.ImageUtils.loadTexture('img/space/moon.jpg');
+        var normalMap = THREE.ImageUtils.loadTexture('img/space/normal.jpg');
 
         var normVertShader = document.getElementById('norm-vert-shader');
         var normFragShader = document.getElementById('norm-frag-shader');
@@ -322,10 +322,10 @@
         mesh.geometry.computeTangents();
         mesh.position.set(-0.7, 0.4, 0.7);
         mesh.rotation.set(0, 180, 0);
-        
+
         mesh.receiveShadow = true;
         mesh.castShadow = true;
-        
+
         return mesh;
     }
 
