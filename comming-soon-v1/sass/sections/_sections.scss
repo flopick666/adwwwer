@@ -1,32 +1,127 @@
 section {
   clear: both;
-  padding-bottom: 5rem;
+  // padding-bottom: 5rem;
   position: relative;
   height: 100vh;
   overflow: hidden;
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100vh;
+    .col-sm-10 {
+      float: none;
+      margin: 0 auto;
+    }
+  }
   &:before {
     display: block;
     content: " ";
     height: 49px;
     margin-top: -49px;
   }
-  @media (min-width: $screen-md) {
-    padding-bottom: 8rem;
-    &:before {
-      height: 79px;
-      margin-top: -79px;
+  a.arrow_down,
+  a.arrow_up {
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    .fa {
+      font-size: 6rem;
+      line-height: 3rem;
+    }
+    &:hover {
+      color: $java;
     }
   }
+  a.arrow_down {
+    bottom: 50px;
+  }
+  a.arrow_up {
+    top: 50px;
+  }
   @import "sections/webgl.scss";
+  @import "sections/welcome.scss";
+  @import "sections/welcome-text.scss";
+  @import "sections/welcome-form.scss";
 }
 
 #overlay {
-  display: none;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.8);
-  // padding-top: 79px;
+  z-index: 200;
+  #comming_welcome,
+  #comming_contact {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+// Starrt settings menu here
+#settings-menu {
+  position: fixed;
+  right: -200px;
+  top: 10rem;
+  z-index: 300;
+  font-family: 'Roboto', sans-serif;
+  #open-settings {
+    float: left;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 1.5rem;
+    background: $java;
+    border: 1px solid $java;
+    display: block;
+    .fa {
+      font-size: 1.8rem;
+    }
+    &:hover {
+      background: none;
+      color: $java;
+    }
+  }
+  #settings-area {
+    float: left;
+    padding: 3rem 3rem 0;
+    border: 1px solid $silver;
+    min-width: 200px;
+    hr {
+      border-color: $cod_gray;
+      margin: 0 0 2.5rem;
+      padding: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 300;
+        padding-bottom: 2.5rem;
+        &:before {
+          font-size: 8px;
+          display: inline-block;
+          content: "\f009";
+          color: $java;
+          font-family:  FontAwesome;
+          margin-right: 2rem;
+          vertical-align: top;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: $java;
+          }
+        }
+      }
+    }
+  }
 }

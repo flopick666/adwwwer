@@ -68,9 +68,13 @@ $(document).ready(function () {
   //     });
   // });
 
-  // Swow Overlay block
-  $('#overlay-show, #overlay-hide').click(function() {
-    $('#overlay').slideToggle('slow');
+  // Swow Settings Menu block
+  $('#open-settings').click(function() {
+    if ($('#settings-menu').hasClass('closing')) {
+      $('#settings-menu').animate({"right":"0px"}, "slow").removeClass('closing').addClass('open');
+    } else {
+      $('#settings-menu').animate({"right":"-200px"}, "slow").removeClass('open').addClass('closing');
+    }
   });
 
   // WebGl section

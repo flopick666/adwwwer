@@ -6,6 +6,7 @@
   background-size: cover;
   position: fixed;
   width: 100%;
+  z-index: 100;
   #webgl {
     height: 100vh;
     padding-top: 5rem;
@@ -20,7 +21,7 @@
     }
     .container {
       position: relative;
-      z-index: 200;
+      z-index: 100;
 
       a.logo {
         border: 1px solid $silver;
@@ -59,7 +60,6 @@
         }
       }
     }
-
   }
 
   @media (min-width: $screen-sm) {
