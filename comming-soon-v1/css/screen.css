@@ -7568,6 +7568,7 @@ body section:before {
 }
 body section a.arrow_down,
 body section a.arrow_up {
+  display: none;
   color: white;
   position: absolute;
   left: 50%;
@@ -7583,10 +7584,32 @@ body section a.arrow_up:hover {
   color: #20b7a3;
 }
 body section a.arrow_down {
-  bottom: 50px;
+  bottom: 2rem;
 }
 body section a.arrow_up {
-  top: 50px;
+  top: 2rem;
+}
+body section h2 {
+  line-height: 4rem;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  body section a.arrow_down,
+  body section a.arrow_up {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  body section a.arrow_down {
+    bottom: 5rem;
+  }
+  body section a.arrow_up {
+    top: 5rem;
+  }
+  body section h2 {
+    line-height: 4rem;
+    margin: 5rem 0;
+  }
 }
 body section#webgl_section {
   height: 100vh;
@@ -7611,46 +7634,6 @@ body section#webgl_section #webgl canvas {
   top: 0;
   width: 100%;
 }
-body section#webgl_section #webgl .container {
-  position: relative;
-  z-index: 100;
-}
-body section#webgl_section #webgl .container a.logo {
-  border: 1px solid #c7c7c7;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: block;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  padding-top: 4rem;
-  margin-bottom: 8rem;
-  font-size: 18px;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-}
-body section#webgl_section #webgl .container a.logo img {
-  display: block;
-  margin: 0 auto 20px;
-}
-body section#webgl_section #webgl .container a.logo:hover {
-  color: #20b7a3;
-  border: 1px solid #20b7a3;
-}
-body section#webgl_section #webgl .container h1 {
-  color: #20b7a3;
-  font-family: 'Roboto', sans-serif;
-  font-size: 6.5rem;
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.6);
-  text-transform: uppercase;
-  margin: 0;
-  padding: 4rem 0;
-  line-height: 52px;
-}
-body section#webgl_section #webgl .container h1 span {
-  color: white;
-}
 @media (min-width: 768px) {
   body section#webgl_section #webgl {
     padding-top: 8rem;
@@ -7663,16 +7646,16 @@ body section#welcome .container a.logo {
   text-transform: uppercase;
   display: block;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  padding-top: 4rem;
-  margin-bottom: 8rem;
+  width: 100px;
+  height: 100px;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 18px;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 body section#welcome .container a.logo img {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 }
 body section#welcome .container a.logo:hover {
   color: #20b7a3;
@@ -7681,44 +7664,54 @@ body section#welcome .container a.logo:hover {
 body section#welcome .container h1 {
   color: #20b7a3;
   font-family: 'Roboto', sans-serif;
-  font-size: 6.5rem;
+  font-size: 5rem;
   font-weight: 700;
   background: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   margin: 0;
-  padding: 4rem 0;
+  padding: 2rem 0;
   line-height: 52px;
 }
 body section#welcome .container h1 span {
   color: white;
 }
+@media (min-width: 992px) {
+  body section#welcome .container a.logo {
+    margin-bottom: 8rem;
+    padding-top: 4rem;
+    width: 150px;
+    height: 150px;
+  }
+  body section#welcome .container h1 {
+    font-size: 6.5rem;
+    padding: 4rem 0;
+  }
+}
 body section#comming_welcome h2 {
-  margin: 5rem 0;
   font-size: 4rem;
 }
-body section#comming_welcome .col-sm-8 {
+body section#comming_welcome .col-md-8 {
   float: none;
   margin: 0 auto;
   overflow: hidden;
   padding: 0;
 }
-body section#comming_welcome .col-sm-8:after, body section#comming_welcome .col-sm-8:before {
+body section#comming_welcome .col-md-8:after, body section#comming_welcome .col-md-8:before {
+  display: none;
   position: absolute;
   top: 0;
   left: 50%;
 }
-body section#comming_welcome .col-sm-8:after {
+body section#comming_welcome .col-md-8:after {
   content: '';
-  display: block;
   height: 1px;
   background: #9a9da0;
   width: 50px;
   margin-left: -25px;
   top: 70px;
 }
-body section#comming_welcome .col-sm-8:before {
+body section#comming_welcome .col-md-8:before {
   content: '';
-  display: block;
   height: 70px;
   background: #9a9da0;
   width: 1px;
@@ -7812,7 +7805,7 @@ body section#comming_welcome .twitter-tweet a:hover {
 }
 body section#comming_welcome .social {
   position: relative;
-  padding-left: 6rem;
+  padding-left: 15px;
   padding-top: 1.5rem;
   text-align: left;
 }
@@ -7827,9 +7820,17 @@ body section#comming_welcome .social a {
 body section#comming_welcome .social a:hover {
   color: #20b7a3;
 }
+@media (min-width: 992px) {
+  body section#comming_welcome .col-md-8:after, body section#comming_welcome .col-md-8:before {
+    display: block;
+  }
+  body section#comming_welcome .social {
+    padding-left: 6rem;
+  }
+}
 body section#comming_contact .container {
   max-width: 390px;
-  padding: 0;
+  padding-bottom: 2rem;
 }
 body section#comming_contact .container h2 {
   font-size: 4rem;
@@ -7942,6 +7943,11 @@ body section#comming_contact .container form .button-more {
 body section#comming_contact .container form .button-more:hover {
   color: #20b7a3;
 }
+@media (min-width: 768px) {
+  body section#comming_contact .container {
+    padding: 0;
+  }
+}
 body #overlay {
   position: relative;
   left: 0;
@@ -7956,11 +7962,12 @@ body #overlay #comming_contact {
 body #settings-menu {
   position: fixed;
   right: -200px;
-  top: 10rem;
+  top: 0;
   z-index: 300;
   font-family: 'Roboto', sans-serif;
 }
 body #settings-menu #open-settings {
+  cursor: pointer;
   float: left;
   width: 50px;
   height: 50px;
@@ -7983,6 +7990,7 @@ body #settings-menu #settings-area {
   padding: 3rem 3rem 0;
   border: 1px solid #c7c7c7;
   min-width: 200px;
+  background: #060a0e;
 }
 body #settings-menu #settings-area hr {
   border-color: #161616;
@@ -8014,4 +8022,12 @@ body #settings-menu #settings-area ul li a {
 }
 body #settings-menu #settings-area ul li a:hover {
   color: #20b7a3;
+}
+@media (min-width: 768px) {
+  body #settings-menu {
+    top: 10rem;
+  }
+  body #settings-menu #settings-area {
+    background: none;
+  }
 }

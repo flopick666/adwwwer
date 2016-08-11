@@ -1,7 +1,7 @@
 &#comming_contact {
   .container {
     max-width: 390px;
-    padding: 0;
+    padding-bottom:2rem;
     h2 {
       font-size: 4rem;
       margin: 5rem 0 3rem 0;
@@ -98,6 +98,11 @@
           color: $java;
         }
       }
+    }
+  }
+  @media (min-width: $screen-sm) {
+    .container {
+      padding: 0;
     }
   }
 }

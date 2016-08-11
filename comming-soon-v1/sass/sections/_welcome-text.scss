@@ -1,22 +1,21 @@
 &#comming_welcome {
   h2 {
-    margin: 5rem 0;
     font-size: 4rem;
   }
-  .col-sm-8 {
+  .col-md-8 {
     float: none;
     margin: 0 auto;
     overflow: hidden;
     padding: 0;
     &:after,
     &:before {
+      display: none;
       position: absolute;
       top: 0;
       left: 50%;
     }
     &:after {
       content: '';
-      display: block;
       height: 1px;
       background: #9a9da0;
       width: 50px;
@@ -25,12 +24,12 @@
     }
     &:before {
       content: '';
-      display: block;
       height: 70px;
       background: #9a9da0;
       width: 1px;
     }
   }
+
   .newsletter {
     max-width: 330px;
     margin: 5rem auto;
@@ -107,7 +106,7 @@
   }
   .social {
     position: relative;
-    padding-left: 6rem;
+    padding-left: 15px;
     padding-top: 1.5rem;
     text-align: left;
     h3 {
@@ -120,6 +119,17 @@
       &:hover {
         color: $java;
       }
+    }
+  }
+  @media(min-width: $screen-md){
+    .col-md-8 {
+      &:after,
+      &:before {
+        display: block;
+      }
+    }
+    .social {
+      padding-left: 6rem;
     }
   }
 }

@@ -1,6 +1,5 @@
 section {
   clear: both;
-  // padding-bottom: 5rem;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -26,6 +25,7 @@ section {
   }
   a.arrow_down,
   a.arrow_up {
+    display: none;
     color: white;
     position: absolute;
     left: 50%;
@@ -39,11 +39,34 @@ section {
     }
   }
   a.arrow_down {
-    bottom: 50px;
+    bottom: 2rem;
   }
   a.arrow_up {
-    top: 50px;
+    top: 2rem;
   }
+  h2 {
+    line-height: 4rem;
+    margin: 2rem 0;
+  }
+  @media (min-width: $screen-sm) {
+    a.arrow_down,
+    a.arrow_up {
+      display: block;
+    }
+  }
+  @media (min-width: $screen-md) {
+    a.arrow_down {
+      bottom: 5rem;
+    }
+    a.arrow_up {
+      top: 5rem;
+    }
+    h2 {
+      line-height: 4rem;
+      margin: 5rem 0;
+    }
+  }
+
   @import "sections/webgl.scss";
   @import "sections/welcome.scss";
   @import "sections/welcome-text.scss";
@@ -66,10 +89,11 @@ section {
 #settings-menu {
   position: fixed;
   right: -200px;
-  top: 10rem;
+  top: 0;
   z-index: 300;
   font-family: 'Roboto', sans-serif;
   #open-settings {
+    cursor: pointer;
     float: left;
     width: 50px;
     height: 50px;
@@ -92,6 +116,7 @@ section {
     padding: 3rem 3rem 0;
     border: 1px solid $silver;
     min-width: 200px;
+    background: $ebony;
     hr {
       border-color: $cod_gray;
       margin: 0 0 2.5rem;
@@ -122,6 +147,12 @@ section {
           }
         }
       }
+    }
+  }
+  @media (min-width: $screen-sm) {
+    top: 10rem;
+    #settings-area {
+      background: none;
     }
   }
 }

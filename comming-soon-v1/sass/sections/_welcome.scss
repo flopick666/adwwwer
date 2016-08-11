@@ -1,5 +1,4 @@
 &#welcome {
-  // padding-top: 5rem;
   .container {
     a.logo {
       border: 1px solid $silver;
@@ -8,15 +7,15 @@
       text-transform: uppercase;
       display: block;
       margin: 0 auto;
-      width: 150px;
-      height: 150px;
-      padding-top: 4rem;
-      margin-bottom: 8rem;
+      width: 100px;
+      height: 100px;
+      padding-top: 1.5rem;
+      margin-bottom: 2rem;
       font-size: 18px;
       font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
       img {
         display: block;
-        margin: 0 auto 20px;
+        margin: 0 auto 10px;
       }
       &:hover {
         color: $java;
@@ -26,19 +25,30 @@
     h1 {
       color: $java;
       font-family: 'Roboto', sans-serif;
-      font-size: 6.5rem;
+      font-size: 5rem;
       font-weight: 700;
       background: rgba(0, 0, 0, 0.6);
       text-transform: uppercase;
       margin: 0;
-      padding: 4rem 0;
+      padding: 2rem 0;
       line-height: 52px;
       span {
         color: white;
       }
     }
   }
-  @media (min-width: $screen-sm) {
-      // padding-top: 8rem;
+  @media (min-width: $screen-md) {
+    .container {
+      a.logo {
+        margin-bottom: 8rem;
+        padding-top: 4rem;
+        width: 150px;
+        height: 150px;
+      }
+      h1 {
+        font-size: 6.5rem;
+        padding: 4rem 0;
+      }
+    }
   }
 }
