@@ -76,7 +76,35 @@ $(document).ready(function () {
       $('#settings-menu').animate({"right":"-200px"}, "slow").removeClass('open').addClass('closing');
     }
   });
-
+  // Time Circle
+  $("#DateCountdown").TimeCircles({
+    "animation": "smooth",
+    "bg_width": 0.4,
+    "fg_width": 0.005,
+    "circle_bg_color": "#60686F",
+    "time": {
+        "Days": {
+            "text": "Days",
+            "color": "#20b7a3",
+            "show": true
+        },
+        "Hours": {
+            "text": "Hours",
+            "color": "#20b7a3",
+            "show": true
+        },
+        "Minutes": {
+            "text": "Minutes",
+            "color": "#20b7a3",
+            "show": true
+        },
+        "Seconds": {
+            "text": "Seconds",
+            "color": "#20b7a3",
+            "show": true
+        }
+    }
+  });
   // WebGl section
   if ( false === $.browser.mobile ) {
     $('body').append('<script src="js/webgl/earth.js" type="text/javascript"></script>');
@@ -88,24 +116,24 @@ $(document).ready(function () {
             $('#loadingProgressG').hide();
         }
     };
-    $(window).scroll(function(){
-        if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
-            webgl.detach();
-            $('#show_webgl_button').html('show animation');
-            $('#show_webgl_button').removeAttr('href');
-        }
-    });
-    $('#show_webgl_button').on('click', function(e){
-        e.preventDefault();
-        if ( 1 === sectionWebGl.children('#earth').length ) {
-            webgl.detach();
-            $('#show_webgl_button').html('show animation');
-            $('#show_webgl_button').removeAttr('href');
-        } else {
-            webgl.appendTo('#webgl');
-            $('#show_webgl_button').html('get started');
-            $('#show_webgl_button').attr('href','#introduce');
-        }
-    });
+    // $(window).scroll(function(){
+    //     if ( ($(window).height() - $(window).scrollTop()) <= 0 ) {
+    //         webgl.detach();
+    //         $('#show_webgl_button').html('show animation');
+    //         $('#show_webgl_button').removeAttr('href');
+    //     }
+    // });
+    // $('#show_webgl_button').on('click', function(e){
+    //     e.preventDefault();
+    //     if ( 1 === sectionWebGl.children('#earth').length ) {
+    //         webgl.detach();
+    //         $('#show_webgl_button').html('show animation');
+    //         $('#show_webgl_button').removeAttr('href');
+    //     } else {
+    //         webgl.appendTo('#webgl');
+    //         $('#show_webgl_button').html('get started');
+    //         $('#show_webgl_button').attr('href','#introduce');
+    //     }
+    // });
   }
 });

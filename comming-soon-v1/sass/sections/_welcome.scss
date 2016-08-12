@@ -36,11 +36,15 @@
         color: white;
       }
     }
+    h2 {
+      margin: 4rem 0 2rem;
+      line-height: 2.4rem;
+    }
   }
   @media (min-width: $screen-md) {
     .container {
       a.logo {
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         padding-top: 4rem;
         width: 150px;
         height: 150px;
