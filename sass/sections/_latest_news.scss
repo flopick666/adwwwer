@@ -1,5 +1,6 @@
 &#latest_news {
   background: $ebony;
+  overflow: hidden;
   @media (min-width: $screen-lg) {
     h2 {
       margin-bottom: 7rem
@@ -48,6 +49,7 @@
           }
         }
       }
+      
       .date {
         width: 65px;
         // height: 65px;
@@ -55,7 +57,7 @@
         color: $java;
         text-align: center;
         float: left;
-        margin-right: 3rem;
+        margin-right: 2.5rem;
         margin-bottom: 3rem;
         font-weight: 900;
         span {
@@ -72,7 +74,7 @@
         clear: both;
         line-height: 24px;
       }
-      @media (max-width: $screen-sm){
+      @media (min-width: $screen-sm){
         padding-bottom: 8rem;
         .item {
           margin: 10px;

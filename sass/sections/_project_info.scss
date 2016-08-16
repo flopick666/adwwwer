@@ -1,4 +1,5 @@
 &#project_info {
+  overflow: hidden;
   .pills .tab-content {
     margin-bottom: 0;
   }
@@ -212,7 +213,7 @@
       display: block;
       margin: 0 auto;
     }
-    @media (min-width: $screen-sm) {      
+    @media (min-width: $screen-sm) {
       a.button-more {
         display: inline-block;
       }

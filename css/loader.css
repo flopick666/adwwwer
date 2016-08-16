@@ -1,4 +1,5 @@
 #loadingProgressG{
+  display: none;
   width:100%;
   height:4px;
   overflow:hidden;
@@ -79,5 +80,11 @@
   }
   100%{
     margin-left:100%;
+  }
+}
+
+@media(min-width:768px){
+  #loadingProgressG{
+    display: block;
   }
 }

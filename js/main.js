@@ -115,7 +115,7 @@ $(document).ready(function () {
   });
 
   // Here owlCarousel functionallity to several sections
-  //Clent Option section Carousel
+  //Testimonials section Carousel
   $("#owl-clients").owlCarousel({
     autoPlay: false, //Set AutoPlay to 3 seconds
     items : 1, //5 items above 1000px browser width
@@ -146,11 +146,11 @@ $(document).ready(function () {
 
   //Recent Post section Carousel
   $("#owl-recent-post").owlCarousel({
-    autoPlay: 5000, //Set AutoPlay to 3 seconds
+    autoPlay: 5000, //Set AutoPlay to 5 seconds
     items : 1, //5 items above 1000px browser width
-    itemsDesktop : [1200,1], //4 items between 1200px and 960px
+    itemsDesktop : [1200,1], //1 items between 1200px and 960px
     itemsDesktopSmall : [960,1], // betweem 960px and 768px
-    itemsTablet: [768,1], //2 items between 768 and 640px
+    itemsTablet: [768,1], //1 items between 768 and 640px
     itemsMobile : [640,1], // itemsMobile
     navigation : true,
     navigationText : ["prev","next"],
@@ -159,7 +159,7 @@ $(document).ready(function () {
     pagination : false
   });
 
-  //Recebt Work section Carousel
+  //Recent Work section Carousel
   $("#owl-recent-work").owlCarousel({
     autoPlay: 3000, //Set AutoPlay to 3 seconds
     items : 5, //5 items above 1200px browser width
@@ -200,33 +200,33 @@ $(document).ready(function () {
     $( "#services #secondary-services" ).slideToggle( "slow");
     $(this).text( $(this).text() == 'Show all services' ? "Hide all services" : "Show all services");
   });
-  /*Hide Become a member block*/
+  // Hide Become a member block
   $( "#hide-green-block" ).click(function() {
     $( "#become_member" ).slideUp( "slow");
   });
   // Tabs responsive
   $(".tabbable.responsive").resptabs();
 
-$window.on('scroll resize', function() {
-   $('#diagrams').find('.diagram_circles').each(function(n,e){
-       var window_height = $window.height();
-       var window_top_position = $window.scrollTop();
-       var window_bottom_position = (window_top_position + window_height);
-       var $el = $(e);
-       var el_height = $el.outerHeight();
-       var el_top_position = $el.offset().top;
-       var el_bottom_position = (el_top_position + el_height);
+  $window.on('scroll resize', function() {
+     $('#diagrams').find('.diagram_circles').each(function(n,e){
+         var window_height = $window.height();
+         var window_top_position = $window.scrollTop();
+         var window_bottom_position = (window_top_position + window_height);
+         var $el = $(e);
+         var el_height = $el.outerHeight();
+         var el_top_position = $el.offset().top;
+         var el_bottom_position = (el_top_position + el_height);
 
-       if ( 0 == $el.data('run') ) {
-         if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
-           $el.circliful({
-               percent: $el.data('percent')
-           });
-           $el.data('run', '1');
+         if ( 0 == $el.data('run') ) {
+           if ( (el_bottom_position >= window_top_position) && (el_top_position <= window_bottom_position) ) {
+             $el.circliful({
+                 percent: $el.data('percent')
+             });
+             $el.data('run', '1');
+           }
          }
-       }
-   });
-});
+     });
+  });
   // Here contact_us functionallity
   /*Hide Contact Us modal*/
   $( "#contact_us #contactform .close_popup" ).click(function() {
