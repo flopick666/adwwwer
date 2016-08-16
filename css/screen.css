@@ -8897,6 +8897,7 @@ body section#recent_post {
   background-position: 0 0;
   background-attachment: fixed;
   padding-bottom: 0;
+  overflow: hidden;
 }
 body section#recent_post:before {
   background: #010509;
