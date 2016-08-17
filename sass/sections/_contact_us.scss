@@ -185,6 +185,7 @@
             line-height: 50px;
             margin-right: 15px;
             margin-left: 4px;
+            transition: 1s;
             label {
               display: block;
               cursor: pointer;
@@ -195,6 +196,10 @@
             }
             input {
              display: none;
+            }
+            &:hover {
+              background: white;
+              color: $java;
             }
           }
         }

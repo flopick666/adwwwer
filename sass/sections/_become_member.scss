@@ -40,7 +40,7 @@
     }
     button#hide-green-block {
       position: absolute;
-      bottom:-27px;
+      bottom:-25px;
       left: 50%;
       background: $mountain_meadow;
       border: none;
@@ -49,10 +49,10 @@
       font-size: 11px;
       padding: 5px 10px;
       margin-left: -70px;
-      span {
-        vertical-align: super;
+      .fa {
+        vertical-align: top;
         font-size: 10px;
-        top: 5px;
+        // top: 5px;
       }
     }
   }

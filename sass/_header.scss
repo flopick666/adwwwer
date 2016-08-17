@@ -22,6 +22,9 @@
         }
       }
     }
+    h1 {
+      margin: 0;
+    }
     .navbar-brand {
       text-transform: uppercase;
       color: white;
@@ -141,9 +144,13 @@
             a {
               color: white;
               font-family: 'Roboto', sans-serif;
+              text-transform: none;
               &:hover {
                 color: $java;
                 background: white;
+              }
+              &:before {
+                display: none;
               }
               .fa {
                 margin-right: 15px;

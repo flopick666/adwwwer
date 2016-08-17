@@ -123,10 +123,11 @@ $(document).ready(function () {
     itemsDesktopSmall : [960,1], // betweem 960px and 768px
     itemsTablet: [768,1], //2 items between 768 and 640px
     itemsMobile : [640,1], // itemsMobile
-    navigation : true,
+    nav : true,
     rewindNav : true,
     scrollPerPage : false,
-    pagination : false
+    pagination : false,
+    loop: true
   });
 
   //Latest News section Carousel
@@ -137,41 +138,74 @@ $(document).ready(function () {
     itemsDesktopSmall : [960,2], // betweem 960px and 768px
     itemsTablet: [768,2], //2 items between 768 and 640px
     itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    navigationText : ["prev","next"],
+
+    nav : true,
+    navText : ["prev","next"],
     rewindNav : true,
     scrollPerPage : false,
-    pagination : false
+    pagination : false,
+    loop: true,
+    responsiveClass: true,
+    responsive:{
+      0:{
+        items:1
+      },
+      640:{
+        items:2
+      },
+      768:{
+        items:2
+      },
+      960:{
+        items:3
+      }
+    }
   });
 
   //Recent Post section Carousel
   $("#owl-recent-post").owlCarousel({
     autoPlay: 5000, //Set AutoPlay to 5 seconds
-    items : 1, //5 items above 1000px browser width
-    itemsDesktop : [1200,1], //1 items between 1200px and 960px
-    itemsDesktopSmall : [960,1], // betweem 960px and 768px
-    itemsTablet: [768,1], //1 items between 768 and 640px
-    itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    navigationText : ["prev","next"],
+    nav : true,
+    navText : ["prev","next"],
     rewindNav : true,
     scrollPerPage : false,
-    pagination : false
+    pagination : false,
+    loop: true,
+    responsiveClass: true,
+    responsive:{
+      0:{
+        items:1
+      }
+    }
   });
 
   //Recent Work section Carousel
   $("#owl-recent-work").owlCarousel({
     autoPlay: 3000, //Set AutoPlay to 3 seconds
-    items : 5, //5 items above 1200px browser width
-    itemsDesktop : [1200,4], //4 items between 1200px and 960px
-    itemsDesktopSmall : [960,3], // betweem 960px and 768px
-    itemsTablet: [768,2], //2 items between 768 and 640px
-    itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    navigationText : ["prev","next"],
+    nav : true,
+    navText : ["prev","next"],
     rewindNav : true,
     scrollPerPage : false,
-    pagination : false
+    pagination : false,
+    loop: true,
+    responsiveClass: true,
+    responsive:{
+      0:{
+        items:1
+      },
+      640:{
+        items:2
+      },
+      768:{
+        items:3
+      },
+      960:{
+        items:4
+      },
+      1200:{
+        items: 5
+      }
+    }
   });
   // popup for recent post
   $('.test-popup-link').magnificPopup({

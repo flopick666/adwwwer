@@ -63,7 +63,6 @@
       }
       a[data-toggle="tab"] {
         line-height: 5rem;
-        padding: 0 5rem;
       }
       &.active {
         border-left: 1px solid $cod_gray;
@@ -77,6 +76,7 @@
           line-height: 5rem;
           background: $ebony;
           color: white;
+          width: 200px;
         }
       }
     }
@@ -95,11 +95,14 @@
       overflow: hidden;
         margin-bottom: -5px;
       li {
-        width: auto;
+        width: 160px;
         float: none;
         display: inline-block!important;
-        a[data-toggle="tab"] {
-          padding: 0 3rem;
+        border-bottom: 1px solid $cod_gray;
+        text-align: center!important;
+        a {
+          display: block;
+          width: auto!important;
         }
         &.active {
           border-left: 1px solid $cod_gray;
@@ -115,9 +118,7 @@
   @media (min-width: $screen-md) {
     .nav-tabs {
       li {
-        a[data-toggle="tab"] {
-          padding: 0 5rem;
-        }
+        width: 200px;
       }
     }
   }

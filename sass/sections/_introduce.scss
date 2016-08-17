@@ -130,8 +130,11 @@
           font-size: 18px;
           padding-bottom: 2rem;
           color: white;
+          line-height: 30px;
           .fa {
             font-size: 30px;
+            display: block;
+            float: left;
             color: $java;
             margin-right: 15px;
           }
@@ -152,7 +155,7 @@
   }
   p:last-child {
     margin: 0;
-    padding: 0 5px;
+    // padding: 0 5px;
   }
   .button-more {
     z-index: 100;

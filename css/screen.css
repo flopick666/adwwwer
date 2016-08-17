@@ -7599,6 +7599,9 @@ body #header nav.navbar .navbar-toggle:hover {
 body #header nav.navbar .navbar-toggle:hover .icon-bar {
   background: #161616;
 }
+body #header nav.navbar h1 {
+  margin: 0;
+}
 body #header nav.navbar .navbar-brand {
   text-transform: uppercase;
   color: white;
@@ -7715,10 +7718,14 @@ body #header nav.navbar #navbar-collapse-1 ul#login li {
 body #header nav.navbar #navbar-collapse-1 ul#login li a {
   color: white;
   font-family: 'Roboto', sans-serif;
+  text-transform: none;
 }
 body #header nav.navbar #navbar-collapse-1 ul#login li a:hover {
   color: #20b7a3;
   background: white;
+}
+body #header nav.navbar #navbar-collapse-1 ul#login li a:before {
+  display: none;
 }
 body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   margin-right: 15px;
@@ -8084,9 +8091,12 @@ body section#introduce #services #secondary-services .col-xs-12 h3 {
   font-size: 18px;
   padding-bottom: 2rem;
   color: white;
+  line-height: 30px;
 }
 body section#introduce #services #secondary-services .col-xs-12 h3 .fa {
   font-size: 30px;
+  display: block;
+  float: left;
   color: #20b7a3;
   margin-right: 15px;
 }
@@ -8101,13 +8111,14 @@ body section#introduce #services #secondary-services .col-xs-12 h3 .fa {
 }
 body section#introduce p:last-child {
   margin: 0;
-  padding: 0 5px;
 }
 body section#introduce .button-more {
   z-index: 100;
 }
 body section#recent_works {
   background: #060a0e;
+  overflow: hidden;
+  padding-bottom: 0;
 }
 body section#recent_works:before {
   background: #010509;
@@ -8270,6 +8281,16 @@ body section#best_sellers .product-item .product_image > div.back {
 body section#best_sellers .product-item .product_image > div.back:hover {
   opacity: 1;
 }
+@media (min-width: 992px) {
+  body section#best_sellers .product-item .product_image {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  body section#best_sellers .product-item .product_image {
+    height: 250px;
+  }
+}
 body section#best_sellers .product-item .product-description {
   padding: 0 10px;
   overflow: hidden;
@@ -8384,7 +8405,7 @@ body section#become_member.green:before {
 }
 body section#become_member.green button#hide-green-block {
   position: absolute;
-  bottom: -27px;
+  bottom: -25px;
   left: 50%;
   background: #149d8b;
   border: none;
@@ -8394,10 +8415,9 @@ body section#become_member.green button#hide-green-block {
   padding: 5px 10px;
   margin-left: -70px;
 }
-body section#become_member.green button#hide-green-block span {
-  vertical-align: super;
+body section#become_member.green button#hide-green-block .fa {
+  vertical-align: top;
   font-size: 10px;
-  top: 5px;
 }
 body section#become_member .col-md-2 {
   text-align: center;
@@ -8622,8 +8642,7 @@ body section#platform .post-images-zoom .post-images-container {
   width: 202px;
   height: 202px;
   border-radius: 50%;
-  border: 10px solid #fff;
-  box-shadow: 0 2px 2px 2px #bbbebc;
+  border: 1px solid #20b7a3;
   overflow: hidden;
 }
 body section#platform .post-images-zoom .post-images-container img {
@@ -9623,20 +9642,20 @@ body section#latest_news #owl-latest-news .item .news-image {
   height: 140px;
   overflow: hidden;
 }
-body section#latest_news #owl-latest-news .item .news-image img {
-  width: 100%;
+body section#latest_news #owl-latest-news .item .news-image a {
+  display: block;
   position: relative;
   top: -50%;
   transition: 1s;
 }
-body section#latest_news #owl-latest-news .item .news-image img:hover {
+body section#latest_news #owl-latest-news .item .news-image a:hover {
   transform: scale(1.1);
 }
 @media (min-width: 611px) {
   body section#latest_news #owl-latest-news .item .news-image {
     height: auto;
   }
-  body section#latest_news #owl-latest-news .item .news-image img {
+  body section#latest_news #owl-latest-news .item .news-image a {
     position: static;
   }
 }
@@ -9758,6 +9777,10 @@ body section#client_opinion #quote-carousel blockquote {
   padding: 0;
   margin-bottom: 8rem;
   font-family: 'Roboto', sans-serif;
+}
+body section#client_opinion #quote-carousel blockquote img {
+  display: inline;
+  width: auto;
 }
 body section#client_opinion #quote-carousel blockquote p {
   width: 75%;
@@ -11399,6 +11422,7 @@ body section#contact_us #contact-form form .input-group.upload .image-upload {
   line-height: 50px;
   margin-right: 15px;
   margin-left: 4px;
+  transition: 1s;
 }
 body section#contact_us #contact-form form .input-group.upload .image-upload label {
   display: block;
@@ -11410,6 +11434,10 @@ body section#contact_us #contact-form form .input-group.upload .image-upload lab
 }
 body section#contact_us #contact-form form .input-group.upload .image-upload input {
   display: none;
+}
+body section#contact_us #contact-form form .input-group.upload .image-upload:hover {
+  background: white;
+  color: #20b7a3;
 }
 body section#contact_us #contact-form form .input-group.message .input-group-addon {
   vertical-align: top;
@@ -11703,7 +11731,6 @@ body .tabbable.responsive .nav-tabs li a.tab-control.right {
 }
 body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
   line-height: 5rem;
-  padding: 0 5rem;
 }
 body .tabbable.responsive .nav-tabs li.active {
   border-left: 1px solid #161616;
@@ -11720,6 +11747,7 @@ body .tabbable.responsive .nav-tabs li.active a[data-toggle="tab"] {
   line-height: 5rem;
   background: #060a0e;
   color: white;
+  width: 200px;
 }
 body .tabbable.responsive .tab-content {
   background: #060a0e;
@@ -11736,12 +11764,15 @@ body .tabbable.responsive .tab-content {
     margin-bottom: -5px;
   }
   body .tabbable.responsive .nav-tabs li {
-    width: auto;
+    width: 160px;
     float: none;
     display: inline-block !important;
+    border-bottom: 1px solid #161616;
+    text-align: center !important;
   }
-  body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
-    padding: 0 3rem;
+  body .tabbable.responsive .nav-tabs li a {
+    display: block;
+    width: auto !important;
   }
   body .tabbable.responsive .nav-tabs li.active {
     border-left: 1px solid #161616;
@@ -11753,8 +11784,8 @@ body .tabbable.responsive .tab-content {
   }
 }
 @media (min-width: 992px) {
-  body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
-    padding: 0 5rem;
+  body .tabbable.responsive .nav-tabs li {
+    width: 200px;
   }
 }
 @media (max-width: 767px) {

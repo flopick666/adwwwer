@@ -19,8 +19,8 @@
         margin-bottom: 20px;
         height: 140px;
         overflow: hidden;
-        img {
-          width: 100%;
+        a {
+          display: block;
           position: relative;
           top: -50%;
           transition: 1s;
@@ -30,7 +30,7 @@
         }
         @media (min-width: 611px) {
           height: auto;
-          img {
+          a {
             position: static;
           }
         }
@@ -49,7 +49,7 @@
           }
         }
       }
-      
+
       .date {
         width: 65px;
         // height: 65px;
