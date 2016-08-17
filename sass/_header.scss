@@ -8,17 +8,16 @@
     padding: 0;
     border: none;
     .navbar-toggle {
-      border:1px solid $java;
-      background: $cod_gray;
+      background: $java;
+      border: none;
       transition: 1s;
       .icon-bar {
-        background: $java;
+        background: $cod_gray;
       }
-      &:hover {
-        border: 1px solid $cod_gray;
-        background: $java;
+      &.collapsed {
+        background: none;
         .icon-bar {
-          background: $cod_gray;
+          background: $java;
         }
       }
     }
@@ -40,6 +39,9 @@
     #navbar-collapse-1 {
       max-height: none;
       font-family: 'Open Sans', sans-serif;
+      max-height: 93vh;
+      overflow-y: auto;
+      overflow-x: hidden;
       ul {
         text-transform: uppercase;
         li {
@@ -88,7 +90,9 @@
               border: 1px solid $cod_gray;
               text-transform: none;
               border-radius: 0;
+              padding-left: 45px;
               a {
+                padding-left: 0;
                 &:before {
                   display: none;
                 }
@@ -101,8 +105,10 @@
                   background: $black_pearl;
                   border: none;
                   margin: 0;
+                  padding-left: 15px;
                   a {
                     padding: 10px 20px;
+                    padding-left: 0;
                   }
                 }
                 &:hover > a:after {border-left-color:#555;}

@@ -4,6 +4,7 @@
   background-position: center 100%;
   background-attachment: fixed;
   text-align: center;
+  padding-bottom: 0;
   .button-more {
     width: 190px;
   }
@@ -69,7 +70,7 @@
       font-size: 14px;
       position: relative;
       padding: 0;
-      margin-bottom: 8rem;
+      margin-bottom: 5rem;
       font-family: 'Roboto', sans-serif;
       img {
         display: inline;
@@ -80,7 +81,7 @@
         margin: 0 auto;
         line-height: 24px;
         &.author {
-          margin: 15px auto;
+          margin: 2rem auto 3rem;
           font-size: 20px;
           color: white;
           font-weight: 500;
@@ -98,6 +99,7 @@
         transition: 1s ease-in-out left;
       }
       @media (min-width: $screen-sm) {
+        margin-bottom: 8rem;
         p {
           width: 80%;
           margin: 0 auto;

@@ -7585,19 +7585,18 @@ body #header nav.navbar {
   border: none;
 }
 body #header nav.navbar .navbar-toggle {
-  border: 1px solid #20b7a3;
-  background: #161616;
+  background: #20b7a3;
+  border: none;
   transition: 1s;
 }
 body #header nav.navbar .navbar-toggle .icon-bar {
-  background: #20b7a3;
-}
-body #header nav.navbar .navbar-toggle:hover {
-  border: 1px solid #161616;
-  background: #20b7a3;
-}
-body #header nav.navbar .navbar-toggle:hover .icon-bar {
   background: #161616;
+}
+body #header nav.navbar .navbar-toggle.collapsed {
+  background: none;
+}
+body #header nav.navbar .navbar-toggle.collapsed .icon-bar {
+  background: #20b7a3;
 }
 body #header nav.navbar h1 {
   margin: 0;
@@ -7617,6 +7616,9 @@ body #header nav.navbar .navbar-brand img {
 body #header nav.navbar #navbar-collapse-1 {
   max-height: none;
   font-family: 'Open Sans', sans-serif;
+  max-height: 93vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 body #header nav.navbar #navbar-collapse-1 ul {
   text-transform: uppercase;
@@ -7664,6 +7666,10 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu {
   border: 1px solid #161616;
   text-transform: none;
   border-radius: 0;
+  padding-left: 45px;
+}
+body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu a {
+  padding-left: 0;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu a:before {
   display: none;
@@ -7677,9 +7683,11 @@ body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdo
   background: #010509;
   border: none;
   margin: 0;
+  padding-left: 15px;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu > .dropdown-menu a {
   padding: 10px 20px;
+  padding-left: 0;
 }
 body #header nav.navbar #navbar-collapse-1 ul li.dropdown .dropdown-menu .dropdown-submenu:hover > a:after {
   border-left-color: #555;
@@ -9621,6 +9629,9 @@ body section#latest_news {
   background: #060a0e;
   overflow: hidden;
 }
+body section#latest_news h2 {
+  margin-bottom: 4rem;
+}
 @media (min-width: 1200px) {
   body section#latest_news h2 {
     margin-bottom: 7rem;
@@ -9631,49 +9642,49 @@ body section#latest_news:before {
 }
 body section#latest_news #owl-latest-news {
   max-width: 1170px;
-  margin: 0 auto 6rem;
+  margin: 0 auto 2rem;
 }
-body section#latest_news #owl-latest-news .item {
+body section#latest_news #owl-latest-news .owl-item {
   padding: 0 15px;
   font-family: 'Roboto', sans-serif;
 }
-body section#latest_news #owl-latest-news .item .news-image {
+body section#latest_news #owl-latest-news .owl-item .news-image {
   margin-bottom: 20px;
   height: 140px;
   overflow: hidden;
 }
-body section#latest_news #owl-latest-news .item .news-image a {
+body section#latest_news #owl-latest-news .owl-item .news-image a {
   display: block;
   position: relative;
   top: -50%;
   transition: 1s;
 }
-body section#latest_news #owl-latest-news .item .news-image a:hover {
+body section#latest_news #owl-latest-news .owl-item .news-image a:hover {
   transform: scale(1.1);
 }
 @media (min-width: 611px) {
-  body section#latest_news #owl-latest-news .item .news-image {
+  body section#latest_news #owl-latest-news .owl-item .news-image {
     height: auto;
   }
-  body section#latest_news #owl-latest-news .item .news-image a {
+  body section#latest_news #owl-latest-news .owl-item .news-image a {
     position: static;
   }
 }
-body section#latest_news #owl-latest-news .item .news-title {
+body section#latest_news #owl-latest-news .owl-item .news-title {
   min-height: 70px;
   overflow: hidden;
   margin-top: 0;
   padding: 15px 0 0 0;
   line-height: 30px;
 }
-body section#latest_news #owl-latest-news .item .news-title a {
+body section#latest_news #owl-latest-news .owl-item .news-title a {
   color: white;
 }
-body section#latest_news #owl-latest-news .item .news-title a:hover {
+body section#latest_news #owl-latest-news .owl-item .news-title a:hover {
   color: #20b7a3;
   text-decoration: none;
 }
-body section#latest_news #owl-latest-news .item .date {
+body section#latest_news #owl-latest-news .owl-item .date {
   width: 65px;
   font-size: 36px;
   color: #20b7a3;
@@ -9683,7 +9694,7 @@ body section#latest_news #owl-latest-news .item .date {
   margin-bottom: 3rem;
   font-weight: 900;
 }
-body section#latest_news #owl-latest-news .item .date span {
+body section#latest_news #owl-latest-news .owl-item .date span {
   display: block;
   background: #20b7a3;
   color: black;
@@ -9692,15 +9703,15 @@ body section#latest_news #owl-latest-news .item .date span {
   padding: 5px 0;
   text-transform: uppercase;
 }
-body section#latest_news #owl-latest-news .item .description {
+body section#latest_news #owl-latest-news .owl-item .description {
   clear: both;
   line-height: 24px;
 }
 @media (min-width: 768px) {
-  body section#latest_news #owl-latest-news .item {
+  body section#latest_news #owl-latest-news .owl-item {
     padding-bottom: 8rem;
   }
-  body section#latest_news #owl-latest-news .item .item {
+  body section#latest_news #owl-latest-news .owl-item .item {
     margin: 10px;
   }
 }
@@ -9710,6 +9721,7 @@ body section#client_opinion {
   background-position: center 100%;
   background-attachment: fixed;
   text-align: center;
+  padding-bottom: 0;
 }
 body section#client_opinion .button-more {
   width: 190px;
@@ -9775,7 +9787,7 @@ body section#client_opinion #quote-carousel blockquote {
   font-size: 14px;
   position: relative;
   padding: 0;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   font-family: 'Roboto', sans-serif;
 }
 body section#client_opinion #quote-carousel blockquote img {
@@ -9788,7 +9800,7 @@ body section#client_opinion #quote-carousel blockquote p {
   line-height: 24px;
 }
 body section#client_opinion #quote-carousel blockquote p.author {
-  margin: 15px auto;
+  margin: 2rem auto 3rem;
   font-size: 20px;
   color: white;
   font-weight: 500;
@@ -9805,6 +9817,9 @@ body section#client_opinion #quote-carousel blockquote .item {
   transition: 1s ease-in-out left;
 }
 @media (min-width: 768px) {
+  body section#client_opinion #quote-carousel blockquote {
+    margin-bottom: 8rem;
+  }
   body section#client_opinion #quote-carousel blockquote p {
     width: 80%;
     margin: 0 auto;
@@ -11487,6 +11502,9 @@ body section#abovefooter h3 {
 body section#abovefooter .col-xs-12 {
   margin-bottom: 20px;
 }
+body section#abovefooter .col-xs-12:last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 1200px) {
   body section#abovefooter .col-xs-12 {
     margin-bottom: 0;
@@ -11572,8 +11590,8 @@ body section#abovefooter .newsletter form .input-group button {
 body section#abovefooter .twitter-tweet {
   font-family: 'Open Sans', sans-serif;
   border: none;
-  padding: 35px 0 0 100px;
-  margin-bottom: 3rem;
+  padding: 0 0 0 100px;
+  margin-bottom: 0;
   font-size: 12px;
   background: url('../img/tweeter-icon.png');
   background-repeat: no-repeat;
@@ -11588,6 +11606,12 @@ body section#abovefooter .twitter-tweet a {
 }
 body section#abovefooter .twitter-tweet a:hover {
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  body section#abovefooter .twitter-tweet {
+    padding: 35px 0 0 100px;
+    margin-bottom: 5rem;
+  }
 }
 body section#abovefooter .tags a {
   color: #20b7a3;
@@ -11612,9 +11636,13 @@ body section#abovefooter .social a {
 body section#abovefooter .social a:hover {
   color: #20b7a3;
 }
+body section#recent_post h2, body section#latest_news h2 {
+  margin-bottom: 4rem;
+  line-height: 2.4rem;
+}
 body section#recent_post hr, body section#latest_news hr {
   border-color: #3c4b4b;
-  margin: 0 2.5rem 2rem;
+  margin: 0 2.5rem 4rem;
 }
 @media (min-width: 768px) {
   body section#recent_post hr, body section#latest_news hr {
@@ -11636,7 +11664,7 @@ body section#recent_post .owl-controls .owl-prev, body section#recent_post .owl-
   position: absolute;
   padding: 0;
   margin: 0;
-  top: -40px;
+  top: -60px;
 }
 body section#recent_post .owl-controls .owl-prev:before, body section#recent_post .owl-controls .owl-next:before, body section#latest_news .owl-controls .owl-prev:before, body section#latest_news .owl-controls .owl-next:before {
   position: absolute;

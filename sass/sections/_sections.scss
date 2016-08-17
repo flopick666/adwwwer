@@ -37,9 +37,13 @@ section {
 
   &#recent_post,
   &#latest_news {
+    h2 {
+      margin-bottom: 4rem;
+      line-height: 2.4rem;
+    }
     hr {
       border-color: $cape_cod;
-      margin: 0 2.5rem 2rem;
+      margin: 0 2.5rem 4rem;
       @media (min-width: $screen-sm) {
         margin: 0 3.4rem 7rem;
       }
@@ -58,7 +62,7 @@ section {
         position: absolute;
         padding: 0;
         margin: 0;
-        top: -40px;
+        top: -60px;
         &:before {
           position: absolute;
           display: block;
