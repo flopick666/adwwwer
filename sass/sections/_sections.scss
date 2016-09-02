@@ -2,6 +2,10 @@ section {
   clear: both;
   padding-bottom: 5rem;
   position: relative;
+  .over {
+    position: relative;
+    overflow: hidden;
+  }
   &:before {
     display: block;
     content: " ";
@@ -44,7 +48,13 @@ section {
     hr {
       border-color: $cape_cod;
       margin: 0 2.5rem 4rem;
-      @media (min-width: $screen-sm) {
+    }
+    @media (min-width: $screen-sm) {
+      h2 {
+        line-height: 3rem;
+        margin-bottom: 8rem;
+      }
+      hr {
         margin: 0 3.4rem 7rem;
       }
     }

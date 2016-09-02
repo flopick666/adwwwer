@@ -7521,7 +7521,6 @@ body .button-more:hover, body a.button-more:hover {
   background-color: transparent;
   border-color: #178375;
   text-decoration: none;
-  box-shadow: inset 0 0 20px rgba(32, 183, 163, 0.5), 0 0 20px rgba(32, 183, 163, 0.2);
   outline-color: rgba(32, 183, 163, 0) !important;
   outline: 1px solid;
   outline-offset: 10px;
@@ -7585,15 +7584,12 @@ body #header nav.navbar {
   border: none;
 }
 body #header nav.navbar .navbar-toggle {
-  background: #20b7a3;
+  background: none;
   border: none;
   transition: 1s;
 }
 body #header nav.navbar .navbar-toggle .icon-bar {
-  background: #161616;
-}
-body #header nav.navbar .navbar-toggle.collapsed {
-  background: none;
+  background: #149d8b;
 }
 body #header nav.navbar .navbar-toggle.collapsed .icon-bar {
   background: #20b7a3;
@@ -7776,6 +7772,7 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a {
     font-size: 13px;
+    padding-left: 30px;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li.dropdown .dropdown-menu li a:hover {
     color: #20b7a3;
@@ -7856,6 +7853,10 @@ body section {
   padding-bottom: 5rem;
   position: relative;
 }
+body section .over {
+  position: relative;
+  overflow: hidden;
+}
 body section:before {
   display: block;
   content: " ";
@@ -7903,25 +7904,30 @@ body section#webgl_section .description {
 }
 body section#webgl_section .description .button-more {
   margin-bottom: 50px;
+  min-width: 150px;
 }
 body section#webgl_section h1 {
   color: #20b7a3;
   font-family: 'Roboto', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
+  line-height: normal;
+  margin-bottom: 3rem;
   text-transform: uppercase;
 }
 body section#webgl_section h1 span {
   color: white;
 }
 body section#webgl_section h1 span:first-child {
+  display: block;
   text-transform: none;
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
 }
 @media (min-width: 374px) {
   body section#webgl_section .description {
-    padding-top: 12rem;
+    padding-top: 20rem;
   }
   body section#webgl_section h1 {
     margin: 0 auto 6rem;
@@ -7938,6 +7944,9 @@ body section#webgl_section h1 span:first-child {
   body section#webgl_section .description {
     padding-top: 25%;
   }
+  body section#webgl_section .description .button-more {
+    min-width: 190px;
+  }
 }
 @media (min-width: 992px) {
   body section#webgl_section h1 {
@@ -7947,6 +7956,7 @@ body section#webgl_section h1 span:first-child {
   }
   body section#webgl_section h1 span:first-child {
     font-size: 5rem;
+    margin-bottom: 0;
   }
   body section#webgl_section .description {
     padding-top: 20%;
@@ -8092,6 +8102,7 @@ body section#introduce #services #secondary-services {
 body section#introduce #services #secondary-services .col-xs-12 {
   overflow: hidden;
   margin-bottom: 3rem;
+  height: 120px;
 }
 body section#introduce #services #secondary-services .col-xs-12 h3 {
   margin-top: 0;
@@ -8125,7 +8136,6 @@ body section#introduce .button-more {
 }
 body section#recent_works {
   background: #060a0e;
-  overflow: hidden;
   padding-bottom: 0;
 }
 body section#recent_works:before {
@@ -8257,7 +8267,7 @@ body section#recent_works .item a:hover .recent_hover .content .fa {
     margin-right: -8px;
   }
 }
-body section#best_sellers {
+body section#best_sellers .container {
   overflow: hidden;
 }
 body section#best_sellers .product-item {
@@ -8545,7 +8555,7 @@ body section#platform #doing-carousel {
 }
 body section#platform #doing-carousel #doing-carousel_list {
   position: relative;
-  margin: 0;
+  margin: 0 0 0 15px;
   padding: 0;
   width: 485px;
   min-height: 450px;
@@ -8987,7 +8997,6 @@ body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons
   border: 1px solid #149d8b;
   text-align: center;
   margin-left: 1rem;
-  width: 4rem;
   padding: 1rem;
   line-height: 1.6rem;
 }
@@ -9148,12 +9157,12 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
     border-style: solid;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p span:after {
-    top: 9px;
+    top: 7px;
     border-color: transparent transparent transparent #060a0e;
     border-width: 10px;
   }
   body section#recent_post #owl-recent-post .author .post_author_statistic p span:before {
-    top: 8px;
+    top: 6px;
     border-color: transparent transparent transparent #161616;
     border-width: 11px;
   }
@@ -9186,9 +9195,6 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
   body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons {
     padding-top: 10px;
     font-size: 2rem;
-  }
-  body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons a {
-    width: 4.5rem;
   }
   body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 h3 {
     clear: none;
@@ -9240,7 +9246,7 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
     margin-right: 20px;
   }
 }
-body section#project_info {
+body section#project_info .container {
   overflow: hidden;
 }
 body section#project_info .pills .tab-content {
@@ -9493,14 +9499,91 @@ body section#project_info #responsive a.button-more {
   display: block;
   margin: 0 auto;
 }
+body section#project_info #responsive #responsive-theme {
+  position: relative;
+  min-height: 330px;
+}
+body section#project_info #responsive #responsive-theme .percent {
+  font-size: 4rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+body section#project_info #responsive #responsive-theme img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+body section#project_info #responsive #responsive-theme img.imac {
+  z-index: 1;
+  left: 0;
+}
+body section#project_info #responsive #responsive-theme img.ipad {
+  z-index: 2;
+  width: 50%;
+}
+body section#project_info #responsive #responsive-theme img.iphone {
+  z-index: 3;
+  right: 13%;
+  left: auto;
+  height: 30%;
+}
+@media (min-width: 460px) {
+  body section#project_info #responsive #responsive-theme img.imac {
+    left: 10%;
+  }
+  body section#project_info #responsive #responsive-theme img.ipad {
+    width: auto;
+  }
+  body section#project_info #responsive #responsive-theme img.iphone {
+    height: auto;
+  }
+}
+@media (min-width: 640px) {
+  body section#project_info #responsive #responsive-theme img.imac {
+    left: 20%;
+  }
+  body section#project_info #responsive #responsive-theme img.ipad {
+    width: auto;
+    left: 5%;
+  }
+  body section#project_info #responsive #responsive-theme img.iphone {
+    height: auto;
+  }
+}
 @media (min-width: 768px) {
   body section#project_info #responsive a.button-more {
     display: inline-block;
+  }
+  body section#project_info #responsive #responsive-theme img.imac {
+    left: 0;
+  }
+  body section#project_info #responsive #responsive-theme img.ipad {
+    width: auto;
+    left: -10px;
+  }
+  body section#project_info #responsive #responsive-theme img.iphone {
+    right: -10px;
+  }
+}
+@media (min-width: 992px) {
+  body section#project_info #responsive #responsive-theme img.imac {
+    left: 5rem;
+  }
+  body section#project_info #responsive #responsive-theme img.ipad {
+    width: auto;
+    left: 0;
+  }
+  body section#project_info #responsive #responsive-theme img.iphone {
+    right: 0;
   }
 }
 @media (min-width: 1200px) {
   body section#project_info #responsive h2 {
     margin-top: 6rem;
+  }
+  body section#project_info #responsive #responsive-theme img.iphone {
+    right: 15%;
   }
 }
 body section#project_info #application .application-section {
@@ -9627,7 +9710,6 @@ body section#project_info #application .application-section div.laptop .screen a
 }
 body section#latest_news {
   background: #060a0e;
-  overflow: hidden;
 }
 body section#latest_news h2 {
   margin-bottom: 4rem;
@@ -9642,7 +9724,7 @@ body section#latest_news:before {
 }
 body section#latest_news #owl-latest-news {
   max-width: 1170px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
 }
 body section#latest_news #owl-latest-news .owl-item {
   padding: 0 15px;
@@ -9708,11 +9790,13 @@ body section#latest_news #owl-latest-news .owl-item .description {
   line-height: 24px;
 }
 @media (min-width: 768px) {
-  body section#latest_news #owl-latest-news .owl-item {
-    padding-bottom: 8rem;
-  }
   body section#latest_news #owl-latest-news .owl-item .item {
-    margin: 10px;
+    margin: 0 10px;
+  }
+}
+@media (min-width: 992px) {
+  body section#latest_news #owl-latest-news {
+    margin-bottom: 7rem;
   }
 }
 body section#client_opinion {
@@ -9821,27 +9905,27 @@ body section#client_opinion #quote-carousel blockquote .item {
     margin-bottom: 8rem;
   }
   body section#client_opinion #quote-carousel blockquote p {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
   }
   body section#client_opinion #quote-carousel blockquote p.author {
     margin: 30px auto;
   }
   body section#client_opinion #quote-carousel blockquote:before, body section#client_opinion #quote-carousel blockquote:after {
-    font-family: FontAwesome;
+    font-family: Arial, sans-serif;
     color: #20b7a3;
-    font-size: 50px;
+    font-size: 20rem;
     font-weight: normal;
     vertical-align: super;
     position: absolute;
-    top: 220px;
+    top: 170px;
   }
   body section#client_opinion #quote-carousel blockquote:before {
-    content: '\f10d';
+    content: '\201C';
     left: 20px;
   }
   body section#client_opinion #quote-carousel blockquote:after {
-    content: '\f10e';
+    content: '\201D';
     right: 20px;
   }
 }
@@ -9871,14 +9955,17 @@ body section#animated_sales h2 {
   }
 }
 body section#animated_sales h4 {
-  line-height: 30px;
+  line-height: 24px;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
 }
 body section#animated_sales p {
   margin-bottom: 2rem;
   line-height: 24px;
+}
+body section#animated_sales .col-md-push-6 {
+  text-align: center;
 }
 body section#animated_sales .content {
   height: 300px;
@@ -10034,9 +10121,7 @@ body section#animated_sales .running .ball5,
 body section#animated_sales .running .ball6,
 body section#animated_sales .running .ball7,
 body section#animated_sales .running .ball8 {
-  background-color: #1a8e80;
-  background-image: -moz-linear-gradient(90deg, #1a8e80 25%, #a0eaff);
-  background-image: -webkit-linear-gradient(90deg, #1a8e80 25%, #a0eaff);
+  background-color: #20b7a3;
   width: 10px;
   height: 10px;
   border-radius: 50px;
@@ -10060,8 +10145,6 @@ body section#animated_sales .running .pulse8 {
   width: 12px;
   height: 12px;
   border-radius: 30px;
-  border: 1px solid #00c6ff;
-  box-shadow: 0 0 5px #00c6ff;
   position: absolute;
   transform: scale(0);
   animation: pulse 0.1s ease-out;
@@ -10575,6 +10658,13 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   body section#animated_sales h2 {
     text-align: left;
   }
+  body section#animated_sales h4 {
+    line-height: 30px;
+    font-size: 2rem;
+  }
+  body section#animated_sales .col-md-push-6 {
+    text-align: left;
+  }
   body section#animated_sales .content {
     max-width: none;
     margin: 0 30px;
@@ -10910,7 +11000,7 @@ body section#diagrams {
   /* full circle 25 empty 534 */
 }
 body section#diagrams h3 {
-  margin-top: 4rem;
+  margin: 4rem 0;
 }
 body section#diagrams .outer {
   fill: transparent;
@@ -10948,15 +11038,26 @@ body section#diagrams .timer {
   font-family: 'Roboto', sans-serif;
 }
 @media (min-width: 992px) {
+  body section#diagrams h3 {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
   body section#diagrams {
     padding-top: 8rem;
   }
-  body section#diagrams .col-xs-6 {
+  body section#diagrams .col-xs-12 {
     border-left: 1px solid #3c4b4b;
   }
-  body section#diagrams .col-xs-6:last-child {
+  body section#diagrams .col-xs-12:last-child {
     border-right: 1px solid #3c4b4b;
   }
+}
+body section#video {
+  background: #060a0e;
+}
+body section#video:before {
+  background: #010509;
 }
 body section#video .video-steps .video-step {
   width: 100%;
@@ -11072,12 +11173,22 @@ body section#video .video-laptop #youtube_canvas iframe {
 body section#sign_up {
   text-align: center;
   z-index: 999;
+  padding-top: 5rem;
 }
 body section#sign_up h3 {
   margin-top: 0;
   margin-bottom: 35px;
   text-align: center;
   font-size: 2.4rem;
+  line-height: normal;
+}
+body section#sign_up h3 span {
+  display: block;
+}
+@media (min-width: 768px) {
+  body section#sign_up h3 span {
+    display: inline-block;
+  }
 }
 body section#sign_up.green {
   background: #149d8b;
@@ -11162,9 +11273,6 @@ body section#sign_up .col-lg-8 button .button-more:hover {
   body section#sign_up .col-lg-8 .input-group {
     width: 315px;
   }
-}
-body section#choose_your_plan {
-  padding-bottom: 0;
 }
 body section#choose_your_plan .plan {
   background: #060a0e;
@@ -11251,7 +11359,6 @@ body section#contact_us {
   min-height: 610px;
 }
 body section#contact_us:before {
-  background: #010509;
   position: relative;
   z-index: 10;
 }
@@ -11269,6 +11376,11 @@ body section#contact_us:after {
 body section#contact_us.clearmap:after {
   display: none;
 }
+@media (min-width: 768px) {
+  body section#contact_us:before {
+    background: #010509;
+  }
+}
 body section#contact_us #googlemaps {
   height: 100%;
   width: 100%;
@@ -11282,7 +11394,7 @@ body section#contact_us #contactform {
   position: relative;
   z-index: 10;
   /* The z-index should be higher than Google Maps */
-  margin: 60px auto 0;
+  margin: 5rem auto 0;
   height: auto;
   background: #20b7a3;
   font-family: 'Roboto', sans-serif;
@@ -11645,6 +11757,10 @@ body section#recent_post hr, body section#latest_news hr {
   margin: 0 2.5rem 4rem;
 }
 @media (min-width: 768px) {
+  body section#recent_post h2, body section#latest_news h2 {
+    line-height: 3rem;
+    margin-bottom: 8rem;
+  }
   body section#recent_post hr, body section#latest_news hr {
     margin: 0 3.4rem 7rem;
   }
@@ -11808,7 +11924,7 @@ body .tabbable.responsive .tab-content {
     border-bottom: 1px solid #060a0e;
   }
   body .tabbable.responsive .tab-content {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
   }
 }
 @media (min-width: 992px) {

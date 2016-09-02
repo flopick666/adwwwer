@@ -1,6 +1,5 @@
 &#latest_news {
   background: $ebony;
-  overflow: hidden;
   h2 {
     margin-bottom: 4rem;
   }
@@ -12,10 +11,9 @@
   &:before {
     background: $black_pearl;
   }
-  
   #owl-latest-news {
     max-width: 1170px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 4rem;
     .owl-item {
       padding: 0 15px;
       font-family: 'Roboto', sans-serif;
@@ -79,11 +77,13 @@
         line-height: 24px;
       }
       @media (min-width: $screen-sm){
-        padding-bottom: 8rem;
         .item {
-          margin: 10px;
+          margin: 0 10px;
         }
       }
+    }
+    @media (min-width: $screen-md){
+      margin-bottom: 7rem;
     }
   }
 }

@@ -1,5 +1,7 @@
 &#project_info {
-  overflow: hidden;
+  .container{
+    overflow: hidden;
+  }
   .pills .tab-content {
     margin-bottom: 0;
   }
@@ -213,14 +215,107 @@
       display: block;
       margin: 0 auto;
     }
+    #responsive-theme {
+      position: relative;
+      min-height: 330px;
+      .percent {
+        font-size: 4rem;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+      }
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        &.imac {
+          z-index: 1;
+          left: 0;
+        }
+        &.ipad {
+          z-index: 2;
+          width: 50%;
+        }
+        &.iphone {
+          z-index: 3;
+          right: 13%;
+          left: auto;
+          height: 30%;
+        }
+      }
+      @media (min-width: 460px) {
+        img {
+          &.imac {
+            left: 10%;
+          }
+          &.ipad {
+            width: auto;
+          }
+          &.iphone {
+            height: auto;
+          }
+        }
+      }
+      @media (min-width: 640px) {
+        img {
+          &.imac {
+            left: 20%;
+          }
+          &.ipad {
+            width: auto;
+            left: 5%;
+          }
+          &.iphone {
+            height: auto;
+          }
+        }
+      }
+    }
     @media (min-width: $screen-sm) {
       a.button-more {
         display: inline-block;
+      }
+      #responsive-theme {
+        img {
+          &.imac {
+            left: 0;
+          }
+          &.ipad {
+            width: auto;
+            left: -10px;
+          }
+          &.iphone {
+            right: -10px;
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-md) {
+      #responsive-theme {
+        img {
+          &.imac {
+            left: 5rem;
+          }
+          &.ipad {
+            width: auto;
+            left: 0;
+          }
+          &.iphone {
+            right: 0;
+          }
+        }
       }
     }
     @media (min-width: $screen-lg) {
       h2 {
         margin-top: 6rem;
+      }
+      #responsive-theme {
+        img {
+          &.iphone {
+            right: 15%;            
+          }
+        }
       }
     }
   }

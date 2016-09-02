@@ -60,7 +60,7 @@
               border: 1px solid $mountain_meadow;
               text-align: center;
               margin-left: 1rem;
-              width: 4rem;
+              // width: 4rem;
               padding: 1rem;
               line-height: 1.6rem;
               &:hover {
@@ -228,12 +228,12 @@
                 border-style: solid;
               }
               &:after {
-                top: 9px;
+                top: 7px;
                 border-color: transparent transparent transparent $ebony;
                 border-width: 10px;
               }
               &:before {
-                top: 8px;
+                top: 6px;
                 border-color: transparent transparent transparent $cod_gray;
                 border-width: 11px;
               }
@@ -267,7 +267,7 @@
             .icons {
               padding-top: 10px;
               font-size: 2rem;
-              a { width: 4.5rem;}
+              // a { width: 4.5rem;}
             }
             h3 {
              clear: none;

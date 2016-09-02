@@ -38,6 +38,7 @@
       left: 15px;
       &:before {
         content: '\f104';
+        // content: '\f104';
         left: 0;
       }
     }
@@ -45,6 +46,7 @@
       right: 15px;
       &:before {
         content: '\f105';
+        // content: '\f105';
         right: 0;
       }
     }
@@ -101,27 +103,27 @@
       @media (min-width: $screen-sm) {
         margin-bottom: 8rem;
         p {
-          width: 80%;
+          width: 75%;
           margin: 0 auto;
           &.author {
             margin: 30px auto;
           }
         }
         &:before, &:after {
-          font-family: FontAwesome;
+          font-family: Arial, sans-serif;
           color: $java;
-          font-size: 50px;
+          font-size: 20rem;
           font-weight: normal;
           vertical-align: super;
           position: absolute;
-          top: 220px;
+          top: 170px;
         }
         &:before {
-          content: '\f10d';
+          content: '\201C';
           left: 20px;
         }
         &:after {
-          content: '\f10e';
+          content: '\201D';
           right: 20px;
         }
       }

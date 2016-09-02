@@ -17,14 +17,17 @@
     }
   }
   h4 {
-    line-height: 30px;
+    line-height: 24px;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
   p {
     margin-bottom: 2rem;
     line-height: 24px;
+  }
+  .col-md-push-6 {
+    text-align: center;
   }
   .content {
     height:300px;
@@ -164,9 +167,7 @@
   .running  .ball6,
   .running  .ball7,
   .running  .ball8 {
-    background-color: $elm;
-    background-image: -moz-linear-gradient(90deg, $elm 25%, #a0eaff);
-    background-image: -webkit-linear-gradient(90deg, $elm 25%, #a0eaff);
+    background-color: $java;
     width:10px;
     height:10px;
     border-radius:50px;
@@ -190,8 +191,8 @@
     width:12px;
     height:12px;
     border-radius:30px;
-    border: 1px solid #00c6ff;
-    box-shadow: 0 0 5px #00c6ff;
+    // border: 1px solid #00c6ff;
+    // box-shadow: 0 0 5px #00c6ff;
     position:absolute;
     transform:scale(0);
     animation:pulse 0.1s ease-out;
@@ -434,6 +435,13 @@
   //Start tablet here
   @media (min-width: $screen-sm) {
     h2 { text-align: left;}
+    h4 {
+      line-height: 30px;
+      font-size: 2rem;
+    }
+    .col-md-push-6 {
+      text-align: left;
+    }
     .content {
       max-width: none;
       margin:0 30px;

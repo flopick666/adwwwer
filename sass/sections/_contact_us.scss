@@ -1,7 +1,7 @@
 &#contact_us {
   min-height: 610px;
   &:before {
-    background: $black_pearl;
+    // background: $black_pearl;
     position: relative;
     z-index: 10;
   }
@@ -21,6 +21,11 @@
       display: none;
     }
   }
+  @media (min-width: $screen-sm){
+    &:before {
+      background: $black_pearl;
+    }
+  }
   #googlemaps {
     height: 100%;
     width: 100%;
@@ -32,7 +37,7 @@
   #contactform {
     position: relative;
     z-index: 10; /* The z-index should be higher than Google Maps */
-    margin: 60px auto 0;
+    margin: 5rem auto 0;
     height: auto;
     // opacity: .45; /* Set the opacity for a slightly transparent Google Form */
     background: $java;

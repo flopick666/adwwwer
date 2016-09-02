@@ -1,4 +1,8 @@
 &#video {
+  background: $ebony;
+  &:before {
+    background: $black_pearl;
+  }
   .video-steps {
     .video-step {
       width: 100%;

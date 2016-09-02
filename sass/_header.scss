@@ -8,14 +8,13 @@
     padding: 0;
     border: none;
     .navbar-toggle {
-      background: $java;
+      background: none;
       border: none;
       transition: 1s;
       .icon-bar {
-        background: $cod_gray;
+        background: $mountain_meadow;
       }
       &.collapsed {
-        background: none;
         .icon-bar {
           background: $java;
         }
@@ -205,8 +204,8 @@
                 width: 200px;
                 li a {
                   font-size: 13px;
+                  padding-left: 30px;
                   &:hover {
-                    // background: $java;
                     color: $java;
                     &:after {
                       color: $java;
