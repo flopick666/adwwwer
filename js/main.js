@@ -209,8 +209,13 @@ $(document).ready(function () {
   });
   // popup for recent post
   $('.test-popup-link').magnificPopup({
-    type: 'image'
+    type: 'image',
     // other options
+    removalDelay: 300,
+
+  // Class that is added to popup wrapper and background
+  // make it unique to apply your CSS animations just to this exact popup
+  mainClass: 'mfp-fade'
   });
 
   // Custom Navigation Events
