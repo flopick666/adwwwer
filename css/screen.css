@@ -7604,7 +7604,7 @@ body #header {
   font-size: 12px;
 }
 body #header nav.navbar {
-  background: #060a0e;
+  background: #010509;
   margin: 0;
   padding: 0;
   border: none;
@@ -7624,16 +7624,20 @@ body #header nav.navbar h1 {
   margin: 0;
 }
 body #header nav.navbar .navbar-brand {
+  background: #060a0e;
   text-transform: uppercase;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  line-height: 20px;
+  line-height: 5rem;
+  padding: 0 1.5rem;
+  height: 5rem;
 }
 body #header nav.navbar .navbar-brand:hover {
   color: #20b7a3;
 }
 body #header nav.navbar .navbar-brand img {
   display: inline-block;
+  vertical-align: middle;
 }
 body #header nav.navbar #navbar-collapse-1 {
   max-height: none;
@@ -7870,8 +7874,10 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     height: 80px;
     line-height: 80px;
   }
-  body #header nav.navbar .navbar-header {
-    padding-top: 10px;
+  body #header nav.navbar .navbar-brand {
+    line-height: 8rem;
+    padding: 0 2.5rem;
+    height: 8rem;
   }
 }
 body section {
@@ -8407,6 +8413,7 @@ body section#best_sellers .product-item a.buy:hover {
 }
 body section#best_sellers .product-item a.buy:hover .fa:before {
   content: "\f067";
+  box-shadow: 10px, 10px, #ff0000;
 }
 body section#become_member {
   padding: 35px 0;

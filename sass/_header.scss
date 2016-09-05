@@ -3,7 +3,7 @@
   padding: 0;
   font-size: 12px;
   nav.navbar {
-    background: $ebony;
+    background: $black_pearl;
     margin: 0;
     padding: 0;
     border: none;
@@ -24,15 +24,19 @@
       margin: 0;
     }
     .navbar-brand {
+      background: $ebony;
       text-transform: uppercase;
       color: white;
       font-family: 'Montserrat', sans-serif;
-      line-height: 20px;
+      line-height: 5rem;
+      padding: 0 1.5rem;
+      height: 5rem;
       &:hover {
         color: $java;
       }
       img {
         display: inline-block;
+        vertical-align: middle;
       }
     }
     #navbar-collapse-1 {
@@ -290,11 +294,14 @@
         }
       }
     }
+
     @media (min-width: $screen-md) {
       height: 80px;
       line-height: 80px;
-      .navbar-header {
-        padding-top: 10px;
+      .navbar-brand {
+        line-height: 8rem;
+        padding: 0 2.5rem;
+        height: 8rem;
       }
     }
   }
