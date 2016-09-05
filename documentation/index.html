@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
 <!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
 <!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
@@ -6,30 +6,30 @@
 <html lang="en-us"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	
-	<title>Voyager - HTML Template</title>
-	
+
+	<title>Adwwwer - HTML Template</title>
+
 	<meta name="description" content="">
 	<meta name="author" content="1pls1.com">
 	<meta name="copyright" content="1pls1.com">
 	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
 	<meta name="date" content="2016-08-09T16:31:17+02:00">
-	
+
 	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
 	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
 	<script src="assets/js/google-code-prettify/prettify.js"></script>
 
-	
+
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
 	<script src="assets/js/jquery.js"></script>
-	
+
 	<script src="assets/js/jquery.scrollTo.js"></script>
 	<script src="assets/js/jquery.easing.js"></script>
-	
+
 	<script>document.createElement('section');var duration='500',easing='swing';</script>
 	<script src="assets/js/script.js"></script>
-	
+
 	<style>
 		html{background-color:#060A0E;color:#9B9B9B;}
 		::-moz-selection{background:#149D8B;color:#010509;}
@@ -67,14 +67,14 @@
 		#documenter_sidebar ul a.current{background:#149D8B;color:#010509;border-top:1px solid #149D8B;}
 		#documenter_copyright{display:block !important;visibility:visible !important;}
 	</style>
-	
+
 </head>
-<body class="documenter-project-voyager">
+<body class="documenter-project-adwwwer">
 	<div id="documenter_sidebar">
 		<a href="#documenter_cover" id="documenter_logo"></a>
 		<ul id="documenter_nav">
 			<li><a class="current" href="#documenter_cover">Start</a></li>
-				
+
 			<li><a href="#files_structure" title="Files Structure">Files Structure</a></li>
 			<li><a href="#webgl_section" title="WebGL Section">WebGL Section</a></li>
 			<li><a href="#introduce_section" title="Introduce Section">Introduce Section</a></li>
@@ -95,27 +95,27 @@
 
 		</ul>
 		<div id="documenter_copyright">Copyright 1pls1.com 2016<br>
-		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a>
 		</div>
 	</div>
 	<div id="documenter_content">
 	<section id="documenter_cover">
-	<h1>Voyager</h1>
+	<h1>Adwwwer</h1>
 	<h2>HTML Template</h2>
 	<div id="documenter_buttons">
-		
+
 	</div>
 	<hr>
 	<ul>
-	
-	
+
+
 	<li>by: 1pls1.com</li>
-	<li><a href="http://voyager111.esy.es/">voyager111.esy.es/</a></li>
+	<li><a href="http://adwwwer.1pls1.com">adwwwer.1pls1.com</a></li>
 	<li>email: <a href="mailto:&#111;&#110;&#101;&#112;&#108;&#115;&#111;&#110;&#101;&#115;&#111;&#108;&#117;&#116;&#105;&#111;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#111;&#110;&#101;&#112;&#108;&#115;&#111;&#110;&#101;&#115;&#111;&#108;&#117;&#116;&#105;&#111;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
 	</ul>
-	<p>Thanks for having purchased Voyager - HTML Template. If you have any questions that are beyond the scope of this help file, please feel free via http://1pls1.com/ or email us &#111;&#110;&#101;&#112;&#108;&#115;&#111;&#110;&#101;&#115;&#111;&#108;&#117;&#116;&#105;&#111;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109; Thanks so much!</p>
+	<p>Thanks for having purchased Adwwwer - HTML Template. If you have any questions that are beyond the scope of this help file, please feel free via http://1pls1.com/ or email us &#111;&#110;&#101;&#112;&#108;&#115;&#111;&#110;&#101;&#115;&#111;&#108;&#117;&#116;&#105;&#111;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109; Thanks so much!</p>
 	</section>
-	
+
 	<section id="files_structure">
 	<div class="page-header"><h3>Files Structure</h3><hr class="notop"></div>
 <p>
@@ -123,18 +123,13 @@
 <p>
 	Root files:</p>
 <ul>
-	<li>
-		index.html</li>
-	<li>
-		favicon.ico</li>
-	<li>
-		config.rb</li>
+	<li>index.html</li>
+	<li>files favicon.ico for different devices</li>
+	<li>config.rb</li>
 </ul>
 <p>
 	Folders:&nbsp;</p>
 <ul>
-	<li>
-		vendor (webgl scripts)</li>
 	<li>
 		sass (sass files according to each sections)</li>
 	<li>
@@ -190,29 +185,45 @@
 	To init slider in Recent Work section you coud find in main.js:</div>
 <div>
 	<pre class="prettyprint lang-js linenums">
-  //Recent Work section Carousel
-  $(&quot;#owl-recent-work&quot;).owlCarousel({
-    autoPlay: 3000, //Set AutoPlay to 3 seconds
-    items : 5, //5 items above 1200px browser width
-    itemsDesktop : [1200,4], //4 items between 1200px and 960px
-    itemsDesktopSmall : [960,3], // 3 items betweem 960px and 768px
-    itemsTablet: [768,2], //2 items between 768 and 640px
-    itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    navigationText : [&quot;prev&quot;,&quot;next&quot;],
-    rewindNav : true,
-    scrollPerPage : false,
-    pagination : false
-  });</pre>
+//Recent Work section Carousel
+$("#owl-recent-work").owlCarousel({
+  autoPlay: 3000, //Set AutoPlay to 3 seconds
+  nav : true,
+  navText : ["prev","next"],
+  rewindNav : true,
+  scrollPerPage : false,
+  pagination : false,
+  loop: true,
+  responsiveClass: true,
+  responsive:{
+    0:{
+      items:1
+    },
+    640:{
+      items:2
+    },
+    768:{
+      items:3
+    },
+    960:{
+      items:4
+    },
+    1200:{
+      items: 5
+    }
+  }
+});</pre>
 	<div>
 		&nbsp;</div>
 	<div>
 		Also, when you click on images on this carousel you could see popup. Here is a code to init this:</div>
 	<pre class="prettyprint lang-js linenums">
-  // popup for recent post
-  $(&#39;.test-popup-link&#39;).magnificPopup({
-    type: &#39;image&#39;
-  });</pre>
+// popup for recent post
+$('.test-popup-link').magnificPopup({
+  type: 'image',
+  removalDelay: 300,
+  mainClass: 'mfp-fade'
+});</pre>
 </div>
 <p>
 	&nbsp;</p>
@@ -249,19 +260,21 @@
 	To init slider in Recent Post section you coud find in main.js:</div>
 <pre class="prettyprint lang-js linenums">
 //Recent Post section Carousel
-  $(&quot;#owl-recent-post&quot;).owlCarousel({
-    autoPlay: 5000, //Set AutoPlay to 5 seconds
-    items : 1, //5 items above 1000px browser width
-    itemsDesktop : [1200,1], //1 items between 1200px and 960px
-    itemsDesktopSmall : [960,1], // betweem 960px and 768px
-    itemsTablet: [768,1], //1 items between 768 and 640px
-    itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    navigationText : [&quot;prev&quot;,&quot;next&quot;],
-    rewindNav : true,
-    scrollPerPage : false,
-    pagination : false
-  });</pre>
+$("#owl-recent-post").owlCarousel({
+	autoPlay: 5000, //Set AutoPlay to 5 seconds
+	nav : true,
+	navText : ["prev","next"],
+	rewindNav : true,
+	scrollPerPage : false,
+	pagination : false,
+	loop: true,
+	responsiveClass: true,
+	responsive:{
+		0:{
+			items:1
+		}
+	}
+});</pre>
 </section>
 <section id="project_info_section">
 	<div class="page-header"><h3>Project Info section</h3><hr class="notop"></div>
@@ -286,19 +299,36 @@
 <div>
 	<pre class="prettyprint lang-js linenums">
 //Latest News section Carousel
-  $(&quot;#owl-latest-news&quot;).owlCarousel({
-    autoPlay: 100000, //Set AutoPlay to 10 seconds
-    items : 3,
-    itemsDesktop : [1200,3], //3 items between 1200px and 960px
-    itemsDesktopSmall : [960,2], // 2 items betweem 960px and 768px
-    itemsTablet: [768,2], //2 items between 768 and 640px
-    itemsMobile : [640,1], // 1 items Mobile
-    navigation : true,
-    navigationText : [&quot;prev&quot;,&quot;next&quot;],
-    rewindNav : true,
-    scrollPerPage : false,
-    pagination : false
-  });</pre>
+$("#owl-latest-news").owlCarousel({
+  autoPlay: 100000, //Set AutoPlay to 3 seconds
+  items : 3,
+  itemsDesktop : [1200,3], //4 items between 1200px and 960px
+  itemsDesktopSmall : [960,2], // betweem 960px and 768px
+  itemsTablet: [768,2], //2 items between 768 and 640px
+  itemsMobile : [640,1], // itemsMobile
+
+  nav : true,
+  navText : ["prev","next"],
+  rewindNav : true,
+  scrollPerPage : false,
+  pagination : false,
+  loop: true,
+  responsiveClass: true,
+  responsive:{
+    0:{
+      items:1
+    },
+    640:{
+      items:2
+    },
+    768:{
+      items:2
+    },
+    960:{
+      items:3
+    }
+  }
+});</pre>
 </div>
 <p>
 	&nbsp;</p>
@@ -313,18 +343,19 @@
 </div>
 <pre class="prettyprint lang-js linenums">
 //Testimonials section Carousel
-  $(&quot;#owl-clients&quot;).owlCarousel({
-    autoPlay: false, //Set AutoPlay to 3 seconds
-    items : 1, //5 items above 1000px browser width
-    itemsDesktop : [1200,1], //4 items between 1200px and 960px
-    itemsDesktopSmall : [960,1], // betweem 960px and 768px
-    itemsTablet: [768,1], //2 items between 768 and 640px
-    itemsMobile : [640,1], // itemsMobile
-    navigation : true,
-    rewindNav : true,
-    scrollPerPage : false,
-    pagination : false
-  });</pre>
+$("#owl-clients").owlCarousel({
+	autoPlay: false, //Set AutoPlay to 3 seconds
+	items : 1, //5 items above 1000px browser width
+	itemsDesktop : [1200,1], //4 items between 1200px and 960px
+	itemsDesktopSmall : [960,1], // betweem 960px and 768px
+	itemsTablet: [768,1], //2 items between 768 and 640px
+	itemsMobile : [640,1], // itemsMobile
+	nav : true,
+	rewindNav : true,
+	scrollPerPage : false,
+	pagination : false,
+	loop: true
+});</pre>
 </section>
 <section id="animated_sales_diagramm_section">
 	<div class="page-header"><h3>Animated Sales Diagramm section</h3><hr class="notop"></div>
@@ -343,7 +374,7 @@ $window.on(&#39;scroll resize&#39;, function() {
        var el_top_position = $el.offset().top;
        var el_bottom_position = (el_top_position + el_height);
        if ( 0 == $el.data(&#39;run&#39;) ) {
-         if ( (el_bottom_position &gt;= window_top_position) 
+         if ( (el_bottom_position &gt;= window_top_position)
                &amp;&amp; (el_top_position &lt;= window_bottom_position) ) {
            $el.circliful({
                percent: $el.data(&#39;percent&#39;)
@@ -453,6 +484,8 @@ google.maps.event.addDomListener(window, &#39;load&#39;, showGoogleMaps);
 		<a href="http://www.bkosborne.com/jquery-feature-carousel" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; text-decoration: none; cursor: pointer;">jquery.featureCarousel.js</a>&nbsp;-&nbsp;jQuery Feature Carousel slider</li>
 	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
 		<a href="https://github.com/OwlFonk/OwlCarousel" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; text-decoration: none; cursor: pointer;">owl.carousel.min.js</a><span style="font-family: inherit; font-style: inherit; font-weight: inherit; line-height: 1.5em;">&nbsp;- Touch enabled jQuery plugin that lets you create beautiful responsive carousel slider</span></li>
+	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
+			<a href="http://dimsemenov.com/plugins/magnific-popup/" style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; text-decoration: none; cursor: pointer;">magnific-popup.js</a><span style="font-family: inherit; font-style: inherit; font-weight: inherit; line-height: 1.5em;">&nbsp;- Responsive lightbox &amp; dialog script with focus on performance and providing best experience for user with any device</span></li>
 	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
 		<a href="https://github.com/pguso/jquery-plugin-circliful">jquery.circliful.js</a>&nbsp;- js plugin to create animated circle</li>
 	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: square;">
