@@ -96,6 +96,9 @@
       padding: 20px;
       width: 80px;
       text-align: center;
+      .fa:before {
+        transition: 1s;
+      }
       &:hover {
         background: black;
         border: 1px solid $cod_gray;

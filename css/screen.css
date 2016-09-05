@@ -8397,6 +8397,9 @@ body section#best_sellers .product-item a.buy {
   width: 80px;
   text-align: center;
 }
+body section#best_sellers .product-item a.buy .fa:before {
+  transition: 1s;
+}
 body section#best_sellers .product-item a.buy:hover {
   background: black;
   border: 1px solid #161616;
