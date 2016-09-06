@@ -83,6 +83,9 @@
       &:nth-child(2) {
         font-weight: 300;
       }
+      a {
+        color: white;
+      }
     }
     .close_popup {
       border-radius: 50px;
@@ -108,16 +111,17 @@
   }
   #contact-form {
     background: $mountain_meadow;
-    height: 530px;
+    height: 610px;
     position: absolute;
     overflow: auto;
     left: 0;
-    top: 8rem;
+    top: 0;
+    //
     z-index: 999;
     width: 100%;
     display: none;
     .top {
-      margin: 8.5rem 0 4rem 0;
+      margin: 2rem 0 2rem 0;
       overflow: hidden;
       h2 {
         font-size: 22px;
@@ -219,6 +223,7 @@
             border: none;
             padding-top: 16px;
             font-weight: 100;
+            color: white;
           }
         }
         input {
@@ -246,6 +251,29 @@
           background: white;
           color: $java;
         }
+      }
+    }
+    @media (min-width: $screen-sm) {
+      top: 5rem;
+      height: 560px;
+      .top {
+        margin: 4rem 0 4rem 0;
+      }
+      form{
+        .input-group{
+          &.message {
+            textarea {
+              height: 190px;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: $screen-md) {
+      top: 8rem;
+      height: 530px;
+      .top {
+        margin: 8.5rem 0 4rem 0;
       }
     }
   }

@@ -158,8 +158,16 @@
   }
   @media (max-width: $screen-sm) {
     margin: 10%;
+    
     .modal-content {
       form {
+        .form-group {
+          .check {
+            input[type=checkbox] + label:before {
+              margin-left: 0;
+            }
+          }
+        }
         .social {
           overflow: hidden;
           margin-top: 3rem;
@@ -173,7 +181,7 @@
             &.goo {
               float: none;
               margin: 0 auto 10px;
-              display: block;             
+              display: block;
             }
           }
         }

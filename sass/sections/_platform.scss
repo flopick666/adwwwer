@@ -417,14 +417,18 @@
         margin-left: -260px;
       }
       #round_left {
-        left: -66px;
+        left: 0;
+        // left: -66px;
       }
       #round_right {
         left: inherit;
-        right: -75px;
+        right: 0;
+        // right: -75px;
       }
     }
-
+    .num {
+      display: none;
+    }
     .post-images-zoom {
       float: none;
       width: 100%;
@@ -438,7 +442,6 @@
 
     .carousel_zoom {
       float: none !important;
-      padding: 0;
     }
     .check-markers {
       padding-top: 25px;

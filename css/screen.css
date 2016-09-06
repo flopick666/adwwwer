@@ -8942,11 +8942,14 @@ body section#platform .download-app i {
     margin-left: -260px;
   }
   body section#platform #doing-carousel #round_left {
-    left: -66px;
+    left: 0;
   }
   body section#platform #doing-carousel #round_right {
     left: inherit;
-    right: -75px;
+    right: 0;
+  }
+  body section#platform .num {
+    display: none;
   }
   body section#platform .post-images-zoom {
     float: none;
@@ -8960,7 +8963,6 @@ body section#platform .download-app i {
   }
   body section#platform .carousel_zoom {
     float: none !important;
-    padding: 0;
   }
   body section#platform .check-markers {
     padding-top: 25px;
@@ -11526,6 +11528,9 @@ body section#contact_us #contactform p {
 body section#contact_us #contactform p:nth-child(2) {
   font-weight: 300;
 }
+body section#contact_us #contactform p a {
+  color: white;
+}
 body section#contact_us #contactform .close_popup {
   border-radius: 50px;
   background: #20b7a3;
@@ -11549,17 +11554,17 @@ body section#contact_us #contactform .button-more:hover {
 }
 body section#contact_us #contact-form {
   background: #149d8b;
-  height: 530px;
+  height: 610px;
   position: absolute;
   overflow: auto;
   left: 0;
-  top: 8rem;
+  top: 0;
   z-index: 999;
   width: 100%;
   display: none;
 }
 body section#contact_us #contact-form .top {
-  margin: 8.5rem 0 4rem 0;
+  margin: 2rem 0 2rem 0;
   overflow: hidden;
 }
 body section#contact_us #contact-form .top h2 {
@@ -11660,6 +11665,7 @@ body section#contact_us #contact-form form .input-group.message textarea {
   border: none;
   padding-top: 16px;
   font-weight: 100;
+  color: white;
 }
 body section#contact_us #contact-form form .input-group input {
   height: 52px;
@@ -11685,6 +11691,27 @@ body section#contact_us #contact-form form .button-more {
 body section#contact_us #contact-form form .button-more:hover {
   background: white;
   color: #20b7a3;
+}
+@media (min-width: 768px) {
+  body section#contact_us #contact-form {
+    top: 5rem;
+    height: 560px;
+  }
+  body section#contact_us #contact-form .top {
+    margin: 4rem 0 4rem 0;
+  }
+  body section#contact_us #contact-form form .input-group.message textarea {
+    height: 190px;
+  }
+}
+@media (min-width: 992px) {
+  body section#contact_us #contact-form {
+    top: 8rem;
+    height: 530px;
+  }
+  body section#contact_us #contact-form .top {
+    margin: 8.5rem 0 4rem 0;
+  }
 }
 body section#abovefooter {
   font-family: 'Roboto', sans-serif;
@@ -12235,6 +12262,9 @@ body .modal-dialog .modal-content form .social button.goo {
 @media (max-width: 768px) {
   body .modal-dialog {
     margin: 10%;
+  }
+  body .modal-dialog .modal-content form .form-group .check input[type=checkbox] + label:before {
+    margin-left: 0;
   }
   body .modal-dialog .modal-content form .social {
     overflow: hidden;
