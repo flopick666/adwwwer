@@ -11287,15 +11287,35 @@ body section#sign_up .col-lg-8 button {
 body section#sign_up .col-lg-8 button .fa {
   font-size: 5rem;
   transition: 1s;
+  position: relative;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+body section#sign_up .col-lg-8 button .fa:before, body section#sign_up .col-lg-8 button .fa:after {
+  position: absolute;
+  width: 42px;
+  height: 50px;
+  top: 0;
+  left: 0;
 }
 body section#sign_up .col-lg-8 button .fa:before {
   content: '\f058';
+  opacity: 1;
+}
+body section#sign_up .col-lg-8 button .fa:after {
+  content: '\f00c';
+  opacity: 0;
 }
 body section#sign_up .col-lg-8 button .fa:hover {
   font-size: 3rem;
 }
 body section#sign_up .col-lg-8 button .fa:hover:before {
-  content: '\f00c';
+  opacity: 0;
+}
+body section#sign_up .col-lg-8 button .fa:hover:after {
+  opacity: 1;
 }
 body section#sign_up .col-lg-8 button .button-more {
   border: 1px solid white;
