@@ -303,6 +303,20 @@ $(document).ready(function () {
 	}
 	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
   //End contact_us functionallity
+  
+  // send contact form
+    $('#contact-form').find('form').on('submit', function(e){
+        e.preventDefault();
+        $.post("/server.php", { 
+            name: $('#contact-form').find('#contact-name').val(), 
+            email: $('#contact-form').find('#contact-email').val() ,
+            phone: $('#contact-form').find('#contact-phone').val(),
+            message: $('#contact-form').find('#contact-message').val()
+        })
+        .done(function(data) {
+            //alert("Data Loaded: " + data);
+        });
+    });
 
   // WebGl section
   if ( false === $.browser.mobile ) {
