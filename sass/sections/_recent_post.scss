@@ -30,15 +30,36 @@
         height: 140px;
         overflow: hidden;
         margin-bottom: 2rem;
-        img {
-          width: 100%;
-          position: relative;
-          top: -50%;
+        a {
+          transition: 1s;
+          overflow: hidden;
+          display: block;
+          img {
+            width: 100%;
+            position: relative;
+            top: -50%;
+
+          }
+          &:hover {
+            overflow: hidden;
+            transform: scale(1.05);
+          }
         }
       }
       .col-sm-8 {
         .head_post1 {
-          h3 { clear: both; padding: 10px 0;}
+          h3 {
+            clear: both;
+            padding: 10px 0;
+            a {
+              color: white;
+              &:hover {
+                text-decoration: none;
+                color: $java;
+
+              }
+            }
+          }
           .post_tags {
             text-transform: uppercase;
             font-size: 12px;

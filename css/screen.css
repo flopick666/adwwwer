@@ -8471,7 +8471,9 @@ body section#become_member.green button#hide-green-block {
 }
 body section#become_member.green button#hide-green-block .fa {
   vertical-align: top;
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 7px;
 }
 body section#become_member .col-md-2 {
   text-align: center;
@@ -9002,14 +9004,30 @@ body section#recent_post #owl-recent-post .row.post .col-sm-4 {
   overflow: hidden;
   margin-bottom: 2rem;
 }
-body section#recent_post #owl-recent-post .row.post .col-sm-4 img {
+body section#recent_post #owl-recent-post .row.post .col-sm-4 a {
+  transition: 1s;
+  overflow: hidden;
+  display: block;
+}
+body section#recent_post #owl-recent-post .row.post .col-sm-4 a img {
   width: 100%;
   position: relative;
   top: -50%;
 }
+body section#recent_post #owl-recent-post .row.post .col-sm-4 a:hover {
+  overflow: hidden;
+  transform: scale(1.05);
+}
 body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 h3 {
   clear: both;
   padding: 10px 0;
+}
+body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 h3 a {
+  color: white;
+}
+body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 h3 a:hover {
+  text-decoration: none;
+  color: #20b7a3;
 }
 body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .post_tags {
   text-transform: uppercase;
@@ -11268,6 +11286,16 @@ body section#sign_up .col-lg-8 button {
 }
 body section#sign_up .col-lg-8 button .fa {
   font-size: 5rem;
+  transition: 1s;
+}
+body section#sign_up .col-lg-8 button .fa:before {
+  content: '\f058';
+}
+body section#sign_up .col-lg-8 button .fa:hover {
+  font-size: 3rem;
+}
+body section#sign_up .col-lg-8 button .fa:hover:before {
+  content: '\f00c';
 }
 body section#sign_up .col-lg-8 button .button-more {
   border: 1px solid white;
@@ -12187,6 +12215,22 @@ body .modal-dialog .modal-content form .social button.goo {
 @media (max-width: 768px) {
   body .modal-dialog {
     margin: 10%;
+  }
+  body .modal-dialog .modal-content form .social {
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+  body .modal-dialog .modal-content form .social button {
+    display: inline-block;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    width: 170px;
+  }
+  body .modal-dialog .modal-content form .social button.fb, body .modal-dialog .modal-content form .social button.goo {
+    float: none;
+    margin: 0 auto 10px;
+    display: block;
   }
 }
 body #footer {

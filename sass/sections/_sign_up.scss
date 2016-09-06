@@ -57,10 +57,20 @@
       padding: 0;
       margin: 0 auto;
       display: block;
+
       .fa {
         font-size: 5rem;
+        transition: 1s;
+        &:before {
+          content: '\f058';
+        }
+        &:hover {
+          font-size: 3rem;
+          &:before {
+            content: '\f00c';
+          }
+        }
       }
-
       .button-more {
         border: 1px solid white;
         transition: 1s;

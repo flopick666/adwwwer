@@ -158,5 +158,26 @@
   }
   @media (max-width: $screen-sm) {
     margin: 10%;
+    .modal-content {
+      form {
+        .social {
+          overflow: hidden;
+          margin-top: 3rem;
+          button {
+            display: inline-block;
+            border: none;
+            height: 30px;
+            line-height: 30px;
+            width: 170px;
+            &.fb,
+            &.goo {
+              float: none;
+              margin: 0 auto 10px;
+              display: block;             
+            }
+          }
+        }
+      }
+    }
   }
 }
