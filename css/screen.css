@@ -8948,6 +8948,9 @@ body section#platform .download-app i {
     left: inherit;
     right: 0;
   }
+  body section#platform .num {
+    display: none;
+  }
   body section#platform .post-images-zoom {
     float: none;
     width: 100%;
@@ -11525,6 +11528,9 @@ body section#contact_us #contactform p {
 body section#contact_us #contactform p:nth-child(2) {
   font-weight: 300;
 }
+body section#contact_us #contactform p a {
+  color: white;
+}
 body section#contact_us #contactform .close_popup {
   border-radius: 50px;
   background: #20b7a3;
@@ -12256,6 +12262,9 @@ body .modal-dialog .modal-content form .social button.goo {
 @media (max-width: 768px) {
   body .modal-dialog {
     margin: 10%;
+  }
+  body .modal-dialog .modal-content form .form-group .check input[type=checkbox] + label:before {
+    margin-left: 0;
   }
   body .modal-dialog .modal-content form .social {
     overflow: hidden;
