@@ -111,7 +111,8 @@ $(document).ready(function () {
   // Here featureCarousel functionallity
   // Feature Carousel for introduce section
   $("#introduce-carousel").featureCarousel({
-
+    carouselSpeed: 500,
+    autoPlay: 2000
   });
 
   // Here owlCarousel functionallity to several sections
@@ -210,12 +211,8 @@ $(document).ready(function () {
   // popup for recent post
   $('.test-popup-link').magnificPopup({
     type: 'image',
-    // other options
     removalDelay: 300,
-
-  // Class that is added to popup wrapper and background
-  // make it unique to apply your CSS animations just to this exact popup
-  mainClass: 'mfp-fade'
+    mainClass: 'mfp-fade'
   });
 
   // Custom Navigation Events
