@@ -314,7 +314,7 @@ $(document).ready(function () {
             message: $('#contact-form').find('#contact-message').val()
         })
         .done(function(data) {
-            //alert("Data Loaded: " + data);
+//            alert("Data Loaded: " + data);
         });
     });
 
