@@ -1,4 +1,7 @@
 &#project_info {
+  /*------------------------------------------------------------------
+  [5.8 Section Project Info / #project_info]
+  */
   .container{
     overflow: hidden;
   }
@@ -313,7 +316,7 @@
       #responsive-theme {
         img {
           &.iphone {
-            right: 15%;            
+            right: 15%;
           }
         }
       }

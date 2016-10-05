@@ -1,3 +1,39 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Adwwwer.1pls1.com
+Version:	1.0
+Last change:	05/08/10 [fixed bugs, vf]
+Assigned to:
+Primary use:	Template
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2. Header / #header
+3. Navigation / #navbar-collapse-1
+4. Content / #content
+5. Sections / section
+  5.1 Section WebGL / #webgl_section
+  5.2 Section Introduce / #introduce
+  5.3 Section Recent work / #recent_works
+  5.4 Section Best sellers / #best_sellers
+  5.5 Section Become a Member / #become_member
+  5.6 Section Mobile Application / #platform
+  5.7 Section Recent Post / #recent_post
+  5.8 Section Project Info / #project_info
+  5.9 Section Latest News / #latest_news
+  5.10 Section Client Opinion / #client_opinion
+  5.11 Section Animated Sales / #animated_sales
+  5.12 Section Diagrams / #diagrams
+  5.13 Section Video Upload / #video
+  5.14 Section Sign Up / #sign_up
+  5.15 Section Choose Your Plan / #choose_your_plan
+  5.16 Section Contact us / #contact_us
+  5.17 Section Abovefooter / #abovefooter
+6. Footer / #footer
+-------------------------------------------------------------------*/
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/images";
@@ -12,6 +48,9 @@ html { box-sizing: border-box;}
 * {
   @include selection($java, white)
 }
+/*------------------------------------------------------------------
+[1. Body]
+*/
 body {
   background: $black_pearl;
   color: $dusty_gray;

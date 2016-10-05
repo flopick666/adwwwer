@@ -1,4 +1,40 @@
 @charset "UTF-8";
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Adwwwer.1pls1.com
+Version:	1.0
+Last change:	05/08/10 [fixed bugs, vf]
+Assigned to:
+Primary use:	Template
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2. Header / #header
+3. Navigation / #navbar-collapse-1
+4. Content / #content
+5. Sections / section
+  5.1 Section WebGL / #webgl_section
+  5.2 Section Introduce / #introduce
+  5.3 Section Recent work / #recent_works
+  5.4 Section Best sellers / #best_sellers
+  5.5 Section Become a Member / #become_member
+  5.6 Section Mobile Application / #platform
+  5.7 Section Recent Post / #recent_post
+  5.8 Section Project Info / #project_info
+  5.9 Section Latest News / #latest_news
+  5.10 Section Client Opinion / #client_opinion
+  5.11 Section Animated Sales / #animated_sales
+  5.12 Section Diagrams / #diagrams
+  5.13 Section Video Upload / #video
+  5.14 Section Sign Up / #sign_up
+  5.15 Section Choose Your Plan / #choose_your_plan
+  5.16 Section Contact us / #contact_us
+  5.17 Section Abovefooter / #abovefooter
+6. Footer / #footer
+-------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -7415,6 +7451,9 @@ html {
   background-color: #20b7a3;
 }
 
+/*------------------------------------------------------------------
+[1. Body]
+*/
 body {
   background: #010509;
   color: #9B9B9B;
@@ -7425,6 +7464,15 @@ body {
   /* content at start */
   /* content animate it */
   /* content animate out */
+  /*------------------------------------------------------------------
+  [2. Header / #header]
+  */
+  /*------------------------------------------------------------------
+  [5. Sections / section]
+  */
+  /*------------------------------------------------------------------
+  [6. Footer / #footer]
+  */
 }
 body .revealOnScroll {
   opacity: 0;
@@ -7602,6 +7650,9 @@ body #header {
   margin: 0;
   padding: 0;
   font-size: 12px;
+  /*------------------------------------------------------------------
+  [3. Navigation / #navbar-collapse-1]
+  */
 }
 body #header nav.navbar {
   background: #010509;
@@ -7905,6 +7956,9 @@ body section:before {
   }
 }
 body section#webgl_section {
+  /*------------------------------------------------------------------
+  [5.1 Section WebGL / #webgl_section]
+  */
   height: 100vh;
   background: url('../img/earth.jpg');
   background-position: 50% 0;
@@ -8003,6 +8057,9 @@ body section#webgl_section h1 span:first-child {
   }
 }
 body section#introduce {
+  /*------------------------------------------------------------------
+  [5.2 Section Introduce / #introduce]
+  */
   line-height: 24px;
 }
 @media (min-width: 1200px) {
@@ -8167,6 +8224,9 @@ body section#introduce .button-more {
   z-index: 100;
 }
 body section#recent_works {
+  /*------------------------------------------------------------------
+  [5.3 Section Recent work / #recent_works]
+  */
   background: #060a0e;
   padding-bottom: 0;
 }
@@ -8299,6 +8359,11 @@ body section#recent_works .item a:hover .recent_hover .content .fa {
     margin-right: -8px;
   }
 }
+body section#best_sellers {
+  /*------------------------------------------------------------------
+  [5.4 Section Best sellers / #best_sellers]
+  */
+}
 body section#best_sellers .container {
   overflow: hidden;
 }
@@ -8416,6 +8481,9 @@ body section#best_sellers .product-item a.buy:hover .fa:before {
   box-shadow: 10px, 10px, #ff0000;
 }
 body section#become_member {
+  /*------------------------------------------------------------------
+  [5.5 Section Become a Member / #become_member]
+  */
   padding: 35px 0;
   margin-bottom: 3rem;
   z-index: 200;
@@ -8529,6 +8597,11 @@ body section#become_member .col-md-10 p {
   body section#become_member .col-md-10:before {
     left: -15px;
   }
+}
+body section#platform {
+  /*------------------------------------------------------------------
+  [5.6 Section Mobile Application / #platform]
+  */
 }
 body section#platform .section__platform {
   text-align: center;
@@ -8969,6 +9042,9 @@ body section#platform .download-app i {
   }
 }
 body section#recent_post {
+  /*------------------------------------------------------------------
+  [5.7 Section Recent Post / #recent_post]
+  */
   background: url('../img/recent_post.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -9301,6 +9377,11 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
   body section#recent_post #owl-recent-post .author .post_author_statistic p span {
     margin-right: 20px;
   }
+}
+body section#project_info {
+  /*------------------------------------------------------------------
+  [5.8 Section Project Info / #project_info]
+  */
 }
 body section#project_info .container {
   overflow: hidden;
@@ -9765,6 +9846,9 @@ body section#project_info #application .application-section div.laptop .screen a
   }
 }
 body section#latest_news {
+  /*------------------------------------------------------------------
+  [5.9 Section Latest News / #latest_news]
+  */
   background: #060a0e;
 }
 body section#latest_news h2 {
@@ -9856,6 +9940,9 @@ body section#latest_news #owl-latest-news .owl-item .description {
   }
 }
 body section#client_opinion {
+  /*------------------------------------------------------------------
+  [5.10 Section Client Opinion / #client_opinion]
+  */
   background: url('../img/client_opinion.jpg');
   background-repeat: no-repeat;
   background-position: center 100%;
@@ -9986,6 +10073,9 @@ body section#client_opinion #quote-carousel blockquote .item {
   }
 }
 body section#animated_sales {
+  /*------------------------------------------------------------------
+  [5.11 Section Animated Sales / #animated_sales]
+  */
   position: relative;
   background: #060a0e;
   font-family: 'Roboto', sans-serif;
@@ -11050,6 +11140,9 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
 }
 body section#diagrams {
+  /*------------------------------------------------------------------
+  [5.12 Section Diagrams / #diagrams]
+  */
   padding-top: 5rem;
   text-align: center;
   /* Container styles */
@@ -11110,6 +11203,9 @@ body section#diagrams .timer {
   }
 }
 body section#video {
+  /*------------------------------------------------------------------
+  [5.13 Section Video Upload / #video]
+  */
   background: #060a0e;
 }
 body section#video:before {
@@ -11227,6 +11323,9 @@ body section#video .video-laptop #youtube_canvas iframe {
   }
 }
 body section#sign_up {
+  /*------------------------------------------------------------------
+  [5.14 Section Sign Up / #sign_up]
+  */
   text-align: center;
   z-index: 999;
   padding-top: 5rem;
@@ -11360,6 +11459,11 @@ body section#sign_up .col-lg-8 button .button-more:hover {
     width: 315px;
   }
 }
+body section#choose_your_plan {
+  /*------------------------------------------------------------------
+  [5.15 Section Choose Your Plan / #choose_your_plan]
+  */
+}
 body section#choose_your_plan .plan {
   background: #060a0e;
   font-family: 'Roboto', sans-serif;
@@ -11442,6 +11546,9 @@ body section#choose_your_plan .plan.best .button-more:hover, body section#choose
   }
 }
 body section#contact_us {
+  /*------------------------------------------------------------------
+  [5.16 Section Contact us / #contact_us]
+  */
   min-height: 610px;
 }
 body section#contact_us:before {
@@ -11714,6 +11821,9 @@ body section#contact_us #contact-form form .button-more:hover {
   }
 }
 body section#abovefooter {
+  /*------------------------------------------------------------------
+  [5.17 Section Abovefooter / #abovefooter]
+  */
   font-family: 'Roboto', sans-serif;
   padding-bottom: 0;
   padding-top: 5rem;

@@ -1,3 +1,6 @@
+/*------------------------------------------------------------------
+[5. Sections / section]
+*/
 section {
   clear: both;
   padding-bottom: 5rem;
@@ -19,14 +22,12 @@ section {
       margin-top: -79px;
     }
   }
-
   @import "sections/webgl.scss";
   @import "sections/introduce.scss";
   @import "sections/recent_works.scss";
   @import "sections/best_sellers.scss";
   @import "sections/become_member.scss";
   @import "sections/platform.scss";
-  // @import "sections/mobile_application.scss";
   @import "sections/recent_post.scss";
   @import "sections/project_info.scss";
   @import "sections/latest_news.scss";

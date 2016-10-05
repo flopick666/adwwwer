@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function () {
   var $window           = $(window),
       win_height_padded = $window.height() * 1.1,
@@ -215,29 +216,14 @@ $(document).ready(function () {
     mainClass: 'mfp-fade'
   });
 
-  // Custom Navigation Events
-  $(".next").click(function(){
-    owl.trigger('owl.next');
-  });
-  $(".prev").click(function(){
-    owl.trigger('owl.prev');
-  });
-  $(".play").click(function(){
-    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-  });
-  $(".stop").click(function(){
-    owl.trigger('owl.stop');
-  });
-  // Here end owlCarousel functionallity to several sections
-
   /*Load more services block*/
-  $( "#services #loadMore" ).click(function() {
+  $( "#services #loadMore" ).on('click', function() {
     // e.preventDefault();
     $( "#services #secondary-services" ).slideToggle( "slow");
     $(this).text( $(this).text() == 'Show all services' ? "Hide all services" : "Show all services");
   });
   // Hide Become a member block
-  $( "#hide-green-block" ).click(function() {
+  $( "#hide-green-block" ).on('click', function() {
     $( "#become_member" ).slideUp( "slow");
   });
   // Tabs responsive
@@ -265,12 +251,12 @@ $(document).ready(function () {
   });
   // Here contact_us functionallity
   /*Hide Contact Us modal*/
-  $( "#contact_us #contactform .close_popup" ).click(function() {
+  $( "#contact_us #contactform .close_popup" ).on('click', function() {
     $( "#contact_us" ).addClass( "clearmap");
     $( "#contact_us #contactform" ).slideUp( "slow");
   });
   /*Show Contact us form*/
-  $( "#contact-form-button, #contact-form-button-close" ).click(function() {
+  $( "#contact-form-button, #contact-form-button-close" ).on('click', function() {
     $( "#contact-form" ).slideToggle( "slow");
   });
   //Contact US block - googlemap with marker and settings for this
@@ -303,18 +289,18 @@ $(document).ready(function () {
 //	}
 //	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
   //End contact_us functionallity
-  
+
   // send contact form
     $('#contact-form').find('form').on('submit', function(e){
         e.preventDefault();
-        $.post("/server.php", { 
-            name: $('#contact-form').find('#contact-name').val(), 
+        $.post("/server.php", {
+            name: $('#contact-form').find('#contact-name').val(),
             email: $('#contact-form').find('#contact-email').val() ,
             phone: $('#contact-form').find('#contact-phone').val(),
             message: $('#contact-form').find('#contact-message').val()
         })
         .done(function(data) {
-            $('#contact-form').find('#contact-name').val(''); 
+            $('#contact-form').find('#contact-name').val('');
             $('#contact-form').find('#contact-email').val('');
             $('#contact-form').find('#contact-phone').val('');
             $('#contact-form').find('#contact-message').val('');
@@ -324,11 +310,11 @@ $(document).ready(function () {
             }, 5000);
         });
     });
-    
-    
-    
-    
-    
+
+
+
+
+
     var position = [41.0621212, -73.5423603];
 
 	    var latLng = new google.maps.LatLng(position[0], position[1]);
@@ -355,13 +341,13 @@ $(document).ready(function () {
 	        animation: google.maps.Animation.DROP
 	    });
 
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 
   // WebGl section
   if ( false === $.browser.mobile ) {
