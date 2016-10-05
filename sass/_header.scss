@@ -177,7 +177,7 @@
       @media (min-width: $screen-sm) {
         float: right;
         > ul {
-          float: left!important;
+          float: left;
           > li {
             margin-left:10px;
             padding: 0;

@@ -314,92 +314,6 @@ th {
   padding: 0;
 }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .btn > .caret,
-  .dropup > .btn > .caret {
-    border-top-color: #000 !important;
-  }
-
-  .label {
-    border: 1px solid #000;
-  }
-
-  .table {
-    border-collapse: collapse !important;
-  }
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
-  }
-}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
@@ -7127,56 +7041,6 @@ button.close {
     bottom: 20px;
   }
 }
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pull-right {
-  float: right !important;
-}
-
-.pull-left {
-  float: left !important;
-}
-
-.hide {
-  display: none !important;
-}
-
-.show {
-  display: block !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.affix {
-  position: fixed;
-}
-
 @-ms-viewport {
   width: device-width;
 }
@@ -7575,7 +7439,7 @@ body .button-more:hover, body a.button-more:hover {
   background-color: transparent;
   border-color: #178375;
   text-decoration: none;
-  outline-color: rgba(32, 183, 163, 0) !important;
+  outline-color: rgba(32, 183, 163, 0);
   outline: 1px solid;
   outline-offset: 10px;
 }
@@ -7820,7 +7684,7 @@ body #header nav.navbar #navbar-collapse-1 ul#login li a .fa {
     float: right;
   }
   body #header nav.navbar #navbar-collapse-1 > ul {
-    float: left !important;
+    float: left;
   }
   body #header nav.navbar #navbar-collapse-1 > ul > li {
     margin-left: 10px;
@@ -8160,7 +8024,7 @@ body section#introduce #services #main-services .col-xs-12 .circle i::after {
   z-index: 0;
 }
 body section#introduce #services #main-services .col-xs-12 .circle:hover i {
-  color: #20b7a3 !important;
+  color: #20b7a3;
   border-color: #20b7a3;
 }
 body section#introduce #services #main-services .col-xs-12 .circle:hover i::after {
@@ -9397,17 +9261,19 @@ body section#project_info #timeline .project_progress_v2 .project_step {
   position: absolute;
   top: 10px;
   height: 250px;
-  min-width: 65px;
+  min-width: 130px;
   padding-top: 150px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 16px;
   z-index: 200;
   text-align: center;
-  background-repeat: no-repeat !important;
-  background-position: 50% 0 !important;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 body section#project_info #timeline .project_progress_v2 .project_step .date {
+  max-width: 70px;
+  margin: 0 auto;
   margin-bottom: 3rem;
 }
 body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) {
@@ -9415,7 +9281,7 @@ body section#project_info #timeline .project_progress_v2 .project_step:nth-child
   bottom: 21px;
   height: 227px;
   padding-top: 0;
-  background-position: 50% 100% !important;
+  background-position: 50% 100%;
 }
 body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) .name {
   margin-bottom: 3rem;
@@ -9425,27 +9291,27 @@ body section#project_info #timeline .project_progress_v2 .project_step:nth-child
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step1 {
   left: 11%;
-  background: url('../img/project_step1.png');
+  background-image: url('../img/project_step1.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step2 {
   left: 25%;
-  background: url('../img/project_step2.png');
+  background-image: url('../img/project_step2.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step3 {
   left: 39%;
-  background: url('../img/project_step3.png');
+  background-image: url('../img/project_step3.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step4 {
   left: 52%;
-  background: url('../img/project_step4.png');
+  background-image: url('../img/project_step4.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step5 {
   left: 66%;
-  background: url('../img/project_step5.png');
+  background-image: url('../img/project_step5.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step6 {
   left: 80%;
-  background: url('../img/project_step6.png');
+  background-image: url('../img/project_step6.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step .date {
   background: #20b7a3;
@@ -9538,8 +9404,8 @@ body section#project_info #timeline .project_progress_mobile .project_step {
   font-size: 16px;
   z-index: 200;
   text-align: right;
-  background-repeat: no-repeat !important;
-  background-position: 90% -10% !important;
+  background-repeat: no-repeat;
+  background-position: 90% -10%;
   padding-right: 40%;
   padding-top: 16px;
 }
@@ -9571,30 +9437,30 @@ body section#project_info #timeline .project_progress_mobile .project_step .name
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step1 {
   top: 5.7%;
-  background: url('../img/project_step1.png');
+  background-image: url('../img/project_step1.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step2 {
   top: 21.4%;
-  background: url('../img/project_step2.png');
+  background-image: url('../img/project_step2.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step3 {
   top: 37.1%;
-  background: url('../img/project_step3.png');
+  background-image: url('../img/project_step3.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step4 {
   top: 52.8%;
-  background: url('../img/project_step4.png');
+  background-image: url('../img/project_step4.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step5 {
   top: 68.5%;
-  background: url('../img/project_step5.png');
+  background-image: url('../img/project_step5.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step6 {
   top: 84.2%;
-  background: url('../img/project_step6.png');
+  background-image: url('../img/project_step6.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) {
-  background-position: 0 100% !important;
+  background-position: 0 100%;
   text-align: left;
   padding-left: 38%;
   padding-right: 0;
@@ -9609,10 +9475,10 @@ body section#project_info #timeline .project_progress_mobile .project_step:nth-c
   left: -20px;
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n).step2 {
-  background-position: 8% 108% !important;
+  background-position: 8% 108%;
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n).step6 {
-  background-position: 12% 105% !important;
+  background-position: 12% 105%;
 }
 body section#project_info #responsive {
   font-family: 'Roboto', sans-serif;
@@ -11173,7 +11039,7 @@ body section#diagrams .inner {
   stroke-dashoffset: 0;
 }
 body section#diagrams .circliful {
-  overflow: visible !important;
+  overflow: visible;
 }
 body section#diagrams .svg-container {
   width: 100%;
@@ -11244,7 +11110,7 @@ body section#video .video-steps .line {
   position: absolute;
   left: 31px;
   top: 62px;
-  display: block !important;
+  display: block;
   height: 100%;
   width: 1px;
   background: #3c4b4b;

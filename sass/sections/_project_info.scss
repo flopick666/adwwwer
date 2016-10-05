@@ -16,16 +16,18 @@
         position: absolute;
         top: 10px;
         height: 250px;
-        min-width: 65px;
+        min-width: 130px;
         padding-top: 150px;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 16px;
         z-index: 200;
         text-align: center;
-        background-repeat: no-repeat!important;
-        background-position: 50% 0!important;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
         .date {
+          max-width: 70px;
+          margin: 0 auto;
           margin-bottom: 3rem;
         }
         &:nth-child(2n){
@@ -33,7 +35,7 @@
           bottom: 21px;
           height: 227px;
           padding-top: 0;
-          background-position: 50% 100%!important;
+          background-position: 50% 100%;
           .name {
             margin-bottom: 3rem;
           }
@@ -41,12 +43,12 @@
             margin-bottom: 0;
           }
         }
-        &.step1 {left: 11%; background: image-url('project_step1.png');}
-        &.step2 {left: 25%; background: image-url('project_step2.png');}
-        &.step3 {left: 39%; background: image-url('project_step3.png');}
-        &.step4 {left: 52%; background: image-url('project_step4.png');}
-        &.step5 {left: 66%; background: image-url('project_step5.png');}
-        &.step6 {left: 80%; background: image-url('project_step6.png');}
+        &.step1 {left: 11%; background-image: image-url('project_step1.png');}
+        &.step2 {left: 25%; background-image: image-url('project_step2.png');}
+        &.step3 {left: 39%; background-image: image-url('project_step3.png');}
+        &.step4 {left: 52%; background-image: image-url('project_step4.png');}
+        &.step5 {left: 66%; background-image: image-url('project_step5.png');}
+        &.step6 {left: 80%; background-image: image-url('project_step6.png');}
         .date {
           background: $java;
           font-size: 10px;
@@ -141,8 +143,8 @@
         font-size: 16px;
         z-index: 200;
         text-align: right;
-        background-repeat: no-repeat!important;
-        background-position: 90% -10%!important;
+        background-repeat: no-repeat;
+        background-position: 90% -10%;
         padding-right: 40%;
         padding-top: 16px;
         .date {
@@ -171,14 +173,14 @@
           color: white;
           display: inline-block;
         }
-        &.step1 {top: 5.7%; background: image-url('project_step1.png');}
-        &.step2 {top: 21.4%; background: image-url('project_step2.png');}
-        &.step3 {top: 37.1%; background: image-url('project_step3.png');}
-        &.step4 {top: 52.8%; background: image-url('project_step4.png');}
-        &.step5 {top: 68.5%; background: image-url('project_step5.png');}
-        &.step6 {top: 84.2%; background: image-url('project_step6.png');}
+        &.step1 {top: 5.7%; background-image: image-url('project_step1.png');}
+        &.step2 {top: 21.4%; background-image: image-url('project_step2.png');}
+        &.step3 {top: 37.1%; background-image: image-url('project_step3.png');}
+        &.step4 {top: 52.8%; background-image: image-url('project_step4.png');}
+        &.step5 {top: 68.5%; background-image: image-url('project_step5.png');}
+        &.step6 {top: 84.2%; background-image: image-url('project_step6.png');}
         &:nth-child(2n){
-          background-position: 0 100%!important;
+          background-position: 0 100%;
           text-align: left;
           padding-left: 38%;
           padding-right: 0;
@@ -191,8 +193,8 @@
               left: -20px;
             }
           }
-          &.step2 {background-position: 8% 108%!important;}
-          &.step6 {background-position: 12% 105%!important;}
+          &.step2 {background-position: 8% 108%;}
+          &.step6 {background-position: 12% 105%;}
         }
       }
     }
