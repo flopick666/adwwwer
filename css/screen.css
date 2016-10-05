@@ -7041,6 +7041,56 @@ button.close {
     bottom: 20px;
   }
 }
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.affix {
+  position: fixed;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -7439,7 +7489,7 @@ body .button-more:hover, body a.button-more:hover {
   background-color: transparent;
   border-color: #178375;
   text-decoration: none;
-  outline-color: rgba(32, 183, 163, 0);
+  outline-color: rgba(32, 183, 163, 0) !important;
   outline: 1px solid;
   outline-offset: 10px;
 }
