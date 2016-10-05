@@ -259,36 +259,36 @@ $(document).ready(function () {
   $( "#contact-form-button, #contact-form-button-close" ).on('click', function() {
     $( "#contact-form" ).slideToggle( "slow");
   });
-  //Contact US block - googlemap with marker and settings for this
+  // Contact US block - googlemap with marker and settings for this
   // The latitude and longitude of your business / place
-//	var position = [41.0621212, -73.5423603];
-//	function showGoogleMaps() {
-//	    var latLng = new google.maps.LatLng(position[0], position[1]);
-//	    var mapOptions = {
-//	        zoom: 16, // initialize zoom level - the max value is 21
-//	        streetViewControl: false, // hide the yellow Street View pegman
-//	        scaleControl: false, // dany users to zoom the Google Map
-//          scrollwheel: false,
-//          navigationControl: false,
-//          mapTypeControl: false,
-//          // draggable: false,
-//	        mapTypeId: google.maps.MapTypeId.ROADMAP,
-//	        center: latLng,
-//          styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
-//	    };
-//	    map = new google.maps.Map(document.getElementById('googlemaps'),
-//	        mapOptions);
-//	    // Show the default red marker at the location
-//	    marker = new google.maps.Marker({
-//	        // position: latLng,
-//					position: {lat: 41.0621212, lng: -73.5423603},
-//	        map: map,
-//	        draggable: false,
-//	        animation: google.maps.Animation.DROP
-//	    });
-//	}
-//	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
-  //End contact_us functionallity
+	var position = [41.0621212, -73.5423603];
+	function showGoogleMaps() {
+	    var latLng = new google.maps.LatLng(position[0], position[1]);
+	    var mapOptions = {
+	        zoom: 16, // initialize zoom level - the max value is 21
+	        streetViewControl: false, // hide the yellow Street View pegman
+	        scaleControl: false, // dany users to zoom the Google Map
+         scrollwheel: false,
+         navigationControl: false,
+         mapTypeControl: false,
+         // draggable: false,
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        center: latLng,
+         styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+	    };
+	    map = new google.maps.Map(document.getElementById('googlemaps'),
+	        mapOptions);
+	    // Show the default red marker at the location
+	    marker = new google.maps.Marker({
+	        // position: latLng,
+					position: {lat: 41.0621212, lng: -73.5423603},
+	        map: map,
+	        draggable: false,
+	        animation: google.maps.Animation.DROP
+	    });
+	}
+	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+  // End contact_us functionallity
 
   // send contact form
     $('#contact-form').find('form').on('submit', function(e){
