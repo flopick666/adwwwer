@@ -2,7 +2,7 @@
   /*------------------------------------------------------------------
   [5.7 Section Recent Post / #recent_post]
   */
-  background: image-url('recent_post.jpg');
+  background: image-url('03_recent_post_bg.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-attachment: fixed;
@@ -85,8 +85,9 @@
               text-align: center;
               margin-left: 1rem;
               // width: 4rem;
-              padding: 1rem;
-              line-height: 1.6rem;
+              padding: 1.4rem;
+              line-height: 2.4rem;
+              font-size: 25px;
               &:hover {
                 color: white;
                 border-color: white;
@@ -286,7 +287,7 @@
         }
         .col-sm-8 {
           .head_post1 {
-            margin-bottom: 10px;
+            margin-bottom: 25px;
             overflow: hidden;
             .icons {
               padding-top: 10px;

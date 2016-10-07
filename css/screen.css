@@ -7874,7 +7874,7 @@ body section#webgl_section {
   [5.1 Section WebGL / #webgl_section]
   */
   height: 100vh;
-  background: url('../img/earth.jpg');
+  background: url('../img/01_webgl_section_bg.jpg');
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8020,6 +8020,7 @@ body section#introduce .carousel-container #introduce-carousel .carousel-feature
 }
 body section#introduce #services #main-services {
   padding-bottom: 5rem;
+  font-family: 'Roboto', sans-serif;
 }
 body section#introduce #services #main-services .col-xs-12 {
   overflow: hidden;
@@ -8101,6 +8102,7 @@ body section#introduce #services #secondary-services {
   border-top: 1px solid #161616;
   line-height: 24px;
   padding-top: 5rem;
+  font-family: 'Roboto', sans-serif;
 }
 body section#introduce #services #secondary-services .col-xs-12 {
   overflow: hidden;
@@ -8509,7 +8511,7 @@ body section#become_member .col-md-10 p {
     margin-top: 10px;
   }
   body section#become_member .col-md-10:before {
-    left: -15px;
+    left: -20px;
   }
 }
 body section#platform {
@@ -8580,14 +8582,14 @@ body section#platform #doing-carousel {
 }
 body section#platform #doing-carousel #doing-carousel_list {
   position: relative;
-  margin: 0 0 0 15px;
+  margin: 0 0 30px 15px;
   padding: 0;
   width: 485px;
   min-height: 450px;
   list-style: none;
 }
 body section#platform #doing-carousel #doing-carousel_list li {
-  background: url('../img/mobile.png');
+  background: url('../img/01_mobile_app_bg.png');
   background-repeat: no-repeat;
   display: block;
   position: absolute;
@@ -8606,7 +8608,7 @@ body section#platform #doing-carousel #doing-carousel_list li img {
   left: 11%;
 }
 body section#platform #doing-carousel #doing-carousel_list li.active {
-  background: url('../img/mobile-active.png');
+  background: url('../img/02_mobile_app_bg.png');
   background-repeat: no-repeat;
   left: 160px;
   z-index: 10;
@@ -8677,19 +8679,41 @@ body section#platform .carousel_zoom {
 body section#platform .post-images-zoom {
   float: right;
   width: 40%;
-  padding-top: 64px;
+  padding-top: 0;
+}
+body section#platform .post-images-zoom #post-zoom-description {
+  position: relative;
+  left: 72px;
+  width: 240px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 24px;
+}
+body section#platform .post-images-zoom #post-zoom-description h3 {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
 }
 body section#platform .post-images-zoom .post-images-container {
   position: relative;
-  left: 66px;
-  width: 202px;
-  height: 202px;
+  left: 72px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 1px solid #20b7a3;
   overflow: hidden;
 }
 body section#platform .post-images-zoom .post-images-container img {
   width: 100%;
+}
+body section#platform .post-images-zoom .post-images-container:before {
+  display: block;
+  content: '';
+  border: 20px solid #060a0e;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 body section#platform .num {
   z-index: 50;
@@ -8774,7 +8798,7 @@ body section#platform .num.num_1_1.active .line2 {
   width: 438px;
 }
 body section#platform .num.num_1_1.active .line3 {
-  height: 96px;
+  height: 32px;
 }
 body section#platform .num.num_2_1 {
   top: 60%;
@@ -8794,7 +8818,7 @@ body section#platform .num.num_2_1.active .line2 {
   width: 425px;
 }
 body section#platform .num.num_2_1.active .line3 {
-  height: 102px;
+  height: 38px;
 }
 body section#platform .num.num_3_1 {
   top: 37%;
@@ -8814,7 +8838,7 @@ body section#platform .num.num_3_1.active .line2 {
   width: 388px;
 }
 body section#platform .num.num_3_1.active .line3 {
-  height: 98px;
+  height: 34px;
 }
 body section#platform .num.num_4_1 {
   top: 49%;
@@ -8834,7 +8858,7 @@ body section#platform .num.num_4_1.active .line2 {
   width: 412px;
 }
 body section#platform .num.num_4_1.active .line3 {
-  height: 109px;
+  height: 44px;
 }
 body section#platform .num.num_5_1 {
   top: 68%;
@@ -8845,16 +8869,16 @@ body section#platform .num.num_5_1 .line2 {
 }
 body section#platform .num.num_5_1 .line3 {
   top: -320px;
-  left: 412px;
+  left: 418px;
 }
 body section#platform .num.num_5_1.active .line1 {
   height: 320px;
 }
 body section#platform .num.num_5_1.active .line2 {
-  width: 406px;
+  width: 412px;
 }
 body section#platform .num.num_5_1.active .line3 {
-  height: 97px;
+  height: 34px;
 }
 body section#platform .download-app {
   padding: 24px 23px 21px 70px;
@@ -8959,7 +8983,7 @@ body section#recent_post {
   /*------------------------------------------------------------------
   [5.7 Section Recent Post / #recent_post]
   */
-  background: url('../img/recent_post.jpg');
+  background: url('../img/03_recent_post_bg.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
   background-attachment: fixed;
@@ -9043,8 +9067,9 @@ body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons
   border: 1px solid #149d8b;
   text-align: center;
   margin-left: 1rem;
-  padding: 1rem;
-  line-height: 1.6rem;
+  padding: 1.4rem;
+  line-height: 2.4rem;
+  font-size: 25px;
 }
 body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons a:hover {
   color: white;
@@ -9235,7 +9260,7 @@ body section#recent_post #owl-recent-post .author .read_blog:hover {
     height: auto;
   }
   body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     overflow: hidden;
   }
   body section#recent_post #owl-recent-post .row.post .col-sm-8 .head_post1 .icons {
@@ -9321,11 +9346,6 @@ body section#project_info #timeline .project_progress_v2 .project_step {
   background-repeat: no-repeat;
   background-position: 50% 0;
 }
-body section#project_info #timeline .project_progress_v2 .project_step .date {
-  max-width: 70px;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-}
 body section#project_info #timeline .project_progress_v2 .project_step:nth-child(2n) {
   top: auto;
   bottom: 21px;
@@ -9341,42 +9361,45 @@ body section#project_info #timeline .project_progress_v2 .project_step:nth-child
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step1 {
   left: 11%;
-  background-image: url('../img/project_step1.png');
+  background-image: url('../img/05_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step2 {
   left: 25%;
-  background-image: url('../img/project_step2.png');
+  background-image: url('../img/06_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step3 {
   left: 39%;
-  background-image: url('../img/project_step3.png');
+  background-image: url('../img/07_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step4 {
   left: 52%;
-  background-image: url('../img/project_step4.png');
+  background-image: url('../img/08_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step5 {
   left: 66%;
-  background-image: url('../img/project_step5.png');
+  background-image: url('../img/09_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step6 {
   left: 80%;
-  background-image: url('../img/project_step6.png');
+  background-image: url('../img/010_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step .date {
+  max-width: 65px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
   background: #20b7a3;
   font-size: 10px;
   color: #060a0e;
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: 5px 0;
 }
 body section#project_info #timeline .project_progress_v2 .project_step .name {
   color: white;
 }
 body section#project_info #timeline .project_progress_v2 hr {
   position: absolute;
-  background: #798084;
-  height: 5px;
+  background: #20b7a3;
+  height: 1px;
   width: 100%;
   top: 42%;
   display: block;
@@ -9384,9 +9407,9 @@ body section#project_info #timeline .project_progress_v2 hr {
 }
 body section#project_info #timeline .project_progress_v2 hr:after {
   content: '';
-  height: 20px;
-  width: 20px;
-  background: #798084;
+  height: 14px;
+  width: 14px;
+  background: #20b7a3;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -9395,9 +9418,9 @@ body section#project_info #timeline .project_progress_v2 hr:after {
 }
 body section#project_info #timeline .project_progress_v2 hr:before {
   content: '';
-  height: 20px;
-  width: 20px;
-  background: #798084;
+  height: 14px;
+  width: 14px;
+  background: #20b7a3;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -9414,7 +9437,7 @@ body section#project_info #timeline .project_progress_mobile .vertical_axis {
   position: absolute;
   background: #20b7a3;
   height: 100%;
-  width: 5px;
+  width: 1px;
   top: 0;
   left: 50%;
   margin-left: -10px;
@@ -9423,8 +9446,8 @@ body section#project_info #timeline .project_progress_mobile .vertical_axis {
 }
 body section#project_info #timeline .project_progress_mobile .vertical_axis:after {
   content: '';
-  height: 20px;
-  width: 20px;
+  height: 14px;
+  width: 14px;
   background: #20b7a3;
   border-radius: 50%;
   display: block;
@@ -9434,14 +9457,14 @@ body section#project_info #timeline .project_progress_mobile .vertical_axis:afte
 }
 body section#project_info #timeline .project_progress_mobile .vertical_axis:before {
   content: '';
-  height: 20px;
-  width: 20px;
+  height: 14px;
+  width: 14px;
   background: #20b7a3;
   border-radius: 50%;
   display: block;
   position: absolute;
-  bottom: -7px;
-  left: -7px;
+  bottom: 0;
+  left: -6px;
 }
 body section#project_info #timeline .project_progress_mobile .project_step {
   position: absolute;
@@ -9456,23 +9479,25 @@ body section#project_info #timeline .project_progress_mobile .project_step {
   text-align: right;
   background-repeat: no-repeat;
   background-position: 90% -10%;
-  padding-right: 40%;
+  padding-right: 41.5%;
   padding-top: 16px;
 }
 body section#project_info #timeline .project_progress_mobile .project_step .date {
   background: #20b7a3;
-  font-size: 10px;
+  font-size: 9px;
   color: #060a0e;
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: 5px 0;
+  min-width: 65px;
   display: inline-block;
   margin-left: 2rem;
   position: relative;
+  text-align: center;
 }
 body section#project_info #timeline .project_progress_mobile .project_step .date:after {
   content: '';
   display: block;
-  background: url('../img/pro_info_bullet_m.png');
+  background: url('../img/011_project_info_bg.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
@@ -9487,32 +9512,32 @@ body section#project_info #timeline .project_progress_mobile .project_step .name
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step1 {
   top: 5.7%;
-  background-image: url('../img/project_step1.png');
+  background-image: url('../img/05_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step2 {
   top: 21.4%;
-  background-image: url('../img/project_step2.png');
+  background-image: url('../img/06_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step3 {
   top: 37.1%;
-  background-image: url('../img/project_step3.png');
+  background-image: url('../img/07_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step4 {
   top: 52.8%;
-  background-image: url('../img/project_step4.png');
+  background-image: url('../img/08_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step5 {
   top: 68.5%;
-  background-image: url('../img/project_step5.png');
+  background-image: url('../img/09_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step6 {
   top: 84.2%;
-  background-image: url('../img/project_step6.png');
+  background-image: url('../img/010_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) {
   background-position: 0 100%;
   text-align: left;
-  padding-left: 38%;
+  padding-left: 36%;
   padding-right: 0;
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) .date {
@@ -9664,7 +9689,7 @@ body section#project_info #application .application-section div.icon {
 }
 body section#project_info #application .application-section div.laptop {
   max-width: 290px;
-  background: url('../img/laptop.png');
+  background: url('../img/04_project_info_bg.png');
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -9859,7 +9884,7 @@ body section#client_opinion {
   /*------------------------------------------------------------------
   [5.10 Section Client Opinion / #client_opinion]
   */
-  background: url('../img/client_opinion.jpg');
+  background: url('../img/04_client_opinion_bg.jpg');
   background-repeat: no-repeat;
   background-position: center 100%;
   background-attachment: fixed;
@@ -10013,7 +10038,7 @@ body section#animated_sales h2 {
 }
 @media (min-width: 768px) {
   body section#animated_sales h2 {
-    margin: 5.5rem 0 4rem 0;
+    margin: 5.5rem 0 3rem 0;
   }
 }
 body section#animated_sales h4 {
@@ -10719,10 +10744,12 @@ body section#animated_sales #layerBall8, body section#animated_sales #layerPulse
   }
   body section#animated_sales h2 {
     text-align: left;
+    line-height: 56px;
   }
   body section#animated_sales h4 {
     line-height: 30px;
     font-size: 2rem;
+    margin-top: 0;
   }
   body section#animated_sales .col-md-push-6 {
     text-align: left;
@@ -11092,7 +11119,7 @@ body section#diagrams .circliful {
   overflow: visible;
 }
 body section#diagrams .svg-container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   overflow: visible;
 }
@@ -11180,7 +11207,7 @@ body section#video .video-steps .video-line {
   animation-duration: 1.25s;
 }
 body section#video .video-laptop {
-  background: url('../img/video_upload.png');
+  background: url('../img/01_video_upload_bg.png');
   background-repeat: no-repeat;
   background-size: 100%;
   width: 265px;
@@ -11741,8 +11768,8 @@ body section#abovefooter {
   [5.17 Section Abovefooter / #abovefooter]
   */
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 0;
-  padding-top: 5rem;
+  padding-bottom: 3rem;
+  padding-top: 8rem;
   line-height: 24px;
 }
 body section#abovefooter h3 {
@@ -11842,7 +11869,7 @@ body section#abovefooter .twitter-tweet {
   padding: 0 0 0 100px;
   margin-bottom: 0;
   font-size: 12px;
-  background: url('../img/tweeter-icon.png');
+  background: url('../img/01_abovefooter.png');
   background-repeat: no-repeat;
   background-position: left bottom;
   min-height: 65px;

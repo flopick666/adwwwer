@@ -42,7 +42,7 @@
             var percent = settings.percent;
             var iconY = 83;
             var iconX = 100;
-            var textY = 75;
+            var textY = 77;
             var textX = 100;
             var additionalCss;
             var elements;

@@ -58,7 +58,7 @@ $(document).ready(function () {
               var top = window.pageYOffset;
               var distance = top - $(this).offset().top;
               var hash = $(this).attr('id');
-              x = $(this);
+              var x = $(this);
               // 30 is an arbitrary padding choice,
               // if you want a precise check then use distance===0
               if (distance < 30 && distance > -30 && currentHash != hash) {
@@ -331,15 +331,18 @@ $(document).ready(function () {
       center: latLng,
       styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
   };
-  map = new google.maps.Map(document.getElementById('googlemaps'),
-      mapOptions);
+  var map = new google.maps.Map(document.getElementById('googlemaps'), mapOptions);
   // Show the default red marker at the location
-  marker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
       // position: latLng,
-            position: {lat: 41.0621212, lng: -73.5423603},
+      position: {lat: 41.0621212, lng: -73.5423603},
       map: map,
       draggable: false,
       animation: google.maps.Animation.DROP
   });
+  google.maps.event.addListener(marker, 'click', function() {
+      $("#contactform").show('slow');
+  });
+
   // End contact_us functionallity
 });

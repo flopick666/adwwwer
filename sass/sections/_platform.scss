@@ -66,13 +66,13 @@
     z-index: 10;
     #doing-carousel_list {
       position: relative;
-      margin: 0 0 0 15px;
+      margin: 0 0 30px 15px;
       padding: 0;
       width: 485px;
       min-height: 450px;
       list-style: none;
       li {
-        background: image-url('mobile.png');
+        background: image-url('01_mobile_app_bg.png');
         background-repeat: no-repeat;
         display: block;
         position: absolute;
@@ -90,7 +90,7 @@
           left: 11%;
         }
         &.active {
-          background: image-url('mobile-active.png');
+          background: image-url('02_mobile_app_bg.png');
           background-repeat: no-repeat;
           left: 160px;
           z-index: 10;
@@ -164,17 +164,40 @@
   .post-images-zoom {
     float: right;
     width: 40%;
-    padding-top: 64px;
+    padding-top: 0;
+    #post-zoom-description {
+      position: relative;
+      left: 72px;
+      width: 240px;
+      font-family: 'Roboto', sans-serif;
+      line-height: 24px;
+      h3 {
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+      }
+    }
     .post-images-container {
       position: relative;
-      left: 66px;
-      width: 202px;
-      height: 202px;
+      left: 72px;
+      // left: 66px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       border: 1px solid $java;
       overflow: hidden;
       img {
         width: 100%;
+      }
+      &:before {
+        display: block;
+        content: '';
+        border: 20px solid $ebony;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -262,7 +285,7 @@
     width: 438px;
   }
   .num.num_1_1.active .line3 {
-    height: 96px;
+    height: 32px;
   }
   .num.num_2_1 {
     top: 60%;
@@ -282,7 +305,7 @@
     width: 425px;
   }
   .num.num_2_1.active .line3 {
-    height: 102px;
+    height: 38px;
   }
   .num.num_3_1 {
     top: 37%;
@@ -302,7 +325,7 @@
     width: 388px;
   }
   .num.num_3_1.active .line3 {
-    height: 98px;
+    height: 34px;
   }
   .num.num_4_1 {
     top: 49%;
@@ -322,7 +345,7 @@
     width: 412px;
   }
   .num.num_4_1.active .line3 {
-    height: 109px;
+    height: 44px;
   }
   .num.num_5_1 {
     top: 68%;
@@ -333,16 +356,16 @@
   }
   .num.num_5_1 .line3 {
     top: -320px;
-    left: 412px;
+    left: 418px;
   }
   .num.num_5_1.active .line1 {
     height: 320px;
   }
   .num.num_5_1.active .line2 {
-    width: 406px;
+    width: 412px;
   }
   .num.num_5_1.active .line3 {
-    height: 97px;
+    height: 34px;
   }
 
 

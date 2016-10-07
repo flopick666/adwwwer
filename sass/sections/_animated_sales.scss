@@ -16,7 +16,7 @@
     line-height: 3rem;
     margin: 0 0 3rem 0;
     @media (min-width: $screen-sm) {
-      margin: 5.5rem 0 4rem 0;
+      margin: 5.5rem 0 3rem 0;
     }
   }
   h4 {
@@ -437,10 +437,14 @@
   }
   //Start tablet here
   @media (min-width: $screen-sm) {
-    h2 { text-align: left;}
+    h2 {
+      text-align: left;
+      line-height: 56px;
+    }
     h4 {
       line-height: 30px;
       font-size: 2rem;
+      margin-top: 0;
     }
     .col-md-push-6 {
       text-align: left;
