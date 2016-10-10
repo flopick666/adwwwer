@@ -15,6 +15,7 @@ Primary use:	Template
 2. Header / #header
 3. Navigation / #navbar-collapse-1
 4. Content / #content
+  4.1 Loading Progress / #loadingProgressG
 5. Sections / section
   5.1 Section WebGL / #webgl_section
   5.2 Section Introduce / #introduce
@@ -7348,6 +7349,66 @@ button.close {
 /*dark section*/
 /*gray section*/
 /*yellow*/
+#loadingProgressG {
+  /*------------------------------------------------------------------
+  [4.1 Loading Progress / #loadingProgressG]
+  */
+  display: none;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 8px;
+  position: relative;
+  line-height: 130px;
+  font-size: 40px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  padding-top: 200px;
+}
+#loadingProgressG:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  width: 100%;
+}
+#loadingProgressG .fa {
+  position: relative;
+  z-index: 400;
+  color: #fff;
+}
+#loadingProgressG .loadingProgressG {
+  background-image: url('../img/01_loading.png');
+  background-repeat: no-repeat;
+  margin-top: 0;
+  width: 135px;
+  height: 135px;
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+  z-index: 350;
+  position: absolute;
+  left: 50%;
+  margin-left: -67px;
+  top: 200px;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 768px) {
+  #loadingProgressG {
+    display: block;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -7879,6 +7940,7 @@ body section#webgl_section {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 5rem;
+  padding-bottom: 0;
 }
 body section#webgl_section #webgl {
   height: 100vh;
@@ -9381,7 +9443,7 @@ body section#project_info #timeline .project_progress_v2 .project_step.step5 {
 }
 body section#project_info #timeline .project_progress_v2 .project_step.step6 {
   left: 80%;
-  background-image: url('../img/010_project_info_bg.png');
+  background-image: url('../img/10_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_v2 .project_step .date {
   max-width: 65px;
@@ -9497,7 +9559,7 @@ body section#project_info #timeline .project_progress_mobile .project_step .date
 body section#project_info #timeline .project_progress_mobile .project_step .date:after {
   content: '';
   display: block;
-  background: url('../img/011_project_info_bg.png');
+  background: url('../img/11_project_info_bg.png');
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
@@ -9532,7 +9594,7 @@ body section#project_info #timeline .project_progress_mobile .project_step.step5
 }
 body section#project_info #timeline .project_progress_mobile .project_step.step6 {
   top: 84.2%;
-  background-image: url('../img/010_project_info_bg.png');
+  background-image: url('../img/10_project_info_bg.png');
 }
 body section#project_info #timeline .project_progress_mobile .project_step:nth-child(2n) {
   background-position: 0 100%;
@@ -11985,6 +12047,9 @@ body .tabbable.responsive .nav-tabs li {
   overflow: hidden;
   border-bottom: none;
 }
+body .tabbable.responsive .nav-tabs li:hover {
+  border-top: 4px solid #20b7a3;
+}
 body .tabbable.responsive .nav-tabs li span.tab-control-spacer {
   float: left;
   width: 36px;
@@ -12011,12 +12076,11 @@ body .tabbable.responsive .nav-tabs li a {
   border: none;
   background: none;
   color: #9B9B9B;
-  border-top: 4px solid #010509;
+  border-top: none;
 }
 body .tabbable.responsive .nav-tabs li a:hover {
   border-style: none;
   background-color: transparent;
-  border-top: 4px solid #20b7a3;
 }
 body .tabbable.responsive .nav-tabs li a.tab-control {
   background: none;
@@ -12043,6 +12107,7 @@ body .tabbable.responsive .nav-tabs li a[data-toggle="tab"] {
 body .tabbable.responsive .nav-tabs li.active {
   border-left: 1px solid #161616;
   border-right: 1px solid #161616;
+  border-top: 4px solid #20b7a3;
 }
 @media (max-width: 768px) {
   body .tabbable.responsive .nav-tabs li.active {
@@ -12051,7 +12116,6 @@ body .tabbable.responsive .nav-tabs li.active {
   }
 }
 body .tabbable.responsive .nav-tabs li.active a[data-toggle="tab"] {
-  border-top: 4px solid #20b7a3;
   line-height: 5rem;
   background: #060a0e;
   color: white;

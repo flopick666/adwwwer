@@ -9,6 +9,9 @@
       width: 100%;
       overflow: hidden;
       border-bottom: none;
+      &:hover {
+        border-top: 4px solid $java;
+      }
       span.tab-control-spacer {
         float: left;
         width: 36px;
@@ -35,11 +38,12 @@
         border: none;
         background: none;
         color: $dusty_gray;
-        border-top: 4px solid $black_pearl;
+        border-top: none;
+        // border-top: 4px solid $black_pearl;
         &:hover {
           border-style: none;
           background-color: transparent;
-          border-top: 4px solid $java;
+          // border-top: 4px solid $java;
         }
         &.tab-control {
           background: none;
@@ -67,12 +71,12 @@
       &.active {
         border-left: 1px solid $cod_gray;
         border-right: 1px solid $cod_gray;
+        border-top: 4px solid $java;
         @media (max-width: $screen-sm) {
           border-left: 0;
           border-right: 0;
         }
         a[data-toggle="tab"] {
-          border-top: 4px solid $java;
           line-height: 5rem;
           background: $ebony;
           color: white;

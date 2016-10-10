@@ -1,0 +1,60 @@
+#loadingProgressG {
+  /*------------------------------------------------------------------
+  [4.1 Loading Progress / #loadingProgressG]
+  */
+  display: none;
+  overflow:hidden;
+  margin:auto;
+  border-radius:8px;
+  position: relative;
+  line-height: 130px;
+  font-size: 40px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  z-index: 300;
+  padding-top: 200px;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.65);
+    height: 100%;
+    width: 100%;
+  }
+  .fa {
+    position: relative;
+    z-index: 400;
+    color: #fff;
+  }
+  .loadingProgressG{
+    background-image: image-url('01_loading.png');
+    background-repeat: no-repeat;
+    margin-top:0;
+    width:135px;
+    height:135px;
+    animation: roll 3s infinite;
+    transform: rotate(30deg);
+    z-index: 350;
+    position: absolute;
+    left:50%;
+    margin-left: -67px;
+    top: 200px;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media(min-width:768px){
+  #loadingProgressG{
+    display: block;
+  }
+}
