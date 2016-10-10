@@ -12,8 +12,9 @@
   text-align: center;
   height: 100%;
   width: 100%;
-  z-index: 300;
-  padding-top: 200px;
+  z-index: 1300;
+  padding-top: 282px;
+  margin-top: -8rem;
   &:before {
     display: block;
     content: '';
@@ -26,22 +27,28 @@
   }
   .fa {
     position: relative;
-    z-index: 400;
+    z-index: 1400;
     color: #fff;
   }
   .loadingProgressG{
     background-image: image-url('01_loading.png');
     background-repeat: no-repeat;
     margin-top:0;
-    width:135px;
-    height:135px;
-    animation: roll 3s infinite;
-    transform: rotate(30deg);
-    z-index: 350;
+    width:200px;
+    height:200px;
+    z-index: 1350;
     position: absolute;
     left:50%;
-    margin-left: -67px;
-    top: 200px;
+    margin-left: -100px;
+    top: 250px;
+    #commet {
+      background-image: image-url('02_loading.png');
+      width:200px;
+      height:200px;
+      animation: roll 3s infinite;
+      transform: rotate(30deg);
+      z-index: 1360;
+    }
   }
 }
 @keyframes roll {

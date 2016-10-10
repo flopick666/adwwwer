@@ -1,4 +1,5 @@
 "use strict";
+
 $(document).ready(function () {
   var $window           = $(window),
       win_height_padded = $window.height() * 1.1,
@@ -292,7 +293,7 @@ $(document).ready(function () {
     THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
         if ( loaded == total ) {
             webgl.show();
-            $('#loadingProgressG').hide();
+            $('#loadingProgressG').hide('slow');
         }
     };
     $(window).scroll(function(){
