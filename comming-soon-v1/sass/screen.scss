@@ -5,6 +5,7 @@
 @import "compass/css3/appearance";
 @import "bootstrap/stylesheets/_bootstrap.scss";
 @import "variables.scss";
+@import "loading.scss";
 html { box-sizing: border-box;}
 *, *:before, *:after {
   box-sizing: inherit;
@@ -68,13 +69,6 @@ body {
     font-size: 3rem;
     line-height: 30px;
     text-transform: uppercase;
-    // margin: 5rem 0;
-    // @media (min-width: $screen-sm) {
-    //   font-size: 4rem;
-    // }
-    // @media (min-width: $screen-md) {
-    //   margin: 8rem 0;
-    // }
   }
   h3 {
     font-family: 'Roboto', sans-serif;
@@ -121,7 +115,6 @@ body {
       outline-color: rgba(32,183,163,0) !important;
       outline: 1px solid;
       outline-offset: 10px;
-      // text-shadow: 1px 1px 2px #427388;
     }
     &:focus {
       color:#20b7a3;background-color:transparent;border-color:#0d4a42
@@ -142,25 +135,5 @@ body {
     }
   }
   .container { margin: 0 auto;}
-  // #earth .earth-content {
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 50%;
-  //   transform: translate(-50%, -50%);
-  //   h1 {
-  //     color: $java;
-  //     font-family: 'Roboto', sans-serif;
-  //     font-weight: 300;
-  //     font-size: 5rem;
-  //     span {
-  //       color: white;
-  //     }
-  //     p:last-child {
-  //       font-size: 6.5rem;
-  //       font-weight: 700;
-  //       text-transform: uppercase;
-  //     }
-  //   }
-  // }
   @import "sections/sections.scss";
 }

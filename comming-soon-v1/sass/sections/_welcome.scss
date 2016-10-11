@@ -7,15 +7,14 @@
       text-transform: uppercase;
       display: block;
       margin: 0 auto;
-      width: 100px;
-      height: 100px;
-      padding-top: 1.5rem;
-      margin-bottom: 2rem;
+      width: 220px;
+      height: 70px;
+      line-height: 70px;
       font-size: 18px;
       font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
       img {
-        display: block;
-        margin: 0 auto 10px;
+        vertical-align: middle;
+        margin: 0 auto;
       }
       &:hover {
         color: $java;
@@ -43,12 +42,6 @@
   }
   @media (min-width: $screen-md) {
     .container {
-      a.logo {
-        margin-bottom: 4rem;
-        padding-top: 4rem;
-        width: 150px;
-        height: 150px;
-      }
       h1 {
         font-size: 6.5rem;
         padding: 4rem 0;

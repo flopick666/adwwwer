@@ -7398,6 +7398,73 @@ button.close {
 /*dark section*/
 /*gray section*/
 /*yellow*/
+#loadingProgressG {
+  /*------------------------------------------------------------------
+  [4.1 Loading Progress / #loadingProgressG]
+  */
+  display: none;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 8px;
+  position: relative;
+  line-height: 130px;
+  font-size: 40px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1300;
+  padding-top: 282px;
+  margin-top: -8rem;
+}
+#loadingProgressG:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  width: 100%;
+}
+#loadingProgressG .fa {
+  position: relative;
+  z-index: 1400;
+  color: #fff;
+}
+#loadingProgressG .loadingProgressG {
+  background-image: url('../img/loading/loading_01.png');
+  background-repeat: no-repeat;
+  margin-top: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 1350;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 250px;
+}
+#loadingProgressG .loadingProgressG #commet {
+  background-image: url('../img/loading/loading_02.png');
+  width: 200px;
+  height: 200px;
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+  z-index: 1360;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 768px) {
+  #loadingProgressG {
+    display: block;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -7646,16 +7713,15 @@ body section#welcome .container a.logo {
   text-transform: uppercase;
   display: block;
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  padding-top: 1.5rem;
-  margin-bottom: 2rem;
+  width: 220px;
+  height: 70px;
+  line-height: 70px;
   font-size: 18px;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 body section#welcome .container a.logo img {
-  display: block;
-  margin: 0 auto 10px;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 body section#welcome .container a.logo:hover {
   color: #20b7a3;
@@ -7680,12 +7746,6 @@ body section#welcome .container h2 {
   line-height: 2.4rem;
 }
 @media (min-width: 992px) {
-  body section#welcome .container a.logo {
-    margin-bottom: 4rem;
-    padding-top: 4rem;
-    width: 150px;
-    height: 150px;
-  }
   body section#welcome .container h1 {
     font-size: 6.5rem;
     padding: 4rem 0;

@@ -68,8 +68,8 @@
 	<link rel='stylesheet' type='text/css' href='css/animate.css'/>
   <link rel='stylesheet' type='text/css' href='css/loader.css'/>
 	<!--js-->
-  <script type="text/javascript" src="js/jquery-latest.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<!-- Mobile Detect Script -->
   <script type="text/javascript" src="js/mobiledetect.js"></script>
 	<!--Custom JS  -->
@@ -84,56 +84,43 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<!-- GLSL vertex shader for the moon -->
   <script id="norm-vert-shader" type="x-shader/x-vertex">
-
       attribute vec4 tangent;
-
       uniform vec2 uvScale;
       uniform vec3 lightPosition;
-
       varying vec2 vUv;
       varying mat3 tbn;
       varying vec3 vLightVector;
-
       void main() {
       vUv = uvScale * uv;
-
       /** Create tangent-binormal-normal matrix used to transform
       coordinates from object space to tangent space */
       vec3 vNormal = normalize(normalMatrix * normal);
       vec3 vTangent = normalize( normalMatrix * tangent.xyz );
       vec3 vBinormal = normalize(cross( vNormal, vTangent ) * tangent.w);
       tbn = mat3(vTangent, vBinormal, vNormal);
-
       /** Calculate the vertex-to-light vector */
       vec4 lightVector = viewMatrix * vec4(lightPosition, 1.0);
       vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
       vLightVector = normalize(lightVector.xyz - modelViewPosition.xyz);
-
       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
-
   </script>
   <!-- GLSL fragment shader for the moon -->
   <script id="norm-frag-shader" type="x-shader/x-fragment">
       uniform sampler2D textureMap;
       uniform sampler2D normalMap;
-
       varying vec2 vUv;
       varying mat3 tbn;
       varying vec3 vLightVector;
-
       void main() {
       /** Transform texture coordinate of normal map to a range (-1, 1) */
       vec3 normalCoordinate = texture2D(normalMap, vUv).xyz * 2.0 - 1.0;
-
       /** Transform the normal vector in the RGB channels to tangent space */
       vec3 normal = normalize(tbn * normalCoordinate.rgb);
-
       /** Lighting intensity is calculated as dot of normal vector and
       the vertex-to-light vector */
       float intensity = max(0.07, dot(normal, vLightVector));
       vec4 lighting = vec4(intensity, intensity, intensity, 1.0);
-
       /** Final color is calculated with the lighting applied */
       gl_FragColor = texture2D(textureMap, vUv) * lighting;
       }
@@ -149,7 +136,6 @@
       vec3 vNormal = normalize( normalMatrix * normal );
       vec3 vNormel = normalize( normalMatrix * viewVector );
       intensity = pow( c - dot(vNormal, vNormel), p );
-
       gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
       }
   </script>
@@ -193,7 +179,10 @@
 	<!-- End settings menu here -->
 	<!-- start webgl section -->
   <section id="webgl_section">
-  	<div id="loadingProgressG"><div id="loadingProgressG_1" class="loadingProgressG"></div></div>
+		<div id="loadingProgressG">
+			<div id="loadingProgressG_1" class="loadingProgressG"><div id="commet"></div></div>
+			<i class="fa fa-globe" aria-hidden="true"></i>
+		</div>
     <div id="webgl">
 			<div id="earth" style="display: none"></div>
     </div>
@@ -205,7 +194,7 @@
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-xs-12 col-sm-10">
-						<a href="index.html" class="logo"><img src='img/logo_b.png' alt="" title="" />voyager</a>
+						<a href="index.html" class="logo"><img src='img/logo.png' alt="" title="Adwwwer.1pls1.com" /></a>
 						<h1>Reimagine <span class="white">what's</span> possible</h1>
 						<h2>OUR WEBSITE IS COMING SOON</h2>
 						<div id="DateCountdown" data-date="2016-10-10 00:00:00" style="width: 100%;"></div>
@@ -268,7 +257,7 @@
 				<ul>
 					<li><i class="fa fa-globe" aria-hidden="true"></i>24 Shine Paper street, New York, NY 25416, USA</li>
 					<li><i class="fa fa-tablet" aria-hidden="true"></i>+1 888 5239 12 63</li>
-					<li><i class="fa fa-skype" aria-hidden="true"></i>voyager-theme</li>
+					<li><i class="fa fa-skype" aria-hidden="true"></i>adwwwer-theme</li>
 				</ul>
 				<form data-toggle="validator">
 					<div class="input-group">
