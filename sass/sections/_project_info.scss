@@ -38,12 +38,12 @@
             margin-bottom: 0;
           }
         }
-        &.step1 {left: 11%; background-image: image-url('05_project_info_bg.png');}
-        &.step2 {left: 25%; background-image: image-url('06_project_info_bg.png');}
-        &.step3 {left: 39%; background-image: image-url('07_project_info_bg.png');}
-        &.step4 {left: 52%; background-image: image-url('08_project_info_bg.png');}
-        &.step5 {left: 66%; background-image: image-url('09_project_info_bg.png');}
-        &.step6 {left: 80%; background-image: image-url('10_project_info_bg.png');}
+        &.step1 {left: 11%; background-image: image-url('07_project_01.png');}
+        &.step2 {left: 25%; background-image: image-url('07_project_02.png');}
+        &.step3 {left: 39%; background-image: image-url('07_project_03.png');}
+        &.step4 {left: 52%; background-image: image-url('07_project_04.png');}
+        &.step5 {left: 66%; background-image: image-url('07_project_05.png');}
+        &.step6 {left: 80%; background-image: image-url('07_project_06.png');}
         .date {
           max-width: 65px;
           margin: 0 auto;
@@ -159,7 +159,7 @@
           &:after {
             content: '';
             display: block;
-            background: image-url('11_project_info_bg.png');
+            background: image-url('07_project_08.png');
             background-repeat: no-repeat;
             background-position: 0 0;
             position: absolute;
@@ -173,12 +173,12 @@
           color: white;
           display: inline-block;
         }
-        &.step1 {top: 5.7%; background-image: image-url('05_project_info_bg.png');}
-        &.step2 {top: 21.4%; background-image: image-url('06_project_info_bg.png');}
-        &.step3 {top: 37.1%; background-image: image-url('07_project_info_bg.png');}
-        &.step4 {top: 52.8%; background-image: image-url('08_project_info_bg.png');}
-        &.step5 {top: 68.5%; background-image: image-url('09_project_info_bg.png');}
-        &.step6 {top: 84.2%; background-image: image-url('10_project_info_bg.png');}
+        &.step1 {top: 5.7%; background-image: image-url('07_project_01.png');}
+        &.step2 {top: 21.4%; background-image: image-url('07_project_02.png');}
+        &.step3 {top: 37.1%; background-image: image-url('07_project_03.png');}
+        &.step4 {top: 52.8%; background-image: image-url('07_project_04.png');}
+        &.step5 {top: 68.5%; background-image: image-url('07_project_05.png');}
+        &.step6 {top: 84.2%; background-image: image-url('07_project_06.png');}
         &:nth-child(2n){
           background-position: 0 100%;
           text-align: left;
@@ -348,7 +348,7 @@
         }
         &.laptop {
           max-width: 290px;
-          background: image-url('04_project_info_bg.png');
+          background: image-url('07_project_12.png');
           background-position: 50% 0;
           background-repeat: no-repeat;
           background-size: contain;

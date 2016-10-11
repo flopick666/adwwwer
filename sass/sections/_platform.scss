@@ -72,7 +72,7 @@
       min-height: 450px;
       list-style: none;
       li {
-        background: image-url('01_mobile_app_bg.png');
+        background: image-url('05_mobile_app/05_mobile_app_12.png');
         background-repeat: no-repeat;
         display: block;
         position: absolute;
@@ -90,7 +90,7 @@
           left: 11%;
         }
         &.active {
-          background: image-url('02_mobile_app_bg.png');
+          background: image-url('05_mobile_app/05_mobile_app_11.png');
           background-repeat: no-repeat;
           left: 160px;
           z-index: 10;

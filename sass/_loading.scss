@@ -31,7 +31,7 @@
     color: #fff;
   }
   .loadingProgressG{
-    background-image: image-url('01_loading.png');
+    background-image: image-url('loading/loading_01.png');
     background-repeat: no-repeat;
     margin-top:0;
     width:200px;
@@ -42,7 +42,7 @@
     margin-left: -100px;
     top: 250px;
     #commet {
-      background-image: image-url('02_loading.png');
+      background-image: image-url('loading/loading_02.png');
       width:200px;
       height:200px;
       animation: roll 3s infinite;

@@ -293,7 +293,7 @@ $(document).ready(function () {
     THREE.DefaultLoadingManager.onProgress = function ( item, loaded, total ) {
         if ( loaded == total ) {
             webgl.show();
-            $('#loadingProgressG').hide('slow');
+            $('#loadingProgressG').hide();
         }
     };
     $(window).scroll(function(){
