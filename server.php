@@ -8,5 +8,5 @@ $message = 'Name: ' . $params['name'] . PHP_EOL
 			. 'Email: ' . $params['email'] . PHP_EOL
 			. 'Phone: ' . $params['phone'] . PHP_EOL
 			. 'Message: ' . $params['message'] . PHP_EOL;
-mail('oneplsonesolutions@gmail.com', 'Contacts from adwwwer.1pls1.com', $message);
+mail('adwwwer@gmail.com', 'Contacts from adwwwer.1pls1.com', $message);
 print_r($message);

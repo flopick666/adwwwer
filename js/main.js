@@ -12,9 +12,9 @@ $(document).ready(function () {
     var scrolled = $window.scrollTop(),
     win_height_padded = $window.height() * 1.1;
     // Showed...
-    $(".revealOnScroll:not(.animated)").each(function () {
-      var $this = $(this),
-        offsetTop = $this.offset().top;
+      for(var i=0; i<$(".revealOnScroll:not(.animated)").length; i++){
+      var $this = $($(".revealOnScroll:not(.animated)")[i] ,
+        offsetTop = $($(".revealOnScroll:not(.animated)")[i])).offset().top;
       if (scrolled + win_height_padded > offsetTop) {
         if ($this.data('timeout')) {
           window.setTimeout(function(){
@@ -29,7 +29,7 @@ $(document).ready(function () {
         }
 
       }
-    });
+    }
     // Hidden...
     $(".revealOnScroll.animated").each(function (index) {
     var $this     = $(this),
